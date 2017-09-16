@@ -1,7 +1,6 @@
 # Learning the basics of HTML
 **Work in progress - More informations will be added. Images for showcasing the explained concepts and code samples coming soon**
 
-
 ## What is HTML
 Html is a format used to write web documents (web pages). The name stands for Hyper Text Markup Language. Hyper means it's more advanced than normal text. Markup means a system of notations used to enrich the way text looks. Think of Word editor but instead of using the user interface to modify text appearance you use special text notations.
 
@@ -11,14 +10,15 @@ Html by itself it is a very simple language. All elements are displayed in a lin
 
 ## Why was it created?
 *Requirements of the early web*
+
 - **Low file size** - Web documents need to travel over computer networks and this was a issue especially in the first years of the internet. The documents need to be transfered as fast as possible. This is a pressing issue even in todays market but at for larger documents that go beyound text.
 - **Modularity** - Because images are taking way more space than text then it is necessary to be able to display the document even before the images have arrived. In the old days you would see the image actually loading line by line. Currently this process is blazingly fast, but so have the file sizes increased. So the fight for speed is still there but at a greater scale.
 - **Human readable** - Due to the nature of the web, these documents needed to be prepared fast and delivered fast. So the best approach was to skip the clumsy editors and just type formatting by hand. For example a title would be indicated by using a heading 1 tag. `<h1>Some interesting title to catch the attention</h1>`
 - **Hyper links** - Hyper links were build in from the start. They allow quick navigation between documents using the so called URLs or routes (Unique Resource Locator). This was an innovative feature that made the web pages a more covenient medium to bind big collections of pages. You could browse a big collection of files without spending too much effort by reading them one by one. 
 
-
 ## What can HTML do 
 *The main features that are need to know for any web developer*
+
 The main unit in html is the tag. These have many types and also can be custumised using attributes. For example setting the height of an image.
 - **Paragraphs** `<p>Text</p>` They allow splitting of text like in traditional print media, delimiting blocks of text. Some default spacing is applied to skipt this effort for the user.
 - **Images** `<img src="..."></img>` Well, this is obvious.
@@ -29,14 +29,16 @@ The main unit in html is the tag. These have many types and also can be custumis
 - **Forms** `<form></form>` Forms are used to enable the webpage to collect user data. Usually forms have multiple fields and a confirmation button. A recent trend is to build forms that save information autoamtically. But this is already requiring Javascript know-how. Will get there.
 - **Standard Vector Graphics SVG** `<svg></svg>` This is an element that has become more and more popular. It allows the creation of intricate and interactive graphics using lines and geometric shapes. There is a big difference betwenn raster and vector graphics but we will touch the subject later in next chapters.
 
-Feel free to search online for all of these element to find further details, As stated before this is the place where zou gain spatial orientation, but the web is the place where you study.
+**REMEMBER There are many other elements and they tend to be really specialised for speciffic scenarios. An experienced developer will know countless more tags and their uses but this doesn't stop you from going ahead and building web apps while learning the details along the way.**
+What you really need to know is outlined here. Not knowing these elements and their basic behaviour is a show stopper. I would recommend spending some time online researching some of the details about those main elements. However, there is no need to go overboard and spend two weeks on studying only html. More knowledge will acummulate in time just by working on real projects. I know it feels unconfortable reading those strange tags without knowing their full meaning. 
+
+**There is a tradeoff to be made here. It's either fast and laser focused or slow and detailed with the potential risk of loosing steam sooner than the course ends.** I will deliver on the promise of fast learning if you are willing to accept that some details will be learned along the way. My recipy is to give you only the hotest subjects that make or break a developer career.
+
+Feel free to search online for all of these element to find further details, As stated before this is the place where you gain spatial orientation, but the web is the place where you study.
 
 ## Why HTML matters
 **What role does it play in app/website building**
 - Html is used to layout the foundation of the application. It's the pillars you put in the ground to sustain the whole building. It's the walls that separate different sections and offer support for the more attractive elements such as text, image and video.
-
-**REMEMBER There are many other elements and they tend to be really specialised for speciffic scenarios. An experienced developer will know countless more tags and theyr uses but this doesn't stop you from going ahead and building web apps while learning the details along the way.**
-What you really need to know is outlined here. Not knowing these elements and their basic behaviour is a show stopper. I would recommend spending some time online researching some of the details about those main elements but there is no need to go overboard and speend two weeks on studying only html. More knowledge will acummulate in time just by working on real projects. I know it feels unconfortable reading those strange tags without knowing theyr full meaning. **There is a tradeoff to be made here. It's either fast and laser focused or slow and detailed with the potential risk of loosing steam sooner than the course ends.** I will delvier on the promise of fast learning if you are willing to accept that some details will be learned along the way. My recipy is to give you only the hotest subjects that make or break a developer career.
 
 ## Task
 - Create a html file named index.html which displays the text 'Hello world' in a paragraph.
@@ -80,7 +82,9 @@ Very often I have to figure out if something is used by many other people and th
     - Looking for number of results in a search engine after the specific technology.
     - Using google.trends tool to aproximate if the popularity is increasing or decreasing.
 
-## More
+## More subjects
+*Learn more than the basics*
+
 - Over the years, many additions were added to the HTML language. Latest version is version 5 and it has elements for playing sound and video, rendering 2d and 3d graphics and many other improvements. Search for **HTML5**, **Semantic tags**. Before Html5 a popular technology for rendering advanced graphics was Flash. Search for **Flash vs HTML5**, **Why was flash abandoned**
 - For advanced applications the HTML layer tends to be the **main source of performance loss**. This is because modern apps tend to create very complex html documents and also to change them on the fly reacting to user input. Due to the fact that html has a visual representation on screen and can react to a lot of document events, a complex computer algorythm is needed to process the state of the document and to render it. This makes it one of the heaviest parts of the page rendering process. I future chaoters we will learn how to keep this problem under control.
 - **Adaptive design** is a trend that has reaced maturity in the modern web. This is one of the main requirements from a project. This means that the same layout is able to render nice on multiple screen sizes from huge tvs to small smartphones.
@@ -88,17 +92,17 @@ Very often I have to figure out if something is used by many other people and th
 - **Psd 2 html** this is the name of the process of taking a design document and creating the HTML specified in the design. Design are usually generated with a graphich software solution such as Phtoshop Illustrator or Gimp. Over the years this process became more an more specialised. 
 
 **Common mistakes** 
-- Using tables for layouts
+- Using tables for layouts. They tend to force the designer to split elements that do not fit perfectly between columns and rows. Not to mention that tables should render tabular data, not layouts. 
 - Adding styles inline, this techniques was abolished with the invention of CSS. Inline styles are hard to change in one shot. Changing them is time consuming and prone to mistakes and typos.
 - Keeping html as characters in the database. Not the most friendly format to changes and updates. It's really hard to work with data when it also contains html tags.
-- Mixing html code with fragments of code. Well... current day framework React does it but without problem. This is because there is a method and a plan behind this behaviour. In the past this was a mistake because people added code without thinking too much how it might impact other parts of the page. Or without properly documenting theyr solutions. This made it extremely hard to maintain or update webpages. 
+- Mixing html code with fragments of code. Well... current day framework React does it but without problem. This is because there is a method and a plan behind this behaviour. In the past this was a mistake because people added code without thinking too much how it might impact other parts of the page. Or without properly documenting their solutions. This made it extremely hard to maintain or update webpages. 
 
 # Links and Resources
 - https://stackoverflow.com/questions/1795438/load-and-execution-sequence-of-a-web-page
 - An excelent book on the subject of designing the layout of webpages "Don't make me think" https://www.amazon.com/Dont-Make-Me-Think-Usability/dp/0321344758
 
 # REMEMBER
-*You are not allowed to forget about these tags, this is the rbead and butter of the web*
+*Do not forget these tags. This is the bread and butter of the web. Learn them and master them in time*
 
       <html>
       <header>
