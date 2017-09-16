@@ -1,6 +1,20 @@
 # Visual School
-How to learn programming *fast*
+## How to learn programming *fast*
 
+---
+
+
+**THIS MATERIAL IS WORK IN PROGRESS**
+
+**I am open to suggestions, answering questions and accepting contributions**
+
+This is work I do in my spare time, and it will take some effort until I finalize the end chapters. I am not a professional author and I cannot provide full coverage in all the topics. This is my own experience after years of work and I myself still have a lot to learn. 
+
+*Why GitHub?*
+
+I prefered a git repository instead of a blog because I am a ferm beliver in commented code. I belive this format will facilitate the transfer of information a lot more easily than using JsBin, JSfiddle or whatever tool. Nothing beat using an actual IDE together with a command line and Node server instance. There will be lots of npm content for many of the examples. A GIT tutorial is actualy the fastest way to transfer code samples. Also this is an excelent platform for other developers to contribute their experience. Plus there are no pesky advertisments here :D
+
+---
 
 ## Objectives of this course
 - Learn the **essentials** of **programming for the web** in less than **4 weeks**.
@@ -36,7 +50,22 @@ You can skip chapters or lessons if you feel so. I totally recommend it, enjoy t
     - **Searching** online for information. Links will be provided for quick orientation.
     - Evaluating multiple **solutions** to find which one is better suited to solve the current problem.
     - Applying the **fix** in a real life scenario.
+    - Learning additional nknowledge in litle steps, and **applying repetition**.
+- **REMEMBER This course is not designed to teach all subjects in great detail. You will not be proficient in these technologies from day one. However, you will have a good understanding of what can be done using these technologies. When the time comes in your current project you will have the skills necessary to understand current problem and than research online for solutions.** This is standard practice in Frontend development due to the rapid technology cycle and the abundance of tutorials. Not even today I do not know by heart the syntax used to load an external CSS style. Each time I have to look it up again. Why? Because It happens so rarely and there are so many other notions that I have to remember. My brain simple refuses to register this syntax unles I start using it often. However I am acutely aware of all the implications of loading an external stylesheet. I can talk for an extended period about the various nuances of this subject. This comes from long exposure to a lot of projects. **This is where the next step comes in REPETITION BY WORK. Building new software zou are very often expose to the same names over and over again. This is the point where things that you learned stick for ever.** So this is my deal: I give you the map and orientation indications, after finishing this 101 class it's up to you to consolidate what zou have learned by aplying it to your own project. Doing exercises might be fun, but the real fun is building actual software :D
 
+## How the content is structured
+I tried to isolate the main disciplines required for web development. Each one of these has a folder with a number. Inside each of these you will find a lesson designed to be finished in one day (arround 4 to 8 hours). Each individual lesson will have the following sections:
+- **What is X** - Basic description of the technology or technique.
+- **Why was it created** - What needs were satisfied by utilising this technology.
+- **What can it do** - The big overview. Each of these chapters can be drilled down in 500 pages books. What I want to explain is the big picture. The overview, how everything fits together. This way I give you the power of deciding what to study and when is this study required to unlock new skills.
+- **Why it matters** - How does this technology help zou build web applications. What are the benefits of using this.
+- **Tasks** - These are tasks designed to quickly showcase the behavior of the presented tehcniques. You will also find explanations of how a particular task can be useful in real world. In order to increase the change of the brain to actually asymilate the information I will leave a bit of room for intepretation for these tasks. They have an objective but it is not strictly stated how to obtain the end result. This is where you enter in *developer mode* and try to find the solution to the problem. This is the most potent process in fixing information in the long term memory. And also the most fun one. If zou feel a task might not be intereseting, just skip ahead.
+- **Real life situations** - These examples are designed to give you a succint presentation of the common ways these techniques can be used to achieve certain real life goals. This is the part that is lacking in other materials the most. You know one example of a technique and one applied situation, But you are totally unaware of the many possibilities that are available. This is usually compensated by years of work and seeing sampels of code from other projects. I-ll try to provide as many examples as possible. In time I will keep adding examples as I recall them myself.
+- **Search for** - These are examples of search queries I used over the years in order to find out new information. These will be really useful in fixing the technical jargon in place. It's hard to find solutions if you don't use the proper terms to explain them.
+- **More** - In case you are really keen on digging deeper in a specific subject, these will be refenrences to more advanced subjects.
+- **Links** - In most cases I will provide links to more detailed articles that explain the subject in more detailed manner while also keeping the learning curve low.
+- **Remember** Instead of you keeping notes I will keep them for you, no really. Stop wasting time go and have time. Information is always at search result away. Enjoy the extra time!
+ 
 ## Support material and examples
 The material that will be provided is minimalistic in nature. It is inteded to be used as a notebook full of valuable notes. The actual knowledge will be a lot of times out there, on the web, waiting to be discovered. So let's call this for what it is: **a roadmap**. A carefuly constructed one, capable of guiding you trough the journey of learning via the **fastest route**.
 
@@ -89,4 +118,13 @@ In time I got better and I made it on the other side. Today I'm leading a small,
 
 Today it is really clear what were the past mistakes, were I have lost time and what were the roadblocks in this learning journey. I wish to share this knowledge with you in order to spare you the frustrations and possible failures that can occur during this period of learning. This is all about motivation and spatial orientation. A professional feels really good about himself when he is aware of the solutions that solve the problems he faces in his daily work. This is the feeling I wish to give you while finishing this course.
 
-Now let's see how this is going to work.
+Now let's get busy creating web apps!
+
+---
+
+## Contributing
+If you wish to expand this course with additional information or samples of your own code, please consider following the main principles behind this collection of tutorials. 
+- Everything was conceived to be easy to digest by a beginner. 
+- Each lesson tries to avoid going deep into detail, leaving this to be a decision made by the reader.
+- 20/80 principle. 20% of the knowledge is used 80% of the time. We want to documetn these 20% of knowledge so that readers become aware of the backbone sustaining all this knwoledge and how it can be extended with additional study.
+- I really want that an ambitious person is abble to read this course in 1 month and actually have a good feeling on how to start building his first app.
