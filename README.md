@@ -6,9 +6,9 @@ How to learn programming *fast*
 - Learn the **essentials** of **programming for the web** in less than **4 weeks**.
 - Understand how **websites** and **web applications** are developed, deployed and maintained.
 - Experience the latest techniques and tools used in **modern web development**.
-- Give plenty of **examples and support** along the way.
-- Learn what actual developers do and showcase **real life scenarios**.
-- Gain a **solid foundation** on to which further knowledge can be gained by **individual study** following the recepies explained here.
+- Receive plenty of **examples and support** along the way.
+- Learn what actual developers do and discover **real life scenarios**.
+- Gain a **solid foundation** on to which further knowledge can be added by **individual study** following the recepies explained here.
 - Get a **clear overview** of how software is created.
 - Explore **multiple branches** of web development and server side programming.
 
@@ -16,25 +16,10 @@ How to learn programming *fast*
 - Desire to start learning programming and Javascript in particular. 
 - Don't have any previous programming experience. 
 - Dislike reading books and waiting forever without understanding how the big picture works.
-- Want to study in you own rythm without feeling pressure from a professor.
+- Want to study in your own rythm without feeling pressure from a professor.
 - Have limited time available for study.
 - Wish to make a big change of career.
 - Or even just wanna have some fun and learn something new.
-
-## Motivation for writting these tutorials
-Confession: **I was a terrible student**. I always got bored and often I felt unable to keep the pace with the school curriculum. This has many explanations but the main one was that I felt a complete loss of freedom. When freedom is constrained you tend to loose motivation and interest. This has continued for me even after K12. I ended up being a dropdout after just half of semester in economics university.
-
-Somehow I was trapped between high hopes, big expectations, social pressure, impenetrable barriers and crushed dreams. Each time I started something new I lost steam quite fast and I ended ditching the plans just after a few weeks.
-
-Yet, somehow **a miracle happened**... sort of. I had these two burning passions: technology and arts. I loved reading stuff about computers and browsing for cool artwork online. Eventually this opened my waz towards a career in webdesign. I spent a few years as a web designer with mixed results always trying to improve.
-
-Eventually I took the big leap and ventured into programming. It was a rough start. Everything was strange and nothing made sense. For a long period I felt a lot of **insecurity about my code and techniques**. Nothing that I built seemed to be even close to acceptable by the standards.
-
-In time I got better and I made it on the other side. Today I'm leading a small, but growing, frontend team writting web applications used in the banking sector utilising the latest and greatest techniques. I have broad experience covering the full spectrum of the software development process. in the spare time I work at my own personal project which I hope to push into production in the near future.
-
-Today it is really clear what were the past mistakes, were I have lost time and what were the roadblocks in this learning journey. I wish to share this knowledge with you in order to spare you the frustrations and possible failures that can occur during this period of learning. This is all about motivation and spatial orientation. A professional feels really good about himself when he is aware of the solutions that solve the problems he faces in his daily work. This is the feeling I wish to give you while finishing this course.
-
-Now let's see how this is going to work.
 
 ## How this works
 The **main objective** of this course is to provide you the fastest way towards **total autonomy in learning** web development. This might seem odd compared to books and other materials that want to give in depth explanations about each subject. But let me give you a tip. A 500 page book is not exhilarating... you need it now, fast. Right?
@@ -90,3 +75,18 @@ So let's put the safety googles, power-up the electric grinder and let's break t
 - Currently this document is work in progress so be patient and keep revisiting the repository.
 - I strongly discourage taking notes. This course is supposed to be your actual notebook so you can have your hands and mind free to work, not collecting and organising notes.
 - **Remember** You will feel unconfortable for a long while. This is natural. This indicates progress, you are growing. Embrace this feeling, learn to love it. This is how you get ahead in life. Somewhere along the line you will make the transition and you will feel the true power of programming knowledge. Stay ambitious, don't throw the towel yet! Make me proud!
+
+## Motivation for writting these tutorials
+Confession: **I was a terrible student**. I always got bored and often I felt unable to keep the pace with the school curriculum. This has many explanations but the main one was that I felt a complete loss of freedom. When freedom is constrained you tend to loose motivation and interest. This has continued for me even after K12. I ended up being a dropdout after just half of semester in economics university.
+
+Somehow I was trapped between high hopes, big expectations, social pressure, impenetrable barriers and crushed dreams. Each time I started something new I lost steam quite fast and I ended ditching the plans just after a few weeks.
+
+Yet, somehow **a miracle happened**... sort of. I had these two burning passions: technology and arts. I loved reading stuff about computers and browsing cool artwork online. Eventually this opened my way towards a career in webdesign. I spent a few years as a web designer with mixed results always trying to improve.
+
+Eventually I took the big leap and I ventured into programming. It was a rough start. Everything was strange and nothing made sense. For a long period I felt a lot of **insecurity about my code and techniques**. Nothing that I built seemed to be even close to acceptable by the standards.
+
+In time I got better and I made it on the other side. Today I'm leading a small, but growing, frontend team writting web applications used in the banking sector utilising the latest and greatest techniques. I have broad experience covering the full spectrum of the software development process. in the spare time I work at my own personal project which I hope to push into production in the near future.
+
+Today it is really clear what were the past mistakes, were I have lost time and what were the roadblocks in this learning journey. I wish to share this knowledge with you in order to spare you the frustrations and possible failures that can occur during this period of learning. This is all about motivation and spatial orientation. A professional feels really good about himself when he is aware of the solutions that solve the problems he faces in his daily work. This is the feeling I wish to give you while finishing this course.
+
+Now let's see how this is going to work.
