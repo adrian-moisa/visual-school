@@ -1,9 +1,6 @@
 # Visual School
-## How to learn programming *fast*
+How to learn programming *fast*
 
-<sub>
-
-</sub>
 
 ## Objectives of this course
 - Learn the **essentials** of **programming for the web** in less than **4 weeks**.
