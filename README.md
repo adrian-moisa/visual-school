@@ -75,7 +75,7 @@ So let's put the safety googles, power-up the electric grinder and let's break t
 ## Index
 
 | First Header  | Second Header |
-| ------------- | ------------- |
+| --- | --- |
 | Content Cell  | Content Cell  |
 | Content Cell  | Content Cell  |
 
