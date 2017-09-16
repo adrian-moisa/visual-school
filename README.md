@@ -76,7 +76,6 @@ So let's put the safety googles, power-up the electric grinder and let's break t
 
 | Chapter | Description |
 | --- | --- |
-| ~~~~~~~~~~~~~~~~~~~~~~~ | --- |
 | **01 - Basic Html** | Learn the basic tools and materials used in constructing the structure of a webpage. Html is the scaffolding onto which webapps are built. |
 | **02 - Tools and Software** | Learn what are the most common used tools in web app development and understand their purpose. |
 | **03 - Basic Javascript** | If html is the skeletton, javascript is the brain and muscles of a webapp. Learn the basic ingredients necessary to write code. |
@@ -97,6 +96,7 @@ So let's put the safety googles, power-up the electric grinder and let's break t
 | **18 - Performance** | After all, electricity costs money, so you want to use it wisely. That includes also how eficient yor code runs, not to mention that nothing makes an user more angry than a sluggish UI. |
 | **19 - Game development** | Learn what makes games work. These techniques can improve your presentational skills to PRO level. VR is the future and you need to understand it. |
 | **20 - Visual Space** | The next generation of web interfaces will be powered by strong UI with a touch of AI and 3D graphics. This is as close as we can get to the holodeck here in 2017. |
+| ~~~~~~~~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~~~~~~~~~ |
 
 **A few notes**
 - This document will be constantly updated with the latest techniques in javascript.
