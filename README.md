@@ -3,20 +3,6 @@
 
 <sub>
 
----
-
-*THIS COURSE IS WORK IN PROGRESS*
-
-*I am open to suggestions, answering questions and accepting contributions*
-
-This is work I do in my spare time, and it will take some effort until I finalize all the chapters. I am not a professional author and I cannot provide full coverage in all the topics. This is my own experience after years of work and I myself still have a lot to learn. 
-
-*Why GitHub?*
-
-I prefered a git repository instead of a blog because I am a ferm beliver in commented code. I belive this format will facilitate the transfer of information a lot more easily than using JsBin, JSfiddle or whatever tool. Nothing beat using an actual IDE together with a command line and Node server instance. There will be lots of npm content for many of the examples. A GIT tutorial is actualy the fastest way to transfer code samples. Also this is an excelent platform for other developers to contribute their experience. Plus there are no pesky advertisments here :D
-
----
-
 </sub>
 
 ## Objectives of this course
@@ -199,3 +185,17 @@ If you wish to expand this course with additional information or samples of your
 - Each lesson tries to avoid going deep into detail, leaving this to be a decision made by the reader.
 - 20/80 principle. 20% of the knowledge is used 80% of the time. We want to document this 20% of knowledge so that readers become aware of the backbone sustaining all this profession skills and how it can be extended with additional study.
 - I really want that an ambitious person is able to read this course in 1 month and actually have a good feeling on how to start building his first app.
+
+---
+
+*THIS COURSE IS WORK IN PROGRESS*
+
+*I am open to suggestions, answering questions and accepting contributions*
+
+*This is work I do in my spare time, and it will take some effort until I finalize all the chapters. I am not a professional author and I cannot provide full coverage in all the topics. This is my own experience after years of work and I myself still have a lot to learn.* 
+
+*Why GitHub?*
+
+*I prefered a git repository instead of a blog because I am a ferm beliver in commented code. I belive this format will facilitate the transfer of information a lot more easily than using JsBin, JSfiddle or whatever tool. Nothing beat using an actual IDE together with a command line and Node server instance. There will be lots of npm content for many of the examples. A GIT tutorial is actualy the fastest way to transfer code samples. Also this is an excelent platform for other developers to contribute their experience. Plus there are no pesky advertisments here :D*
+
+---
