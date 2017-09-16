@@ -82,8 +82,8 @@ So let's put the safety googles, power-up the electric grinder and let's break t
 
 | Chapter | Description |
 | --- | --- | --- |
-| **01 - Basic Html** | Learn the basic tools and materials used in constructing the structure of a webpage. Html is the scaffolding onto which webapps are built. |
-| **02 - Tools and Software** | Learn what are the most common used tools in web app development and understand their purpose. |
+| 01 - Basic Html | Learn the basic tools and materials used in constructing the structure of a webpage. Html is the scaffolding onto which webapps are built. |
+| 02 - Tools and Software | Learn what are the most common used tools in web app development and understand their purpose. |
 
 | **03 - Basic Javascript** | If html is the skeletton, javascript is the brain and muscles of a webapp. Learn the basic ingredients necessary to write code. |
 | **04 - Object Oriented Javascript** | After learning how to utilise the basic ingredients you will start writting long scripts. But after a while you hit a wall. Somehow you need to organize your code so that it has a recognisible structure. This is where OOP comes in. |
