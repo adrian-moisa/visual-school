@@ -74,6 +74,12 @@ So let's put the safety googles, power-up the electric grinder and let's break t
 
 ## Index
 
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
+
 | Chapter | Description |
 | --- | --- | --- |
 | **01 - Basic Html** | Learn the basic tools and materials used in constructing the structure of a webpage. Html is the scaffolding onto which webapps are built. |
