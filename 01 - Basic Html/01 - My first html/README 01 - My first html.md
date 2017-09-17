@@ -1,5 +1,5 @@
 # Learning the basics of HTML
-**Work in progress - More informations will be added. Images for showcasing the explained concepts and code samples coming soon**
+*This is it, first lesson. Let me know if you liked it [twitter.com/adriancmoisa](https://twitter.com/adriancmoisa)*<br>
 
 ## What is HTML
 Html is a format used to write web documents (web pages). The name stands for Hyper Text Markup Language. Hyper means it's more advanced than normal text. Markup means a system of notations used to enrich the way text looks. Think of Word editor but instead of using the user interface to modify text appearance you use special text notations.
@@ -21,16 +21,16 @@ Html by itself it is a very simple language. All elements are displayed in a lin
 
 The main unit in HTML is the tag. These have many types and also can be custumised using attributes. For example setting the height of an image.
 
-Tag section | Description
+Html tag | Description
 --- | ---
-**Paragraphs** | `<p>Text</p>` They allow splitting of text like in traditional print media, delimiting blocks of text. Some default spacing is applied to skip this effort for the user.
-**Images** | `<img src="..."></img>` Well, this is obvious.
-**Links** | `<a href="..."></a>` Indicators that can point to another document (or even another section)
-**Lists** | `<ul><li>Item 1</li> ... </ul>` Bullet lists are very often used in webpages.
-**Dividers** | `<div></div>` By far the most used element in web pages. They are extremely useful in grouping other elements together. They can be used to move content around in page as a group. Without these dividers most web pages would all look the same. A linear progression of text and images. Think of these dividers as containers wehere you can put stuff inside and than move it around. For example: On a products page, each of the products has a title, an image, a price and a link. What keeps these elements together in a nice box? A divider. Thus it is really easy to specify to the brwoser that only 4 products should appear per row by setting the divider width to 25%. `<div class="product" style="width:25%">`. Of course, styles should not be inline but this we will discuss in CSS section.
-**Tables** | `<table><tr><td>Content</td></tr></table>` They are most useful for displaying tabelar data. Rows and columns. In the early stages of the web these elements were abused by using them for grouping page elements together in order to obtain certain layouts. This created the problem of having hard to modify page layouts due to the rules that tables have build in. You cannot always fit and split elements between a fixed numeber of cells (rows and columns). Currently by far the best approach for this problem is to use dividers and to position them independently of each other.
-**Forms** | `<form></form>` Forms are used to enable the webpage to collect user data. Usually forms have multiple fields and a confirmation button. A recent trend is to build forms that save information autoamtically. But this is already requiring Javascript know-how. We will get there.
-**SVG** Standard Vector Graphics | `<svg></svg>` This is an element that has become more and more popular. It allows the creation of intricate and interactive graphics using lines and geometric shapes. There is a big difference betwenn raster and vector graphics but we will touch the subject later in next chapters.
+**Paragraphs**<br>`<p>Text</p>` |  They allow splitting of text like in traditional print media, delimiting blocks of text. Some default spacing is applied to skip this effort for the user.
+**Images**<br>`<img src="..."></img>` |  Well, this is obvious. 
+**Links**<br>`<a href="..."></a>` |  Indicators that can point to another document (or even another section)
+**Lists**<br>`<ul><li>Item 1</li> ... </ul>` |  Bullet lists are very often used in webpages.
+**Dividers**<br>`<div></div>` |  By far the most used element in web pages. They are extremely useful in grouping other elements together. They can be used to move content around in page as a group. Without these dividers most web pages would all look the same. A linear progression of text and images. Think of these dividers as containers wehere you can put stuff inside and than move it around. For example: On a products page, each of the products has a title, an image, a price and a link. What keeps these elements together in a nice box? A divider. Thus it is really easy to specify to the brwoser that only 4 products should appear per row by setting the divider width to 25%. `<div class="product" style="width:25%">`. Of course, styles should not be inline but this we will discuss in CSS section.
+**Tables**<br>`<table><tr><td>Content</td></tr></table>` |  They are most useful for displaying tabelar data. Rows and columns. In the early stages of the web these elements were abused by using them for grouping page elements together in order to obtain certain layouts. This created the problem of having hard to modify page layouts due to the rules that tables have build in. You cannot always fit and split elements between a fixed numeber of cells (rows and columns). Currently by far the best approach for this problem is to use dividers and to position them independently of each other.
+**Forms**<br>`<form></form>` |  Forms are used to enable the webpage to collect user data. Usually forms have multiple fields and a confirmation button. A recent trend is to build forms that save information autoamtically. But this is already requiring Javascript know-how. We will get there.
+**SVG**<br>Standard Vector Graphics<br>`<svg></svg>`|  This is an element that has become more and more popular. It allows the creation of intricate and interactive graphics using lines and geometric shapes. There is a big difference betwenn raster and vector graphics but we will touch the subject later in next chapters.
 ~~~~~~~~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~~~~~~~~~
 
 **REMEMBER There are many other elements and they tend to be really specialised for speciffic scenarios. An experienced developer will know countless more tags and their uses but this doesn't stop you from going ahead and building web apps while learning the details along the way.**
@@ -49,15 +49,24 @@ Feel free to search online for all of these element to find further details. As 
 - **Basic page** 
     - Create a HTML file named `index.html` which displays the text "This is my first html document" in a paragraph. 
     - Open this page in a browser. So far you don't need a server.
-    - Change the title of the page that is visible in the browser topbar. Use `<title>` tag in the `<head>` section. If zou don't have a head section add it now. 
+    - Change the title of the page that is visible in the browser topbar. Use `<title>` tag in the `<head>` section. If you don't have a head section add it now. 
 
             <html>
                 <head>
-                    <!-- This is a comment tag. Comment tags are useful for leaving notes behind explaining the purpose of the code. I strongly advise leaving comments behind. Your human memory is prone to forget the exact details so you will do yourself a service by explaining WHY you did something in the code -->
-                    <!-- This section contains the so called metadata of a page, data that is intended for the browser, not for the user. This is were tipically you will find links to external styleseets or to scripts. Some specialised tags can often be seen here but right now zou don't need to know them. Let's keep it simple and fun. -->
+                    <!-- This is a comment tag. Comment tags are useful for leaving notes behind 
+                    explaining the purpose of the code. I strongly advise leaving comments behind. 
+                    Your human memory is prone to forget the exact details so you will do yourself 
+                    a service by explaining WHY you did something in the code -->
+                    <!-- This section contains the so called metadata of a page. 
+                    This data that is intended for the browser, not for the user. 
+                    This is were tipically you will find links to external styleseets or to scripts. 
+                    Some specialised tags can often be seen here but right now you don't need to know them. 
+                    Let's keep it simple and fun. -->
                 </head>
                 <body>
-                    <!-- This is where we display the content of the page. Everything that is placed here will be displayed in the page. Of course, except comments or commented code -->
+                    <!-- This is where we display the content of the page. 
+                    Everything that is placed here will be displayed in the page. 
+                    Of course, except comments or commented code -->
                     <!-- <div>This div is not going to show up</div> -->
                 </body>
             </html>
@@ -89,7 +98,7 @@ Feel free to search online for all of these element to find further details. As 
     - Create a new file and add two dividers. Set 20% and 80% widths using inline style attribute. Add some text in each of these divs.
     - Now lets learn a new trick. Add `styles="float: left"` attribute to both divs. Voila, your first layout. Floating elements are a staple of web design. In time you will learn to master them. Right now let's just note that this is possible. In CSS section we learn more about how. 
 
-Now you have a basic understanding of HTML. From here on we will build from this knowledge litle by litle by repetition. There is no need right now to learn more HTML. It wont help you right now. For exampel I havent mention about `<video>` and `<audio>` tags because most projects don't use them. Now the next step is to learn how HTML and CSS can work together.
+Now you have a basic understanding of HTML. From here on we will build from this knowledge litle by litle by repetition. There is no need right now to learn more HTML. It wont help you right now. For exampel I havent mention about `<video>` and `<audio>` tags because most projects don't use them. Now the next step is to learn how HTML and CSS can work together. Before going further, if you have been working on the tasks and not just reading the samples now it's time to compare notes.
 
 *If you insist on knowing them all go ahead and binge. I'm not going to ruin your fun but I'll let you know that this course is going to take more than 4 weeks :D
 https://www.w3schools.com/tags/default.asp*
@@ -123,9 +132,16 @@ https://www.w3schools.com/tags/default.asp*
 When looking online for tutorials and articles, check the date of the article. If it is written in the last 1 or 2 years it is very likely to have up to date information. This is really important for frontend development. Technology evolves at a rapid pace and it's best to stay up to date with the latest.
 
 **PRO TIP 2**
-Very often I have to figure out if something is used by many other people and thus if it is popular. Two ways to achieve this are: 
-    - Looking for number of results in a search engine after the specific technology.
-    - Using google.trends tool to aproximate if the popularity is increasing or decreasing.
+Very often I have to figure out if something is used by many other people and thus if it is popular. There are several ways to achieve this: 
+    - Looking for number of results in a search engine.
+    - Using google trends tool to aproximate if the popularity is increasing or decreasing.
+    - Looking on stackoverflow for the number of questions about this subject.
+    - Looking on github for the number of stars that a library has.
+    - Looking on npm for the number of monthly downloads. Popular libraries tend to have huge numbers.
+    - Using a google chrome plugin named Alexa traffic rank I can evaluate if the hompeage of the project is really popular.
+    - Sometimes even a facebook page or a reddit group can give me a hint if it has many likes or upvotes. But this is rarely happening.
+
+Well, of course searching for popular stuff might have it's drawbacks, you are not going to learn about the emerging technologies until they have been adopted in mass. But for a beginer it's best to stick with the flock. The more popular a subject is the easier is to find support and tutorials online.
 
 ## More subjects
 *Learn more than the basics*
@@ -138,8 +154,10 @@ Advanced Subject | Description
 **Adaptive design** | is a trend that has reaced maturity in the modern web. This is one of the main requirements from a project. This means that the same layout is able to render nice on multiple screen sizes from huge tvs to small smartphones.
 **HTML validators** | have been for a long time a popular tool for checking the integrity and quality of the HTML documents. Nowadays they are built in the editors that are commonly used to write web apps. So expect to see warnings when your code is not valid.
 **Psd 2 HTML** | this is the name of the process of taking a design document and creating the HTML specified in the design. Design are usually generated with a graphichs software solution such as Photoshop, Illustrator or Gimp. Over the years this process became more an more specialised. 
-**SEO** Search Engine Optimisation | This is a difficult subject to master. There are entire companies are built only for this purpose. My simple approach is to follow the google mantra: **Write content for humans**. In simple words this means writting content that a human can easily comprehend, is well defined and structured. Uses bullet lists, bold, itals, emphasys and various other text markup. All the images and links should provide alternative descriptions and titles. The content has links towards websites that are closely related to the content subject. The content has keywords that are varied but yet stay in the same domain reinforcing the probability that certain content will be shown for certain search queries. For example this whole page discussing the topic of HTML should be a preety good mix for google search engine to deliver it on top of the result pages for queries related to learning html. But this is already enough said. I won't touch SEO too much because web apps in general they tend to care less about SEO. Of course, there are web apps that are absolutely going to need SEO to help the content reach the target public.
+**SEO**<br>Search Engine Optimisation | This is a difficult subject to master. There are entire companies are built only for this purpose. My simple approach is to follow the google mantra: **Write content for humans**. In simple words this means writting content that a human can easily comprehend, is well defined and structured. Uses bullet lists, bold, itals, emphasys and various other text markup. All the images and links should provide alternative descriptions and titles. The content has links towards websites that are closely related to the content subject. The content has keywords that are varied but yet stay in the same domain reinforcing the probability that certain content will be shown for certain search queries. For example this whole page discussing the topic of HTML should be a preety good mix for google search engine to deliver it on top of the result pages for queries related to learning html. But this is already enough said. I won't touch SEO too much because web apps in general they tend to care less about SEO. Of course, there are web apps that are absolutely going to need SEO to help the content reach the target public.
 **DOM is not the only way to structure content** | There are many other formats out there used to structure content. Android and iOs have theyr own languages built for this task in native aps. Windows applications also have theyr own way of handling view structure. Here we are focusing on web apps structure, and this is maintained using HTML. 
+**URL**<br>Unique Resource Locator | If you opened a webpage by now you have learned about the website address or URL. This structure is quite sophisticated. Some of the urls might look really strange because no whitespace is allowed so they use `%20` to denote whitespace. Usually they have this composition: **Protocol** `https://` **Domain** `github` **Top level domain** `.com` **Website route** `/adrian-moisa/visual-school`.<ul><li>Protocol is defining how the browser and server are supposed to exchange information. In this case it means that the connection will be secure.</li><li>The domain is the name of the website.</li><li>The top level domain is an umbrela category usually containing all the websites in a country. But there are many other TLDs.</li><li>The route is the part of the url that explains how to reach a certain document from this specific server. Similar to how My Computer has partitions and folders.</li></ul>I have skipped URL params for a later discussion. Right now this should give you a feelin of what are URLs.
+**No clear boundries between HTML CSS JS** | In the beginning it will be really confusing to see HTML mixed with CSS and even Javascript. It is really confusing to learn about this subject if you can't really identify which is which. The truth is that HTML alone has little use in modern websites. No modern page would have attractive design without CSS and Javascript. If you want to see how a raw HTML looks like visit some of the original webpages from the 90's such as: [A history of HTML](https://www.w3.org/People/Raggett/book4/ch02.html). Press `Ctrl+U` to access the source of the page and you will see plain old html. Nothing special.
  ~~~~~~~~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~~~~~~~~~
 
 **Common mistakes** 
@@ -157,10 +175,12 @@ Mistake | Description
 - An excelent book on the subject of designing the layout of webpages "Don't make me think" https://www.amazon.com/Dont-Make-Me-Think-Usability/dp/0321344758
 
 # REMEMBER
-*Do not forget these tags. This is the bread and butter of the web. Learn them and master them in time*
+*Do not forget these tags. This is the bread and butter of the web. Learn them and master them in time!*
 
       <html>
       <header>
+      <style>
+      <script>
       <body>
       <div>
       <p>
@@ -168,9 +188,8 @@ Mistake | Description
       <ul>
       <li>
       <img>
-      <style>
-      <script>
       <form>
+      <table>
       <svg>
 
 

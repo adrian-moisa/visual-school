@@ -1,6 +1,8 @@
-# Visual School
-How to learn programming *fast*
+# Visual School - Learn how to build Web Apps in 4 weeks
+How to learn programming *really fast*
 
+- *Stay up to date, follow me on twitter [twitter.com/adriancmoisa](https://twitter.com/adriancmoisa)*
+- *Skip the intro go straight to lesson [01 - My first html tags](https://github.com/adrian-moisa/visual-school/blob/master/01%20-%20Basic%20Html/01%20-%20My%20first%20html/README%2001%20-%20My%20first%20html.md)*
 
 ## Objectives of this course
 - Learn the **essentials** of **programming for the web** in less than **4 weeks**.
@@ -74,6 +76,7 @@ Unfortunately this is not so easy said about programming. The tools are not visi
 My intention is to provide this map using a series revealing examples that will teach you the ins and outs of crafting software.
 
 So let's put the safety googles, power-up the electric grinder and let's break this black box open!
+**Feel free to reuse any of the sample code provided**
 
 ## Index
 
