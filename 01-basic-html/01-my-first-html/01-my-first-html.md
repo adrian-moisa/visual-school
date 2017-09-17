@@ -1,6 +1,10 @@
 # Learning the basics of HTML
 *This is it, first lesson. Let me know if you liked it [twitter.com/adriancmoisa](https://twitter.com/adriancmoisa)*
 
+
+[Home](https://github.com/adrian-moisa/visual-school)<br>
+[Basic Html / Basic css ->](https://github.com/adrian-moisa/visual-school/blob/master/01-basic-html/02-basic-css/02-basic-css.md)
+
 <br><br><br>
 ## What is HTML
 Html is a format used to write web documents (web pages). The name stands for Hyper Text Markup Language. Hyper means it's more advanced than normal text. Markup means a system of notations used to enrich the way text looks. Think of Word editor but instead of using the user interface to modify text appearance you use special text notations.
@@ -108,6 +112,7 @@ Now you have a basic understanding of HTML. From here on we will build from this
 *If you insist on knowing them all go ahead and binge. I'm not going to ruin your fun but I'll let you know that this course is going to take more than 4 weeks :D
 https://www.w3schools.com/tags/default.asp*
 
+<br><br><br>
 ## Real life situations
 - Very often the first task of a webdesigner is to create the **layout of an website**. Setting up the navigation menu, the sidebar and so on. This is an entire field of study by itself. But don't loose faith. There are also some **common desing patterns**. Searhc for "How to create a simple sidebar layout in HTML"
 - A lot of applications have listings of tabular data. Quite often this is done to show for example the users in a system and some details about them. Or a list of ordered products. An so on.

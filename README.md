@@ -2,8 +2,8 @@
 How to learn programming *really fast*
 
 - *Stay up to date, follow me on twitter [twitter.com/adriancmoisa](https://twitter.com/adriancmoisa)*
-- *Skip the intro go straight to lesson [01 - My first html tags](https://github.com/adrian-moisa/visual-school/blob/master/01%20-%20Basic%20Html/01%20-%20My%20first%20html/README%2001%20-%20My%20first%20html.md)*
-https://github.com/adrian-moisa/visual-school/tree/master/01-basic-html/01-my-first-html
+- *Skip the intro go straight to lesson [01 - My first html tags](https://github.com/adrian-moisa/visual-school/tree/master/01-basic-html/01-my-first-html)*
+
 
 <br><br><br>
 ## Showcased technologies
@@ -110,7 +110,7 @@ So let's put the safety googles, power-up the electric grinder and let's break t
 ## Index
 Chapter | Description
 --- | ---
-**01 - Basic Html** | Learn the basic tools and materials used in constructing the structure of a webpage. Html is the scaffolding onto which webapps are built.
+**01 - [Basic Html](https://github.com/adrian-moisa/visual-school/tree/master/01-basic-html)** | Learn the basic tools and materials used in constructing the structure of a webpage. Html is the scaffolding onto which webapps are built.
 **02 - Tools and Software** | Learn what are the most common used tools in web app development and understand their purpose.
 **03 - Basic Javascript** | If html is the skeletton, javascript is the brain and muscles of a webapp. Learn the basic ingredients necessary to write code.
 **04 - Object Oriented Javascript** | After learning how to utilise the basic ingredients you will start writting long scripts. But after a while you hit a wall. Somehow you need to organize your code so that it has a recognisible structure. This is where OOP comes in.

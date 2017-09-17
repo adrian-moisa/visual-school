@@ -27,7 +27,7 @@ Normal text indicates existing material<br>
 		- **Autoclose tags plugin**
 	- **Using shortcuts, working fast, fast techniques of editing in page**
 	- **Using ctrl space for path autocomplete**
-	- **intelisense, Auto select from import. Prevents typos**
+	- **Intelisense, Auto select from import. Prevents typos**
 	- **Highlight word at caret**
 	- **How much time I gain from these**
 	- **Too many open tabs, reset navigation ocasionaly**
@@ -101,12 +101,12 @@ Normal text indicates existing material<br>
 - **Inspecting objects**
 - **Problems with OOP**
 
-## 05 - **Functional programming
+## 05 - **Functional programming**
 - **Pure functions**
 - **Side effects**
 - **Goals of this style**
 
-## 06 - **Production environment
+## 06 - **Production environment**
 - **Big projects**
 - **IDE tools**
 - **Environments**
@@ -118,14 +118,14 @@ Normal text indicates existing material<br>
 - **Basic folder structure**
 - **Advanced folder structure switch**
 
-## 07 - **Ecmascript 6
+## 07 - **Ecmascript 6**
 - **Es modules**
 - **Es classes**
 - **Spread operator**
 - **Lamba function**
 - **Web workers**
 
-## 08 - **Asynchronous Javascript
+## 08 - **Asynchronous Javascript**
 - **What is async?**
 - **XML, JSON**
 	- **Why doesnt json have comments**
@@ -141,7 +141,7 @@ Normal text indicates existing material<br>
 - **Basics Webapi**
 	- **REST principles**
 
-## 09 - **Frameworks
+## 09 - **Frameworks**
 - **JS fatigue, The search for latest tech**
 - **jQuery**
 - **Basic templates with moustache**
