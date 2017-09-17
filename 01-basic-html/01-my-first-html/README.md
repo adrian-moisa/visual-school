@@ -110,6 +110,8 @@ Feel free to search online for all of these element to find further details. As 
 Now you have a basic understanding of HTML. From here on we will build from this knowledge litle by litle by repetition. There is no need right now to learn more HTML. It wont help you right now. For example I havent mention about `<video>` and `<audio>` tags because most projects don't use them. Now the next step is to learn how HTML and CSS can work together. Before going further, if you have been working on the tasks and not just reading the samples now it's time to compare notes.
 [Basic html samples](https://github.com/adrian-moisa/visual-school/blob/master/01-basic-html/01-my-first-html/01-first-html-tags/index.html)
 
+**A reminder, this content is best viewed if downloaded in local computer. This way you can open the index.html in the browser. On the other hand it's better to read the tutorials on github because it parses the md files. I want to keep this tutorial as close to the real developer setup so this is the way to go forward.**
+
 *If you insist on knowing them all go ahead and binge. I'm not going to ruin your fun but I'll let you know that this course is going to take more than 4 weeks :D
 https://www.w3schools.com/tags/default.asp*
 
