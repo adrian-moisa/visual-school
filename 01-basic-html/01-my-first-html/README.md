@@ -108,6 +108,7 @@ Feel free to search online for all of these element to find further details. As 
     - Now lets learn a new trick. Add `styles="float: left"` attribute to both divs. Voila, your first layout. Floating elements are a staple of web design. In time you will learn to master them. Right now let's just note that this is possible. In CSS section we learn more about how. 
 
 Now you have a basic understanding of HTML. From here on we will build from this knowledge litle by litle by repetition. There is no need right now to learn more HTML. It wont help you right now. For example I havent mention about `<video>` and `<audio>` tags because most projects don't use them. Now the next step is to learn how HTML and CSS can work together. Before going further, if you have been working on the tasks and not just reading the samples now it's time to compare notes.
+[Basic html samples](https://github.com/adrian-moisa/visual-school/blob/master/01-basic-html/01-my-first-html/01-first-html-tags/index.html)
 
 *If you insist on knowing them all go ahead and binge. I'm not going to ruin your fun but I'll let you know that this course is going to take more than 4 weeks :D
 https://www.w3schools.com/tags/default.asp*
