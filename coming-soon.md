@@ -8,6 +8,7 @@ Normal text indicates existing material<br>
 ## 01 - Basic Html
 - [01 - My first HTML](https://github.com/adrian-moisa/visual-school/tree/master/01-basic-html/01-my-first-html)
 	- [First html tags example](https://github.com/adrian-moisa/visual-school/tree/master/01-basic-html/01-my-first-html/01-first-html-tags)
+		- **Html entities**
 	- [Basic page layout](https://github.com/adrian-moisa/visual-school/tree/master/01-basic-html/01-my-first-html/02-basic-page-layout)
 - **[02 - Basic CSS](https://github.com/adrian-moisa/visual-school/blob/master/01-basic-html/02-basic-css)**
 	- **Naming styles conventions, needs, short names, meaningfull, css naming**
@@ -93,6 +94,7 @@ Normal text indicates existing material<br>
 	- **Data table**
 	- **Datepicker**
 	- **TinyMCE**
+- **Coffeescript**
 
 ## 04 - **Object Oriented Javascript**
 - **Objects**

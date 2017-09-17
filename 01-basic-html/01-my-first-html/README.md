@@ -1,4 +1,5 @@
-# Learning the basics of HTML
+# My first HTML
+*Learn the basics of HTML*<br>
 *This is it, first lesson. Let me know if you liked it [twitter.com/adriancmoisa](https://twitter.com/adriancmoisa)*
 
 [Home](https://github.com/adrian-moisa/visual-school)<br>

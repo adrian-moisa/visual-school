@@ -13,7 +13,7 @@ How to learn programming *really fast*
 - Javascript ES6
 - Typescript
 - Webpack
-- jQuery - not too much, just enough ot get a grip
+- jQuery - not too much, just enough to get a grip
 - React - main course 
 - Angular 2 - some lessons so you understand both of them
 - Redux - main course
