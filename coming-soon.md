@@ -14,7 +14,7 @@ Normal text indicates existing material<br>
 	Hex notations, RGBA, Inline styles.
 - **[03 - Jpg, Png, Svg, Gif, Bitmap](https://github.com/adrian-moisa/visual-school/blob/master/01-basic-html/03-jpg-png-svg-gif-bitmap)**
 
-##02 - **Tools and Software**
+##02 - **Tools and Software** 
 - **Browsers. headless browsers**
 	- **Caching issues**
 	- **Inspector panel, explain all tabs**

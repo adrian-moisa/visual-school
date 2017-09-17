@@ -57,11 +57,11 @@ This is possible by consolidating two main skills: **spatial awareness** knowing
 
 You can skip chapters or lessons if you feel so. I totally recommend it, enjoy the freedom in your own pace. Maybe you want to check something fresh or you are already ready to jump into your first real project. Consider this as the place where you can return for directions if you feel lost out there.
 
-<br><br><br>
+<br><br><br> 
 ## Method of teaching
 This course is carefully crafted to emulate the typical learning cycle of most frontend developers. This usually implies:
 
-- Formulating a **description** of the problem using standard programming jargon
+- Formulating a **description** of the problem using standard programming jargon.
 - **Searching** online for information. Links will be provided for quick orientation.
 - Evaluating multiple **solutions** to find which one is better suited for solving the current problem.
 - Applying the **fix** in a real life scenario.
