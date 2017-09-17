@@ -43,23 +43,26 @@ This course is carefully crafted to emulate the typical learning cycle of most f
 
 This is standard practice in Frontend development due to the rapid technology cycle and the abundance of tutorials. Even today I do not know by heart the syntax used to load an external CSS style. Each time I have to look it up again. Why? Because It happens so rarely and there are so many other notions that I have to remember. My brain simple refuses to register this syntax unles I start using it often. However I am acutely aware of all the implications of loading an external stylesheet. I can talk for an extended period about the various nuances of this subject. This comes from long exposure to a lot of projects. 
 
-**This is where the next step comes in REPETITION BY WORK. Building new software you are very often expose to the same names over and over again. This is the point where things that you learned stick for ever.** 
+**This is where the next step comes in: REPETITION BY WORK. Building new software you are very often exposed to the same names over and over again. This is the point where things that you learned stick for ever.** 
 
-So this is my deal: I give you the map and orientation indications, after finishing this 101 class it's up to you to consolidate what you have learned by aplying it to your own project. Doing exercises might be fun, but the real fun is building actual software :D
+So this is my deal: I give you the map and orientation indications. After finishing this 101 class it's up to you to consolidate what you have learned by aplying it to your own project. Doing exercises might be fun, but the real fun is building actual software :D
 
 ## How the content is structured
-I tried to isolate the main disciplines required for web development. Each one of these disciplines has a folder with a number and a name. Inside each of these folders you will find lessons designed to be finished in one day (arround 4 to 8 hours). Each individual lesson will have the following sections:
+I tried to isolate the main disciplines required for web development. Each one of these disciplines has a folder with a chapter number and a chapter name. Inside each of these folders you will find lessons designed to be finished in one day (arround 4 to 8 hours). Each individual lesson will have the following sections:
 
-- **What is X** - Basic description of the technology or technique.
-- **Why was it created** - What needs were satisfied by utilising this technology.
-- **What can it do** - The big overview. Each of these chapters can be drilled down in 500 pages books. What I want to explain is the big picture. The overview, how everything fits together. This way I give you the power of deciding what to study and when is this study required to unlock new skills.
-- **Why it matters** - How does this technology help you build web applications. What are the benefits of using it.
-- **Tasks** - These are tasks designed to quickly showcase the behavior of the presented tehcniques. You will also find explanations of how a particular task can be useful in real world. In order to increase the change of the brain to actually asymilate the information I will leave a bit of room for intepretation for these tasks. They have an objective but it is not strictly stated how to obtain the end result. This is where you enter in *developer mode* and try to find the solution to the problem. This is the most potent process in fixing information in the long term memory. And also the most fun one. If you feel a task might not be intereseting, just skip ahead.
-- **Real life situations** - These examples are designed to give you a succint presentation of the common ways these techniques can be used to achieve certain real life goals. This is the part that is lacking in other materials the most. You learn one example of a technique and one applied situation, but you are totally unaware of the many possibilities that are available. This is usually compensated by years of work and seeing samples of code from other projects. I'll try to provide as many examples as possible. In time I will keep adding examples as I recall them myself.
-- **Search for** - These are examples of search queries I used over the years in order to find out new information. These will be really useful in fixing the technical jargon in place. It's hard to find solutions if you don't use the proper terms to describe them.
-- **More** - In case you are really keen on digging deeper in a specific subject, these will be references to more advanced subjects.
-- **Links** - In most cases I will provide links to more detailed articles that explain the subject in more detailed manner while also keeping the learning curve low.
-- **Remember** Instead of you keeping notes I will keep them for you. No, really! Stop wasting time, go and have some fun. Information is always at search result away. Enjoy the extra time!
+Lesson section | Description
+--- | ---
+**What is X** | Basic description of the technology or technique.
+**Why was it created** | What needs were satisfied by utilising this technology.
+**What can it do** | The big overview. Each of these chapters can be drilled down in 500 pages books. What I want to explain is the big picture. The overview, how everything fits together. This way I give you the power of deciding what to study and when is this study required to unlock new skills.
+**Why it matters** | How does this technology help you build web applications. What are the benefits of using it.
+**Tasks** | These are tasks designed to quickly showcase the behavior of the presented tehcniques. You will also find explanations of how a particular task can be useful in real world. In order to increase the chance that the brain will actually asimilate the information I will leave a bit of room for interpretation for these tasks. They have an objective but it is not strictly stated how to obtain the end result. This is where you enter in *developer mode* and try to find the solution to the problem. This is the most potent process in fixing information in the long term memory. And also the most fun one. If you feel a task might not be intereseting, just skip ahead. However the other part of the story is the *getting confirmation mode* so for this I will provide sampeles of code for all the tasks. *I challange you to solve the tasks yourslef* but if you are in a hurry I can live with this. I do it myself a lot of the time. I just go to samples, see it, memorise it and than fly away to the next lesson. But I think this is more likely to work if you have a solid foundation, meaning some expirience. it's up to you to make this choice.
+**Real life situations** | These examples are designed to give you a succint presentation of the common ways these techniques can be used to achieve certain real life goals. This is the part that is lacking in other materials the most. You learn one example of a technique and one applied situation, but you are totally unaware of the many possibilities that are available. This is usually compensated by years of work and seeing samples of code from other projects. I'll try to provide as many examples as possible. In time I will keep adding examples as I recall them myself.
+**Search for** | These are examples of search queries I used over the years in order to find out new information. These will be really useful in fixing the technical jargon in place. It's hard to find solutions if you don't use the proper terms to describe them.
+**More** | In case you are really keen on digging deeper in a specific subject, these will be references to more advanced subjects.
+**Links** | In most cases I will provide links to more detailed articles that explain the subject in more detailed manner while also keeping the learning curve low.
+**Remember** | Instead of you keeping notes I will keep them for you. No, really! Stop wasting time, go and have some fun. Information is always at search result away. Enjoy the extra time!
+~~~~~~~~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~~~~~~~~~
  
 ## Support material and examples
 The material that will be provided is minimalistic in nature. It is inteded to be used as a notebook full of valuable notes. The actual knowledge will be a lot of times out there, on the web, waiting to be discovered. So let's call this for what it is: **a roadmap**. A carefuly constructed one, capable of guiding you trough the journey of learning via the **fastest route**.
@@ -74,29 +77,29 @@ So let's put the safety googles, power-up the electric grinder and let's break t
 
 ## Index
 
-| Chapter | Description |
-| --- | --- |
-| **01 - Basic Html** | Learn the basic tools and materials used in constructing the structure of a webpage. Html is the scaffolding onto which webapps are built. |
-| **02 - Tools and Software** | Learn what are the most common used tools in web app development and understand their purpose. |
-| **03 - Basic Javascript** | If html is the skeletton, javascript is the brain and muscles of a webapp. Learn the basic ingredients necessary to write code. |
-| **04 - Object Oriented Javascript** | After learning how to utilise the basic ingredients you will start writting long scripts. But after a while you hit a wall. Somehow you need to organize your code so that it has a recognisible structure. This is where OOP comes in. |
-| **05 - Functional programming** | Well, OOP is nice and it gives code structure, but abusing OOP can lead to even worse problems. Logic mixed together with data so tight that it cannot be untangled anymore... meaning spaghetti code. This is were pure functions help you to maintain sanity. |
-| **06 - Production environment** | Ok so now you know how to keep your code nice and clean avoiding to build a labyrinth. But this needs to run on real servers with real users... |
-| **07 - Ecmascript 6** | Javascript is always evolving and the latest version is by far the best. Learn what makes it so special and how it saves development time. |
-| **08 - Asynchronous Javascript** | This is usually were the brain starts melting. The order of code execution is mixed by network traffic, and it starts jumping from on place to another almost feeling like it has no clear path. Well, there are ways to keep this under control :D |
-| **09 - Frameworks** | Programming can become tedious and repetitive. Frameworks take the repetitive parts out of the process. You get to spend your energy on the code that is making your app unique. |
-| **10 - Architecture patterns** | After a while some patterns emerge. The same solutions keep reoccuring. These have been studied and labeled by experienced developers. Patterns can be highly reusable for lots of situations, saving time and effort. |
-| **11 - Web graphics (2D, 3D)** | Today, user inderfaces have to work hard to stand out as inovative and interesting. Taking advantage of interactive graphics is a must. |
-| **12 - User experience** | Let's not forget for who we are building this for. In the end the user is your judge. No matter what you believe, he will have the power of life or death over your app. |
-| **13 - Server apps** | Current generation of frontend apps are almost standalone apps. But they still need databases and access points and help when computation becomes intensive. |
-| **14 - Development process** | Let's do a quck review on how all of this fits together with the clients needs and real life chalanges such as paying salaries. |
-| **15 - Working as a developer** | What can you expect from your new career as a developer. |
-| **16 - Building a real app** | This is where the rubber hits the road. Now you are ready to actually build something useful for other people. |
-| **17 - Security** | We are more and more reliant on the technology that powers the web. That leaves us exposed to malicious agents unless we take steps to protect our data.  |
-| **18 - Performance** | After all, electricity costs money, so you want to use it wisely. That includes also how eficient yor code runs, not to mention that nothing makes an user more angry than a sluggish UI. |
-| **19 - Game development** | Learn what makes games work. These techniques can improve your presentational skills to PRO level. VR is the future and you need to understand it. |
-| **20 - Visual Space** | The next generation of web interfaces will be powered by strong UI with a touch of AI and 3D graphics. This is as close as we can get to the holodeck here in 2017. |
-| ~~~~~~~~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~~~~~~~~~ |
+Chapter | Description
+--- | ---
+**01 - Basic Html** | Learn the basic tools and materials used in constructing the structure of a webpage. Html is the scaffolding onto which webapps are built.
+**02 - Tools and Software** | Learn what are the most common used tools in web app development and understand their purpose.
+**03 - Basic Javascript** | If html is the skeletton, javascript is the brain and muscles of a webapp. Learn the basic ingredients necessary to write code.
+**04 - Object Oriented Javascript** | After learning how to utilise the basic ingredients you will start writting long scripts. But after a while you hit a wall. Somehow you need to organize your code so that it has a recognisible structure. This is where OOP comes in.
+**05 - Functional programming** | Well, OOP is nice and it gives code structure, but abusing OOP can lead to even worse problems. Logic mixed together with data so tight that it cannot be untangled anymore... meaning spaghetti code. This is were pure functions help you to maintain sanity.
+**06 - Production environment** | Ok so now you know how to keep your code nice and clean avoiding to build a labyrinth. But this needs to run on real servers with real users...
+**07 - Ecmascript 6** | Javascript is always evolving and the latest version is by far the best. Learn what makes it so special and how it saves development time.
+**08 - Asynchronous Javascript** | This is usually were the brain starts melting. The order of code execution is mixed by network traffic, and it starts jumping from on place to another almost feeling like it has no clear path. Well, there are ways to keep this under control :D
+**09 - Frameworks** | Programming can become tedious and repetitive. Frameworks take the repetitive parts out of the process. You get to spend your energy on the code that is making your app unique.
+**10 - Architecture patterns** | After a while some patterns emerge. The same solutions keep reoccuring. These have been studied and labeled by experienced developers. Patterns can be highly reusable for lots of situations, saving time and effort.
+**11 - Web graphics (2D, 3D)** | Today, user inderfaces have to work hard to stand out as inovative and interesting. Taking advantage of interactive graphics is a must.
+**12 - User experience** | Let's not forget for who we are building this for. In the end the user is your judge. No matter what you believe, he will have the power of life or death over your app.
+**13 - Server apps** | Current generation of frontend apps are almost standalone apps. But they still need databases and access points and help when computation becomes intensive.
+**14 - Development process** | Let's do a quck review on how all of this fits together with the clients needs and real life chalanges such as paying salaries.
+**15 - Working as a developer** | What can you expect from your new career as a developer.
+**16 - Building a real app** | This is where the rubber hits the road. Now you are ready to actually build something useful for other people.
+**17 - Security** | We are more and more reliant on the technology that powers the web. That leaves us exposed to malicious agents unless we take steps to protect our data.
+**18 - Performance** | After all, electricity costs money, so you want to use it wisely. That includes also how eficient yor code runs, not to mention that nothing makes an user more angry than a sluggish UI.
+**19 - Game development** | Learn what makes games work. These techniques can improve your presentational skills to PRO level. VR is the future and you need to understand it.
+**20 - Visual Space** | The next generation of web interfaces will be powered by strong UI with a touch of AI and 3D graphics. This is as close as we can get to the holodeck here in 2017.
+~~~~~~~~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~~~~~~~~~
 
 **A few notes**
 - This document will be constantly updated with the latest techniques in javascript.
