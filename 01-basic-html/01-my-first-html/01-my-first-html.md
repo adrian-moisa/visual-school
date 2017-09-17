@@ -71,17 +71,17 @@ Feel free to search online for all of these element to find further details. As 
                 </body>
             </html>
 
-- **How to write text** - 
+- **How to write text**
     - Now add a few paragraphs `<p>`. Don't know what to write? Use faux text http://lipsum.com/. It will keep you focused on the task instead of the content. 
     - Now add even more paragraphs by copy/paste. Soon you will see the browser scrollbar.
     - Try separating half of the pargraphs using `<hr>` tag. I know this is a new one, I never said it's one of the most used tags but that's how you get to learn HTML. Bit by bit.
     - Also try adding some distance between two paragraphs by using `<br/>` tag. Notice taht both `<hr>` and  `<br/>` Don't have pairs. This is an exception. Most tags have pairs.
     - Add a few headings `<h2>` between paragraphs to simulate a real article with text sections.
-- **Images** - 
+- **Images**
     - Add a few images saved on your own computer. Anything will do, use https://9gag.com/ for nice memes. 
     - Also add an image using an online address. Grab an image url from any existing website. Some of them might have protection against mirroring. 
     - Set the with of the image to 100%. Notice that the aspect ratio stays the same.
-- **Simple list** - 
+- **Simple list**
     - Add a list of notes using bullets. Just write your wishes for this year. 
     - Also try making an ordered list with numbers using `<ol>` tag.
     - Instead of text try using images to see what happens.
@@ -113,6 +113,7 @@ https://www.w3schools.com/tags/default.asp*
 - Avoid long blocks of text. This is going to be repulsive for any visitor. Notice the way I used headings, subheadings, bullet lists, links, images (not yed :D ) and tables to keep the content looking interesting.
 
 ## Search for
+*Reading other sources always helps to piece together to puzzle*
 - What is HTML
 - How is HTML loaded
 - Why is HTML important
@@ -121,12 +122,20 @@ https://www.w3schools.com/tags/default.asp*
 - What is index.html
 - How to make an image stretch
 - When was HTML invented
+
+## Search for (advanced)
+*These are optional searches for advanced students*
+*Come back later if you don't wish to spend time right now*
 - What does parsing HTML mean https://stackoverflow.com/questions/39242280/what-parsing-the-page-means
 - What is an iframe
 - Is iframe still used
 - F shape reading pattern
 - Click heatmap
 - Image aspect ratio
+- Url naming conventions
+- What is DNS
+- How do you register a domain
+- Why domains cost money
 
 **PRO TIP**
 When looking online for tutorials and articles, check the date of the article. If it is written in the last 1 or 2 years it is very likely to have up to date information. This is really important for frontend development. Technology evolves at a rapid pace and it's best to stay up to date with the latest.
@@ -145,6 +154,7 @@ Well, of course searching for popular stuff might have it's drawbacks, you are n
 
 ## More subjects
 *Learn more than the basics*
+*Come back later if you don't wish to spend time right now*
 
 Advanced Subject | Description
 --- | ---
@@ -156,7 +166,7 @@ Advanced Subject | Description
 **Psd 2 HTML** | this is the name of the process of taking a design document and creating the HTML specified in the design. Design are usually generated with a graphichs software solution such as Photoshop, Illustrator or Gimp. Over the years this process became more an more specialised. 
 **SEO**<br>Search Engine Optimisation | This is a difficult subject to master. There are entire companies are built only for this purpose. My simple approach is to follow the google mantra: **Write content for humans**. In simple words this means writting content that a human can easily comprehend, is well defined and structured. Uses bullet lists, bold, itals, emphasys and various other text markup. All the images and links should provide alternative descriptions and titles. The content has links towards websites that are closely related to the content subject. The content has keywords that are varied but yet stay in the same domain reinforcing the probability that certain content will be shown for certain search queries. For example this whole page discussing the topic of HTML should be a preety good mix for google search engine to deliver it on top of the result pages for queries related to learning html. But this is already enough said. I won't touch SEO too much because web apps in general they tend to care less about SEO. Of course, there are web apps that are absolutely going to need SEO to help the content reach the target public.
 **DOM is not the only way to structure content** | There are many other formats out there used to structure content. Android and iOs have theyr own languages built for this task in native aps. Windows applications also have theyr own way of handling view structure. Here we are focusing on web apps structure, and this is maintained using HTML. 
-**URL**<br>Unique Resource Locator | If you opened a webpage by now you have learned about the website address or URL. This structure is quite sophisticated. Some of the urls might look really strange because no whitespace is allowed so they use `%20` to denote whitespace. Usually they have this composition: **Protocol** `https://` **Domain** `github` **Top level domain** `.com` **Website route** `/adrian-moisa/visual-school`.<ul><li>Protocol is defining how the browser and server are supposed to exchange information. In this case it means that the connection will be secure.</li><li>The domain is the name of the website.</li><li>The top level domain is an umbrela category usually containing all the websites in a country. But there are many other TLDs.</li><li>The route is the part of the url that explains how to reach a certain document from this specific server. Similar to how My Computer has partitions and folders.</li></ul>I have skipped URL params for a later discussion. Right now this should give you a feeling of what are URLs. Zou might have noticed the strange naming conventions used in the project structure. This has several reasons. Hyphens where used instead of whitespace to conform to the no whites space rule of routes but still keep the url readable. Urls need to be readable because people tend to share them on social media and email when they can read them easily. Then everyhing is written in small caps. Capital letters are allowed. However, to maintain **consistency** (meaning to be predictable without triggering confusion) I avoided them. Then there is the numbering scheme. I used numbers so that the chapters shoud up in the right order in windows explorer if you download the repository. And I used 0 in front of single digit numbers to prevent sorting issue that can arrise from github sorting algorithm and also to keep a nice consistent spacing. Of course the big assumption is that I don't go beyound 99. But this would not be a big issue. I could have used underscore charecters `like_this` but I find this convention really obnoxious in urls.
+**URL**<br>Unique Resource Locator | If you opened a webpage by now you have learned about the website address or URL. This structure is quite sophisticated. Some of the urls might look really strange because no whitespace is allowed so they use `%20` to denote whitespace. Usually they have this composition: <br><br>**Protocol** `https://` <br>Protocol is defining how the browser and server are supposed to exchange information. In this case it means that the connection will be secure.<br><br>**Domain** `github`<br>The domain is the name of the website. <br><br>**Top level domain** `.com`<br>The top level domain is an umbrela category usually containing all the websites in a country. But there are many other TLDs. <br><br>**Website route** `/adrian-moisa/visual-school`. <br>The route is the part of the url that explains how to reach a certain document from this specific server. Similar to how My Computer has partitions and folders. <br><br> I have skipped URL params for a later discussion. Right now this should give you a feeling of what are URLs.<br><br>**Naming convetions** <br> You might have noticed the strange naming conventions used in the project structure. This has several reasons. Hyphens where used instead of whitespace to conform to the no whites space rule of routes but still keep the url readable. <br><br> Urls need to be readable because people tend to share them on social media and email when they can read them easily. Then everyhing is written in small caps. Capital letters are allowed. However, to maintain **consistency** (meaning to be predictable without triggering confusion) I avoided them. <br><br> Then there is the numbering scheme. I used numbers so that the chapters shoud up in the right order in windows explorer if you download the repository. And I used 0 in front of single digit numbers to prevent sorting issue that can arrise from github sorting algorithm and also to keep a nice consistent spacing. Of course the big assumption is that I don't go beyound 99. But this would not be a big issue. I could have used underscore charecters `like_this` but I find this convention really obnoxious in URLs. These naming conventions are very common in web apps folder structure. <br><br> **DNS and IP** <br> You might also wonder how the browser knows how to open a website when you type urls. But here we have to digg into *Domain Name Service* and *Internet Protocol* addresses. These subjects are not necessary for a beginner student to build simple apps. 
 **No clear boundries between HTML CSS JS** | In the beginning it will be really confusing to see HTML mixed with CSS and even Javascript. It is really confusing to learn about this subject if you can't really identify which is which. The truth is that HTML alone has little use in modern websites. No modern page would have attractive design without CSS and Javascript. If you want to see how a raw HTML looks like visit some of the original webpages from the 90's such as: [A history of HTML](https://www.w3.org/People/Raggett/book4/ch02.html). Press `Ctrl+U` to access the source of the page and you will see plain old html. Nothing special.
  ~~~~~~~~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~~~~~~~~~
 
