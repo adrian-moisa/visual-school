@@ -2,7 +2,7 @@
 How to learn programming *really fast*
 
 - *Stay up to date, follow me on twitter [twitter.com/adriancmoisa](https://twitter.com/adriancmoisa)*
-- *Skip the intro go straight to lesson [01 - My first HTML](https://github.com/adrian-moisa/visual-school/tree/master/01-basic-html/01-my-first-html)*
+- *Skip the intro and go straight to lesson [01 - Basic Html / My first HTML](https://github.com/adrian-moisa/visual-school/tree/master/01-basic-html/01-my-first-html)*
 
 
 <br><br><br>

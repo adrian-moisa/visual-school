@@ -35,6 +35,7 @@ Html tag | Description
 **Lists**<br>`<ul><li>Item 1</li> ... </ul>` |  Bullet lists are very often used in webpages.
 **Dividers**<br>`<div></div>` |  By far the most used element in web pages. They are extremely useful in grouping other elements together. They can be used to move content around in page as a group. Without these dividers most web pages would all look the same. A linear progression of text and images. Think of these dividers as containers wehere you can put stuff inside and than move it around. For example: On a products page, each of the products has a title, an image, a price and a link. What keeps these elements together in a nice box? A divider. Thus it is really easy to specify to the brwoser that only 4 products should appear per row by setting the divider width to 25%. `<div class="product" style="width:25%">`. Of course, styles should not be inline but this we will discuss in CSS section.
 **Tables**<br>`<table><tr><td>Content</td></tr></table>` |  They are most useful for displaying tabelar data. Rows and columns. In the early stages of the web these elements were abused by using them for grouping page elements together in order to obtain certain layouts. This created the problem of having hard to modify page layouts due to the rules that tables have build in. You cannot always fit and split elements between a fixed numeber of cells (rows and columns). Currently by far the best approach for this problem is to use dividers and to position them independently of each other.
+**Buttons**<br>`<button>` |  Any user interface needs buttons. Otherwise how can the user interact with the page? thse buttons can come in many shapes and sizes using css but the standard one uses windows default style.
 **Forms**<br>`<form></form>` |  Forms are used to enable the webpage to collect user data. Usually forms have multiple fields and a confirmation button. A recent trend is to build forms that save information autoamtically. But this is already requiring Javascript know-how. We will get there.
 **SVG**<br>Standard Vector Graphics<br>`<svg></svg>`|  This is an element that has become more and more popular. It allows the creation of intricate and interactive graphics using lines and geometric shapes. There is a big difference betwenn raster and vector graphics but we will touch the subject later in next chapters.
 ~~~~~~~~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~~~~~~~~~
@@ -56,7 +57,7 @@ Feel free to search online for all of these element to find further details. As 
 *These are simple tasks meant to teach you the basics. In the next lessons the tasks will be closer to real life scenarios*
 - **Basic page** 
     - Create a HTML file named `index.html` which displays the text "This is My first HTML document" in a paragraph. 
-    - Open this page in a browser. So far you don't need a server.
+    - Open this page in a browser. So far you don't need a server, the browser alone can open simple html files.
     - Change the title of the page that is visible in the browser topbar. Use `<title>` tag in the `<head>` section. If you don't have a head section add it now. 
 
             <html>
@@ -123,7 +124,7 @@ https://www.w3schools.com/tags/default.asp*
 
 <br><br><br>
 ## Search for
-*Reading other sources always helps to piece together to puzzle*
+*Reading other sources always helps to piece together the puzzle*
 - What is HTML
 - How is HTML loaded
 - Why is HTML important
@@ -132,6 +133,7 @@ https://www.w3schools.com/tags/default.asp*
 - What is index.html
 - How to make an image stretch
 - When was HTML invented
+- What is word wrapping
 
 <br><br><br>
 ## Search for (advanced)
@@ -214,6 +216,7 @@ Mistake | Description
       <li>
       <img>
       <form>
+      <button>
       <table>
       <svg>
 

@@ -11,6 +11,7 @@ Normal text indicates existing material<br>
 	- [Basic page layout](https://github.com/adrian-moisa/visual-school/tree/master/01-basic-html/01-my-first-html/02-basic-page-layout)
 - **[02 - Basic CSS](https://github.com/adrian-moisa/visual-school/blob/master/01-basic-html/02-basic-css)**
 	- **Naming styles conventions, needs, short names, meaningfull, css naming**
+	Hex notations, RGBA, Inline styles.
 - **[03 - Jpg, Png, Svg, Gif, Bitmap](https://github.com/adrian-moisa/visual-school/blob/master/01-basic-html/03-jpg-png-svg-gif-bitmap)**
 
 ##02 - **Tools and Software**
@@ -63,8 +64,10 @@ Normal text indicates existing material<br>
 - **Comments**
 	- **When commenting code explain why is it commented**
 - **Write a function**
+	- **Function params**
 	- **Log the inputs and outputs**
 	- **Write an init function**
+	- **Implicit / Explicit**
 - **Scopes**
 	- **Local scope, Global, (<any>window), function sceope, block scope**
 - **Use inspector to modify page on the fly, refresh**
@@ -85,6 +88,11 @@ Normal text indicates existing material<br>
 - **Timeouts**
 - **Set Interval**
 - **Basic Animation**
+- **Plugins**
+	- **Lightbox**
+	- **Data table**
+	- **Datepicker**
+	- **TinyMCE**
 
 ## 04 - **Object Oriented Javascript**
 - **Objects**
