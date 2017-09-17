@@ -1,4 +1,8 @@
-**Work in progress, more details will be added**
+# Basic CSS
+*Let me know if you liked this lesson [twitter.com/adriancmoisa](https://twitter.com/adriancmoisa)*s
+
+[Home](https://github.com/adrian-moisa/visual-school)<br>
+[Basic Html / Jpg, Png, Svg, Gif, Bitmap ->](https://github.com/adrian-moisa/visual-school/blob/master/01-basic-html/03-jpg-png-svg-gif-bitmap)
 
 # Task
 - Create a simple index.html with a few paragraphs and a few images.

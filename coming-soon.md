@@ -6,12 +6,12 @@ Normal text indicates existing material<br>
 **Bold text indicates subjects planned for addition to the course** (a lot of bold right now :)
 
 ## 01 - Basic Html
-- My first html
-	- First html tags example
-	- Basic page layout
-- **BASIC CSS**
+- [01 - My first HTML](https://github.com/adrian-moisa/visual-school/tree/master/01-basic-html/01-my-first-html)
+	- [First html tags example](https://github.com/adrian-moisa/visual-school/tree/master/01-basic-html/01-my-first-html/01-first-html-tags)
+	- [Basic page layout](https://github.com/adrian-moisa/visual-school/tree/master/01-basic-html/01-my-first-html/02-basic-page-layout)
+- **[02 - Basic CSS](https://github.com/adrian-moisa/visual-school/blob/master/01-basic-html/02-basic-css)**
 	- **Naming styles conventions, needs, short names, meaningfull, css naming**
-- **Jpg, Png, Svg, Gif, Bitmap**
+- **[03 - Jpg, Png, Svg, Gif, Bitmap](https://github.com/adrian-moisa/visual-school/blob/master/01-basic-html/03-jpg-png-svg-gif-bitmap)**
 
 ##02 - **Tools and Software**
 - **Browsers. headless browsers**

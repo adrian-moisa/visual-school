@@ -1,9 +1,8 @@
 # Learning the basics of HTML
 *This is it, first lesson. Let me know if you liked it [twitter.com/adriancmoisa](https://twitter.com/adriancmoisa)*
 
-
 [Home](https://github.com/adrian-moisa/visual-school)<br>
-[Basic Html / Basic css ->](https://github.com/adrian-moisa/visual-school/blob/master/01-basic-html/02-basic-css)
+[Basic Html / Basic CSS ->](https://github.com/adrian-moisa/visual-school/blob/master/01-basic-html/02-basic-css)
 
 <br><br><br>
 ## What is HTML
@@ -56,7 +55,7 @@ Feel free to search online for all of these element to find further details. As 
 ## Tasks
 *These are simple tasks meant to teach you the basics. In the next lessons the tasks will be closer to real life scenarios*
 - **Basic page** 
-    - Create a HTML file named `index.html` which displays the text "This is my first html document" in a paragraph. 
+    - Create a HTML file named `index.html` which displays the text "This is My first HTML document" in a paragraph. 
     - Open this page in a browser. So far you don't need a server.
     - Change the title of the page that is visible in the browser topbar. Use `<title>` tag in the `<head>` section. If you don't have a head section add it now. 
 
@@ -107,7 +106,7 @@ Feel free to search online for all of these element to find further details. As 
     - Create a new file and add two dividers. Set 20% and 80% widths using inline style attribute. Add some text in each of these divs.
     - Now lets learn a new trick. Add `styles="float: left"` attribute to both divs. Voila, your first layout. Floating elements are a staple of web design. In time you will learn to master them. Right now let's just note that this is possible. In CSS section we learn more about how. 
 
-Now you have a basic understanding of HTML. From here on we will build from this knowledge litle by litle by repetition. There is no need right now to learn more HTML. It wont help you right now. For exampel I havent mention about `<video>` and `<audio>` tags because most projects don't use them. Now the next step is to learn how HTML and CSS can work together. Before going further, if you have been working on the tasks and not just reading the samples now it's time to compare notes.
+Now you have a basic understanding of HTML. From here on we will build from this knowledge litle by litle by repetition. There is no need right now to learn more HTML. It wont help you right now. For example I havent mention about `<video>` and `<audio>` tags because most projects don't use them. Now the next step is to learn how HTML and CSS can work together. Before going further, if you have been working on the tasks and not just reading the samples now it's time to compare notes.
 
 *If you insist on knowing them all go ahead and binge. I'm not going to ruin your fun but I'll let you know that this course is going to take more than 4 weeks :D
 https://www.w3schools.com/tags/default.asp*

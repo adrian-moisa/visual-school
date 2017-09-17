@@ -1,4 +1,8 @@
-**Work in progress, more details will be added**
+# Jpg Png Svg Gif Bitmap
+*Let me know if you liked this lesson [twitter.com/adriancmoisa](https://twitter.com/adriancmoisa)*
+
+[Home](https://github.com/adrian-moisa/visual-school)<br>
+[Tools and Software ->](https://github.com/adrian-moisa/visual-school/blob/master/02-tools-and-software)
 
 # Search for
 - What is JPG
