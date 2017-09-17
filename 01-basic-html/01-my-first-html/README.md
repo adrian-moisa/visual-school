@@ -3,7 +3,7 @@
 
 
 [Home](https://github.com/adrian-moisa/visual-school)<br>
-[Basic Html / Basic css ->](https://github.com/adrian-moisa/visual-school/blob/master/01-basic-html/02-basic-css/02-basic-css.md)
+[Basic Html / Basic css ->](https://github.com/adrian-moisa/visual-school/blob/master/01-basic-html/02-basic-css)
 
 <br><br><br>
 ## What is HTML
