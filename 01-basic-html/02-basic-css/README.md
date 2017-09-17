@@ -112,7 +112,7 @@ Yep it's a mess. You need some practice until you have a good feeling of all the
 - **Performance** - Ther are many ways how CSS helps a page render fater but one of these is using the browser caching mechanism. A single stylesheet can be used for multiple pages of the same site. Thus deacreasing even further the payload that will be transfered by the network. Browsers have a special mechanism called **caching**. It means a copy of a certain **resource** (css file in our case) is kept in the local memory of the **client** computer in order to prevent wasteful network traffic. Why download the same thing 100 times? This allows having different html pages but the same local cached css style.
 
 <br><br><br>
-## What can HTML do 
+## What can CSS do 
 *The main features that are need to know for any web developer*
 
 All tags (DOM elements) have properties. Almost all share the same common properties. A few of these are used very often. Most of the others are used in particular scenarios ocasionally.
