@@ -3,7 +3,30 @@ How to learn programming *really fast*
 
 - *Stay up to date, follow me on twitter [twitter.com/adriancmoisa](https://twitter.com/adriancmoisa)*
 - *Skip the intro go straight to lesson [01 - My first html tags](https://github.com/adrian-moisa/visual-school/blob/master/01%20-%20Basic%20Html/01%20-%20My%20first%20html/README%2001%20-%20My%20first%20html.md)*
+https://github.com/adrian-moisa/visual-school/tree/master/01-basic-html/01-my-first-html
 
+<br><br><br>
+## Showcased technologies
+*Don't faint yet! Yes, you will learn all of these.*
+- Html5
+- CSS3
+- Javascript ES6
+- Typescript
+- Webpack
+- jQuery - not too much, just enough ot get a grip
+- React - main course 
+- Angular 2 - some lessons so you understand both of them
+- Redux - main course
+- Ngrx state store - some lessons
+- Express - Javascript server framework solution for node
+- Mongo database - maybe some MySQL
+- RESTfull APIs - also GraphQL demo
+- WebGL with Thre.js - some shader programming with GLSL
+- A whole bunch of development tools: VsCode, Node.js, PostMan, Redux-dev-tools, SmartGit and many others
+- And the kicker: Visual Space (building up some hype here)
+
+
+<br><br><br>
 ## Objectives of this course
 - Learn the **essentials** of **programming for the web** in less than **4 weeks**.
 - Understand how **websites** and **web applications** are developed, deployed and maintained.
@@ -14,6 +37,7 @@ How to learn programming *really fast*
 - Get a **clear overview** of how software is created.
 - Explore **multiple branches** of web development and server side programming.
 
+<br><br><br>
 ## This course is perfect for you if you:
 - Desire to start learning programming and Javascript in particular. 
 - Don't have any previous programming experience. 
@@ -23,6 +47,7 @@ How to learn programming *really fast*
 - Wish to make a big change of career.
 - Or even just wanna have some fun and learn something new.
 
+<br><br><br>
 ## How this works
 The **main objective** of this course is to provide you the fastest way towards **total autonomy in learning** web development. This might seem odd compared to books and other materials that want to give in depth explanations about each subject. But let me give you a tip. A 500 page book is not exhilarating... you need it now, fast. Right?
 
@@ -32,6 +57,7 @@ This is possible by consolidating two main skills: **spatial awareness** knowing
 
 You can skip chapters or lessons if you feel so. I totally recommend it, enjoy the freedom in your own pace. Maybe you want to check something fresh or you are already ready to jump into your first real project. Consider this as the place where you can return for directions if you feel lost out there.
 
+<br><br><br>
 ## Method of teaching
 This course is carefully crafted to emulate the typical learning cycle of most frontend developers. This usually implies:
 
@@ -49,6 +75,7 @@ This is standard practice in Frontend development due to the rapid technology cy
 
 So this is my deal: I give you the map and orientation indications. After finishing this 101 class it's up to you to consolidate what you have learned by aplying it to your own project. Doing exercises might be fun, but the real fun is building actual software :D
 
+<br><br><br>
 ## How the content is structured
 I tried to isolate the main disciplines required for web development. Each one of these disciplines has a folder with a chapter number and a chapter name. Inside each of these folders you will find lessons designed to be finished in one day (arround 4 to 8 hours). Each individual lesson will have the following sections:
 
@@ -66,6 +93,7 @@ Lesson section | Description
 **Remember** | Instead of you keeping notes I will keep them for you. No, really! Stop wasting time, go and have some fun. Information is always at search result away. Enjoy the extra time!
 ~~~~~~~~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~~~~~~~~~
  
+<br><br><br>
 ## Support material and examples
 The material that will be provided is minimalistic in nature. It is inteded to be used as a notebook full of valuable notes. The actual knowledge will be a lot of times out there, on the web, waiting to be discovered. So let's call this for what it is: **a roadmap**. A carefuly constructed one, capable of guiding you trough the journey of learning via the **fastest route**.
 
@@ -78,8 +106,8 @@ My intention is to provide this map using a series revealing examples that will 
 So let's put the safety googles, power-up the electric grinder and let's break this black box open!
 **Feel free to reuse any of the sample code provided**
 
+<br><br><br>
 ## Index
-
 Chapter | Description
 --- | ---
 **01 - Basic Html** | Learn the basic tools and materials used in constructing the structure of a webpage. Html is the scaffolding onto which webapps are built.
@@ -110,6 +138,7 @@ Chapter | Description
 - I strongly discourage taking notes. This course is supposed to be your actual notebook so you can have your hands and mind free to work, not collecting and organising notes.
 - **Remember** You will feel unconfortable for a long while. This is natural. This indicates progress, you are growing. Embrace this feeling, learn to love it. This is how you get ahead in life. Somewhere along the line you will make the transition and you will feel the true power of programming knowledge. Stay ambitious, don't throw the towel yet! Make me proud!
 
+<br><br><br>
 ## Motivation for writting these tutorials
 Confession: **I was a terrible student**. I always got bored and often I felt unable to keep the pace with the school curriculum. This has many explanations but the main one was that I felt a complete loss of freedom. When freedom is constrained you tend to loose motivation and interest. This has continued for me even after K12. I ended up being a dropout after just half of semester in economics university.
 
@@ -125,7 +154,7 @@ Today it is really clear what were the past mistakes, were I have lost time and 
 
 Now let's get busy creating web apps!
 
----
+<br><br><br>
 
 ## Contributing
 If you wish to expand this course with additional information or samples of your own code, please consider following the main principles behind this collection of tutorials. 
@@ -133,6 +162,8 @@ If you wish to expand this course with additional information or samples of your
 - Each lesson tries to avoid going deep into detail, leaving this to be a decision made by the reader.
 - 20/80 principle. 20% of the knowledge is used 80% of the time. We want to document this 20% of knowledge so that readers become aware of the backbone sustaining all this profession skills and how it can be extended with additional study.
 - I really want that an ambitious person is able to read this course in 1 month and actually have a good feeling on how to start building his first app.
+
+<br><br><br>
 
 ---
 

@@ -1,6 +1,7 @@
 # Learning the basics of HTML
-*This is it, first lesson. Let me know if you liked it [twitter.com/adriancmoisa](https://twitter.com/adriancmoisa)*<br>
+*This is it, first lesson. Let me know if you liked it [twitter.com/adriancmoisa](https://twitter.com/adriancmoisa)*
 
+<br><br><br>
 ## What is HTML
 Html is a format used to write web documents (web pages). The name stands for Hyper Text Markup Language. Hyper means it's more advanced than normal text. Markup means a system of notations used to enrich the way text looks. Think of Word editor but instead of using the user interface to modify text appearance you use special text notations.
 
@@ -8,6 +9,7 @@ Before Html was introduced different standards of writting documents were employ
 
 Html by itself it is a very simple language. All elements are displayed in a linear fashion. And styling options are prety basic. To enable rich design and interactivity you need CSS and Javascript. These will be explained in later chapters.  
 
+<br><br><br>
 ## Why was it created?
 *Requirements of the early web*
 
@@ -16,6 +18,7 @@ Html by itself it is a very simple language. All elements are displayed in a lin
 - **Human readable** - Due to the nature of the web, these documents needed to be prepared fast and delivered fast. So the best approach was to skip the clumsy editors and just type formatting by hand. For example a title would be indicated by using a heading 1 tag. `<h1>Some interesting title to catch the attention</h1>`
 - **Hyper links** - Hyper links were build in from the start. They allow quick navigation between documents using the so called URLs or routes (Unique Resource Locator). This was an innovative feature that made the web pages a more covenient medium to bind big collections of pages. You could browse a big collection of files without spending too much effort by reading them one by one. 
 
+<br><br><br>
 ## What can HTML do 
 *The main features that are need to know for any web developer*
 
@@ -40,10 +43,12 @@ What you really need to know is outlined here. Not knowing these elements and th
 
 Feel free to search online for all of these element to find further details. As stated before this is the place where you gain spatial orientation, but the web is the place where you study.
 
+<br><br><br>
 ## Why HTML matters
 *What role does it play in app/website building*
 - Html is used to layout the foundation of the application. It's the pillars you put in the ground to sustain the whole building. It's the walls that separate different sections and offer support for the more attractive elements such as text, image and video.
 
+<br><br><br>
 ## Tasks
 *These are simple tasks meant to teach you the basics. In the next lessons the tasks will be closer to real life scenarios*
 - **Basic page** 
@@ -112,6 +117,7 @@ https://www.w3schools.com/tags/default.asp*
 - In the first years of the web each HTML document was edited by hand. So if a big website needed to add a new section, al the documents had to be updated manually. This led to the invention of server side scripting languages such as PHP. These were able to generate HTML documents on request by asembling HTML fragment into full pages thus avoiding code duplication. Also adding information from databases was a huge step forward.
 - Avoid long blocks of text. This is going to be repulsive for any visitor. Notice the way I used headings, subheadings, bullet lists, links, images (not yed :D ) and tables to keep the content looking interesting.
 
+<br><br><br>
 ## Search for
 *Reading other sources always helps to piece together to puzzle*
 - What is HTML
@@ -123,6 +129,7 @@ https://www.w3schools.com/tags/default.asp*
 - How to make an image stretch
 - When was HTML invented
 
+<br><br><br>
 ## Search for (advanced)
 *These are optional searches for advanced students*
 *Come back later if you don't wish to spend time right now*
@@ -152,6 +159,7 @@ Very often I have to figure out if something is used by many other people and th
 
 Well, of course searching for popular stuff might have it's drawbacks, you are not going to learn about the emerging technologies until they have been adopted in mass. But for a beginer it's best to stick with the flock. The more popular a subject is the easier is to find support and tutorials online.
 
+<br><br><br>
 ## More subjects
 *Learn more than the basics*
 *Come back later if you don't wish to spend time right now*
@@ -166,11 +174,12 @@ Advanced Subject | Description
 **Psd 2 HTML** | this is the name of the process of taking a design document and creating the HTML specified in the design. Design are usually generated with a graphichs software solution such as Photoshop, Illustrator or Gimp. Over the years this process became more an more specialised. 
 **SEO**<br>Search Engine Optimisation | This is a difficult subject to master. There are entire companies are built only for this purpose. My simple approach is to follow the google mantra: **Write content for humans**. In simple words this means writting content that a human can easily comprehend, is well defined and structured. Uses bullet lists, bold, itals, emphasys and various other text markup. All the images and links should provide alternative descriptions and titles. The content has links towards websites that are closely related to the content subject. The content has keywords that are varied but yet stay in the same domain reinforcing the probability that certain content will be shown for certain search queries. For example this whole page discussing the topic of HTML should be a preety good mix for google search engine to deliver it on top of the result pages for queries related to learning html. But this is already enough said. I won't touch SEO too much because web apps in general they tend to care less about SEO. Of course, there are web apps that are absolutely going to need SEO to help the content reach the target public.
 **DOM is not the only way to structure content** | There are many other formats out there used to structure content. Android and iOs have theyr own languages built for this task in native aps. Windows applications also have theyr own way of handling view structure. Here we are focusing on web apps structure, and this is maintained using HTML. 
-**URL**<br>Unique Resource Locator | If you opened a webpage by now you have learned about the website address or URL. This structure is quite sophisticated. Some of the urls might look really strange because no whitespace is allowed so they use `%20` to denote whitespace. Usually they have this composition: <br><br>**Protocol** `https://` <br>Protocol is defining how the browser and server are supposed to exchange information. In this case it means that the connection will be secure.<br><br>**Domain** `github`<br>The domain is the name of the website. <br><br>**Top level domain** `.com`<br>The top level domain is an umbrela category usually containing all the websites in a country. But there are many other TLDs. <br><br>**Website route** `/adrian-moisa/visual-school`. <br>The route is the part of the url that explains how to reach a certain document from this specific server. Similar to how My Computer has partitions and folders. <br><br> I have skipped URL params for a later discussion. Right now this should give you a feeling of what are URLs.<br><br>**Naming convetions** <br> You might have noticed the strange naming conventions used in the project structure. This has several reasons. Hyphens where used instead of whitespace to conform to the no whites space rule of routes but still keep the url readable. <br><br> Urls need to be readable because people tend to share them on social media and email when they can read them easily. Then everyhing is written in small caps. Capital letters are allowed. However, to maintain **consistency** (meaning to be predictable without triggering confusion) I avoided them. <br><br> Then there is the numbering scheme. I used numbers so that the chapters shoud up in the right order in windows explorer if you download the repository. And I used 0 in front of single digit numbers to prevent sorting issue that can arrise from github sorting algorithm and also to keep a nice consistent spacing. Of course the big assumption is that I don't go beyound 99. But this would not be a big issue. I could have used underscore charecters `like_this` but I find this convention really obnoxious in URLs. These naming conventions are very common in web apps folder structure. <br><br> **DNS and IP** <br> You might also wonder how the browser knows how to open a website when you type urls. But here we have to digg into *Domain Name Service* and *Internet Protocol* addresses. These subjects are not necessary for a beginner student to build simple apps. 
+**URL**<br>Unique Resource Locator | If you opened a webpage by now you have learned about the website address or URL. This structure is quite sophisticated. Some of the urls might look really strange because no whitespace is allowed so they use `%20` to denote whitespace. Usually they have this composition: <br><br>**Protocol** `https://` <br>Protocol is defining how the browser and server are supposed to exchange information. In this case it means that the connection will be secure.<br><br>**Domain** `github`<br>The domain is the name of the website. <br><br>**Top level domain** `.com`<br>The top level domain is an umbrela category usually containing all the websites in a country. But there are many other TLDs. <br><br>**Website route** `/adrian-moisa/visual-school`. <br>The route is the part of the url that explains how to reach a certain document from this specific server. Similar to how My Computer has partitions and folders. <br><br> I have skipped URL params for a later discussion. Right now this should give you a feeling of what are URLs.<br><br>**Naming convetions** <br> You might have noticed the strange naming conventions used in the project structure. This has several reasons. Hyphens where used instead of whitespace to conform to the no whites space rule of routes but still keep the url readable. <br><br> Urls need to be readable because people tend to share them on social media and email when they can read them easily. Then everyhing is written in small caps. Capital letters are allowed. However, to maintain **consistency** (meaning to be predictable without triggering confusion) I avoided them. <br><br> Then there is the numbering scheme. I used numbers so that the chapters shoud up in the right order in windows explorer if you download the repository. And I used 0 in front of single digit numbers to prevent sorting issue that can arrise from github sorting algorithm and also to keep a nice consistent spacing. Of course the big assumption is that I don't go beyound 99. But this would not be a big issue. I could have used underscore charecters `like_this` but I find this convention really obnoxious in URLs. These naming conventions are very common in web apps folder structure. <br><br> **DNS and IP** <br> You might also wonder how the browser knows how to open a website when you type urls. But here we have to digg into *Domain Name Service* and *Internet Protocol* addresses. These subjects are not necessary for a beginner student to build simple apps. <br><br> Compare these two links <br><br> Has white space <br>`https://github.com/adrian-moisa/visual-school/blob/master/01%20-%20Basic%20Html/01%20-%20My%20first%20html/README%2001%20-%20My%20first%20html.md`<br><br> No white space <br>`https://github.com/adrian-moisa/visual-school/tree/master/01-basic-html/01-my-first-html`
 **No clear boundries between HTML CSS JS** | In the beginning it will be really confusing to see HTML mixed with CSS and even Javascript. It is really confusing to learn about this subject if you can't really identify which is which. The truth is that HTML alone has little use in modern websites. No modern page would have attractive design without CSS and Javascript. If you want to see how a raw HTML looks like visit some of the original webpages from the 90's such as: [A history of HTML](https://www.w3.org/People/Raggett/book4/ch02.html). Press `Ctrl+U` to access the source of the page and you will see plain old html. Nothing special.
  ~~~~~~~~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~~~~~~~~~
 
-**Common mistakes** 
+<br><br><br>
+## **Common mistakes** 
 Mistake | Description
 --- | ---
 **Using tables for layouts** | They tend to force the designer to split elements that do not fit perfectly between columns and rows. Not to mention that tables should render tabular data, not layouts. 
@@ -180,11 +189,13 @@ Mistake | Description
 **Renaming a file and editing on the open tab in the editor** | When you work on a file and the editor keeps an internal copy of the document. If it happens that you want to rename that file, which tends to happen a lot during programming, remember to close and reopen the file. Otherwise the modification will be saved under the old name and you will than delete the old one thinking that you have the modifications in the new one. Bumer, you just lost all your new content since the renaming. This can be easily fix if you use a versioning software such as **SVN** or **Git**. We will talk about git repositories in the following chapter.
 ~~~~~~~~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~~~~~~~~~
 
+<br><br><br>
 # Links and Resources
 - https://stackoverflow.com/questions/1795438/load-and-execution-sequence-of-a-web-page
 - An excelent book on the subject of designing the layout of webpages "Don't make me think" https://www.amazon.com/Dont-Make-Me-Think-Usability/dp/0321344758
 
-# REMEMBER
+<br><br><br>
+# Remember
 *Do not forget these tags. This is the bread and butter of the web. Learn them and master them in time!*
 
       <html>
