@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <title>Specificity (Selector priority)</title>
+
+    <!-- Separate style sheet, not inline styles -->
+    <style>
+        
+        /** This will override any previous rule no matter what the order or rank */
+        .olive { color:olive !important; }
+
+        /* You can specify how HTML elements should render in a browser */
+        /* For example, using selectors is useful for making all links orange */
+        h1 { color:red; } /* The stuff between curly braces is called a declaration */
+        p { color:blue; }
+        a { color:orange; }
+
+        /* The hover selector is extremely useful in simulating interaction 
+            with an element just by hovering the pointer over it*/
+        a:hover { background-color: yellow; }
+
+        /* CSS classes */
+        /* Usualy class names indicate the role of the element: Examples .avatar .login-form .menu*/
+        .gray { color:gray; } /* A class can be reused multiple times */
+        .magenta { color:yellow; }
+
+        /* Same selector can be used twice. second definition will override first definition */
+        .magenta { color:magenta; } 
+
+        /* Defining a property twice is possible but not usefull */
+        /* In case this happens last instance will have the last word to say */
+        .magenta { color:yellow; color:magenta; } 
+        #my-green-paragraph { color:green; } /*An id should only be used once*/
+
+        /* Usually CSS properties are not written on the same line as the selector. */
+        /* I recommend avoiding this compact style. */
+        /* It makes it hard to read the CSS contents */
+        /* Also autoformaters will ruin this custom formatting. */
+        /* Usually it's better to follow the pack and use the common formatting rules. */
+
+    </style>
+    
+</head>
+
+<body>
+
+    <h1>A red heading</h1>
+    <p>A blue paragraph.</p>
+    <a href="some-link.html">An orange link</a>
+    <a href="some-other-link.html">And another orange link</a>
+
+    <!-- Blue paragraph. Selector overrides default browser style.  -->
+    <p>A blue paragraph</p>
+
+    <!-- Gray paragraph. Class overrides selector -->
+    <p class="gray">A gray paragraph.</p>
+
+    <!-- Magenta paragraph. Order of declaration matters. Last class overrides previous class. -->
+    <p class="gray magenta">A magenta paragraph.</p>
+
+    <!-- Gray paragraph. Id overrides class -->
+    <p id="my-green-paragraph" class="gray">A green paragraph.</p>
+    
+    <!-- Maroon paragraph. Inline style override everything -->
+    <p id="my-green-paragraph" class="gray" style="color:maroon">A maroon paragraph.</p>
+
+    <!-- Well there is yet another rule but this one is really tricky. -->
+    <!-- It should be avoided at all costs if possible. -->
+    <!-- Only some extreme rare situations justify the use of this one. -->
+    <p id="my-green-paragraph" class="olive gray" style="color:maroon">An olive paragraph.</p>
+
+</body>
+
+</html>

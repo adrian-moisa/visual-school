@@ -44,34 +44,34 @@ Now the cool thing is that you can do this at any level for deep hierarchies of 
 ## Elements, Ids and classes
 Well, inline styles are not the only option. Using separate block of styles can unlock some new features such as ids and classes. Let's see how this works.
 
-        <!-- Separate style sheet -->
+        <!-- Separate style sheet, not inline styles -->
         <style>
 
             /** This will override any previous rule no matter what the order or rank */
-            .olive {color:olive !important;}
+            .olive { color:olive !important; }
 
             /* You can specify how HTML elements should render in a browser */
             /* For example, using selectors is useful for making all links orange */
-            h1 {color:red;} /* The stuff between curly braces is called a declaration */
-            p {color:blue;}
-            a {color:orange;}
+            h1 { color:red; } /* The stuff between curly braces is called a declaration */
+            p { color:blue; }
+            a { color:orange; }
 
             /* The hover selector is extremely useful in simulating interaction 
                with an element just by hovering the pointer over it*/
-            a:hover {background-color: yellow;}
+            a:hover { background-color: yellow; }
 
             /* CSS classes */
             /* Usualy class names indicate the role of the element: Examples .avatar .login-form .menu*/
-            .gray {color:gray;} /* A class can be reused multiple times */
-            .magenta {color:yellow;}
+            .gray { color:gray; } /* A class can be reused multiple times */
+            .magenta { color:yellow; }
 
             /* Same selector can be used twice. second definition will override first definition */
-            .magenta {color:magenta;} 
+            .magenta { color:magenta; } 
 
             /* Defining a property twice is possible but not usefull */
             /* In case this happens last instance will have the last word to say */
-            .magenta {color:yellow; color:magenta;} 
-            #my-green-paragraph {color:green;} /*An id should only be used once*/
+            .magenta { color:yellow; color:magenta; } 
+            #my-green-paragraph { color:green; } /*An id should only be used once*/
 
         </style>
 
@@ -80,27 +80,29 @@ Well, inline styles are not the only option. Using separate block of styles can 
         <a href="some-link.html">An orange link</a>
         <a href="some-other-link.html">And another orange link</a>
 
-        /* Blue paragraph. Selector overrides default browser style. */
+        <!-- Blue paragraph. Selector overrides default browser style.  -->
         <p>A blue paragraph</p>
 
-        /* Gray paragraph. Class overrides selector */
+        <!-- Gray paragraph. Class overrides selector -->
         <p class="gray">A gray paragraph.</p>
 
-        /* Magenta paragraph. Order of declaration matters. Last class overrides previous class. */
+        <!-- Magenta paragraph. Order of declaration matters. Last class overrides previous class. -->
         <p class="gray magenta">A magenta paragraph.</p>
 
-        /* Gray paragraph. Id overrides class */
+        <!-- Gray paragraph. Id overrides class -->
         <p id="my-green-paragraph" class="gray">A green paragraph.</p>
         
-        /* Maroon paragraph. Inline style override everything */
+        <!-- Maroon paragraph. Inline style override everything -->
         <p id="my-green-paragraph" class="gray" style="color:maroon">A maroon paragraph.</p>
 
-        /* Well there is yet another rule but this one is really tricky. */
-        /* It should be avoided at all costs if possible */
-        /* Only some extreme rare situations justify the use of this one */
+        <!-- Well there is yet another rule but this one is really tricky. -->
+        <!-- It should be avoided at all costs if possible. -->
+        <!-- Only some extreme rare situations justify the use of this one. -->
         <p id="my-green-paragraph" class="olive gray" style="color:maroon">An olive paragraph.</p>
 
 Yep it's a mess. You need some practice until you have a good feeling of all these overrides. But I can tell you right now. These overrides are really useful. In time after some practive, they will help you build elegant CSS styles. As you can see this behavior is not so easily expressed in pure html. That's enough reason alone to have a separate language for styling web pages.
+
+Try opening the first sample in the css folder. It has the same exact contents. Zou can see selector priority (aka specificity) in action.
 
 
 <br><br><br>
@@ -119,19 +121,19 @@ All tags (DOM elements) have properties. Almost all share the same common proper
 
 CSS property | Description
 --- | ---
-**Color**<br>`div {color:red;}` | This is text color.
-**Font size**<br>`div {font-size:20px;}` | Font size in pixels.
-**Font family**<br>`div {font-family:Verdana;}` | Changes the type face.
-**Background**<br>`div {background:gray;}` | Element background.
-**Background image**<br>`div {background:url('image.jpg');}` | An image can be as a background.
-**Margin**<br>`div {margin:10px;}` | Creates an invisible margin surounding the element.
-**Border**<br>`div {border: solid 1px red;}` | Elements can have a border. The border is situated betwebb the margin and the padding
-**Padding**<br>`div {padding:10px;}` | Creates an internal spacing inside the element.
-**Postion**<br>`div {position:10px;}` | Positioning is a tricky subject in CSS. I will explain in the samples code.
-**Float**<br>`div {float:right;}` | Floating elements is a tricky subject in CSS. I will explain in the samples code.
-**Display**<br>`div {display block;}` | Changing the display type affects many element properties. I will explain in the samples code.
-**Shadow**<br>`div {box-shadow:10px 10px 10px rgba(0, 0, 0, 0.4);}` | Creates a shadow sorounding the elements. Shadows don't take any extra space on screen. This was added in CSS3. Also text has a special property called `text-shadow`.
-**Transition**<br>`div {transition:0.3s;}` | Transition are used to define animations. They indicate how long should the transition from initial state to final state should take. The browser interpolates the intermediary values. This was added in CSS3.
+**Color**<br>`div { color:red; }` | This is text color.
+**Font size**<br>`div { font-size:20px; }` | Font size in pixels.
+**Font family**<br>`div { font-family:Verdana; }` | Changes the type face.
+**Background**<br>`div { background:gray; }` | Element background.
+**Background image**<br>`div { background:url('image.jpg'); }` | An image can be as a background.
+**Margin**<br>`div { margin:10px; }` | Creates an invisible margin surounding the element.
+**Border**<br>`div { border: solid 1px red; }` | Elements can have a border. The border is situated betwebb the margin and the padding
+**Padding**<br>`div { padding:10px; }` | Creates an internal spacing inside the element.
+**Postion**<br>`div { position:10px; }` | Positioning is a tricky subject in CSS. I will explain in the samples code.
+**Float**<br>`div { float:right; }` | Floating elements is a tricky subject in CSS. I will explain in the samples code.
+**Display**<br>`div { display block; }` | Changing the display type affects many element properties. I will explain in the samples code.
+**Shadow**<br>`div { box-shadow:10px 10px 10px rgba(0, 0, 0, 0.4); }` | Creates a shadow sorounding the elements. Shadows don't take any extra space on screen. This was added in CSS3. Also text has a special property called `text-shadow`.
+**Transition**<br>`div { transition:0.3s; }` | Transition are used to define animations. They indicate how long should the transition from initial state to final state should take. The browser interpolates the intermediary values. This was added in CSS3.
 ~~~~~~~~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~~~~~~~~~
 
 **REMEMBER As I said in HTML lesson. I'm not going to digg deep in all the possible ways to use CSS. I will show main ones that are must-know. I will also stop using this warning. I think it's clear how this method of teaching works.**
@@ -285,7 +287,7 @@ Mistake | Description
 # Remember
 *Do not forget these properties. Return here as many times as needed until you know these by heart*
 
-        div {
+        div { 
             color:red;
             font-size:20px;
             font-family:Verdana;
@@ -299,5 +301,5 @@ Mistake | Description
             display block; /* Concentrate yor learning efforts here */
             box-shadow:10px 10px 10px rgba(0, 0, 0, 0.4);
             transition:0.3s;
-        }
+         }
 
