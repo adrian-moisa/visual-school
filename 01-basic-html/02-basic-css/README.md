@@ -115,7 +115,7 @@ Yep it's a mess. You need some practice until you have a good feeling of all the
 ## What can CSS do 
 *The main features that are need to know for any web developer*
 
-All tags (DOM elements) have properties. Almost all share the same common properties. A few of these are used very often. Most of the others are used in particular scenarios ocasionally.
+All tags (DOM elements) have properties. Almost all share the same common properties. A few of these are used very often. Most of the others are used ocasionally in particular scenarios.
 
 CSS property | Description
 --- | ---
@@ -140,7 +140,9 @@ CSS property | Description
 <br><br><br>
 ## Why CSS matters
 *What role does it play in app/website building*
-- Having the CSS language makes the task of maintaining the style of website a really easy task.
+- Well, let's just say that using inline html attributes and  tables for styling and templating is like using a stone axe to make high end furniture while the rest of the world uses electric tools with laser measurements and Elon Musk is busy colonising Mars. 
+- Improved maintainability. Having the CSS language makes the task of maintaining the style of website a really easy and enjoyable task.
+- Improves collaboration between team members due to the fact the stylesheets can be grouped and created for specific purposes. Improves clarity by clearly stating intent. This leads to less judgement erors and mistakes.
 
 <br><br><br>
 ## Tasks
@@ -237,7 +239,7 @@ Mistake | Description
 **Not taking advantage of cascading styles** | This means repeating the same style over and over again when it could have compressed in one single class. 
 **Font sizes in pixels instead of ems** | 
 **Not checking various browsers when developing** | 
-**Not cfrafting css classes arounf UI components/blocks** | 
+**Not crafting css classes around UI components/blocks** | 
 **Not using global styles and local styles** | 
 **Not using the browser insector to review the cascading effects** | 
 **Using !important in excess** |  
@@ -298,5 +300,4 @@ Mistake | Description
             box-shadow:10px 10px 10px rgba(0, 0, 0, 0.4);
             transition:0.3s;
         }
-
 

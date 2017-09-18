@@ -1,0 +1,109 @@
+<html>
+
+<head>
+    <title>Inputs</title>
+</head>
+
+<body>
+
+    <h2>Ok let's try some inputs for a job application</h2>
+    <!-- This is the input tag -->
+    <!-- Without any specifications it becomes a text input -->
+    <!-- Try typing something there in the browser -->
+    <input>
+
+
+    <!-- But it's better to be explicit -->
+    <input type="text">
+
+    <!-- Inputs also have names -->    
+    First name: <input type="text" name="first-name"> 
+    Middle name: <input type="text" name="middle-name">
+
+    <!-- Input names can be used to attach labels to inputs -->
+    <label for="last-name">Last name:</label>
+    <input type="text" name="last-name">
+
+    <!-- Ooops, looks like also inputs are positioned inline as text an images. -->
+    <!-- Lets fix this -->
+    Job title: <input type="text" name="job"><br> Nationality: <input type="text" name="country"><br>
+
+    <!-- We could fix it even better -->
+    <!-- Using dividers -->
+    <div>
+        <!-- Btw this one needs more space, maybe the person has several hobbies -->
+        Hobbies: <input type="text" length="300" name="hobbies">
+    </div>
+    <div>
+        Skills: <input type="text" name="lname"><br>
+    </div>
+
+    <!-- Let's see this again in Xray mode -->
+    <!-- Using dividers -->
+    <!-- This is the recomended method to break the inline behavior -->
+    <!-- In time you will ean what are the pros and cons of each method -->
+    <!-- For the moment stick with dividers -->
+    <div style="box-shadow: inset 0 0 20px rgba(255,0,0,0.5)">
+        First name: <input type="text" name="fname">
+    </div>
+    <div style="box-shadow: inset 0 0 20px rgba(255,0,0,0.5)">
+        Last name: <input type="text" name="lname"><br>
+    </div>
+
+    <!-- Now let's try some other input types -->
+
+    <div>
+        <!-- This one accepts only numbers -->
+        Years of work: <input type="number" name="years">
+    </div>
+
+    <div>
+        <!-- And this one accepts only numbers between 0 and 10 inclusive -->
+        Number of previous employers: <input type="employers" name="num-of-prev-emp" min="0" min="10">
+    </div>
+
+    <div>
+        <!-- This is a checkbox -->
+        Are you available for a new job? <input type="checkbox" name="availability">
+    </div>
+
+    <!-- Let's separete a bit -->
+    <br><br><br>
+    <hr>
+    <br><br><br>
+
+    <!-- Also radio buttons are available -->
+    <!-- They behave like buttons on a old radio, only one option at a time -->
+    <!-- Whoaa... wait a sec... -->
+    <!-- This is an entire form -->
+    <!-- I think it's time to increase the difficulty a bit -->
+    <!-- Learning html means also learning how real code looks -->
+    <!-- A form always has an action, a location where the form data is sent to be received and processed -->
+    <form action="/action_page.php">
+
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="male" value="male"><br>
+
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="female" value="female"><br>
+
+        <label for="other">Other</label>
+        <input type="radio" name="gender" id="other" value="other"><br><br>
+
+        <!-- To actually send a form you need a button -->
+        <input type="submit" value="Submit">
+
+    </form>
+
+    <!-- ALso dropdowns are really useful -->
+    Which car do you drive?
+    <select name="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="fiat">Fiat</option>
+        <option value="audi">Audi</option>
+    </select>
+
+</body>
+
+</html>

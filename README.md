@@ -23,7 +23,7 @@ How to learn programming *really fast*
 - RESTfull APIs - also GraphQL demo
 - WebGL with Thre.js - some shader programming with GLSL
 - A whole bunch of development tools: VsCode, Node.js, PostMan, Redux-dev-tools, SmartGit and many others
-- And the kicker: Visual Space (building up some hype here)
+- And the kicker: Visual Space (I'm building up some hype here for a product that is currently under development)
 
 
 <br><br><br>
@@ -101,7 +101,7 @@ As a metaphor I will use the example of construction workers. In construction th
 
 Unfortunately this is not so easy said about programming. The tools are not visible and palpable. The projects are not tangible and they are almost impossbile to tear down by the average person. What each skilled programmer needs is a mental map of all the tools and all the common techniques used in building software. 
 
-My intention is to provide this map using a series revealing examples that will teach you the ins and outs of crafting software.
+My intention is to provide this map using a series revealing examples that will teach you the ins and outs of crafting software. From my expirience, half the effort is gathering the knowledge, being aware that certain techniques exist. The other half is just pinning down what syntax will work. I'm trying to help on both sides. The lessons are like maps of knowledge and the samples are notebooks of good syntax. Once you have these secured than you have more freedom to actually write software instead of constantly researching. 
 
 So let's put the safety googles, power-up the electric grinder and let's break this black box open!
 **Feel free to reuse any of the sample code provided**

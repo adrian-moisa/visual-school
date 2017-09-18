@@ -109,6 +109,7 @@ Normal text indicates existing material<br>
 - **Composition**
 - **Pass by value, Pass by reference**
 - **Inspecting objects**
+- **SOLID**
 - **Problems with OOP**
 
 ## 05 - **Functional programming**
@@ -127,6 +128,8 @@ Normal text indicates existing material<br>
 - **Write a utils file and import it**
 - **Basic folder structure**
 - **Advanced folder structure switch**
+- **Minification**
+- **Build process**
 
 ## 07 - **Ecmascript 6**
 - **Es modules**
