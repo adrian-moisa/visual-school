@@ -33,3 +33,4 @@ Basic cmd commands
 There is a lot of hidden knowledge behind code. Assume knowledge. Expected to be there. The less guess work the easier maintenace.  WHAT WHY.  
 Do not put paddings margins in reusable cmps. Stick then from top
 Write styles as if css encapsulation is disabled
+CDN networks

@@ -176,7 +176,7 @@ CSS property | Description
 <br><br><br>
 ## Tasks
 *These are simple tasks meant to teach you the basics. In the next lessons the tasks will be closer to real life scenarios*
-- **Basic page** 
+- **Basic CSS experiments** 
     - Experiment with changing text `color` of elements at various levels in a nested hierarchy of divs and paragraphs. Try using some of the various color notations.
     - Experiment a bit with placing `background` on various elements. Try using the `repeat-x, no-repeat` features. Also size cover and contain.
     - Experiment with different `font-size` values expressend in pixels, ems and rems. Try them, at various levels in a arbitrary hierarchy. See what happens. Also try some fonts from google fonts collection.
@@ -189,7 +189,7 @@ CSS property | Description
     - Try assembling a gradient using manual notation or an online generator.
     - Try some basic animations with `transition`, connect them to the `:hover` selector 
 
-I'm not going to deep into taks because I myself I'm not a big fan of doing book exercises while learning. I feel like they are draining your energy while giving little reward. Feel free to skip them completely and just read the samples. Than go and build something meaningful for you. This will be way more fun than doing these tasks. Most of the material covered here will be reviewed when starting the real exercises after introductory Javascript chapter. The choice is yours.
+I'm not going to deep into tasks because I myself I'm not a big fan of doing book exercises while learning. I feel like they are draining your energy while giving little reward. Feel free to skip them completely and just read the samples. Than go and build something meaningful for you. This will be way more entertaining than doing these menial tasks. Most of the material covered here will be reviewed when starting the real life and fun exercises after introductory Javascript chapter. The choice is yours.
 
 <br><br><br>
 ## Real life situations
@@ -310,7 +310,7 @@ Mistake | Description
 **Inline styles** | Huge collections of web pages are hard to maintain when they have inline styles. There are many other subtle reasons. Suchs as making it hard to read the code. Or having extra logic in javascript to account for inline styles. 
 **Long chains of selectors** | **REMEMBER THIS: “Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.” - Brian Kernighan** In simple words, the more fancy your selectors are the harder is to reivew them and understand their effects.
 **Using cryptic names for classes and ids** | That is one of the worst offenders. Using weird notations and numbers is going to be extremely unpleasent for new colleagues in the project. Just don't do it.
-**Relying stylesheets hosted on other servers** | It might be nice to skip some time but when the original author modifies or removes thse files, you are toasted.
+**Relying on stylesheets hosted on other servers** | It might be nice to skip some time but when the original author modifies or removes thse files, you are toasted.
 __**Not documenting with comments**__ | Sometimes you have to apply a weird property just to get a certain effect working. Other colleagues might also want to modify the same property without realising how important is that property. This can create templating issues that can stay hidden for long periods of time. Debugging these issues is often a very difficult task. Due to this enormous flexibility CSS is also really easy to missuse. 
 **Having one giant CSS stylesheet** | **In general, avoid big files at all costs no matter the language**. The bigger the file the less easy is to traverse and review. Smaller files with clear concise names are really helpful at getting around a project. There is no need today to warry about the number of files. Automatic build processes will take care of **concatenating** all the files. We will talk more about concatenating in Javascript chapter. For now remember that in means to join text with text.
 **Excessive nesting** | **Again, this goes to the excess category**. Hard to inspect, hard to reason about, hard to modify.
@@ -393,4 +393,4 @@ __**Not documenting with comments**__ | Sometimes you have to apply a weird prop
             display block; /* Concentrate yor learning efforts here */
             box-shadow:10px 10px 10px rgba(0, 0, 0, 0.4);
             transition:0.3s;
-         }
+        }
