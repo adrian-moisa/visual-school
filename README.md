@@ -25,7 +25,6 @@ How to learn programming *really fast*
 - A whole bunch of development tools: VsCode, Node.js, PostMan, Redux-dev-tools, SmartGit and many others
 - And the kicker: Visual Space (I'm building up some hype here for a product that is currently under development)
 
-
 <br><br><br>
 ## Objectives of this course
 - Learn the **essentials** of **programming for the web** in less than **4 weeks**.

@@ -19,3 +19,17 @@ https://blog.thoughtram.io
 When to go native and when to use a plugin.
 Learning curve, 10000 litle steps, better than 1000 clifs.
 declare var
+Check the link sometimes libs have similar names. 
+Why view encapsulation matters for styles. Form builder grilopu control. Custom control. 
+Adding classes to cmps. Why adding from inside is better than writting in the template by hand as attributes.
+Cannot find module
+Sometimes I even need a diffchecker
+Link to diffchecker
+Link to regex edutor
+Link to dillinger
+Conemu
+Powershell
+Basic cmd commands
+There is a lot of hidden knowledge behind code. Assume knowledge. Expected to be there. The less guess work the easier maintenace.  WHAT WHY.  
+Do not put paddings margins in reusable cmps. Stick then from top
+Write styles as if css encapsulation is disabled
