@@ -8,3 +8,4 @@ How paths work
 Typos, simplebar simpleBar, the VS studio stack answer
 Js is not the terible language it used to be. 
 The rush to invent. Plan ahead don't be a hot head. 
+jquery easings page
