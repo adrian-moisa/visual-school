@@ -2,7 +2,7 @@
 How to learn programming *really fast* using bleeding edge web technologies
 
 - *Stay up to date, follow me on twitter [twitter.com/visual_space](https://twitter.com/visual_space)*
-- *Skip the intro and go straight to lesson [01 - Basic Html / My first HTML](https://github.com/visual-space/visual-school/tree/master/01-basic-html/01-my-first-html)*
+- *Skip the intro and go straight to lesson [01 - Basic HTML and CSS / My first HTML](https://github.com/visual-space/visual-school/tree/master/01-basic-html-and-css/01-my-first-html)*
 
 
 <br><br><br>
@@ -119,7 +119,7 @@ So let's put the safety googles, power-up the electric grinder and let's break t
 ## Index
 Chapter | Description
 --- | ---
-**01 - [Basic Html](https://github.com/visual-space/visual-school/tree/master/01-basic-html)** | Learn the basic tools and materials used in constructing the structure of a webpage. Html is the scaffolding onto which webapps are built.
+**01 - [Basic Html](https://github.com/visual-space/visual-school/tree/master/01-basic-html-and-css)** | Learn the basic tools and materials used in constructing the structure of a webpage. Html is the scaffolding onto which webapps are built.
 **02 - Basic Javascript** | If html is the skeletton, javascript is the brain and muscles of a webapp. Learn the basic ingredients necessary to write code.
 **03 - Ecmascript 6** | Javascript is always evolving and the latest version is by far the best. Learn what makes it so special and how it saves development time.
 **04 - Object Oriented Javascript** | After learning how to utilise the basic ingredients you will start writting long scripts. But after a while you hit a wall. Somehow you need to organize your code so that it has a recognisible structure. This is where OOP comes in.

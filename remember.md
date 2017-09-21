@@ -1,8 +1,8 @@
 # Remember
 *This is what you absolutely need in order to unlock the next level*
 
-## 01 - Basic Html
-- [01 - My first HTML](https://github.com/visual-space/visual-school/tree/master/01-basic-html/01-my-first-html)
+## 01 - Basic HTML and CSS
+- [01 - My first HTML](https://github.com/visual-space/visual-school/tree/master/01-basic-html-and-css/01-my-first-html)
 
         <html>
         <header>
@@ -20,7 +20,7 @@
         <table>
         <svg>
 
-- [02 - Basic CSS](https://github.com/visual-space/visual-school/blob/master/01-basic-html/02-basic-css)
+- [02 - Basic CSS](https://github.com/visual-space/visual-school/blob/master/01-basic-html-and-css/02-basic-css)
 
         div { 
             color:red;
@@ -38,7 +38,7 @@
             transition:0.3s;
         }
 
-- [03 - Jpg, Png, Svg, Gif, Bitmap](https://github.com/visual-space/visual-school/blob/master/01-basic-html/03-jpg-png-svg-gif-bitmap)
+- [03 - Jpg, Png, Svg, Gif, Bitmap](https://github.com/visual-space/visual-school/blob/master/01-basic-html-and-css/03-jpg-png-svg-gif-bitmap)
 
 ## 02 - Basic Javascript
 

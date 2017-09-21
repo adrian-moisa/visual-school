@@ -5,10 +5,10 @@
 Normal text indicates existing material<br>
 **Bold text indicates subjects planned for addition to the course** (a lot of bold right now :)
 
-## 01 - Basic Html
-- [01 - My first HTML](https://github.com/visual-space/visual-school/tree/master/01-basic-html/01-my-first-html)
-- [02 - Basic CSS](https://github.com/visual-space/visual-school/blob/master/01-basic-html/02-basic-css)
-- **[03 - Jpg, Png, Svg, Gif, Bitmap](https://github.com/visual-space/visual-school/blob/master/01-basic-html/03-jpg-png-svg-gif-bitmap)**
+## 01 - Basic HTML and CSS
+- [01 - My first HTML](https://github.com/visual-space/visual-school/tree/master/01-basic-html-and-css/01-my-first-html)
+- [02 - Basic CSS](https://github.com/visual-space/visual-school/blob/master/01-basic-html-and-css/02-basic-css)
+- **[03 - Jpg, Png, Svg, Gif, Bitmap](https://github.com/visual-space/visual-school/blob/master/01-basic-html-and-css/03-jpg-png-svg-gif-bitmap)**
 
 ## 02 - **Basic Javascript**
 - **Why first example is always hello world?**
