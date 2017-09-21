@@ -1,4 +1,4 @@
-# Chapter 1 - Basic Html and CSS
+# Chapter 1 - Basic HTML and CSS
 Learn the basic tools and materials used in constructing the structure of a webpage. Html is the scaffolding onto which webapps are built.
 
 [Home](https://github.com/visual-space/visual-school)
