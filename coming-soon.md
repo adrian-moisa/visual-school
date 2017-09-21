@@ -6,50 +6,11 @@ Normal text indicates existing material<br>
 **Bold text indicates subjects planned for addition to the course** (a lot of bold right now :)
 
 ## 01 - Basic Html
-- [01 - My first HTML](https://github.com/adrian-moisa/visual-school/tree/master/01-basic-html/01-my-first-html)
-- [02 - Basic CSS](https://github.com/adrian-moisa/visual-school/blob/master/01-basic-html/02-basic-css)
-- **[03 - Jpg, Png, Svg, Gif, Bitmap](https://github.com/adrian-moisa/visual-school/blob/master/01-basic-html/03-jpg-png-svg-gif-bitmap)**
+- [01 - My first HTML](https://github.com/visual-space/visual-school/tree/master/01-basic-html/01-my-first-html)
+- [02 - Basic CSS](https://github.com/visual-space/visual-school/blob/master/01-basic-html/02-basic-css)
+- **[03 - Jpg, Png, Svg, Gif, Bitmap](https://github.com/visual-space/visual-school/blob/master/01-basic-html/03-jpg-png-svg-gif-bitmap)**
 
-##02 - **Tools and Software** 
-- **Browsers. headless browsers**
-	- **Caching issues**
-	- **Inspector panel, explain all tabs**
-- **Switch from Notepad to Notepad++, Sublime, Vscode, WebStorm, Visual Studio, Atom**
-	- **Quick navigation using jump to file**
-	- **Mass renames, F2 rename**
-	- **Duplicating existing code using find and replace (Foos, Reports example, using path selection for module)**
-	- **Advanced renamer**
-	- **Autoformat using the Vscode**
-	- **Vscode extensions**
-		- **Autoclose tags plugin**
-	- **Using shortcuts, working fast, fast techniques of editing in page**
-	- **Using ctrl space for path autocomplete**
-	- **Intelisense, Auto select from import. Prevents typos**
-	- **Highlight word at caret**
-	- **How much time I gain from these**
-	- **Too many open tabs, reset navigation ocasionaly**
-- **What is git? Install smartgit**
-	- **Smartgit is not a code editor, it only keeps files in sync**
-	- **Resolving conflicts**
-- **What is the command line?**
-	- **Basic instructions?**
-	- **What does $ mean?**
-- **Install node**
-	- **Explain node_modules**
-	- **Install global modules**
-	- **Start a new project**
-	- **Instal local modules**
-- **Overview of some tools: Gulp, Grunt, Webpack**
-- **Install mongo, basic overview**
-- **POSTman, basic overview**
-- **XAMPP, basic overview**
-- **Markdown**
-- **Batch rename files**
-- **Capturing screenshots**
-- **Using stackoverflow**
-- **Using github**
-
-## 03 - **Basic Javascript**
+## 02 - **Basic Javascript**
 - **Why first example is always hello world?**
 - **alert('My first alert') Search: How to display in alert in javascript**
 - **Doon't panic ignore weird names such as $scope or XMLHttpRequest**
@@ -91,6 +52,13 @@ Normal text indicates existing material<br>
 	- **TinyMCE**
 - **Coffeescript**
 
+## 03 - **Ecmascript 6**
+- **Es modules**
+- **Es classes**
+- **Spread operator**
+- **Lamba function**
+- **Web workers**
+
 ## 04 - **Object Oriented Javascript**
 - **Objects**
 - **new object**
@@ -112,28 +80,7 @@ Normal text indicates existing material<br>
 - **Side effects**
 - **Goals of this style**
 
-## 06 - **Production environment**
-- **Big projects**
-- **IDE tools**
-- **Environments**
-- **Command line**
-- **Package json**
-- **Import libs**
-- **Import a file**
-- **Write a utils file and import it**
-- **Basic folder structure**
-- **Advanced folder structure switch**
-- **Minification**
-- **Build process**
-
-## 07 - **Ecmascript 6**
-- **Es modules**
-- **Es classes**
-- **Spread operator**
-- **Lamba function**
-- **Web workers**
-
-## 08 - **Asynchronous Javascript**
+## 06 - **Asynchronous Javascript**
 - **What is async?**
 - **XML, JSON**
 	- **Why doesnt json have comments**
@@ -149,7 +96,58 @@ Normal text indicates existing material<br>
 - **Basics Webapi**
 	- **REST principles**
 
-## 09 - **Frameworks**
+## 07 - **Production environment** 
+- **Browsers. headless browsers**
+	- **Caching issues**
+	- **Inspector panel, explain all tabs**
+- **Switch from Notepad to Notepad++, Sublime, Vscode, WebStorm, Visual Studio, Atom**
+	- **Quick navigation using jump to file**
+	- **Mass renames, F2 rename**
+	- **Duplicating existing code using find and replace (Foos, Reports example, using path selection for module)**
+	- **Advanced renamer**
+	- **Autoformat using the Vscode**
+	- **Vscode extensions**
+		- **Autoclose tags plugin**
+	- **Using shortcuts, working fast, fast techniques of editing in page**
+	- **Using ctrl space for path autocomplete**
+	- **Intelisense, Auto select from import. Prevents typos**
+	- **Highlight word at caret**
+	- **How much time I gain from these**
+	- **Too many open tabs, reset navigation ocasionaly**
+- **What is git? Install smartgit**
+	- **Smartgit is not a code editor, it only keeps files in sync**
+	- **Resolving conflicts**
+- **What is the command line?**
+	- **Basic instructions?**
+	- **What does $ mean?**
+- **Install node**
+	- **Explain node_modules**
+	- **Install global modules**
+	- **Start a new project**
+	- **Instal local modules**
+- **Overview of some tools: Gulp, Grunt, Webpack**
+- **Install mongo, basic overview**
+- **POSTman, basic overview**
+- **XAMPP, basic overview**
+- **Markdown**
+- **Batch rename files**
+- **Capturing screenshots**
+- **Using stackoverflow**
+- **Using github**
+- **Big projects**
+- **IDE tools**
+	- **Environments**
+	- **Command line**
+	- **Package json**
+	- **Import libs**
+	- **Import a file**
+	- **Write a utils file and import it**
+	- **Minification**
+	- **Build process**
+- **Basic folder structure**
+- **Advanced folder structure switch**
+
+## 08 - **Frameworks**
 - **JS fatigue, The search for latest tech**
 - **jQuery**
 - **Basic templates with moustache**
@@ -178,6 +176,8 @@ Normal text indicates existing material<br>
 	- **Circular references**
 - **React**
 	- **In angular you have to work with the DSL, in React you can use the entire JS language**
+- **Vue**
+	- **General overview**
 - **Basic homebrew state store**
 - **Ngrx**
 	- **What is state?**
@@ -185,6 +185,8 @@ Normal text indicates existing material<br>
 	- **Moving data: Inputs in components, or subscribing to store, or straight away to service or in web api, pros cons `this._route.data.subscribe((data: {`**
 - **Redux**
 	- **Thunks, Sagas, Epics, Observable**
+
+## 09 - **Web components**
 
 ## 10 - **Architecture patterns**
 - **Singleton**
@@ -216,47 +218,35 @@ Normal text indicates existing material<br>
 - **Browser issues**
 - **CanIUse**
 
-## 12 - **User experience**
-- **What are UI UX**
-- **Skeumorphic design, Flat design**
-- **White space**
-- **Typography**
-- **User research**
-- **AB testing**
-- **Design considerations**
-- **Don't make me think**
-- **It should feel familiar**
-- **Getting feedback**
-
-## 13 - **Server apps**
+## 12 - **Server apps**
 - **Node**
 - **Express**
 - **Mongo**
 	- **Robomongo, Postman**
 - **Mongoose** 
 
-## 14 - **Development process**
+## 13 - **Development process**
 - **Webpack**
 - **Git**
 - **Build**
 - **Deploy**
 - **Testing Benchmarks**
+- **Working as a developer**
+	- **What can you expect from your new career as a developer.**
+	- **What to expect in 2017**
+	- **Interview**
+	- **Specs**
+	- **Jira Tasks**
+	- **Kanban**
+	- **Colaborating**
+	- **Comunication tools**
+	- **Contibuting**
+	- **Review process**
+	- **Networking**
+	- **Learning**
+	- **Using dual screen**
 
-## 15 - **Working as a developer**
-- **What to expect in 2017**
-- **Interview**
-- **Specs**
-- **Jira Tasks**
-- **Kanban**
-- **Colaborating**
-- **Comunication tools**
-- **Contibuting**
-- **Review process**
-- **Networking**
-- **Learning**
-- **Using dual screen**
-
-## 16 - **Building a real app**
+## 14 - **Building a real app**
 - **All of it together**
 - **Performance issues**
 - **Tight coupling**
@@ -288,11 +278,23 @@ Normal text indicates existing material<br>
 - **Realease tools**
 - **Licenses**
 
-## 17 - **Security**
+## 15 - **Performance**
 
-## 18 - **Performance**
+## 16 - **Security**
 
-## 19 - **Game development**
+## 17 - **User experience**
+- **What are UI UX**
+- **Skeumorphic design, Flat design**
+- **White space**
+- **Typography**
+- **User research**
+- **AB testing**
+- **Design considerations**
+- **Don't make me think**
+- **It should feel familiar**
+- **Getting feedback**
+
+## 18 - **Game development**
 - **ECS explained**
 - **How to build each component**
 - **Main loop Perf problems**
@@ -302,7 +304,7 @@ Normal text indicates existing material<br>
 - **State machines**
 - **Game mechanics**
 
-## 20 - **Visual Space**
+## 19 - **Visual Space**
 - **CMS architecture**
 - **Plugins**
 - **How it all fits together**

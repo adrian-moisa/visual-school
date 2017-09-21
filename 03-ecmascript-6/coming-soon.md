@@ -2,3 +2,4 @@
 *Ignore them*
 
 import * as, import, export
+Decorators

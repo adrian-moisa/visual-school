@@ -1,29 +1,36 @@
 # Visual School - Learn how to build Web Apps in 4 weeks
 How to learn programming *really fast*
 
-- *Stay up to date, follow me on twitter [twitter.com/adriancmoisa](https://twitter.com/adriancmoisa)*
-- *Skip the intro and go straight to lesson [01 - Basic Html / My first HTML](https://github.com/adrian-moisa/visual-school/tree/master/01-basic-html/01-my-first-html)*
+- *Stay up to date, follow me on twitter [twitter.com/visual_space](https://twitter.com/visual_space)*
+- *Skip the intro and go straight to lesson [01 - Basic Html / My first HTML](https://github.com/visual-space/visual-school/tree/master/01-basic-html/01-my-first-html)*
 
 
 <br><br><br>
 ## Showcased technologies
 *Don't faint yet! Yes, you will learn all of these.*
-- Html5
-- CSS3
-- Javascript ES6
-- Typescript
+- **Html5**
+- **CSS3**
+- **Javascript ES6**
+- **Typescript**
 - Webpack
-- jQuery - not too much, just enough to get a grip
-- React - main course 
-- Angular 2 - some lessons so you understand both of them
-- Redux - main course
-- Ngrx state store - some lessons
-- Express - Javascript server framework solution for node
-- Mongo database - maybe some MySQL
-- RESTfull APIs - also GraphQL demo
-- WebGL with Thre.js - some shader programming with GLSL
+- Popular web app frameworks:
+    - jQuery
+    - Angular 2
+    - React
+    - Vue
+- **Web components**
+- **Redux**
+    - Ngrx state store
+- **Express** (Javascript on the server)
+- **Mongo database**
+    - MySQL (Quick overview)
+- RESTfull APIs 
+- **GraphQL**
+- WebGL
+    - **Three.js**
+    - Shader programming with GLSL
 - A whole bunch of development tools: VsCode, Node.js, PostMan, Redux-dev-tools, SmartGit and many others
-- And the kicker: Visual Space (I'm building up some hype here for a product that is currently under development)
+- And the kicker: **Visual Space** (I'm building up some hype here for a product that is currently under development)
 
 <br><br><br>
 ## Objectives of this course
@@ -109,26 +116,25 @@ So let's put the safety googles, power-up the electric grinder and let's break t
 ## Index
 Chapter | Description
 --- | ---
-**01 - [Basic Html](https://github.com/adrian-moisa/visual-school/tree/master/01-basic-html)** | Learn the basic tools and materials used in constructing the structure of a webpage. Html is the scaffolding onto which webapps are built.
-**02 - Tools and Software** | Learn what are the most common used tools in web app development and understand their purpose.
-**03 - Basic Javascript** | If html is the skeletton, javascript is the brain and muscles of a webapp. Learn the basic ingredients necessary to write code.
+**01 - [Basic Html](https://github.com/visual-space/visual-school/tree/master/01-basic-html)** | Learn the basic tools and materials used in constructing the structure of a webpage. Html is the scaffolding onto which webapps are built.
+**02 - Basic Javascript** | If html is the skeletton, javascript is the brain and muscles of a webapp. Learn the basic ingredients necessary to write code.
+**03 - Ecmascript 6** | Javascript is always evolving and the latest version is by far the best. Learn what makes it so special and how it saves development time.
 **04 - Object Oriented Javascript** | After learning how to utilise the basic ingredients you will start writting long scripts. But after a while you hit a wall. Somehow you need to organize your code so that it has a recognisible structure. This is where OOP comes in.
 **05 - Functional programming** | Well, OOP is nice and it gives code structure, but abusing OOP can lead to even worse problems. Logic mixed together with data so tight that it cannot be untangled anymore... meaning spaghetti code. This is were pure functions help you to maintain sanity.
-**06 - Production environment** | Ok so now you know how to keep your code nice and clean avoiding to build a labyrinth. But this needs to run on real servers with real users...
-**07 - Ecmascript 6** | Javascript is always evolving and the latest version is by far the best. Learn what makes it so special and how it saves development time.
-**08 - Asynchronous Javascript** | This is usually were the brain starts melting. The order of code execution is mixed by network traffic, and it starts jumping from on place to another almost feeling like it has no clear path. Well, there are ways to keep this under control :D
-**09 - Frameworks** | Programming can become tedious and repetitive. Frameworks take the repetitive parts out of the process. You get to spend your energy on the code that is making your app unique.
-**10 - Architecture patterns** | After a while some patterns emerge. The same solutions keep reoccuring. These have been studied and labeled by experienced developers. Patterns can be highly reusable for lots of situations, saving time and effort.
+**06 - Asynchronous Javascript** | This is usually were the brain starts melting. The order of code execution is mixed by network traffic, and it starts jumping from on place to another almost feeling like it has no clear path. Well, there are ways to keep this under control :D
+**07 - Production environment** | Learn what are the most common used tools in web app development and understand their purpose. Now you know how to keep your code nice and clean avoiding to build a labyrinth. But this needs to run on real servers with real users...
+**08 - Frameworks** | Programming can become tedious and repetitive. Frameworks take the repetitive parts out of the process. You get to spend your energy on the code that is making your app unique.
+**09 - Architecture patterns** | After a while some patterns emerge. The same solutions keep reoccuring. These have been studied and labeled by experienced developers. Patterns can be highly reusable for lots of situations, saving time and effort.
+**10 - Web components** | Learn what are the technologies of the future and how they can greatly improve the development process of web applications.
 **11 - Web graphics (2D, 3D)** | Today, user inderfaces have to work hard to stand out as inovative and interesting. Taking advantage of interactive graphics is a must.
-**12 - User experience** | Let's not forget for who we are building this for. In the end the user is your judge. No matter what you believe, he will have the power of life or death over your app.
-**13 - Server apps** | Current generation of frontend apps are almost standalone apps. But they still need databases and access points and help when computation becomes intensive.
-**14 - Development process** | Let's do a quck review on how all of this fits together with the clients needs and real life chalanges such as paying salaries.
-**15 - Working as a developer** | What can you expect from your new career as a developer.
-**16 - Building a real app** | This is where the rubber hits the road. Now you are ready to actually build something useful for other people.
-**17 - Security** | We are more and more reliant on the technology that powers the web. That leaves us exposed to malicious agents unless we take steps to protect our data.
-**18 - Performance** | After all, electricity costs money, so you want to use it wisely. That includes also how eficient yor code runs, not to mention that nothing makes an user more angry than a sluggish UI.
-**19 - Game development** | Learn what makes games work. These techniques can improve your presentational skills to PRO level. VR is the future and you need to understand it.
-**20 - Visual Space** | The next generation of web interfaces will be powered by strong UI with a touch of AI and 3D graphics. This is as close as we can get to the holodeck here in 2017.
+**12 - Server apps** | Current generation of frontend apps are almost standalone apps. But they still need databases and access points and help when computation becomes intensive.
+**13 - Development process** | Let's do a quck review on how all of this fits together with the clients needs and real life chalanges such as paying salaries.
+**14 - Building a real app** | This is where the rubber hits the road. Now you are ready to actually build something useful for other people.
+**15 - Performance** | After all, electricity costs money, so you want to use it wisely. That includes also how eficient yor code runs, not to mention that nothing makes an user more angry than a sluggish UI.
+**16 - Security** | We are more and more reliant on the technology that powers the web. That leaves us exposed to malicious agents unless we take steps to protect our data.
+**17 - User experience** | Let's not forget for who we are building this for. In the end the user is your judge. No matter what you believe, he will have the power of life or death over your app.
+**18 - Game development** | Learn what makes games work. These techniques can improve your presentational skills to PRO level. VR is the future and you need to understand it.
+**19 - Visual Space** | The next generation of web interfaces will be powered by strong UI with a touch of AI and 3D graphics. This is as close as we can get to the holodeck here in 2017.
 ~~~~~~~~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~~~~~~~~~
 
 **A few notes**

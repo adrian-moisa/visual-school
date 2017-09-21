@@ -2,7 +2,7 @@
 *This is what you absolutely need in order to unlock the next level*
 
 ## 01 - Basic Html
-- [01 - My first HTML](https://github.com/adrian-moisa/visual-school/tree/master/01-basic-html/01-my-first-html)
+- [01 - My first HTML](https://github.com/visual-space/visual-school/tree/master/01-basic-html/01-my-first-html)
 
         <html>
         <header>
@@ -20,7 +20,7 @@
         <table>
         <svg>
 
-- [02 - Basic CSS](https://github.com/adrian-moisa/visual-school/blob/master/01-basic-html/02-basic-css)
+- [02 - Basic CSS](https://github.com/visual-space/visual-school/blob/master/01-basic-html/02-basic-css)
 
         div { 
             color:red;
@@ -38,42 +38,40 @@
             transition:0.3s;
         }
 
-- [03 - Jpg, Png, Svg, Gif, Bitmap](https://github.com/adrian-moisa/visual-school/blob/master/01-basic-html/03-jpg-png-svg-gif-bitmap)
+- [03 - Jpg, Png, Svg, Gif, Bitmap](https://github.com/visual-space/visual-school/blob/master/01-basic-html/03-jpg-png-svg-gif-bitmap)
 
-## 02 - Tools and Software 
+## 02 - Basic Javascript
 
-## 03 - Basic Javascript
+## 03 - Ecmascript 6
 
 ## 04 - Object Oriented Javascript
 
 ## 05 - Functional programming
 
-## 06 - Production environment
+## 06 - Asynchronous Javascript
 
-## 07 - Ecmascript 6
+## 07 - Production environment
 
-## 08 - Asynchronous Javascript
+## 08 - Frameworks
 
-## 09 - Frameworks
+## 09 - Architecture patterns
 
-## 10 - Architecture patterns
+## 10 - Web components
 
 ## 11 - Web graphics (2D, 3D)
 
-## 12 - User experience
+## 12 - Server apps
 
-## 13 - Server apps
+## 13 - Development process
 
-## 14 - Development process
+## 14 - Building a real app
 
-## 15 - Working as a developer
+## 15 - Performance
 
-## 16 - Building a real app
+## 16 - Security
 
-## 17 - Security
+## 17 - User experience
 
-## 18 - Performance
+## 18 - Game development
 
-## 19 - Game development
-
-## 20 - Visual Space
+## 19 - Visual Space

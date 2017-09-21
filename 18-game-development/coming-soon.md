@@ -4,3 +4,4 @@
 HDR‎
 Occlusion
 Subsurface scaterring
+18 why platformers go from left to right. 
