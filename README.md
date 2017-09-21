@@ -1,5 +1,5 @@
 # Visual School - Learn how to build Web Apps in 4 weeks
-How to learn programming *really fast*
+How to learn programming *really fast* using bleeding edge web technologies
 
 - *Stay up to date, follow me on twitter [twitter.com/visual_space](https://twitter.com/visual_space)*
 - *Skip the intro and go straight to lesson [01 - Basic Html / My first HTML](https://github.com/visual-space/visual-school/tree/master/01-basic-html/01-my-first-html)*
@@ -47,6 +47,7 @@ How to learn programming *really fast*
 ## This course is perfect for you if you:
 - Desire to start learning programming and Javascript in particular. 
 - Don't have any previous programming experience. 
+- Don't want to be bored to death with soul crushing lectures on sorting algorithms.
 - Dislike reading books and waiting forever without understanding how the big picture works.
 - Want to study in your own rythm without feeling pressure from a professor.
 - Have limited time available for study.
@@ -108,6 +109,8 @@ As a metaphor I will use the example of construction workers. In construction th
 Unfortunately this is not so easy said about programming. The tools are not visible and palpable. The projects are not tangible and they are almost impossbile to tear down by the average person. What each skilled programmer needs is a mental map of all the tools and all the common techniques used in building software. 
 
 My intention is to provide this map using a series revealing examples that will teach you the ins and outs of crafting software. From my expirience, half the effort is gathering the knowledge, being aware that certain techniques exist. The other half is just pinning down what syntax will work. I'm trying to help on both sides. The lessons are like maps of knowledge and the samples are notebooks of good syntax. Once you have these secured than you have more freedom to actually write software instead of constantly researching. 
+
+Eventually these lessons will be hosted on an innovative online learning platform that will be built on top of the technologies discussed in the course. Until this is done, the main medium of learning is github itself.
 
 So let's put the safety googles, power-up the electric grinder and let's break this black box open!
 **Feel free to reuse any of the sample code provided**
