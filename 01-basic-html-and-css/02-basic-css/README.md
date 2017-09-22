@@ -146,8 +146,8 @@ All tags (DOM elements) have properties. Almost all share the same common proper
 
 CSS property | Description
 --- | ---
-**Color**<br>`div { color:red; }` | This is text color.
-**Font size**<br>`div { font-size:20px; }` | Font size in pixels.
+**Color**<br>`div { color:red; }` | Controls text color. Several color code notaions are used. Search online for "hex vs rgba". vs stands for versus (comparison).
+**Font size**<br>`div { font-size:20px; }` | Font size. Several mesurement unist exist. Search online for "px vs em".
 **Font family**<br>`div { font-family:Verdana; }` | Changes the type face.
 **Background**<br>`div { background:gray; }` | Element background.
 **Background image**<br>`div { background:url('image.jpg'); }` | An image can be used as a background.
@@ -238,6 +238,7 @@ I'm not going to deep into tasks because I myself I'm not a big fan of doing boo
 - How human eyes work
 - Monitor blue light, sleep issues
 - Skeumorphic design
+- What are monospace fonts
 
 <br><br><br>
 ## More subjects
@@ -260,7 +261,7 @@ Advanced Subject | Description
 **Iconfonts** | I mention about Iconfonts when talkin about CSS sprites. These are fonts that instead of storing characters, they store icons.
 **Color depth** | Early web had 256 colors. It might seem ridiculous but this is wat much better than the previous standards, 16 colors or monochrome. There was this feature in various editors that said: use web safe colors. Well, currently there are 16 million possible colors available. This is enough for the tipical website.
 **Color schemes** | When working with styles and designs you will end up working with color schemes. These are collections of collors hand picked in order to maintain a consistent look and feel in the entire website. 
-**Integrated color pickers** | Modern browsers have in the developer tools a tiny color picker. Sometimes I use it to quickly get a color code. This is really useful for rapid development.
+**Integrated color pickers** | Modern browsers have in the developer tools a tiny color picker. Sometimes I use it to quickly get a color code. This is really useful for rapid development. In case you don't know how to use them you will find instructions in the [02-colors.html](https://github.com/visual-space/visual-school/blob/master/01-basic-html-and-css/02-basic-css/02-colors.html) sample. We will talk more about developer tools in another chapter. For the moment just remember it exists. Or if you forget it's ok. We will encounter these tools again multiple times.
 **Aditive vs Substractive colors** | This basically means the difference between how Print media and Electronic screens produce color. In print the more color you add the more you go towards black. In computer monitors and tvs it's the other way around. The more color you add the whiter it gets.
 **Webdesign showcase articles** | I recommend that you start searching online for showcases of webdesign. This will help you get a better understanding what is good design and also hunt for new ideas. Search for: showcase of online shops showcase. Than search for tourism agency design showcase. Or any other category. You will see certain patterns that define each category.
 **Graceful degradation,<br>Mobile first design** | This basically means that when you build a website you need to consider what happens if the website is not able to use CSS or Javascript. These concepts try to guide developers in creting barebone functional websites that are enriched by the various layers of technology available. Even to this day, a lot of websites will fail catastrophically if one technology layer is missing.
@@ -301,7 +302,7 @@ Mistake | Description
 --- | ---
 **:hover, :before, :after** | These selectors extend even more the styling options available for a designer. I highly recomend learning the. Demos of usage are provided in the samples. Short description is the fallowing. Before ads a virtual element before the actual element. Thus you render something extra without actually creaing dom. Same for after. Hover changes the rules of the element only when the pointer hovers above the selected element.
 **Clearfix** | Clearfix is a useful technique to prevent a div with floated children from collapsing and loosing all it's height. This leads to serious layout issues. An example is provided in the samples.
-**Inline styles** | Use a separate stulesheet `app-layout.css` to maintain the rules that describe the ratios between the regions of the website. Sometimes this might get tedious to maintain, but it offers the advantage of having a single place where the app layout can be studied and reviewed. It also tends to expose layout mistakes in plain sight.
+**Separate stylesshet for layouts** | Use a separate stylesheet `app-layout.css` to maintain the rules that describe the ratios between the regions of the website. Sometimes this might get tedious to maintain, but it offers the advantage of having a single place where the app layout can be studied and reviewed. It also tends to expose layout mistakes in plain sight.
 
 <br><br><br>
 ## **Common mistakes** 

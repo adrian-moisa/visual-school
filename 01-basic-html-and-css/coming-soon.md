@@ -1,4 +1,4 @@
-# Improvements that will be added in this chapter
+﻿# Improvements that will be added to this chapter
 *Expect to see them coming soon*
 
 - CSS Media queries
