@@ -5,7 +5,7 @@
 [Home](https://github.com/visual-space/visual-school)<br>
 [Basic Html / Basic CSS ->](https://github.com/visual-space/visual-school/blob/master/01-basic-html-and-css/02-basic-css)
 
-**_Friendly Reminder_ - These lessons are designed to showcase both the basic notions and the more advanced knowledge. Don't panic when reading this lesson. If you are a complete beginner focus on studying only the first part up to the tasks section. Anything after this section is recreational lecture just for fun. There is no need to master those techniques explained there. This will happen in time, after many months even years. My purpose is no to scare you but to familiarise you with the advanced topics. You will be perfectly capable of continuing this course with just the basic notions.**
+**_Friendly Reminder_ - These lessons are designed to showcase both the basic notions and the more advanced knowledge. Don't panic when reading this lesson. If you are a complete beginner focus on studying only the first part up to the tasks section. Anything after this section is recreational lecture just for fun. There is no need to master those techniques explained there. This will happen in time, after many months, even years. My purpose is no to scare you, but to familiarise you with the advanced topics. You will be perfectly capable of continuing this course with just the basic notions.**
 
 **This will apply also for the upcoming chapters. I won't repeat this reminer in each chapter. So my final advice is: read it for fun but focus only on the basics. Feel free to revisit the advanced topics as many times you need afterwards. So when you get to the CSS lesson don't let it overwhelm you. You only need a few basic notions from there and I pinpoint exactly which ones.**
 
