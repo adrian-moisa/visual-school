@@ -181,7 +181,7 @@
         .pattern > .caption {
             font-family: 'Open Sans', sans-serif;
             color: #3e374a;
-            margin: 0 30%;
+            margin: 0 20%;
             text-align: center;
         }
 
@@ -201,12 +201,21 @@
             text-decoration: none;
             transition: 0.3s;
             font-size: 1.2em;
+            font-family: 'Time New Roman', serif;
         }
 
         a.skinny:hover{
             color: white;
             background: #be1d3b;
-            font-family: 'Time New Roman', serif;
+        }
+
+        .row {
+            overflow: auto;
+        }
+        
+        .col {
+            width: 50%;
+            float: left;
         }
 
     </style>
@@ -221,13 +230,69 @@
         <div class="subtitle">Now you basically understand the CSS box model</div>
 
         <p class="caption">
-            You don't think so? 
-            Well, this is it: <b>padding, border, margin</b>.
-            And just remember: When you want width 100% and paddings use <b>box-sizing: border-box;</b> <b></b>.
+            You don't think so? <br/>
+            Well, this is it: <b>padding, border, margin</b>. Remember:  <br/>
+            When you want width 100% and paddings use <b>box-sizing: border-box</b> <br/>
             When you need width:100% and 10px margin use <b>width: calc(100% - 10px)</b>
         </p>
         <a class="skinny" href="https://twitter.com/visual_space">Follow Visual Space on Twitter</a>
     </div>
+
+    <style>
+        .row{
+            font-size: 1rem;
+        }
+        .spacing {
+            margin-top:200px;
+        }
+    </style>
+    
+    <h1 class="title spacing"> Ok, ok, let's review it again<h1>
+        <h2 class="subtitle"> This time on two columns<h2>
+            
+            
+        <div class="row xray">
+                
+            <div class="col">
+                        
+                <div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                </div>
+                <div class="padding">
+                    <b>padding</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                </div>
+                <div class="padding border">
+                        <b>padding border</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                </div>
+                <div class="padding border width100 orange">
+                        <b>padding border width100 orange</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                </div>
+                <div class="padding border width100 border-box">
+                        <b>padding border width100 border-box</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                </div>
+                <div class="padding border margin border-box orange">
+                        <b>padding border margin border-box orange</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                </div>
+                <div class="padding border  margin width100 border-box orange">
+                        <b>padding border margin width100 border-box orange</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                </div>
+                <div class="padding border margin calc100 border-box orange">
+                        <b>padding border margin calc100 border-box orange</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                </div>
+
+            </div>
+                
+            <div class="col">
+
+                <h1 class="title">
+                    As you can see the second column is affected by the neighbour.
+                </h1>
+                <h2 class="subtitle">
+                    That's why we put so much effort in understanding the box model.
+                </h2>
+                
+            </div>
+        </div>
 
 </body>
 </html>
