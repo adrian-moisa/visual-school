@@ -15,3 +15,5 @@ jquery easings page
 2 Offset vs client width
 2 i sort tabs in the order of dependency
 2 best viwed woth browser x. 
+import * as, import, export
+Decorators

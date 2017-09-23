@@ -18,6 +18,13 @@
             box-shadow: inset 0 0 20px rgba(0, 0, 255, 0.5);
             background: rgba(0, 0, 255, 0.1);
         }
+        .xray.orange,
+        .xray.orange *,
+        .xray .orange,
+        .xray .orange * {
+            box-shadow: inset 0 0 20px rgba(255, 165, 0, 0.5);
+            background: rgba(255, 165, 0, 0.1);
+        }
 
         .padding{
             padding: 20px;
@@ -28,7 +35,7 @@
         }
 
         .border.orange {
-            border-color: orange;
+            border-color: rgb(255, 165, 0);
         }
 
         .width100{
@@ -66,26 +73,26 @@
     
     <!-- Padding and Border -->
     <div class="xray padding border">
-            <b>padding border</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            <b>padding, border</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
     </div>
     
     <!-- Width 100% and border 10px x 2... -->
     <!-- Something is not ok here... -->
     <!-- The right border is out of the screen -->
     <div class="xray padding border width100 orange">
-            <b>padding border width100 orange</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            <b>padding, border, width100</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
     </div>
 
     <!-- Let's change the behavior of the div -->
     <!-- We will add the border as part of the entire div width -->
     <!-- Better :D -->
     <div class="xray padding border width100 border-box">
-            <b>padding border width100 border-box</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            <b>padding, border, width100, border-box</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
     </div>
     
     <!-- Let's try some margin without width100 -->
-    <div class="xray padding border margin border-box orange">
-            <b>padding border margin border-box orange</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+    <div class="xray padding border margin border-box">
+            <b>padding, border, margin, border-box</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
     </div>
 
     <!-- Now together with width100 -->
@@ -93,14 +100,14 @@
     <!-- Now we need another fix -->
     <!-- Luckly CSS3 has just the right stuff -->
     <div class="xray padding border  margin width100 border-box orange">
-            <b>padding border margin width100 border-box orange</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            <b>padding, border, margin, width100, border-box</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
     </div>
 
     <!-- Luckly CSS3 has just the right stuff: calculations -->
     <!-- Now this is fixed -->
     <!-- Remember this technique, you are going to use it over and over again. -->
-    <div class="xray padding border margin calc100 border-box orange">
-            <b>padding border margin calc100 border-box orange</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+    <div class="xray padding border margin calc100 border-box">
+            <b>padding, border, margin, calc100, border-box</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
     </div>
 
     
@@ -247,52 +254,50 @@
         }
     </style>
     
-    <h1 class="title spacing"> Ok, ok, let's review it again<h1>
-        <h2 class="subtitle"> This time on two columns<h2>
-            
-            
-        <div class="row xray">
-                
-            <div class="col">
-                        
-                <div>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                </div>
-                <div class="padding">
-                    <b>padding</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                </div>
-                <div class="padding border">
-                        <b>padding border</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                </div>
-                <div class="padding border width100 orange">
-                        <b>padding border width100 orange</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                </div>
-                <div class="padding border width100 border-box">
-                        <b>padding border width100 border-box</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                </div>
-                <div class="padding border margin border-box orange">
-                        <b>padding border margin border-box orange</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                </div>
-                <div class="padding border  margin width100 border-box orange">
-                        <b>padding border margin width100 border-box orange</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                </div>
-                <div class="padding border margin calc100 border-box orange">
-                        <b>padding border margin calc100 border-box orange</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                </div>
-
+    <h1 class="title spacing"> Ok, ok, let's review it again</h1>
+    <h1 class="subtitle"> This time on two columns</h1>h2>
+        
+    <div class="row xray">
+        <div class="col">
+                    
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
             </div>
-                
-            <div class="col">
-
-                <h1 class="title">
-                    As you can see the second column is affected by the neighbour.
-                </h1>
-                <h2 class="subtitle">
-                    That's why we put so much effort in understanding the box model.
-                </h2>
-                
+            <div class="padding">
+                <b>padding</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
             </div>
+            <div class="padding, border">
+                    <b>padding border</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            </div>
+            <div class="padding, border, width100, orange">
+                    <b>padding border width100</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            </div>
+            <div class="padding, border, width100, border-box">
+                    <b>padding border width100 border-box</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            </div>
+            <div class="padding, border, margin, border-box">
+                    <b>padding border margin border-box</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            </div>
+            <div class="padding, border, margin width100, border-box orange">
+                    <b>padding border margin width100 border-box</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            </div>
+            <div class="padding, border, margin, calc100, border-box">
+                    <b>padding border margin calc100 border-box</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            </div>
+
         </div>
+            
+        <div class="col">
+
+            <h1 class="title">
+                As you can see the second column is affected by the neighbour.
+            </h1>
+            <h2 class="subtitle">
+                That's why we put so much effort in understanding the box model.
+            </h2>
+            
+        </div>
+    </div>
 
 </body>
 </html>

@@ -1,0 +1,393 @@
+<html>
+<head>
+    <title>Position</title>
+
+    <!-- Some of the stuff we are using here keeps repeating, such as the xray googles -->
+    <!-- From now one I am going to use external style sheets to preserve screen space -->
+    <!-- Globals means styles affecting all the pages of an application -->
+    <!-- This way of working is getting closer to real life scenarios -->
+    <link rel="stylesheet" href="assets/css/globals.css">
+    <link rel="stylesheet" href="assets/css/typography.css">
+    <link rel="stylesheet" href="assets/css/ui-blocks.css">
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Open+Sans|Pacifico|Raleway|Slabo+27px" rel="stylesheet">
+
+</head>
+<body>
+
+    <style>
+        /* Just to make it easier to analyse this page I'm going to overwrite a bit the orange xray */
+        .xray.orange,
+        .xray.orange *,
+        .xray .orange,
+        .xray .orange * {
+            background: rgba(255, 220, 160, 0.9);
+        }
+
+        .margin50 {
+            margin: 50px;
+        }
+        .margin0-50 {
+            margin: 0 50px ;
+        }
+        .overflow-x-hidden{
+            /* Our experiment might upset the main page. Let's keep the horizontal scrollbars out for the moment. */
+            overflow-x: hidden;
+        }
+    </style>
+    
+    <div class="row overflow-x-hidden">
+            
+        <div class="col">
+
+            <div class="margin0-50">
+                <h1 class="title spacing">Position relative</h1>
+                <h2 class="subtitle">Keeps the same space occupied but it's displayed somewhere else</h2>
+            </div>
+
+            <!-- The default position is static -->
+            <div class="xray margin50 padding">Static div that has: <b>margin50, padding</b> classes </div>
+            <div class="xray margin50 padding">
+                Static div with several children divs nested. It uses: <b>margin50, padding</b> classes
+                
+                <div>Static div</div>
+                <div>Static div</div>
+                <div>Static div</div>
+                <div>Static div</div>
+                <div>Static div</div>
+            </div>
+
+            <style>
+                .relative{
+                    /* Position relative means that the element will be position relative to itself */
+                    /* A relative positioned div occupies the same physical space but it is display in another position */
+                    /* His neighnours act as if he is still there */
+                    position: relative;
+                }
+                
+                .top0{
+                    top: 0;
+                }
+                
+                .top30{
+                    /* Top specifies how much the div is moved from top towards bottom starting with the initial position */
+                    /* Any unit of measure works. px, em, rem, vw, vh */
+                    top: 30px;
+                }
+                
+                .top60{
+                    top: 60px;
+                }
+                
+                .left30{
+                    left: 30px;
+                }
+                
+                .left60{
+                    left: 60px;
+                }
+                
+                .bottom30{
+                    bottom: 30px;
+                }
+                
+                .right30{
+                    right: 30px;
+                }
+                
+                .right60{
+                    right: 60px;
+                }
+
+            </style>
+
+            <!-- Now let's try something interesting -->   
+            <div class="xray margin50 padding">
+                <div>Static div</div>
+                <div>Static div</div>
+                <!-- Check this one out -->
+                <!-- Nothin seems to happen -->
+                <div class="relative orange">Position <b>relative</b> div</div>
+                <div>Static div</div>
+                <div>Static div</div>
+            </div>
+
+            <div class="xray margin50 padding">
+                <div>Static div</div>
+                <div>Static div</div>
+                <!-- Look again now -->
+                <!-- Huh... that is strange... -->
+                <div class="relative top30 left30 orange">Position <b>relative, top30, left30</b> div</div>
+                <div>Static div</div>
+                <div>Static div</div>
+            </div>
+
+            <div class="xray margin50 padding">
+                <div>Static div</div>
+                <div>Static div</div>
+                <!-- What if we add paddings? -->
+                <!-- Looks like the neighbours have sensed the change -->
+                <div class="relative top30 left30 padding orange">Position <b>relative, top30, left30, padding</b> div</div>
+                <div>Static div</div>
+                <div>Static div</div>
+            </div>
+
+            <div class="xray margin50 padding">
+                <div>Static div</div>
+                <div>Static div</div>
+                <div class="relative top30 left30 padding orange">Position <b>relative, top30, left30, padding</b> div</div>
+                <!-- What if we do the same for the neighbour but with other coordinates? -->
+                <div class="relative top60 right30 orange">Position <b>relative, top60, right30</b> div</div>
+                <div>Static div</div>
+            </div>
+            
+            <div class="xray margin50 padding">
+                <div>Static div</div>
+                <div>Static div</div>
+                <div class="relative top30 left30 padding orange">
+                    Position <b>relative, top30, left30, padding</b> div
+                    
+                    <!-- Wanna see even more? -->
+                    <!-- Try nesting a static div inside a relative postioned div -->
+                    <div>Static div</div>
+                </div>
+                <div>Static div</div>
+            </div>
+            
+            <div class="xray margin50 padding">
+                <div>Static div</div>
+                <div>Static div</div>
+                <div class="relative top30 left30 padding orange">
+                    Position <b>relative, top30, left30, padding</b> div
+                    
+                    <!-- And now: nesting a relative positioned div inside a relative positioned div -->
+                    <!-- Just like in the movie Inception -->
+                    <div class="relative top30 left30 orange">Position <b>relative, top30, left30</b> div</div>
+                </div>
+                <div>Static div</div>
+            </div>
+
+        </div>
+
+        <!-- Now if you don't find position relative strange enough let's try position absolute -->
+        <div class="col">
+
+            <div class="margin0-50">
+                <h1 class="title spacing">Position absolute</h1>
+                <h2 class="subtitle">Frees up the space occupied as if it never was there</h2>
+            </div>
+
+            <!-- The default position is static -->
+            <div class="xray margin50 padding">Static div that has: <b>margin50, padding</b> classes </div>
+            <div class="xray margin50 padding">
+                Static div with several children divs nested. It uses: <b>margin50, padding</b> classes
+                
+                <div>Static div</div>
+                <div>Static div</div>
+                <div>Static div</div>
+                <div>Static div</div>
+                <div>Static div</div>
+            </div>
+
+            <style>
+                .absolute{
+                    /* Position absolute means that the element will be position absolute to the nearest relative element */
+                    /* In this case it will be relative to the page */
+                    /* An absolute positioned div does not occupy any physical space in the position where it is nested */
+                    /* His neighnours act as if he never existed */
+                    /* Talk about bad neighbours... */
+                    position: absolute;
+                }
+
+            </style>
+
+            <div class="xray margin50 padding">
+                <div>Static div</div>
+                <div>Static div</div>
+                <!-- Suspiciously this one seems to prefer staying close to the nesting point. -->
+                <!-- That is because no coordinates were specified -->
+                <div class="absolute orange">Position <b>absolute</b> div</div>
+                <div>Static div</div>
+                <div>Static div</div>
+            </div>
+
+            <div class="xray margin50 padding">
+                Where is this orange guy??? Look above...
+                <div>Static div</div>
+                <div>Static div</div>
+                <!-- So this one seems to have vanished from he's original place -->
+                <!-- He is somewhere at the top of the page... -->
+                <!-- If this is not making sense all I can recommend is that you keep studying ahead -->
+                <!-- In time these patterns will start to make sens once we start building some real stuff -->
+                <div class="absolute top30 right30 orange">Position <b>absolute, top30, right30</b> div</div>
+                <div>Static div</div>
+                <div>Static div</div>
+            </div>
+
+            <!-- Pay attention here, I will add position relative to the parent -->   
+            <div class="xray margin50 padding relative">
+                Parent: position <b>relative</b><br>
+                Easily the most useful rule so far
+                <!-- It can be used to place anything anywhere with preety high confidence 
+                    that it will be there no mmater what else happens around. -->
+                <!-- Using position relative > absolute is like buying health insurance, it is guaranteed. -->
+
+                <div>Static div</div>
+                <div>Static div</div>
+                <!-- Look again now -->
+                <!-- Huh... that is interesting. Somehow the orange guy is position relative to the parent -->
+                <!-- Actualy this the most common situation for positioning -->
+                <!-- If you understand what happened here, than you are done learning CSS -->
+                <!-- No for real, this is the hardest concept to properly understand in the whole CSS land -->
+                <div class="absolute top30 right30 orange">Position <b>absolute, top30, right30</b> div</div>
+                <div>Static div</div>
+                <div>Static div</div>
+            </div>
+
+            <!-- Since this is a relative position... Why not try to move it also? -->   
+            <div class="xray margin50 padding relative top30 left60">
+                Parent: position <b>relative, top30, left60</b><br>
+                <!-- Intereseting, the parent has moved, while his neighbours havent really cared about the move -->
+                <!-- The absolute child has moved in tandem with the parent -->
+                <!-- Actually this is really useful -->
+                <!-- We will see many situations were this comes in handy -->
+
+                <div>Static div</div>
+                <div>Static div</div>
+                <div class="absolute top30 right30 orange">Position <b>absolute, top30, right30</b> div</div>
+                <div>Static div</div>
+                <div>Static div</div>
+            </div>
+
+            <div class="xray margin50 padding relative">
+                Parent: position <b>relative</b>
+                <div>Static div</div>
+                <div>Static div</div>
+                <!-- What if we add paddings? -->
+                <!-- Looks like the neighbours couldn't care less -->
+                <div class="absolute top30 right30 padding orange">Position <b>absolute, top30, right30, padding</b> div</div>
+                <div>Static div</div>
+                <div>Static div</div>
+            </div>
+
+            <div class="xray margin50 padding relative">
+                Parent: position <b>relative</b>
+                <div>Static div</div>
+                <div>Static div</div>
+                <div class="absolute top30 right30 padding orange">Position <b>absolute, top30, right30, padding</b> div</div>
+                <!-- What if we do the same for the neighbour but with other coordinates? -->
+                <!-- Keeps getting stranger? -->
+                <!-- Well, not really, we did the same trick, only that this time we used top 0 -->
+                <!-- In esence: the order of the elements no longer matter in regards to positioning -->
+                <!-- The order still affects the draw order, meaning who is drawn first. -->
+                <!-- But this we will discuss in the z-index lesson -->
+                <div class="absolute top0 right30 orange">Position <b>absolute, top0, right30</b> div</div>
+                <div>Static div</div>
+            </div>
+            
+            <div class="xray margin50 padding relative">
+                Parent: position <b>relative</b>
+                <div>Static div</div>
+                <div>Static div</div>
+                <div class="absolute top30 right30 padding orange">
+                    Position <b>absolute, top30, right30, padding</b> div
+                    
+                    <!-- Wanna see even more? -->
+                    <!-- Try nesting a static div inside a absolute postioned div -->
+                    <div>Static div</div>
+                </div>
+                <div>Static div</div>
+            </div>
+            
+            <div class="xray margin50 padding relative">
+                Parent: position <b>relative</b>
+                <div>Static div</div>
+                <div>Static div</div>
+                <div class="absolute top30 right30 padding orange">
+                    Position <b>absolute, top30, right30, padding</b> div
+                    
+                    <!-- And now: nesting a absolute positioned div inside a absolute positioned div -->
+                    <!-- Dist is still a valid scenario that can have real life applications -->
+                    <div class="absolute top60 right30 orange">Position <b>absolute, top60, right30</b> div</div>
+                </div>
+                <div>Static div</div>
+            </div>
+            
+            <div class="xray margin50 padding relative">
+                Parent: position <b>relative</b>
+                <div>Static div</div>
+                <div>Static div</div>
+
+                <!-- Oh look, they move together -->
+                <div class="absolute top30 right60 padding orange">
+                    Position <b>absolute, top30, right60, padding</b> div
+                    <div class="absolute top60 right30 orange">Position <b>absolute, top60, right30</b> div</div>
+                </div>
+                <div>Static div</div>
+            </div>
+
+            <div class="xray margin50 padding relative">
+                Parent: position <b>relative</b>
+                <div>Static div</div>
+                <div>Static div</div>
+
+                <!-- Also, watch out what happens when I remove the padding -->
+                <div class="absolute top30 right60 orange">
+                    Position <b>absolute, top30, right60,</b> div
+                    
+                    <!-- This guys frame of reference is the same -->
+                    <!-- In the current setup the padding removal has no effect. -->
+                    <!-- everything is referencing the top right corner -->
+                    <!-- So the orange div has stayed put -->
+                    <div class="absolute top60 right30 orange">Position <b>absolute, top60, right30</b> div</div>
+
+                    <!-- One minor detail -->
+                    <!-- Because the orange div has no width of his own, he is still elastic -->
+                    <!-- This means he is constrained to not exceed the parent width even tough he is absolute positioned -->
+                    <!-- Yep... :D Understanding the inline elments takes a bit of patience -->
+                </div>
+                <div>Static div</div>
+            </div>
+
+            <div class="xray margin50 padding relative">
+                Parent: position <b>relative</b>
+                <div>Static div</div>
+                <div>Static div</div>
+
+                <!-- Final demo: adding some margin -->
+                <div class="absolute top30 right60 margin50 orange">
+                    Position <b>absolute, top30, right60, margin50</b> div
+                    
+                    <!-- This guys frame of reference has moved -->
+                    <!-- So now he also moved together with the new frame of reference -->
+                    <div class="absolute top60 right30 orange">Position <b>absolute, top60, right30</b> div</div>
+                </div>
+                <div>Static div</div>
+            </div>
+
+        </div>
+
+    </div>
+    
+
+    <div class="cover pattern">
+            
+        <div class="title">The force is strong with this one</div>
+        <div class="divider"></div>
+        <div class="subtitle">So you are still here. That's excelent news!</div>
+
+        <p class="caption">
+            I suppose you have a headache by now. But you made it! <br/>
+            The hard part is over. From now on everything will make more sense. <br/>
+            This might be the hardest part in the entire course. Hooray! <br/>
+            Well, maybe second hardest after the Object Oriented Programming chapter. <br/>
+            <br/>
+            Anyway, remember: <br/>
+            Position a div relative to it's origin <b>position: relative</b> <br/>
+            Position a div absolute to a parent <b>position: absolute</b>
+        </p>
+        <a class="skinny" href="https://twitter.com/visual_space">Follow Visual Space on Twitter</a>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,269 @@
+<html>
+<head>
+    <title>Transform & Animation</title>
+
+    <!-- Some of the stuff we are using here keeps repeating, such as the xray googles -->
+    <!-- From now one I am going to use external style sheets to preserve screen space -->
+    <!-- Globals means styles affecting all the pages of an application -->
+    <!-- This way of working is getting closer to real life scenarios -->
+    <link rel="stylesheet" href="assets/css/globals.css">
+    <link rel="stylesheet" href="assets/css/typography.css">
+    <link rel="stylesheet" href="assets/css/ui-blocks.css">
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Open+Sans|Pacifico|Raleway|Slabo+27px" rel="stylesheet">
+
+</head>
+<body>
+
+    <style>
+        .width50 {
+            width: 50%;
+        }
+        .m-auto{
+            margin: 0 auto;
+            float: none; /* Just in case a float was already defined */
+        }
+        .overflow-auto{
+            overflow:auto;
+        }
+    </style>
+
+    <div class="col width50 m-auto">
+            
+        <div class="margin0-50">
+            <h1 class="title spacing">Transformations</h1>
+            <h2 class="subtitle">Rotate, Translate, Scale, Skew</h2>
+        </div>
+
+        <p class="margin0-50">
+            Wanna see something even more interesting than position absolute?<br>
+            Try hovering the divs down bellow:
+        </p>
+
+        <style>
+
+            .square{
+                width: 200px;
+                height: 200px;
+                float: left;
+                margin: 10px;
+                cursor: pointer;
+            }
+
+            .square:hover{
+                box-shadow: inset 0 0 20px rgba(255, 165, 0, 0.5);
+                background: rgba(255, 165, 0, 0.1);
+            }
+
+            /* Enable smooth animation */
+            /* Again, no javascript :D */
+            .hover-translate,
+            .hover-rotate,
+            .hover-scale,
+            .hover-skew {
+                transition: ease-in-out 0.3s;
+            }
+
+            /* initial state */
+            .hover-translate{
+                transform: translate(0, 0);
+            }
+            .hover-rotate{
+                transform: rotate(0deg);
+            }
+            .hover-scale{
+                transform: scale(1, 1);
+            }
+            .hover-skew{
+                transform: skew(0deg, 0deg);
+            }
+
+            /* Hover states */
+            .hover-translate:hover{
+                transform: translate(50px, 50px);
+            }
+            .hover-rotate:hover{
+                transform: rotate(180deg);
+            }
+            .hover-scale:hover{
+                transform: scale(2, 2);
+            }
+            .hover-skew:hover{
+                transform: skew(60deg, 0deg);
+            }
+        </style>
+
+        <!-- The default position is static -->
+        <div class="xray margin50 padding overflow-auto">
+            Static div with several children divs nested. It uses: <b>margin50, padding</b> classes
+            
+            <div class="square hover-translate"><b>transoform: translate</b> Static div</div>
+            <div class="square hover-rotate"><b>transoform: rotate</b>Static div</div>
+            <div class="square hover-skew"><b>transoform: skew</b>Static div</div>
+            <div class="square hover-scale"><b>transoform: scale</b>Static div</div>
+        </div>
+
+        <!-- Now let's do a scince experiment :D -->
+        <style>
+            .squid {
+                overflow: visible;
+                height: 180px;
+            }
+            .squid > .tentacle{
+                width: 130px;
+                height: 130px;
+                float:left;
+            }
+            .tentacle{
+                padding: 5px;
+                transform: translate(0px, 0px) rotate(0deg);;
+                transition: ease-in-out 1s;
+            }
+            .squid:hover #tentacle-1 .tentacle{
+                transform: translate(-20px, -5px) rotate(10deg);
+            }
+            .squid:hover #tentacle-2 .tentacle{
+                transform: translate(-18px, 0px) rotate(-12deg);
+            }
+            .squid:hover #tentacle-3 .tentacle{
+                transform: translate(30px, 20px) rotate(8deg);
+            }
+            .squid:hover #tentacle-4 .tentacle{
+                transform: translate(25px, 10px) rotate(-9deg);
+            }
+        </style>
+
+        <div class="margin0-50">
+            <h1 class="title spacing">Beware of the mighty spaghetti code Kraken!</h1>
+            <h2 class="subtitle">Many programmers have lost their sanity trying to escape 
+                it's exponential complexity tentacles</h2>
+        </div>
+
+        <div class="xray margin50 padding squid">
+                Static div with several children divs nested. It uses: <b>margin50, padding</b> classes
+                
+                <!-- PRO TIP: The DOM tree is not by far the best choice for creating complex animations rigs -->
+                <!-- This is totaly unusual to execute in html. It's more of a fun experiment -->
+                <!-- These operations are very expensive and they can add up and clog the UI -->
+                <!-- A mobile phone won't be so happy rendering this animation without some GPU assist. -->
+                <div id="tentacle-1" class="tentacle">
+                    <div class="tentacle">
+                        <div class="tentacle">
+                            <div class="tentacle">
+                                <div class="tentacle">
+                                    <div class="tentacle">
+                                        <div class="tentacle">
+                                            <div class="tentacle">
+                                                <div class="tentacle">
+                                                    <div class="tentacle">
+                                                        <div class="tentacle">
+                                                            <div class="tentacle">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="tentacle-2" class="tentacle">
+                    <div class="tentacle">
+                        <div class="tentacle">
+                            <div class="tentacle">
+                                <div class="tentacle">
+                                    <div class="tentacle">
+                                        <div class="tentacle">
+                                            <div class="tentacle">
+                                                <div class="tentacle">
+                                                    <div class="tentacle">
+                                                        <div class="tentacle">
+                                                            <div class="tentacle">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="tentacle-3" class="tentacle">
+                    <div class="tentacle">
+                        <div class="tentacle">
+                            <div class="tentacle">
+                                <div class="tentacle">
+                                    <div class="tentacle">
+                                        <div class="tentacle">
+                                            <div class="tentacle">
+                                                <div class="tentacle">
+                                                    <div class="tentacle">
+                                                        <div class="tentacle">
+                                                            <div class="tentacle">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="tentacle-4" class="tentacle">
+                    <div class="tentacle">
+                        <div class="tentacle">
+                            <div class="tentacle">
+                                <div class="tentacle">
+                                    <div class="tentacle">
+                                        <div class="tentacle">
+                                            <div class="tentacle">
+                                                <div class="tentacle">
+                                                    <div class="tentacle">
+                                                        <div class="tentacle">
+                                                            <div class="tentacle">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+    </div>
+    
+    <div class="cover pattern">
+            
+        <div class="title">Now you know how to create animations</div>
+        <div class="divider"></div>
+        <div class="subtitle">Even the most complex animations are possible with some basic transformations</div>
+
+        <p class="caption">
+            Basically you now posses enough knowledge to run even the most complex animations. Even in 3d space. <br/>
+            The most advanced skeleton rigs and messhes can still boil down to several basic transformations <br/>
+            If you learn some basic Javascript in order to control the timing, the sky is the limit!<br/>
+            <br/>
+            Remember the folowing transformations: <b>translate, rotate, scale, skew</b>
+        </p>
+        <a class="skinny" href="https://twitter.com/visual_space">Follow Visual Space on Twitter</a>
+    </div>
+
+</body>
+</html>
