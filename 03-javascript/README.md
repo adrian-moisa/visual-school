@@ -2,7 +2,7 @@
 *Fundamental concepts in programming*<br>
 *Let me know if you liked it [twitter.com/visual_space](https://twitter.com/visual_space)*
 
-[Index](https://github.com/visual-space/visual-school/chapters.md)<br>
+[Index](https://github.com/visual-space/visual-school/blob/master/chapters.md)<br>
 [04 - OOP ->](https://github.com/visual-space/visual-school/blob/master/04-oop)
 
 <br><br><br>
