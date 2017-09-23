@@ -2,7 +2,8 @@
 *How to control html styling like a pro*<br>
 *Let me know if you liked this lesson [twitter.com/visual_space](https://twitter.com/visual_space)*
 
-[Index](https://github.com/visual-space/visual-school/blob/master/chapters.md)<br>
+[Index](https://github.com/visual-space/visual-school/blob/master/chapters.md) - 
+[Code samples](https://visual-space.github.io/visual-school#css)<br>
 [03 - Javascript ->](https://github.com/visual-space/visual-school/blob/master/03-javascript)
 
 **Quick check-up. How are we going with the motivation? Still going strong? That is really good. Don't let it go. You are doing the first steps in a strange new world and each lesson will seem more intriguing than the next one. Take a leap of faith and trust my advice. We are going to reach the light on the other end of the tunnel sooner than expected. I promise you! And it's a paradise full of wonder over there. They have maglev trains and holograms :D**
