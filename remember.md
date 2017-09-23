@@ -36,6 +36,8 @@
             display block; /* Concentrate yor learning efforts here */
             box-shadow:10px 10px 10px rgba(0, 0, 0, 0.4);
             transition:0.3s;
+            /* Useful tip: Press F12 to open developer tools */
+            /* Useful tip 2: Press Ctrl + Shift + C to inspect elements right in the browser window */
         }
 
 - [03 - Jpg, Png, Svg, Gif, Bitmap](https://github.com/visual-space/visual-school/blob/master/01-basic-html-and-css/03-jpg-png-svg-gif-bitmap)

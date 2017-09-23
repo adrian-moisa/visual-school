@@ -1,8 +1,6 @@
 # Temporary notes until I write this chapter
 *Ignore them*
 
-The force ia strong with this one. 
-It takes 10/20 years to become an overnight success
 Query selector can also run on div and on document
 fun fun function youtube
 JSON validation, JSON vs YAML vs XML

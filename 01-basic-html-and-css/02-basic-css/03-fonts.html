@@ -1,15 +1,548 @@
 <html>
-    <head>
-        <title>Text</title>
-        <style>
-            
-    
-        </style>
-    </head>
-    <body>
-    
-    
-        <!-- Text align demo -->
 
-    </body>
-    </html>
+<head>
+    <title>Fonts</title>
+
+    <!-- Browsers come preloaded with a limited selection of fonts. -->
+    <!-- This tag is used to link to a google server that provides modern typefaces. -->
+    <!-- 5 fonts bundled together in one tag -->
+    <!-- This is optimal balance between having variety of typefaces and maintaining low page load (fast download speeds). -->
+    <!-- Still, 4 would be better. -->
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Open+Sans|Pacifico|Raleway|Slabo+27px" rel="stylesheet">
+
+    <!-- We are also going to play with icon fonts -->
+    <!-- I already did the leg work for you and prepared the necessary assets -->
+    <!-- It's worth opening the assets folder and inspecting the size of all the elements there -->
+    <!-- Now compare those files with html files. Html is significantly smaller in size. -->
+    <!-- In time you will start get a solid understanding of what constitutes excess and what is slim package. -->
+    <!-- For the moment let's just say a website should aim to download less than 2-3 MB at first view. -->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+    <style>
+        /* Applying custom fonts for all the content in the body */
+
+        body {
+
+            /* This is how you change to font face used for a certain element */
+            /* One particular feature of this system is that it can define several fonts in the order of priority */
+            /* If first one is not available on the system than the next alternative font is used */
+            /* This used to be the case in past years but current day font imports fix this issue */
+            font-family: 'Open Sans', 'Arial', sans-serif;
+
+            /* This property comes with a 8px value by default from the browser. */
+            /* This ensures that the text does not stick to the edge of the screen in case a developer has not set any CSS rules. */
+            /* Usually it's a good idea to have total control over the page so I prefer to reset this one. */
+            margin: 0
+        }
+        /* To copensate for the previous change I create my own container with custom rules of my own */
+
+        .content {
+            /* So far this is enough */
+            margin: 30px;
+        }
+        /* Overriding the generic font with something more specific for headings */
+        /* As you can see, multiple selecgtors can match the same set of properties */
+        /* This is really handy in certain situations */
+        /* For example when we want to button (the alement) and .button (custom class) the same style */
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Raleway', serif;
+        }
+        /* One common practice is to define a global set of rules that applies for the entire app */
+        /* For example in this case I will define some custom specs for titles and subtitles */
+        /* This is going to be helpful in keeping the same typographic style all over the app */
+        /* Typography is a distinct subject itself which can take months to master */
+        /* Those who have artistic inclinations will desire to show-off the most attractive combinations of fonts */
+
+        .title {
+            font-family: 'Raleway', sans-serif;
+
+            /* This is how you control how thick a font is */
+            /* Values range between 100, 200, 300, 400, 500, 600, 700, 800, 900 */
+            /* System fonts have a limited range of thickneses, some of them are limited to normal 500 and bold 700 */
+            /* This is not the case for google fonts, yet another reason to use them */
+            /* In some situation, skiny and tall fonts look really nice */
+            font-weight: 300;
+
+            /* Two and a half times the size of the standard line height */
+            /* Headings by default have bigger sizes than plain text, but this is even bigger */
+            font-size: 2.5em;
+
+            /* The same applies for margins, the bigger the heading the bigger the margin */
+            /* In this case, because I'm building a pair of titles I want better control over the bottom margin */
+            /* Titles that are closer together tend to be perceived as a standalone unit */
+            /* This is the principle of using whitespace to control visual separation of page elements */
+            /* This is more of an art than an exact science. */
+            /* This time I'm using margin-bottom property because I do not want ot disturb the other defaults. */
+            /* However usually I use the 4 number (tob, right, bottom, left) notation because it allows me to quickly modify dimensions
+                whenever I change my mind. I don't have to retype long property names. */
+            margin-bottom: 0em;
+        }
+
+        .subtitle {
+            font-family: 'Slabo 27px', serif;
+
+            /* Italic looks nice in some situations */
+            font-style: italic;
+
+            /* Also the subtitle has it's own margin on top that we need to take care of */
+            margin-top: 0em;
+
+            /* Getting the right balance of properties takes some experimentation */
+            font-weight: 300;
+
+            /* Color is really useful to make headings stand out */
+            color: DeepSkyBlue;
+        }
+        /* However text stretching on the entire screen like on wikipedia is not appealing */
+        /* The typical line of text is expected to have 40 to 60 words */
+        /* This is the amount of text that feels confortable for readers */
+        /* We can achieve this effect by splitting the screen in two columns */
+
+        .col {
+
+            /* Instead of pixels we used percents, more precisely, percents of the parent element. */
+            /* In our case the parent streches for 100% so basically it mens that we ocuppy half of the entire screen */
+            width: 50%;
+
+            /* As usual the divs will go pne affter the other because of theyr block behavior */
+            /* They are not inlined as text and images */
+            /* So we need to force this behavior on them */
+            /* This is the most basic layout you can start with */
+            float: left;
+        }
+        /* Because the paragraphs, headings and dividers stretch 100% by default we need to add some margin to them */
+        /* This will prevent text touching between columns */
+        /* This way I'm showing right now is not optimal. I will show a better solution later in another lesson */
+
+        .col p,
+        .col div,
+        .col h1,
+        .col h2,
+        .col h3,
+        .col h4,
+        .col h5,
+        .col h6 {
+            /* I'm taking care not to interfere with previous rules */
+            /* This is were CSS is missunderstood a lot */
+            /* Be aware of the priority rules we talk about in lesson 1 and you will be just fine */
+            /* Stay away from overrinding in cascades as much as possible */
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+        /* For the moment please ignore this one */
+        /* I will explain in detail what it does in the layouts lesson */
+        /* I cannot avoid it right now so just let it be :( */
+        /* Show explanations, it prevents content from different rows coliding into each other. */
+        /* Try commenting this and refresh the page to see what I mean. */
+
+        .row {
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- On long templates is easy to forget to close tags -->
+    <div class="content">
+
+        <!-- So we are using columns but two columns is not enough for nice homepages -->
+        <!-- We need a way to separate them in standalone blocks so that ob block can be a pair of columns
+                and the next one could be a block of horizontaly aligned textx. -->
+        <!-- This is why we use an extra divider to group together the columns -->
+        <!-- I prefer using the row name because it indicates what is the purpose of this divider -->
+        <!-- REMEMBER - Always express what you wish to achieve -->
+        <!-- Short meaningful comments and proper naming are your best tools in fighting confusion -->
+        <!-- Whenever somebody opens your code he needs to understand fast what happens there -->
+        <!-- Otherwise he is at risk of introducing terrible mistakes just because he does not understand your logic -->
+        <!-- I will be repeating this over and over again -->
+        <!-- We need good habits from the get go -->
+        <div class="row">
+
+            <div class="col">
+
+                <h1 class="title">Demonstration of heading with custom font</h1>
+                <h2 class="subtitle">Demonstration of sub heading with custom font and italic style</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat.
+                </p>
+
+
+                <!-- Text align demo -->
+
+                <h1 class="title">Don't over do it</h1>
+                <h2 class="subtitle">Select just a few fonts</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat.
+                </p>
+
+                <h1 class="title">Maintain consistency</h1>
+                <h2 class="subtitle">Stick with your selection of fonts, don't add exceptions unless you really need them</h2>
+                <h3 class="fineprint"></h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat. 
+                </p>
+            </div>
+
+            <!-- Let's make this column stand out a bit -->
+            <!-- Again, I'm using stylesheets in the body just for convenience :D -->
+            <style>
+                /* This is how I specifically target a certain combination of classes that sit on the same level */
+                /* Notice that there is not space between them */
+                /* This matches only classes that sit together on the same element */
+                /* I find this solution far superior than the instinctive .dark-col that most developers use */
+                /* I cannot stress enough how much of a difference this makes */
+                /* It is called COMPOSITION */
+                /* I compose the behavior of an element by adding multiple behaviors to obtain more advanced behaviors */
+                /* In this case we take the standard column behavior and we enhance it with dark colors. */
+                /* Now the cool thing is that I can use my dark class anywhere esle to obtain the same desiere */
+
+                .col.dark {
+                    background: rgb(17, 140, 169);
+                    color: white;
+                }
+
+                .col.dark .subtitle {
+                    /* Notice the use of complemetary colors to enhance the overall effect */
+                    /* This is linked to aesthetics and color psychology */
+                    color: #ffe200;
+                }
+            </style>
+
+            <div class="col dark">
+
+                <h1 class="title">Check this out, now we are talking!</h1>
+                <h2 class="subtitle">Inverted colors... Damn, this guy gets it!</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat. 
+                </p>
+
+                <h1 class="title">Using class composition is extremely powerful</h1>
+                <h2 class="subtitle">It takes some practice but in time this will feel second nature</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat. 
+                </p>
+
+                <!-- Especially due to the drak bakground you will notice that column heights do not match -->
+                <!-- This problem will be addressed in the CSS layouts tutorial -->
+            </div>
+        </div>
+
+        <style>
+            /* Centering text is quite easy using CSS */
+
+            .centered {
+                text-align: center;
+            }
+            /* The power of em units */
+
+            .bigger {
+                /* All the text under this class will be additionally increased in size besides 
+                    the sizes specified in the individual classes */
+                /* Remember the dev tools? Press F12, Open elements tab */
+                /* Select the element that has the classes "row centered bigger"*/
+                /* In the .bigger property set try disabling the font-size by pressing on the checkbox */
+                /* Interesting, right? */
+                /* Everything scales up in sync */
+                /* This is really useful in a lot of scenarios. */
+                /* For example, you want to open an overlayed box with newsletter subscribtion call to action */
+                /* To make it stand out you want bigger font sizes */
+                /* Why not increase the defautl styling all at once using ems */
+                /* this is where ems are far more usefuls than using pixels */
+                font-size: 1.5em;
+            }
+
+            .narrow {
+                /* Let's put some spacing on all the sides */
+                margin: 15%;
+            }
+        </style>
+
+
+        <!-- Say we want to stick something in the middle of the screen -->
+        <!-- Inside the content tag we create the second row whre this time we don't have columns -->
+        <div class="row centered bigger narrow">
+
+            <style>
+                /* Slab typeface are extra thick to create a powerful expressive font */
+                /* They also feature big, strong serifs. */
+
+                .slab {
+                    font-family: 'Alfa Slab One', cursive;
+                    font-size: 3em;
+                }
+                /* Who doesn't like beautiful handwriting? */
+
+                .cursive {
+                    font-family: 'Pacifico', cursive;
+                }
+            </style>
+
+            <!-- Typography really matters for adding extra impact to a title -->
+            <!-- Oh look! Composition again! -->
+            <!-- Duude... this is awesome! -->
+            <h1 class="title slab">This already looks better than plain old HTML</h1>
+            <h2 class="subtitle cursive">We will see more and more advanced uses of CSS</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+            </p>
+
+            <!-- By the way, did you know how a female dude is called? -->
+            <!-- A dudete :D -->
+            <!-- http://www.urbandictionary.com/define.php?term=dudet -->
+
+
+        </div>
+
+
+        <!-- Let's prepare some science apparatus -->
+        <style>
+            /* That is a funny notation */
+            /* Asterisk is a catch all selector */
+            /* Rarely used but really useful in specific scenarios */
+            /* Basically this mean that we are selecting the element that has the xray class and 
+                all children elements that are nested inside */
+
+            .xray,
+            .xray * {
+                box-shadow: inset 0 0 20px rgba(0, 0, 255, 0.5);
+                background: rgba(0, 0, 255, 0.1);
+            }
+        </style>
+
+        <!-- Now let's review some technicalities -->
+        <!-- First of all lets put back the xray googles -->
+        <div class="row xray">
+
+            <style>
+                /* If you have been using Notepad++ you may have noticed how much it helps you with formatting and sugestions */
+                /* Autocomplete saves a lot of time lost typing */
+                /* Also detecting syntax mistakes is much easier with a codeeditor */
+                /* There are many other useful features in code editors, we will review them in further chapters */
+
+                .align-left {
+                    text-align: left;
+                }
+
+                .centered {
+                    text-align: center;
+                }
+
+                .align-right {
+                    text-align: right;
+                }
+            </style>
+
+            <!-- Interesting results -->
+            <h1 class="title align-left">This title is aligned to the right</h1>
+            <h2 class="subtitle align-left">So is the subtitle</h2>
+
+            <h1 class="title centered">This title is aligned to the right</h1>
+            <h2 class="subtitle centered">Centered subtitle</h2>
+
+            <h1 class="title align-right">This title is aligned to the left</h1>
+            <h2 class="subtitle align-right">Left aligned subtitle</h2>
+
+        </div>
+
+        <!-- Now let's do another science experiment -->
+        <!-- Observe in page how the positions have changed -->
+        <!-- Try also the developer tools -->
+        <!-- Hover over the elements in the Elements panel -->
+        <!-- You may notice that in the browser window, elements are highlighted -->
+        <!-- This feature is really useful to reverse engineer the structure of a page -->
+        <!-- When debugging layouts this feature is priceless -->
+
+        <!-- Let me teach you another nea trick -->
+        <!-- While in the browser (Chrome, Firefox) Press Ctrl + Shift + C -->
+        <!-- This will enable the highlight feature right in the viewport -->
+        <!-- Now you can hover elements and see their positioning much easier -->
+        <!-- Remember this shortcut, it will save you tons of precious time on the long run -->
+        <div class="row xray narrow">
+
+            <!-- Interesting results -->
+            <h1 class="title align-left">This title is aligned to the right</h1>
+            <h2 class="subtitle align-left">So is the subtitle</h2>
+
+            <h1 class="title centered">This title is aligned to the right</h1>
+            <h2 class="subtitle centered">Centered subtitle</h2>
+
+            <h1 class="title align-right">This title is aligned to the left</h1>
+            <h2 class="subtitle align-right">Left aligned title</h2>
+
+        </div>
+
+        <!-- Now let's understand iconfonts -->
+        <div class="row narrow">
+
+            <!-- Wee need some icons prepared -->
+            <style>
+                /* That is a funny notation */
+                /* Asterisk is a catch all selector */
+                /* Rarely used but really useful in specific scenarios */
+                /* Basically this mean that we are selecting the element that has the xray class and 
+                        all children elements that are nested inside */
+
+                .icon {
+                    float: left;
+                }
+
+                .icon.raster {
+                    background-image: url(assets/icons/user.png);
+                    background-size: 100% 100%;
+                }
+
+                .icon.vector {
+                    /* Nothing here so far */
+                }
+
+                .gold {
+                    color: gold;
+                }
+
+                .deep-pink {
+                    color: DeepPink;
+                }
+
+                .navy {
+                    color: navy;
+                }
+
+                .turquoise {
+                    color: Turquoise;
+                }
+                /* Let's prepare a scale of dimensions */
+                /* It is preety common to see powers of two used in images native sizes */
+                /* There are various architectural reasons why these image dimensions are sometimes prefered */
+                /* In video games they are essential in order to use the most efficient memory allocation */
+                /* On the web things are more relaxed, feel free to use whatever you need */
+                /* Just remmebr to match container size with the actual native image size */
+                /* Otherwise you get a resampled image which might be blury if scaled up or 
+                        might use memory ineficiently if scaled down. */
+
+                .s32 {
+                    width: 32px;
+                    height: 32px;
+
+                    /* This is needed to sync also the icon font */
+                    /* This time is actually better to use pixel dimensions for font size */
+                    font-size: 32px;
+                }
+
+                .s64 {
+                    width: 64px;
+                    height: 64px;
+                    font-size: 64px;
+                }
+
+                .s128 {
+                    width: 128px;
+                    height: 128px;
+                    font-size: 128px;
+                }
+
+                .s256 {
+                    width: 256px;
+                    height: 256px;
+                    font-size: 256px;
+                }
+            </style>
+
+            <!-- Interesting results -->
+            <h1 class="title">Notice how a typical PNG icon 32px by 32px looses quality as size grows</h1>
+            <h2 class="subtitle">This is called raster graphics (grids of pixels)</h2>
+
+            <!-- I'm using divs with background instead of image tags because I want to protext these images 
+                from direct interaction -->
+            <!-- It's harder to download or be distracted by a image that is a background instead of a image element -->
+            <div class="icon raster s32"></div>
+            <div class="icon raster s64"></div>
+            <div class="icon raster s128"></div>
+            <div class="icon raster s256"></div>
+        </div>
+
+        <!-- A second row is used to prevent floated elements from ruining the template -->
+        <div class="row narrow">
+
+            <h1 class="title ">This is not a problem for iconfonts</h1>
+            <h2 class="subtitle">This is called vector graphics (geometric shapes)</h2>
+
+            <p>
+                Vector graphics is not limited to icon fonts. There is the <b>&#60;svg&#62;</b> element that actually is
+                the main way to use vector graphics in modern browsers. I will talk more about svg in the next lesson.
+            </p>
+            <!-- Notice how I was forced to use special syntax in order to avoid angled brakets -->
+            <!-- This was necessary in order to get the tag rendered as text instead as an actual DOM element -->
+            <!-- This special syntax is called HTML entities -->
+
+            <!-- .fa .fa-user-circle-o are classes required by fontawesome CSS library -->
+            <!-- Notice the freedom of size of color I have from vector graphics -->
+            <div class="icon vector s32 gold fa fa-user-circle-o"></div>
+            <div class="icon vector s64 deep-pink fa fa-user-circle-o"></div>
+            <div class="icon vector s128 navy fa fa-user-circle-o"></div>
+            <div class="icon vector s256 turquoise fa fa-user-circle-o"></div>
+
+            <!-- Actually I was stuck myself here -->
+            <!-- I had to search online for help: -->
+            <!-- "font awesome not loading" -->
+            <!-- This is what I found -->
+            <!-- https://stackoverflow.com/questions/14366158/font-awesome-not-working-icons-showing-as-squares -->
+            <!-- After some reading I figured the problem -->
+            <!-- I forgot to add the .fa class thus the font was not loaded. -->
+
+            <!-- You just witnesed the wonderful process of learning in action -->
+            <!-- I had a problem, I searched for a fix, I applied it. Now I'm a litle bit better at this -->
+            <!-- This is daily routine for programmers. Do not feel disapointed about this process, embrace it. -->
+            <!-- A commoon joke on the web is: -->
+            <!-- I'm a senior programmer in my company. 
+                They think I'm really good but actually all I do is search on Google for fixes. -->
+
+        </div>
+
+        <div class="row narrow">
+
+            <!-- Another feature that text has is the superscript and subscript positioning -->
+            <p>
+                Superscript is useful for adding <sup>additonal notes</sup>. Sometime you may even use subscript <sub>depending on the context</sub>.
+            </p>
+
+
+            <style>
+                .footer {
+                    border-top: solid 1px lightgray; 
+                    margin: 50px 0; 
+                    padding: 30px; 
+                    background: #f5f5f5;
+                }
+            </style>
+
+            <p class="footer">
+                This concludes our lesson about fonts. 
+                Now you have a brod array of skills which will help you overcome most issues related to text formatting.
+            </p>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

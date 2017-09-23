@@ -239,6 +239,10 @@ I'm not going to deep into tasks because I myself I'm not a big fan of doing boo
 - Monitor blue light, sleep issues
 - Skeumorphic design
 - What are monospace fonts
+- Sans serif vs serif vs monospace
+- Color coding
+- Color schemas
+- Complementary colors
 
 <br><br><br>
 ## More subjects
@@ -395,5 +399,6 @@ __**Not documenting with comments**__ | Sometimes you have to apply a weird prop
             box-shadow:10px 10px 10px rgba(0, 0, 0, 0.4);
             transition:0.3s;
             /* Useful tip: Press F12 to open developer tools */
+            /* Useful tip 2: Press Ctrl + Shift + C to inspect elements right in the browser window */
         }
         
