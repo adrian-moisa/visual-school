@@ -1,13 +1,233 @@
 <html>
 <head>
     <title>Margin, Border, Padding</title>
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Open+Sans|Pacifico|Raleway|Slabo+27px" rel="stylesheet">
     <style>
+            
+        body{
+            margin:0;
+            font-size: 1.2em;
+            font-family: 'Open Sans', sans-serif;
+
+            /* For the moment let's hide stuff getting out of the page on the X axis */
+            overflow-x: hidden;
+        }
         
+        .xray,
+        .xray * {
+            box-shadow: inset 0 0 20px rgba(0, 0, 255, 0.5);
+            background: rgba(0, 0, 255, 0.1);
+        }
+
+        .padding{
+            padding: 20px;
+        }
+
+        .border{
+            border: solid 10px #333;
+        }
+
+        .border.orange {
+            border-color: orange;
+        }
+
+        .width100{
+            width:100%;
+        }
+
+        .border-box{
+            box-sizing: border-box;
+        }
+
+        .margin{
+            margin: 20px;
+        }
+
+        .calc100{
+            /* Let's substract both margins */
+            width:calc(100% - 40px);
+        }
 
     </style>
 </head>
 <body>
 
+    <!-- Let's observe a wild div in it's natural environment -->
+    <!-- By now you know what to expect there -->
+    <!-- We will start adding a series of properties on top of it to see how it reacts to them -->
+    <div class="xray">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+    </div>
+    
+    <!-- Padding -->
+    <div class="xray padding">
+        <b>padding</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+    </div>
+    
+    <!-- Padding and Border -->
+    <div class="xray padding border">
+            <b>padding border</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+    </div>
+    
+    <!-- Width 100% and border 10px x 2... -->
+    <!-- Something is not ok here... -->
+    <!-- The right border is out of the screen -->
+    <div class="xray padding border width100 orange">
+            <b>padding border width100 orange</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+    </div>
+
+    <!-- Let's change the behavior of the div -->
+    <!-- We will add the border as part of the entire div width -->
+    <!-- Better :D -->
+    <div class="xray padding border width100 border-box">
+            <b>padding border width100 border-box</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+    </div>
+    
+    <!-- Let's try some margin without width100 -->
+    <div class="xray padding border margin border-box orange">
+            <b>padding border margin border-box orange</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+    </div>
+
+    <!-- Now together with width100 -->
+    <!-- It's broken again -->
+    <!-- Now we need another fix -->
+    <!-- Luckly CSS3 has just the right stuff -->
+    <div class="xray padding border  margin width100 border-box orange">
+            <b>padding border margin width100 border-box orange</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+    </div>
+
+    <!-- Luckly CSS3 has just the right stuff: calculations -->
+    <!-- Now this is fixed -->
+    <!-- Remember this technique, you are going to use it over and over again. -->
+    <div class="xray padding border margin calc100 border-box orange">
+            <b>padding border margin calc100 border-box orange</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+    </div>
+
+    
+    <style>
+            
+        .title {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 300;
+            font-size: 2.5em;
+            margin-bottom: 0em;
+        }
+
+        .subtitle {
+            font-family: 'Slabo 27px', serif;
+            font-style: italic;
+            margin-top: 0em;
+            font-weight: 300;
+            color: DeepSkyBlue;
+        }
+
+        .cover{
+            background-image: url(assets/images/sea.jpg);
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            width:90vw;
+            height:90vh;
+            padding: 0;
+            margin: 5vh 5vw;
+        }
+
+        .cover > .title {
+            text-align: center;
+            font-family: 'Alfa Slab One', cursive;
+            color: #fff;
+            font-size: 3em;
+            padding-top: 200px; 
+            margin-bottom: 10px;
+
+        }
+
+        .cover > .subtitle {
+            text-align: center;
+            color: #fff;
+            font-size: 1.5em;
+            border-top: double 3px #fff;
+            border-bottom: double 3px #fff;
+            width: 350px;
+            margin: 0 auto;
+            padding: 10px 0;
+        }
+        
+        .pattern{
+            background-image: url(assets/patterns/topography.png);
+            background-size: initial;
+
+            /* Rem units are extrmely versatily in reseting font sizing */
+            /* Basically this propery ignores cascading font size */
+            /* It always uses the initial size of a line of text */
+            /* Right now we need it to reset the global font size */
+            font-size: 1rem;
+        }
+
+        .pattern > .title {
+            color: #3e374a;
+        }
+        .pattern > .subtitle {
+            color: #3e374a;
+            margin-bottom: 0;
+        }
+
+        .pattern > .divider {
+            border-top: solid 4px #3e374a;
+            width: 200px;
+            margin: 0 auto;
+        }
+
+        .pattern > .caption {
+            font-family: 'Open Sans', sans-serif;
+            color: #3e374a;
+            margin: 0 30%;
+            text-align: center;
+        }
+
+        .pattern > .caption b{
+            color: #be1d3b;
+        }
+
+        a.skinny {
+            display: block;
+            width: 250px;
+            padding: 10px;
+            background: white;
+            color: #be1d3b;
+            border: solid 4px #be1d3b;
+            text-align: center;
+            margin: 20px auto;
+            text-decoration: none;
+            transition: 0.3s;
+            font-size: 1.2em;
+        }
+
+        a.skinny:hover{
+            color: white;
+            background: #be1d3b;
+            font-family: 'Time New Roman', serif;
+        }
+
+    </style>
+    
+    <div class="cover pattern">
+
+        <div class="title">Congratulations</div>
+
+        <!-- Dividers always look nice :D -->
+        <div class="divider"></div>
+
+        <div class="subtitle">Now you basically understand the CSS box model</div>
+
+        <p class="caption">
+            You don't think so? 
+            Well, this is it: <b>padding, border, margin</b>.
+            And just remember: When you want width 100% and paddings use <b>box-sizing: border-box;</b> <b></b>.
+            When you need width:100% and 10px margin use <b>width: calc(100% - 10px)</b>
+        </p>
+        <a class="skinny" href="https://twitter.com/visual_space">Follow Visual Space on Twitter</a>
+    </div>
 
 </body>
 </html>
