@@ -1,6 +1,8 @@
 # Temporary notes until I write this chapter
 *Ignore them*
 
+Use slack channels for real app dev 
+
 ## Development process
 - Webpack
 - Git
