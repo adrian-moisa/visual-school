@@ -1,5 +1,5 @@
-﻿# Improvements that will be added to this chapter
-*Expect to see them coming soon*
+﻿# Additional material
+*These subjects will be added to this chapter*
 
 - CSS Media queries
 - http://browserhacks.com/

@@ -1,11 +1,9 @@
-# Basic CSS
+# CSS
 *How to control html styling like a pro*<br>
 *Let me know if you liked this lesson [twitter.com/visual_space](https://twitter.com/visual_space)*
 
-**WORK IN PROGRESS**
-
-[Home](https://github.com/visual-space/visual-school)<br>
-[Basic Html / Jpg, Png, Svg, Gif, Bitmap ->](https://github.com/visual-space/visual-school/blob/master/01-basic-html-and-css/03-jpg-png-svg-gif-bitmap)
+[Index](https://github.com/visual-space/visual-school/chapters.md)<br>
+[03 - Javascript ->](https://github.com/visual-space/visual-school/blob/master/03-javascript)
 
 **Quick check-up. How are we going with the motivation? Still going strong? That is really good. Don't let it go. You are doing the first steps in a strange new world and each lesson will seem more intriguing than the next one. Take a leap of faith and trust my advice. We are going to reach the light on the other end of the tunnel sooner than expected. I promise you! And it's a paradise full of wonder over there. They have maglev trains and holograms :D**
 

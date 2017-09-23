@@ -1,6 +1,15 @@
 # Temporary notes until I write this chapter
 *Ignore them*
 
+
+- Singleton
+- Command
+- Mediator
+- Observable
+- Strategy
+- Thinking in modules
+- Building an Web Api
+
 Code ergonomics
 DO I really need state store forms? Seems overkill.
 9 Dom inperative. Html de lartive

@@ -1,6 +1,115 @@
 # Temporary notes until I write this chapter
 *Ignore them*
 
+# Environment
+- Browsers. headless browsers
+	- Caching issues
+	- Inspector panel, explain all tabs
+- Switch from Notepad to Notepad++, Sublime, Vscode, WebStorm, Visual Studio, Atom
+	- Quick navigation using jump to file
+	- Mass renames, F2 rename
+	- Duplicating existing code using find and replace (Foos, Reports example, using path selection for module)
+	- Advanced renamer
+	- Autoformat using the Vscode
+	- Vscode extensions
+		- Autoclose tags plugin
+	- Using shortcuts, working fast, fast techniques of editing in page
+	- Using ctrl space for path autocomplete
+	- Intelisense, Auto select from import. Prevents typos
+	- Highlight word at caret
+	- How much time I gain from these
+	- Too many open tabs, reset navigation ocasionaly
+- What is git? Install smartgit
+	- Smartgit is not a code editor, it only keeps files in sync
+	- Resolving conflicts
+- What is the command line?
+	- Basic instructions?
+	- What does $ mean?
+- Install node
+	- Explain node_modules
+	- Install global modules
+	- Start a new project
+	- Instal local modules
+- Overview of some tools: Gulp, Grunt, Webpack
+- Install mongo, basic overview
+- POSTman, basic overview
+- XAMPP, basic overview
+- Markdown
+- Batch rename files
+- Capturing screenshots
+- Using stackoverflow
+- Using github
+- Big projects
+- IDE tools
+	- Environments
+	- Command line
+	- Package json
+	- Import libs
+	- Import a file
+	- Write a utils file and import it
+	- Minification
+	- Build process
+- Basic folder structure
+- Advanced folder structure switch
+
+Pretty print in chrome.
+Require module manager, 
+Javascript module pattern
+Don't use vim, period, unless you want to be an asshole. It totaly destroys the normal layout of the IDE
+Not using the same code formatting conventions leads to git conflicts.
+I sort tabs in the order of dependency
+Give the example of hard ass x-colleague
+7 Link to diffchecker
+7 Link to regex edutor
+7 Link to dillinger
+7 Conemu
+7 Powershell
+7 Basic cmd commands
+
+# Frameworks
+- Svg
+- D3
+	- Bar chart
+	- Line chart
+	- Pie chart
+- JS fatigue, The search for latest tech
+- jQuery
+- Basic templates with moustache
+- Typescript
+	- Types, Enums
+- Angular basic
+	- MVC
+	- Building components
+	- Building services
+		- Maps services, data services (observables), logic services
+	- Life cycle: OnInit, AfterViewInit, ngOnDestroy. Not unsubscribing
+	- Inputs, Outputs
+	- Forms, Subscribe, onCHange, Inifinite loops
+	- Building a nav menu
+	- Rendering object data
+	- Change detection
+	- Controllers should be binders
+	- Routing
+		- Guards, Resolvers
+		- The resolver is a good place to do mappings. Better than the reducer, or the effects. Even emulated resolvers are good, they can later be connected to proper web api path
+		- Modular architecture
+	- Be aware of what are you doing
+	- Dependency injection
+	- Angular was a moving target for a while
+	- Why it matters to have similar technique
+	- Circular references
+- React
+	- In angular you have to work with the DSL, in React you can use the entire JS language
+- Vue
+	- General overview
+- Basic homebrew state store
+- Ngrx
+	- What is state?
+	- Effects
+	- Moving data: Inputs in components, or subscribing to store, or straight away to service or in web api, pros cons `this._route.data.subscribe((data: {`
+- Redux
+	- Thunks, Sagas, Epics, Observable
+
 Maps services, data services (observables), logic services, 
 Reducers trigger maps, resolvers call the objects. 
 This promotes code reuse. Use injector to bring services to reducer.

@@ -1,14 +1,12 @@
-# Variables and Functions
-*Fundamental concepts in programming*<br>
+## Let's talk about motivation
+*Keep it up, there's more coming ahead*
 *Let me know if you liked it [twitter.com/visual_space](https://twitter.com/visual_space)*
 
 [Home](https://github.com/visual-space/visual-school)<br>
-[Basic Javascript / Arrays ->](https://github.com/visual-space/visual-school/blob/master/01-basic-javascript/02-basic-css)
+[HTML ->](https://github.com/visual-space/visual-school/blob/master/01-html)
 
 <br><br><br>
-## Let's talk about motivation
-*Keep it up, there's more coming ahead*
-
+## It will take more than 4 weeks to get good
 Ok. Let's face it, it's obvious by now. I told you a lie. You won't finish learning web apps in 4 weeks. That was not my plan anyway, that is unrealistic. But wait, before losing hope let's consider a bit what we are really trying to achieve. In 4 weeks I do wish that you are done reading my tutorials. But this does not mean you have stopped learning by revisiting them or by reading online. This is just the beginning. As I said multiple times, these tutorials are meant to give you the roadmap that you will follow in your own adventure.
 
 ## First understand the big picture, be efficient 
@@ -42,84 +40,3 @@ This might not be the case for everybody. Some people are just hell bent on succ
 - Don't forget to take breaks :) 
 
 May the code be with you!
-
-
-<br><br><br>
-## What is Javascript
-Lorem.
-
-<br><br><br>
-## Why was it created?
-*Lorem*
-
-- **Lorem** - Lorem.
-
-<br><br><br>
-## What can Javascript do 
-*The main features that are need to know for any web developer*
-
-Lorem.
-
-Programming concept | Description
---- | ---
-**Variables**<br>`var a = 10;` |  Lorem.
-**Arrays**<br>`function () {}` |  Lorem. 
-~~~~~~~~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~~~~~~~~~
-
-**REMEMBER A lot more to learn.**
-Lorem. 
-
-<br><br><br>
-## Why Javascript matters
-*What role does it play in app/website building*
-- Lorem.
-
-<br><br><br>
-## Tasks
-*These are simple tasks meant to teach you the basics. In the next lessons the tasks will be closer to real life scenarios*
-- **Lorem** 
-    - Lorem
-
-<br><br><br>
-## Real life situations
-- Lorem.
-
-<br><br><br>
-## Search for
-*Reading other sources always helps to piece together the puzzle*
-- Lorem
-
-<br><br><br>
-## Search for (advanced)
-*These are optional searches for advanced students*
-*Come back later if you don't wish to spend time right now*
-- Lorem
-
-<br><br><br>
-## More subjects
-*Learn more than the basics*
-*Come back later if you don't wish to spend time right now*
-
-Advanced Subject | Description
---- | ---
-**Lorem** | Lorem.
- ~~~~~~~~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~~~~~~~~~
-
-<br><br><br>
-## **Common mistakes** 
-Mistake | Description
---- | ---
-**Lorem** | Lorem.
-~~~~~~~~~~~~~~~~~~~~~~~ | ~~~~~~~~~~~~~~~~~~~~~~~
-
-<br><br><br>
-# Links and Resources
-- Lorem
-
-<br><br><br>
-# Remember
-*Do not forget these programming concepts. This is the bread and butter of the web. Learn them and master them in time!*
-
-      Lorem
-
-

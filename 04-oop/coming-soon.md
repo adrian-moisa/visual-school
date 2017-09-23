@@ -1,6 +1,20 @@
 # Temporary notes until I write this chapter
 *Ignore them*
 
+- Objects
+- new object
+- .this context
+	- public, private, static, abstract
+- Property chaining
+- Classes
+- Prototype
+- Inheritance
+	- Classical vs Prototypical
+- Composition
+- Pass by value, Pass by reference
+- Inspecting objects
+- SOLID
+- Problems with OOP
 When you have to mutate the curent object at init time this more likely a job for the constructor.
 Encapsulation. Polymorphism. 
 Principle of segregation. 
