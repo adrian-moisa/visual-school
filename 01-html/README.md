@@ -2,8 +2,8 @@
 *Learn the basics of HTML*<br>
 *This is it, first lesson. Let me know if you liked it [twitter.com/visual_space](https://twitter.com/visual_space)*
 
-[Index](https://github.com/visual-space/visual-school/blob/master/chapters.md), 
-[Code samples](https://visual-space.github.io/visual-school/#html)<br>
+[Index](https://github.com/visual-space/visual-school/blob/master/chapters.md) - 
+[Code samples](https://visual-space.github.io/visual-school#html)<br>
 [02 - CSS ->](https://github.com/visual-space/visual-school/blob/master/02-css)
 
 **_Friendly Reminder_ - These lessons are designed to showcase both the basic notions and the more advanced knowledge. Don't panic when reading this lesson. If you are a complete beginner focus on studying only the first part up to the tasks section. Anything after this section is recreational lecture just for fun. There is no need to master those techniques explained there. This will happen in time, after many months, even years. My purpose is not to scare you, but to familiarise you with the advanced topics. You will be perfectly capable of continuing this course with just the basic notions.**
