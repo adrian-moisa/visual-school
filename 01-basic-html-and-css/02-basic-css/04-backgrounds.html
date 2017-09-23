@@ -1,13 +1,183 @@
 <html>
+
+<!-- This lesson will be quite short and fast -->
 <head>
     <title>Backgrounds</title>
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Open+Sans|Pacifico|Raleway|Slabo+27px" rel="stylesheet">
     <style>
+
+        body{
+            margin:0;
+            width:100%;
+            height:100%;
+        }
         
+        .title {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 300;
+            font-size: 2.5em;
+            margin-bottom: 0em;
+        }
+
+        .subtitle {
+            font-family: 'Slabo 27px', serif;
+            font-style: italic;
+            margin-top: 0em;
+            font-weight: 300;
+            color: DeepSkyBlue;
+        }
+
+        /* Let-s setup a cover image for this lesson */
+        .cover{
+            background-image: url(assets/images/sea.jpg);
+
+            /* This is a really usefeul property */
+            /* It alows you to stretch a photo on the browser viewport without 
+                having to wory about aspect ratio or white space */
+            background-size: cover;
+
+            /* Keeps the image in center for both the X and Y axis */
+            background-position: center center;
+
+            /* This one will blow your mind */
+            /* The background will stay fixed relative to the browser viewport giving a nice animated effect */
+            /*  No Javascript sorcery here */
+            background-attachment: fixed;
+
+            width:90vw;
+            height:90vh;
+            padding: 0;
+            margin: 5vh 5vw;
+        }
+
+        /* Observe the pattern of COMPOSITION again */
+        /* I'm specifying what happens when the cover photo has also title */
+        /* Notice the > direct descendent indicator */
+        /* It forces only direct children to have this property. */
+        /* Grand-children of this element wont receive the property. */
+        /* This is really usful to ensure that other elements names 
+            title lower down the hierarchy wont be affected by this property. */
+        .cover > .title {
+            text-align: center;
+            font-family: 'Alfa Slab One', cursive;
+            color: #fff;
+            font-size: 3em;
+
+            /* This is 30% from the parent height */
+            padding-top: 200px; 
+            margin-bottom: 10px;
+
+        }
+        .cover > .subtitle {
+            /* font-family: 'Pacifico', cursive; */
+            text-align: center;
+            color: #fff;
+            font-size: 1.5em;
+            border-top: double 3px #fff;
+            border-bottom: double 3px #fff;
+            width: 300px;
+            margin: 0 auto;
+            padding: 10px 0;
+        }
+
+        .cover > .caption {
+            font-family: 'Open Sans', sans-serif;
+            color: #fff;
+            margin: 20px 30%;
+            text-align: center;
+        }
+
+        .cover > .caption a {
+            color: #FDDB1C;
+        }
 
     </style>
 </head>
 <body>
 
+    <div class="cover">
+        <div class="title">How to setup big backgrounds</div>
+        <div class="subtitle">And some nice typography</div>
+        <div class="caption">
+            A tutorial provided with love by <a href="https://github.com/visual-space/visual-school">Visual School</a> and friends. <br>
+            Star us on github if you like what you have seem so far.
+        </div>
+    </div>
+    
+    <!-- IF not specified otherwise backgrounds will behave ass repetitive patterns -->
+    <style>
+        .pattern{
+            background-image: url(assets/patterns/topography.png);
+
+            /* In this case we need to reset the size */
+            background-size: initial;
+        }
+
+        .pattern > .title {
+            color: #3e374a;
+        }
+        .pattern > .subtitle {
+            color: #3e374a;
+            margin-bottom: 0;
+        }
+
+        .pattern > .divider {
+            border-top: solid 4px #3e374a;
+            width: 200px;
+            margin: 0 auto;
+        }
+
+        .pattern > .caption {
+            font-family: 'Open Sans', sans-serif;
+            color: #3e374a;
+            margin: 0 30%;
+            text-align: center;
+        }
+
+        a.skinny {
+            display: block;
+            width: 250px;
+            padding: 10px;
+            background: white;
+            color: #be1d3b;
+            border: solid 4px #be1d3b;
+            text-align: center;
+            margin: 20px auto;
+
+            /* By default links have underline */
+            /* right now I don't desire this */
+            text-decoration: none;
+
+            /* This one was supposed to be used in a later lesson */
+            /* But I cannot help myself, I need to show some nice stuff :D */
+            transition: 0.3s;
+
+            font-size: 1.2em;
+        }
+
+        a.skinny:hover{
+            color: white;
+            background: #be1d3b;
+        }
+
+    </style>
+
+    <div class="cover pattern">
+
+        <div class="title">How cool is that?</div>
+
+        <!-- Dividers always look nice :D -->
+        <div class="divider"></div>
+
+        <div class="subtitle">We already learned some nice tricks here</div>
+
+        <p class="caption">
+            Want to see more cool stuff? Folow me on twitter and you will get tons of nice demos and samples!
+            Also don't forget to tell your friends about this excelent tutorial you found.
+            Spread the word!
+        </p>
+        <a class="skinny" href="https://twitter.com/visual_space">Follow Visual Space on Twitter</a>
+    </div>
 
 </body>
 </html>
