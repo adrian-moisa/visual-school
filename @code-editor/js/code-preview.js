@@ -314,7 +314,7 @@ function getChaptersAndLessons(callback) {
 
     // Chapters json url
     let lessonUrl = window.location.href;
-    let chaptersUrl = new URL(`../../@code-editor/data/chapters.json`, lessonUrl);
+    let chaptersUrl = new URL(`../@code-editor/data/chapters.json`, lessonUrl);
     debug('Chapters json url:', chaptersUrl.href);
 
     // Fetch chapters 
