@@ -6,7 +6,8 @@ let contentEl = document.querySelector('body > .content'),
     editorEl,
     codeEditorEl,
     codeEditorBtnEl,
-    editor;
+    editor,
+    PROJ_ROOT;
 
 // Debug
 let debug, debugOff = function () { }; // Disable all logs for the moment
@@ -42,6 +43,9 @@ function init() {
         let lessons = getChapterLessons(chapter);
         let lesson = getCurrLesson(lessons);
         let links = getNavigationLinks(lessons);
+
+        // Project root
+        PROJ_ROOT = getProjectRoot();
 
         // Quick menu
         initQuickNavMenu(links, chapter, lesson);
@@ -118,7 +122,7 @@ function initQuickNavMenu(links, chapter, lesson) {
             <!-- Menu items -->
             ${ links.reduce((t, link) => t + `
                 
-                <a class="link ${link.active === true ? 'active' : '' }"  href="${link.url}">
+                <a class="link ${link.active === true ? 'active' : '' }"  href="${PROJ_ROOT}${link.url}">
                     <div class="icon fa fa-${link.icon}"></div>
                     <div class="info">
                         <div class="title">${link.title}</div>
@@ -393,4 +397,17 @@ function getCurrLesson(lessons) {
     debug(`Lesson "${lessonName}":`, lesson);
 
     return lesson;
+}
+
+/**
+ * Get chapter lessons
+ */
+function getProjectRoot() {
+    let lessonUrl = window.location.href;
+
+    // Path name
+    let projectRoot = new URL('../../', lessonUrl).href;
+    debug(`Get project root:`, projectRoot);
+
+    return projectRoot;
 }
