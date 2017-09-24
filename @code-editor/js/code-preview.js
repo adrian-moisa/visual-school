@@ -10,8 +10,8 @@ let contentEl = document.querySelector('body > .content'),
     PROJ_ROOT;
 
 // Debug
-let debug, debugOff = function () { }; // Disable all logs for the moment
-debug = console.log; // Uncomment to enable debug
+let debug = debugOff = function () { }; // Disable all logs for the moment
+// debug = console.log; // Uncomment to enable debug
 
 init();
 
@@ -29,35 +29,38 @@ init();
 function init() {
     debug('Initialise');
 
-    // Load source code than init editor
-    // TODO Use promise
-    getSourceCode(text => {
-        initEditor(text);
-    });
+    Promise.all([
+        getSourceCode(), // Load source code than init editor
+        getChaptersAndLessons() // Retrieve data used to assist the student
+    ])
+        .then(response => {
 
-    // Retrieve data used to assist the student
-    // TODO Use promise
-    getChaptersAndLessons(chapters => {
+            console.warn(response);
 
-        let chapter = getCurrChapter(chapters);
-        let lessons = getChapterLessons(chapter);
-        let lesson = getCurrLesson(lessons);
-        let links = getNavigationLinks(lessons);
+            let [sourceCode, chapters] = response;
 
-        // Project root
-        PROJ_ROOT = getProjectRoot();
+            let chapter = getCurrChapter(chapters);
+            let lessons = getChapterLessons(chapter);
+            let lesson = getCurrLesson(lessons);
+            let links = getNavigationLinks(lessons);
 
-        // Quick menu
-        initQuickNavMenu(links, chapter, lesson);
+            // Project root
+            PROJ_ROOT = getProjectRoot();
 
-        // Code assistent
-        initCodeAssitent(chapter, lesson);
+            // Init editor
+            initEditor(sourceCode);
 
-    });
+            // Quick menu
+            initQuickNavMenu(links, chapter, lesson);
 
-    setTimeout(()=>{
+            // Code assistent
+            initCodeAssitent(chapter, lesson);
+
+        });
+
+    setTimeout(() => {
         document.body.classList.add('visible');
-    },200);
+    }, 200);
 }
 
 /**
@@ -79,12 +82,12 @@ function initQuickNavMenu(links, chapter, lesson) {
     let navMenuAndBtn = `
     
         <!-- Toggle menu -->
-        <div id="lesson-navigation-btn" class="button quick-menu-item ${isVis ? 'active' : '' }" 
+        <div id="lesson-navigation-btn" class="button quick-menu-item ${isVis ? 'active' : ''}" 
             onclick="toggleNavMenu()" title="Lessons menu">
             <i class="fa fa-list" aria-hidden="true"></i>
         </div>
 
-        <div id="lesson-navigation" class="menu side ${isVis ? 'visible' : 'hidden' }">
+        <div id="lesson-navigation" class="menu side ${isVis ? 'visible' : 'hidden'}">
 
             <!-- Header -->
             <div class="header">
@@ -101,7 +104,7 @@ function initQuickNavMenu(links, chapter, lesson) {
             </a>
             
             <!-- Code samples -->
-            <a class="link" href="/index.html">
+            <a class="link" href="${PROJ_ROOT}/index.html">
                 <div class="icon fa fa-code"></div>
                 <div class="info">
                     <div class="title">Code samples</div>
@@ -122,7 +125,7 @@ function initQuickNavMenu(links, chapter, lesson) {
             <!-- Menu items -->
             ${ links.reduce((t, link) => t + `
                 
-                <a class="link ${link.active === true ? 'active' : '' }"  href="${PROJ_ROOT}${link.url}">
+                <a class="link ${link.active === true ? 'active' : ''}"  href="${PROJ_ROOT}${link.url}">
                     <div class="icon fa fa-${link.icon}"></div>
                     <div class="info">
                         <div class="title">${link.title}</div>
@@ -141,7 +144,7 @@ function initQuickNavMenu(links, chapter, lesson) {
 
     // Insert in the page
     document.body.insertAdjacentHTML('beforeend', navMenuAndBtn);
-    
+
     // Cache page elements
     navMenuEl = document.querySelector('#lesson-navigation');
     navMenuBtnEl = document.querySelector('#lesson-navigation-btn');
@@ -154,7 +157,7 @@ function initQuickNavMenu(links, chapter, lesson) {
  * Toggle main menu visibility
  * TODO Find data binding options besides web components
  */
-function toggleNavMenu(){
+function toggleNavMenu() {
     debug('Toggle menu visibility');
     if (navMenuEl.classList.contains('visible')) {
 
@@ -168,7 +171,7 @@ function toggleNavMenu(){
         navMenuEl.classList.add('visible');
         navMenuEl.classList.remove('hidden');
         navMenuBtnEl.classList.add('active');
-        
+
         localStorage.setItem("isNavMenuVis", true);
     }
 }
@@ -200,20 +203,20 @@ function initEditor(sourceCode) {
     // Prepare navigation menu and navigation button
     let codeEditorAndBtn = `
         <!-- Toggle code editor -->
-        <div id="code-editor-btn" class="button quick-menu-item ${isVis ? 'active' : '' }" 
+        <div id="code-editor-btn" class="button quick-menu-item ${isVis ? 'active' : ''}" 
             onclick="toggleCodeEditor()" title="Code editor">
             <i class="fa fa-code" aria-hidden="true"></i>
         </div>
 
         <!-- Code editor -->
-        <div id="code-editor" class="${isVis ? 'visible' : 'hidden' }"></div>
+        <div id="code-editor" class="${isVis ? 'visible' : 'hidden'}"></div>
     `;
 
     debugOff('Code editor and button template:', codeEditorAndBtn);
 
     // Insert in the page
     document.body.insertAdjacentHTML('beforeend', codeEditorAndBtn);
-    
+
     // Cache page elements
     codeEditorEl = document.querySelector('#code-editor');
     codeEditorBtnEl = document.querySelector('#code-editor-btn');
@@ -242,7 +245,7 @@ function initEditor(sourceCode) {
  * TODO Find data binding options besides web components
  * TODO Or convert to an util
  */
-function toggleCodeEditor(){
+function toggleCodeEditor() {
     debug('Toggle editor visibility');
     if (codeEditorEl.classList.contains('visible')) {
 
@@ -256,7 +259,7 @@ function toggleCodeEditor(){
         codeEditorEl.classList.add('visible');
         codeEditorEl.classList.remove('hidden');
         codeEditorBtnEl.classList.add('active');
-        
+
         localStorage.setItem("isCodeEditorVis", true);
     }
 }
@@ -273,17 +276,29 @@ function onEditorChange(e) {
 
 // ====== UTILS ======
 
-function getSourceCode(callback) {
-    fetch(window.location.href, {
-        method: 'get',
-        headers: new Headers({
-            'Content-Type': 'text/plain'
-        })
-    }).then(response => {
-        response.text().then(function (text) {
-            callback(text);
+function getSourceCode() {
+
+    return new Promise(function (resolve, reject) {
+
+        fetch(window.location.href, {
+            method: 'get',
+            headers: new Headers({
+                'Content-Type': 'text/plain'
+            })
+        }).then(response => {
+            response.text().then(function (text) {
+
+                // if(/* good condition */) {
+                resolve(text);
+                // }
+                // else {
+                //     reject('Failure!');
+                // }
+
+            });
         });
     });
+
 }
 
 function getNavigationLinks(lessons) {
@@ -313,25 +328,33 @@ function getNavigationLinks(lessons) {
  * Get all chapters with lessons
  * <!> Currently Chapters has Lessons data already attached
  */
-function getChaptersAndLessons(callback) {
+function getChaptersAndLessons() {
     debug('Get chapters and lessons');
 
-    // Chapters json url
-    let lessonUrl = window.location.href;
-    let chaptersUrl = new URL(`../@code-editor/data/chapters.json`, lessonUrl);
-    debug('Chapters json url:', chaptersUrl.href);
+    return new Promise(function (resolve, reject) {
 
-    // Fetch chapters 
-    fetch(chaptersUrl, {
-        method: 'get'
-    }).then(response => {
-        response.json().then(function (chapters) {
+        // Chapters json url
+        let lessonUrl = window.location.href;
+        let chaptersUrl = new URL(`../@code-editor/data/chapters.json`, lessonUrl);
+        debug('Chapters json url:', chaptersUrl.href);
 
-            // Add url keys
-            chaptersIds = Object.keys(chapters);
-            chaptersIds.forEach(id => chapters[id].url = id)
+        // Fetch chapters 
+        fetch(chaptersUrl, {
+            method: 'get'
+        }).then(response => {
+            response.json().then(function (chapters) {
 
-            callback(chapters)
+                // Add url keys
+                chaptersIds = Object.keys(chapters);
+                chaptersIds.forEach(id => chapters[id].url = id)
+                        
+                // if () {
+                    resolve(chapters);
+                // }
+                // else {
+                //     reject('Failure!');
+                // }
+            });
         });
     });
 
@@ -366,7 +389,7 @@ function getCurrChapter(chapters) {
  */
 function getChapterLessons(chapter) {
     debug(`Get chapter "${chapter.title}" lessons`);
-    
+
     let lessons = chapter.lessons;
     debug(`Lessons:`, lessons);
 
@@ -407,7 +430,7 @@ function getProjectRoot() {
 
     // Path name
     let projectRoot = new URL('../', lessonUrl).href.slice(0, -1);;
-    
+
     debug(`Get project root:`, projectRoot);
 
     return projectRoot;
