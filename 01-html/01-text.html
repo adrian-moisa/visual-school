@@ -1,145 +1,137 @@
 <html>
-
 <head>
-    <!-- Not so much to see in the head section so far, only the title tag -->
-    <!-- Change this title to something else and refresh the page -->
-    <title>Text</title>
+    <!-- 
+        First of all, it's best if you read these lessons in a modern browser.
+        I have limited time so I cannot test older generations.
+        Thank you for understanding!
+
+        Not so much to see here, only the title tag.
+        Change this title to something else and refresh the page.
+        You will see the tab name changing.
+
+        Wait a sec,
+        How did it remember the changes? 
+        Aren't HTML webpages supposed to refresh on reload?
+        Well, I'll teach you in "Chapter 3 - Javascript" how this trick works.
+     -->
+    <title>HTML Text</title>
 </head>
+<!-- 
+    Why don't I use code snippets showcased in normal webpages like everybody does? 
 
-<!-- Why don't I use code snippets showcased in normal webpages like everybody does? -->
+    There are several reasons:
 
-<!-- There are several reasons, first of all, you have quick access to the source code just by downloading the entire folder. -->
-<!-- Second, its better when you can experiment yourslef with the browser and see it 
-        how it actually behaves without any distracitons. -->
-<!-- I remember being extremely confused trying to understand which is which when 
-        I was learning using online samples a long time ago. -->
-<!-- Even tough initialy this might be a bit overwhelming, at the same time it will help you focus only on the exercise. -->
-<!-- Also, I write these tutorials in my spare time which is very limited. I have an actual 9 hours job. -->
-<!-- Considering that I try to write almost an entire 500 pages book for free I am willing to take some shortcuts. -->
-<!-- However, this will be improved in time. After finishing all the chapters I will focus on porting all these
-        examples in an online interactive learning platform that I am building right now. -->
-<!-- It will use interactive code snippets designed to keep your eyes on exactly what matters. -->
-<!-- Until then, using the real editing tools that real developers use is the best approach I can recommend. -->
+    - You have quick access to the source code just by downloading the entire folder.
+    - You can experiment and see the actual browser behavior without distractions.
+    - It's less confusing to understand how the script works when nothing else interferes.
+        - Initialy this might be a bit overwhelming.
+        - In time it will help you focus only on the exercise.
+    - The developer tools will show you exactly what you have in the source code.
+    - Currently you can edit live in the page. There are some limitations of course.
+    - This is actually really close to what you will do as a developer.
+    - I write these tutorials in my spare time which is very limited.
+        - Efficency matters, this is by far the most efficient method.
+
+    Future plans:
+
+    - All the samples will be moved in an online interactive learning platform.
+    - It will use interactive code snippets designed to focus you attention.
+    - Until then I recommend using the real editing tools that real developers use.
+ -->
 <body>
 
-    Text can be placed without any tags. Observe the automatic placement of text fragments one after the other. 
-    Even if they are on different lines. 
-    This happens because html ignores whitespace in the source file. 
-    This is My first HTML document.
-    This is My first HTML document. 
-    This is My first HTML document. 
-    This is My first HTML document.
+    <div class="content">
 
-    <p>And this is my first paragraph</p>
-    <p>Now text is no longer going automatically on the same line</p>
+        <!-- Read the text bellow -->
+        Text can be placed without any tags. 
+        Observe the automatic placement of text fragments one after the other. 
+        Even if they are on different lines. 
+        This happens because html ignores whitespace in the source file. 
 
-    <!-- Actually lets place a heading / title -->
-    <h1>This is My first HTML document</h1>
+        <p>This is how you write a paragraph</p>
+        <p>Now the text is no longer displayed on the same line</p>
 
-    <!-- Some more text -->
-    <!-- Observe the distance between normal lines of text and paragraphs. -->
-    <!-- This was intentionally created in order to simulate book reading. -->
-    <!-- If you don't see the paragraphs in the editor spannign on multiple lines try enabling word wrapping -->
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-    <p>
-        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque
-        ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
-        quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi
-        nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia
-        non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam,
-        quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem
-        vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem
-        eum fugiat quo voluptas nulla pariatur?
-    </p>
-    <p>
-        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti
-        quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia
-        deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
-        Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere
-        possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis
-        aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum
-        rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus
-        asperiores repellat.
-    </p>
+        <!-- Let's place a heading (title) -->
+        <h1>This is a simple heading</h1>
 
-    <!-- For smaller titles we want to use smaller headings such as h2 h3 h4 h5 h6 -->
-    <h2>This is a heading, but smaller</h2>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-    <p>
-        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque
-        ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
-        quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi
-        nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia
-        non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam,
-        quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem
-        vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem
-        eum fugiat quo voluptas nulla pariatur?
-    </p>
+        <!-- 
+            Observe the distance between the regular lines of text and the paragraphs. 
+            This was intentionally created in order to simulate book reading.
+            If you don't see the entire paragraphs in your editor try enabling word wrapping.
+            The online version has word wrapping enabled by default
+            Anyway, I'm using short sentences so that we don't have to care about wrapping.
+            Also it's easy to follow this type of formatting.
+            From here on ignore content in the paragraphs.
+         -->
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
 
-    <h3>And even a smaller heading</h3>
-    <p>
-        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti
-        quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia
-        deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
-        Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere
-        possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis
-        aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum
-        rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus
-        asperiores repellat.
-    </p>
+        <!-- Smaller titles use smaller headings such as h2 h3 h4 h5 h6 -->
+        <h2>This is another heading, but smaller</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
 
-    <!-- Add some visual separation of text, a horizontal line -->
-    <!-- This element is rarely used in web apps but it is occasionally used in websites such as blogs -->
-    <hr>
+        <h3>And even a smaller heading</h3>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
 
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-    <p>
-        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque
-        ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
-        quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi
-        nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia
-        non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam,
-        quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem
-        vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem
-        eum fugiat quo voluptas nulla pariatur?
-    </p>
+        <!-- 
+            Separate text using a horizontal lines.
+            This element is rarely used in web apps.
+            Occasionally it is used in websites such as blogs.
+        -->
+        <hr>
 
-    <!-- Also you can use the break line element. However this is not common in web apps. -->
-    <!-- When you want to add more space between elements usually you change the margins of an element using CSS. -->
-    <!-- Examples coming soon. -->
-    <!-- Old school editors such as Adobe Dreamweaver or Microsoft Frontend tend to add these tags. -->
-    <!-- This behavior is extremely annoying for professional developers. -->
-    <!-- It's pointless to have extra tags when you can achieve the same effect from CSS. It makes html harder to read. -->
-    <br/>
-    <br/>
-    <br/>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <!-- 
+            Break line element ads an empty text line. 
+            <br> is not commonly used in web apps.
+            It has strong limitations as an element used to control spacing.
+            It's better to adjust the margins or paddings of an element using CSS.
+            There are examples on how to do this in the CSS chapter.
+            Old school editors such as Adobe Dreamweaver or Microsoft Frontend tend to add these tags.
+            This behavior is extremely annoying for professional developers.
+            It's pointless to have extra tags when you can achieve the same effect from CSS. 
+            It makes html harder to read.
+        -->
+        <br/>
+        <br/>
+        <br/>
 
-    <p>
-        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti
-        quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia
-        deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
-        Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere
-        possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis
-        aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum
-        rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus
-        asperiores repellat.
-    </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+
+    </div>
 
 </body>
+
+<!-- 
+    <!> Ignore this code :D
+    
+    As you can see it actually creates the live editor.
+    We will learn later how it works. Really!
+    Also try not to edit this while using the live editor :D
+    In case you did edit by mistake you can always use the refresh button.
+    Remember: The edits you make are stored only in the browser you currently use.
+    Don't expect to see them in other browsers.
+    As you can see, the live editor complains about adding styles down here.
+    He is right, but for the moment this is what works best.
+ -->
+<link rel="stylesheet" href="assets/css/code-preview.css">
+<script src="assets/libs/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="assets/libs/theme-xcode.js" type="text/javascript" charset="utf-8"></script>
+<script src="assets/libs/mode-html.js" type="text/javascript" charset="utf-8"></script>
+<script src="assets/js/code-preview.js" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" href="assets/css/globals.css">
+<link rel="stylesheet" href="assets/css/typography.css">
+<link rel="stylesheet" href="assets/css/ui-blocks.css">
+<link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Open+Sans|Pacifico|Raleway|Slabo+27px" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/font-awesome.min.css">
 
 </html>

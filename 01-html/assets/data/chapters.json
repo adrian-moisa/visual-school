@@ -1,0 +1,46 @@
+{
+    "/01-html": {
+        "title": "Ch 1 - HTML",
+        "description": "Learn the basics of html",
+        "lessons": {
+            "/01-html/01-text.html": {
+                "title": "Text",
+                "description": "Learn how to write text using HTML in web pages",
+                "icon": "file-text-o",
+                "steps": [
+                    {
+                        "lineNumber": 10
+                    },
+                    {
+                        "lineNumber": 20
+                    }
+                ]
+            },
+            "/01-html/02-images.html": {
+                "title": "Images",
+                "description": "Add images to the page",
+                "icon": "file-image-o"
+            },
+            "/01-html/03-lists.html": {
+                "title": "Lists",
+                "description": "Display items in lists",
+                "icon": "list"
+            },
+            "/01-html/04-inputs.html": {
+                "title": "Inputs",
+                "description": "Write a forms and inputs",
+                "icon": "check-square-o"
+            },
+            "/01-html/05-table.html": {
+                "title": "Table",
+                "description": "Render data in tables",
+                "icon": "table"
+            },
+            "/01-html/06-image-formats.html": {
+                "title": "Image Formats",
+                "description": "Pros and Cons for all formats",
+                "icon": "file-image-o"
+            }
+        }
+    }
+}

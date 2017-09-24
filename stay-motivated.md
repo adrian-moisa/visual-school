@@ -2,15 +2,15 @@
 *Keep it up, there's more coming ahead*
 *Let me know if you liked it [twitter.com/visual_space](https://twitter.com/visual_space)*
 
-[Home](https://github.com/visual-space/visual-school)<br>
+[Home](https://github.com/visual-space/visual-school) - 
+[Code samples](https://visual-space.github.io/visual-school#html)<br>
 [HTML ->](https://github.com/visual-space/visual-school/blob/master/01-html)
 
 <br><br><br>
-## It will take more than 4 weeks to get good
+## It will take more than 4 weeks to get really good at building web apps
 Ok. Let's face it, it's obvious by now. I told you a lie. You won't finish learning web apps in 4 weeks. That was not my plan anyway, that is unrealistic. But wait, before losing hope let's consider a bit what we are really trying to achieve. In 4 weeks I do wish that you are done reading my tutorials. But this does not mean you have stopped learning by revisiting them or by reading online. This is just the beginning. As I said multiple times, these tutorials are meant to give you the roadmap that you will follow in your own adventure.
 
 ## First understand the big picture, be efficient 
-
 So you want to get fit and get your nice beach body. Well what do you do? Buy a gym subscribtion, right? Now what? What are the exercises? How long do you have to practice? What can you realistically expect? How do you actually stay motivated? How do you avoid embarasing accidents and injury?
 
 Next best idea is to actually start doing some actual research. But then this is getting out of hand fast, so many contradicting ideas, everybody has their owm methodologies. You stumble upon lots of missconceptions and so an so. It takes ages... But maybe you get lucky and you find this nice book promising perfect abs in 4 weeks. The guy is nuts, he is doing bench presses with double what you weigh. This is definetly years of training... How can you even dream???
@@ -23,7 +23,6 @@ There's a famous quote: **It takes 10/20 years to become an overnight success**.
 Currently, my average is 12 to 14 hours of work daily. Switching between 4 projects each week. I'm not saying that you need to do likewise. But you definetly need to reduce your Youtube, Facebook, Instragram and slacking around time. I had months on end of low motivation, close to almost depression. It's hard. Hardest thing ever to find motivation when you feel like giving up completely. Not easy. 
 
 ## The key is steady and constant progress
-
 Let me teach you a secret. The key is not getting too deep into technical details. You don't need to do 200lbs bench presses. Do not loose too much steam in one place. When a lesson becomes tedious just skip it for god sake. Go ahead, find something refreshing, but always learn. Otherwise you might risk loosing the limited amount of motivation you have. Worst thing that can happen is actually feeling stressed by the fact that you need to start yet another lesson. This is where I put my bet on this course. I have provided a balanced blend of useful content and fun stuff so that you get a nice steady stream of interesting and enjoyable discoveries. The funny thing is that the more progress you make the more motivated you get and then the more progress you achieve. It's a self-enforcing feedback loop.
 
 ## I don't belive in setting goals, I belive in chasing pleasures

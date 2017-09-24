@@ -1,16 +1,10 @@
 <html>
 <head>
     <title>Transform & Animation</title>
-
-    <!-- Some of the stuff we are using here keeps repeating, such as the xray googles -->
-    <!-- From now one I am going to use external style sheets to preserve screen space -->
-    <!-- Globals means styles affecting all the pages of an application -->
-    <!-- This way of working is getting closer to real life scenarios -->
     <link rel="stylesheet" href="assets/css/globals.css">
     <link rel="stylesheet" href="assets/css/typography.css">
     <link rel="stylesheet" href="assets/css/ui-blocks.css">
     <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Open+Sans|Pacifico|Raleway|Slabo+27px" rel="stylesheet">
-
 </head>
 <body>
 
@@ -60,11 +54,28 @@
             .hover-rotate,
             .hover-scale,
             .hover-skew {
+                /* This is the property used for creating CSS animations */
+                /* It states that the animation should start and end slowly while the mid part of it gains full momentum */
+                /* It also has a duration of 300 miliseconds */
+                /* For a long time there was no other posibility to run animation than to use 
+                    javascript to obtain the same logic */
+                /* With the adition of the CSS3 transitions animations become much easier to achieve for deisgners
+                    that don't know the javascript prorgamming language */
+                /* A transition is basically a series of frames that are rendered in rapid succesion
+                    using different intermediary states, thus giving the illusion of movement */
+                /* So that's it, no special magic, just redrawing the same page many times with slight differences. */
                 transition: ease-in-out 0.3s;
             }
 
-            /* initial state */
+            /* Initial state */
             .hover-translate{
+
+                /* The transform operation can apply several transformations */
+                /* These trasnformation are the basics of animating objects */
+                /* One crucial thing to understand about transformations is that they work on top of the 
+                    existing position properties */
+                /* Each trasnformation has a pivot point that can be specified */
+                /* In this case no pivot was designated so the center of the object was used as the pivot point */
                 transform: translate(0, 0);
             }
             .hover-rotate{
@@ -77,7 +88,7 @@
                 transform: skew(0deg, 0deg);
             }
 
-            /* Hover states */
+            /* Hover state */
             .hover-translate:hover{
                 transform: translate(50px, 50px);
             }
@@ -96,10 +107,10 @@
         <div class="xray margin50 padding overflow-auto">
             Static div with several children divs nested. It uses: <b>margin50, padding</b> classes
             
-            <div class="square hover-translate"><b>transoform: translate</b> Static div</div>
-            <div class="square hover-rotate"><b>transoform: rotate</b>Static div</div>
-            <div class="square hover-skew"><b>transoform: skew</b>Static div</div>
-            <div class="square hover-scale"><b>transoform: scale</b>Static div</div>
+            <div class="square hover-translate"><b>transform: translate</b> Static div</div>
+            <div class="square hover-rotate"><b>transform: rotate</b> Static div</div>
+            <div class="square hover-skew"><b>transform: skew</b> Static div</div>
+            <div class="square hover-scale"><b>transform: scale</b> Static div</div>
         </div>
 
         <!-- Now let's do a scince experiment :D -->
@@ -115,7 +126,7 @@
             }
             .tentacle{
                 padding: 5px;
-                transform: translate(0px, 0px) rotate(0deg);;
+                transform: translate(0px, 0px) rotate(0deg);
                 transition: ease-in-out 1s;
             }
             .squid:hover #tentacle-1 .tentacle{

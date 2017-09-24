@@ -1,0 +1,126 @@
+/* Generic stuff */
+body{
+    margin:0;
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Some useful classes for quick demos */
+
+.padding{
+    padding: 20px;
+}
+
+.border{
+    border: solid 10px #333;
+}
+
+.border.orange {
+    border-color: rgb(255, 165, 0);
+}
+
+.width100{
+    width:100%;
+}
+
+.border-box{
+    box-sizing: border-box;
+}
+
+.margin{
+    margin: 20px;
+}
+
+.calc100{
+    width:calc(100% - 40px);
+}
+
+.margin50 {
+    margin: 50px;
+}
+
+.margin0-50 {
+    margin: 0 50px ;
+}
+
+.overflow-x-hidden{
+    overflow-x: hidden;
+}
+
+.width50 {
+    width: 50%;
+}
+
+.m-auto{
+    margin: 0 auto;
+    float: none; /* Just in case a float was already defined */
+}
+
+.overflow-auto{
+    overflow:auto;
+}
+
+/* Positioning */
+.relative{
+    position: relative;
+}
+
+.absolute{
+    position: absolute;
+}
+
+.top0{
+    top: 0;
+}
+
+.top30{
+    top: 30px;
+}
+
+.top60{
+    top: 60px;
+}
+
+.left30{
+    left: 30px;
+}
+
+.left60{
+    left: 60px;
+}
+
+.bottom30{
+    bottom: 30px;
+}
+
+.right30{
+    right: 30px;
+}
+
+.right60{
+    right: 60px;
+}
+
+/* Basic two column layout */
+.row {
+    overflow: auto;
+}
+
+.col {
+    width: 50%;
+    float: left;
+}
+
+/* The famous xray googles */       
+.xray,
+.xray * {
+    box-shadow: inset 0 0 20px rgba(0, 0, 255, 0.5);
+    background: rgba(0, 0, 255, 0.1);
+}
+.xray.orange,
+.xray.orange *,
+.xray .orange,
+.xray .orange * {
+    box-shadow: inset 0 0 20px rgba(255, 165, 0, 0.5);
+    background: rgba(255, 165, 0, 0.1);
+}
