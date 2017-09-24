@@ -406,7 +406,7 @@ function getProjectRoot() {
     let lessonUrl = window.location.href;
 
     // Path name
-    let projectRoot = new URL('../../', lessonUrl).href;
+    let projectRoot = new URL('../', lessonUrl).href;
     debug(`Get project root:`, projectRoot);
 
     return projectRoot;
