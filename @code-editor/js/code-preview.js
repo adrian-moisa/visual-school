@@ -22,6 +22,7 @@ init();
 // JSON metadata for code replay
 // Steps, Modals, Tooltips
 // Follow on twitter, discuss on slack
+// Prev Next arros in the chapter section
 
 /**
  * Enable live editing tools for the static html document
@@ -55,6 +56,10 @@ function init() {
 
             // Code assistent
             initCodeAssitent(chapter, lesson);
+
+            // Update editor (prevents wrapping problem)
+            editor.setValue(sourceCode);
+            editor.resize();
 
         });
 
@@ -174,6 +179,8 @@ function toggleNavMenu() {
 
         localStorage.setItem("isNavMenuVis", true);
     }
+    
+    editor.resize();
 }
 
 /**
@@ -192,6 +199,8 @@ function initCodeAssitent(lesson) {
 function initEditor(sourceCode) {
     debug('Initialise ACE editor');
     debugOff('Source code:', sourceCode);
+    
+    localStorage.setItem("sourceCode", sourceCode);
 
     // Is visible
     isVis = JSON.parse(localStorage.getItem("isCodeEditorVis"));
@@ -224,7 +233,7 @@ function initEditor(sourceCode) {
     debugOff('Code editor button:', codeEditorBtnEl);
 
     // Prepare contents
-    codeEditorEl.appendChild(document.createTextNode(sourceCode));
+    // codeEditorEl.appendChild(document.createTextNode(sourceCode));
 
     // Start ace code editor
     editor = ace.edit("code-editor");
@@ -234,6 +243,7 @@ function initEditor(sourceCode) {
     editor.getSession().setTabSize(4);
     editor.getSession().setUseSoftTabs(true);
     editor.getSession().setUseWrapMode(true);
+    editor.setAutoScrollEditorIntoView(true);
 
     // Update document
     editor.getSession().on('change', onEditorChange);
@@ -262,6 +272,8 @@ function toggleCodeEditor() {
 
         localStorage.setItem("isCodeEditorVis", true);
     }
+    
+    editor.resize();
 }
 
 /**
