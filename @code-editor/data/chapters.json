@@ -1,0 +1,87 @@
+{
+    "/01-html": {
+        "title": "Ch 1 - HTML",
+        "description": "Learn the basics of HTML",
+        "lessons": {
+            "/01-html/01-text.html": {
+                "title": "Text",
+                "description": "Learn how to write text using HTML in web pages",
+                "icon": "file-text-o",
+                "steps": [
+                    {
+                        "lineNumber": 10
+                    },
+                    {
+                        "lineNumber": 20
+                    }
+                ]
+            },
+            "/01-html/02-images.html": {
+                "title": "Images",
+                "description": "Add images to the page",
+                "icon": "file-image-o"
+            },
+            "/01-html/03-lists.html": {
+                "title": "Lists",
+                "description": "Display items in lists",
+                "icon": "list"
+            },
+            "/01-html/04-inputs.html": {
+                "title": "Inputs",
+                "description": "Write a forms and inputs",
+                "icon": "check-square-o"
+            },
+            "/01-html/05-table.html": {
+                "title": "Table",
+                "description": "Render data in tables",
+                "icon": "table"
+            },
+            "/01-html/06-image-formats.html": {
+                "title": "Image Formats",
+                "description": "Pros and Cons for all formats",
+                "icon": "file-image-o"
+            }
+        }
+    },
+    "/02-css": {
+        "title": "Ch 2 - CSS",
+        "description": "Learn the basics of CSS",
+        "lessons": {
+            "/02-css/01-specificity.html": {
+                "title": "Specificity",
+                "description": "CSS selectors have a priority order",
+                "icon": "code"
+            },
+            "/02-css/02-colors-shadows.html": {
+                "title": "Colors, Shadows",
+                "description": "Handling colors and the various color notations",
+                "icon": "eye"
+            },
+            "/02-css/03-fonts.html": {
+                "title": "Fonts",
+                "description": "Typefaces and Iconfonts",
+                "icon": "text-height"
+            },
+            "/02-css/04-backgrounds.html": {
+                "title": "Backgrounds",
+                "description": "Background position and dimensions",
+                "icon": "file-picture-o"
+            },
+            "/02-css/05-margin-border-padding.html": {
+                "title": "Margin, Border, Padding",
+                "description": "Control the box model like a pro",
+                "icon": "arrows-alt"
+            },
+            "/02-css/06-position.html": {
+                "title": "Position",
+                "description": "Control the placements of DOM elements",
+                "icon": "arrows"
+            },
+            "/02-css/07-transform-animation.html": {
+                "title": "Transform, Animation",
+                "description": "Master the elements of animation",
+                "icon": "video-camera"
+            }
+        }
+    }
+}

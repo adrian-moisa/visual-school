@@ -18,7 +18,7 @@ init();
 // Remember if code editor and menu are open or closed using local storage
 // Refresh code
 // Show a modal explaining how this works
-// JsOn metadata for code replay
+// JSON metadata for code replay
 // Steps, Modals, Tooltips
 // Follow on twitter, discuss on slack
 
@@ -50,6 +50,10 @@ function init() {
         initCodeAssitent(chapter, lesson);
 
     });
+
+    setTimeout(()=>{
+        document.body.classList.add('visible');
+    },200);
 }
 
 /**
@@ -308,20 +312,9 @@ function getNavigationLinks(lessons) {
 function getChaptersAndLessons(callback) {
     debug('Get chapters and lessons');
 
-    let lessonUrl = window.location.href;
-
-    // Path name
-    let pathname = new URL(lessonUrl).pathname;
-    debug('Path name:', pathname);
-
-    // Chapter name
-    let chapterName = pathname.split('/')[1];
-    let lessonName = pathname.split('/')[2];
-    debug('Chapter name:', chapterName);
-    debug('Lesson name:', lessonName);
-
     // Chapters json url
-    let chaptersUrl = new URL(`../${chapterName}/assets/data/chapters.json`, lessonUrl);
+    let lessonUrl = window.location.href;
+    let chaptersUrl = new URL(`/@code-editor/data/chapters.json`, lessonUrl);
     debug('Chapters json url:', chaptersUrl.href);
 
     // Fetch chapters 
