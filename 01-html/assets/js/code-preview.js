@@ -4,6 +4,8 @@ let contentEl = document.querySelector('body > .content'),
     navMenuEl,
     navMenuBtnEl,
     editorEl,
+    codeEditorEl,
+    codeEditorBtnEl,
     editor;
 
 // Debug
@@ -69,8 +71,8 @@ function initQuickNavMenu(links, chapter, lesson) {
     let navMenuAndBtn = `
     
         <!-- Toggle menu -->
-        <div id="lesson-navigation-btn" class="button ${isVis ? 'hidden' : 'visible' }" 
-            onclick="toggleNavMenu()" title="Show lessons menu">
+        <div id="lesson-navigation-btn" class="button quick-menu-item ${isVis ? 'active' : '' }" 
+            onclick="toggleNavMenu()" title="Lessons menu">
             <i class="fa fa-list" aria-hidden="true"></i>
         </div>
 
@@ -78,7 +80,7 @@ function initQuickNavMenu(links, chapter, lesson) {
 
             <!-- Header -->
             <div class="header">
-                <div class="close fa fa-close" onclick="toggleNavMenu()"></div>
+                <!-- <div class="close fa fa-close" onclick="toggleNavMenu()"></div> -->
             </div>
 
             <!-- Home -->
@@ -135,7 +137,8 @@ function initQuickNavMenu(links, chapter, lesson) {
     // Cache page elements
     navMenuEl = document.querySelector('#lesson-navigation');
     navMenuBtnEl = document.querySelector('#lesson-navigation-btn');
-    debugOff(navMenuEl, navMenuBtnEl);
+    debugOff('Navigation menu:', navMenuEl);
+    debugOff('Navigation menu button:', navMenuBtnEl);
 
 }
 
@@ -149,18 +152,14 @@ function toggleNavMenu(){
 
         navMenuEl.classList.remove('visible');
         navMenuEl.classList.add('hidden');
-
-        navMenuBtnEl.classList.remove('hidden');
-        navMenuBtnEl.classList.add('visible');
+        navMenuBtnEl.classList.remove('active');
 
         localStorage.setItem("isNavMenuVis", false);
     } else {
 
         navMenuEl.classList.add('visible');
         navMenuEl.classList.remove('hidden');
-
-        navMenuBtnEl.classList.remove('visible');
-        navMenuBtnEl.classList.add('hidden');
+        navMenuBtnEl.classList.add('active');
         
         localStorage.setItem("isNavMenuVis", true);
     }
@@ -183,19 +182,41 @@ function initEditor(sourceCode) {
     debug('Initialise ACE editor');
     debugOff('Source code:', sourceCode);
 
-    // Prepare editor container
-    var codePreviewEl = document.createElement('div');
-    codePreviewEl.id = 'code-preview';
-    codePreviewEl.className = 'editor';
+    // Is visible
+    isVis = JSON.parse(localStorage.getItem("isCodeEditorVis"));
+    if (isVis === null) {
+        isVis = false;
+        localStorage.setItem("isCodeEditorVis", isVis);
+    }
 
-    // Prepare contents
-    codePreviewEl.appendChild(document.createTextNode(sourceCode));
+    // Prepare navigation menu and navigation button
+    let codeEditorAndBtn = `
+        <!-- Toggle code editor -->
+        <div id="code-editor-btn" class="button quick-menu-item ${isVis ? 'active' : '' }" 
+            onclick="toggleCodeEditor()" title="Code editor">
+            <i class="fa fa-code" aria-hidden="true"></i>
+        </div>
+
+        <!-- Code editor -->
+        <div id="code-editor" class="${isVis ? 'visible' : 'hidden' }"></div>
+    `;
+
+    debugOff('Code editor and button template:', codeEditorAndBtn);
 
     // Insert in the page
-    document.body.appendChild(codePreviewEl);
+    document.body.insertAdjacentHTML('beforeend', codeEditorAndBtn);
+    
+    // Cache page elements
+    codeEditorEl = document.querySelector('#code-editor');
+    codeEditorBtnEl = document.querySelector('#code-editor-btn');
+    debugOff('Code editor:', codeEditorEl);
+    debugOff('Code editor button:', codeEditorBtnEl);
+
+    // Prepare contents
+    codeEditorEl.appendChild(document.createTextNode(sourceCode));
 
     // Start ace code editor
-    editor = ace.edit("code-preview");
+    editor = ace.edit("code-editor");
     editor.setTheme("ace/theme/xcode");
     var JavaScriptMode = ace.require("ace/mode/html").Mode;
     editor.session.setMode(new JavaScriptMode());
@@ -206,6 +227,30 @@ function initEditor(sourceCode) {
     // Update document
     editor.getSession().on('change', onEditorChange);
 
+}
+
+/**
+ * Toggle main editor visibility
+ * TODO Find data binding options besides web components
+ * TODO Or convert to an util
+ */
+function toggleCodeEditor(){
+    debug('Toggle editor visibility');
+    if (codeEditorEl.classList.contains('visible')) {
+
+        codeEditorEl.classList.remove('visible');
+        codeEditorEl.classList.add('hidden');
+        codeEditorBtnEl.classList.remove('active');
+
+        localStorage.setItem("isCodeEditorVis", false);
+    } else {
+
+        codeEditorEl.classList.add('visible');
+        codeEditorEl.classList.remove('hidden');
+        codeEditorBtnEl.classList.add('active');
+        
+        localStorage.setItem("isCodeEditorVis", true);
+    }
 }
 
 /**

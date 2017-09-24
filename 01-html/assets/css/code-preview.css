@@ -4,46 +4,46 @@ body {
     flex-direction: row;
 }
 body > .content {
-    /* width: 50%; */
     height: 100%;
     overflow: auto;
     position: relative;
     flex:1;
 }
 
-/* Navigation menu */
-#lesson-navigation-btn {
+/* Quick menu */
+.quick-menu-item {
     position: fixed;
-    top: 10px;
-    right: 17px;
-    width: 30px;
-    height: 30px;
-    font-size: 0.85em;
+    width: 40px;
+    height: 40px;
+    top: 0;
+    padding: 10px;
+    font-size: 20px;
     background: #333;
     color: #fff;
     font-family: 'Open Sans', sans-serif;
     overflow: hidden;
     cursor:pointer;
     box-sizing: border-box;
-    padding: 8px;
     z-index: 10; /* Prevent overlay by ace editor issue */
 }
 
-#lesson-navigation-btn.hidden {
-    display: none;
-}
-
-#lesson-navigation-btn:hover {
+.quick-menu-item:hover {
     background: #09A0F7;
     color: white;
 }
 
+.quick-menu-item.active {
+    background: #09A0F7;
+}
+
+/* Navigation menu */
+#lesson-navigation-btn {
+    right: 17px;
+}
+
 #lesson-navigation {
-    /* position: fixed;
-    top: 0;
-    right: 0; */
     width: 300px;
-    /* height: 100%; */
+    height: 100%;
     font-size: 0.85em;
     background: #333;
     color: #fff;
@@ -65,7 +65,8 @@ body > .content {
 }
 
 #lesson-navigation .header{
-    overflow: auto;
+    overflow: hidden;
+    height:50px;
 }
 
 #lesson-navigation .header .close{
@@ -154,12 +155,16 @@ body > .content {
 }
 
 /* Code editor */
-#code-preview {
-    /* position: fixed;
-    top: 0;
-    right: 0;
-    width: 50%; */
+#code-editor-btn {
+    right: 67px;
+}
+
+#code-editor {
     flex:1;
     height: 100%;
     font-size: 0.85em;
+}
+
+#code-editor.hidden {
+    display: none;
 }
