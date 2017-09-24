@@ -346,7 +346,8 @@ function getCurrChapter(chapters) {
     debug('Path name:', pathname);
 
     // Chapter name
-    let chapterName = pathname.split('/')[1];
+    let folders = pathname.split('/');
+    let chapterName = folders[folders.length - 2];
     debug('Chapter name:', chapterName);
 
     // Get only the current lesson 
@@ -381,8 +382,9 @@ function getCurrLesson(lessons) {
     debug('Path name:', pathname);
 
     // Chapter name
-    let chapterName = pathname.split('/')[1];
-    let lessonName = pathname.split('/')[2];
+    let folders = pathname.split('/');
+    let chapterName = folders[folders.length - 2];
+    let lessonName = folders[folders.length - 1];
     debug('Chapter name:', chapterName);
     debug('Lesson name:', lessonName);
 
