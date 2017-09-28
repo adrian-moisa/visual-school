@@ -1,0 +1,30 @@
+@import '../colors.scss';
+@import '../variables.scss';
+
+/* Button */
+button{
+    border: none;
+}
+
+button,
+.button {
+    cursor: pointer;
+    background: blue;
+    color: white;
+    padding: 8px 4px;
+    border-radius: 2px;
+    display: inline-block;
+    min-width: 50px;
+    text-align: center;
+    user-select: none;
+
+    &:hover {
+        background: darkblue;
+    }
+
+    &.disabled {
+        pointer-events: none;
+        background: gray;
+    }
+    
+}

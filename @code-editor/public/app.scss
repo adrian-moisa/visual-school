@@ -1,0 +1,11 @@
+@import './shared/scss/colors.scss';
+@import './shared/scss/variables.scss';
+
+.app {
+    .app-routes-cmp{
+        h2 {
+            margin:0;
+            padding: 30px 20px;
+        }
+    }
+}
