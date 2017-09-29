@@ -1,10 +1,13 @@
+// Debug
+let debugOff = (...any: any[]) => { }, debug = require('debug')('vs:App');
 
 /**
  * App
  */
 export class App extends HTMLElement {
-
+    
     constructor() {
+        debug('Construct App');
         super();
     }
 
@@ -14,8 +17,7 @@ export class App extends HTMLElement {
 
     get template() {
         return `
-          <div>This is a div</div>
+          <div>App component</div>
         `;
     }
 }
-window.customElements.define('vs-app', App);

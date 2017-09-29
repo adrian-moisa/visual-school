@@ -1,5 +1,6 @@
 const webpack = require("webpack"),
     path = require("path"),
+    ts = require("typescript"),
     CopyWebpackPlugin = require('copy-webpack-plugin'),
     HtmlWebpackPlugin = require('html-webpack-plugin'),
     ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
@@ -27,7 +28,8 @@ module.exports = {
 
     module: {
 
-        loaders: [{
+        loaders: [
+            {
                 test: /\.ts?$/,
                 loader: "awesome-typescript-loader",
                 include: PUBLIC_DIR,
@@ -40,19 +42,11 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
+                exclude: /node_modules/,
                 loader: 'style-loader!css-loader!sass-loader'
-            },
+            }
         ]
 
-    },
-
-    // When importing a module whose path matches one of the following, just
-    // assume a corresponding global variable exists and use that instead.
-    // This is important because it allows us to avoid bundling all of our
-    // dependencies, which allows browsers to cache those libraries between builds.
-    externals: {
-        "react": "React",
-        "react-dom": "ReactDOM"
     },
 
     // Base plugins
@@ -70,7 +64,8 @@ module.exports = {
         ]),
 
         new HtmlWebpackPlugin({
-            template: 'public/index.html'
+            template: 'public/index.html',
+            inject: false 
         }),
 
         // Load bundle.js after libs are loaded
