@@ -55,7 +55,8 @@ export class CodeEditorCmp extends HTMLElement {
         this.editor.getSession().setUseWrapMode(true);
         // this.editor.setAutoScrollEditorIntoView(true);
         this.editor.setOptions({
-            enableBasicAutocompletion: true
+            enableBasicAutocompletion: true,
+            showPrintMargin: false
         });
 
         // Initial content
