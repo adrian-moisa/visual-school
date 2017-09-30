@@ -13,5 +13,9 @@
   "exclude": [
     "node_modules",
     "build"
+  ],
+  "typeRoots": [
+    "./node_modules/@types",
+    "./public/shared/types"
   ]
 }

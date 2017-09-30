@@ -1,4 +1,5 @@
 import { APP } from '../../config/app';
+declare var $: any;
 
 // Interfaces
 import { NavItem } from './interfaces/navigator';
@@ -34,8 +35,8 @@ export class NavigatorCmp extends HTMLElement {
         this.innerHTML = this.template;
 
         // Cache page elements
-        this.navMenuEl = document.querySelector('#lesson-navigation');
-        this.navMenuBtnEl = document.querySelector('#lesson-navigation-btn');
+        this.navMenuEl = $('#lesson-navigation');
+        this.navMenuBtnEl = $('#lesson-navigation-btn');
         debugOff('Navigation menu:', this.navMenuEl);
         debugOff('Navigation menu button:', this.navMenuBtnEl);
     }

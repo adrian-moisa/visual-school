@@ -11,10 +11,10 @@ import { SharedDataState } from './shared-state';
  * App state
  */
 export interface AppState {
-    admin: AssistantState;
-    catalog: ChaptersState;
-    editor: CodeEditorState;
-    engine: LessonsState;
-    pages: NavigatorState;
+    assistants: AssistantState;
+    chapters: ChaptersState;
+    codeEditor: CodeEditorState;
+    lessons: LessonsState;
+    navigator: NavigatorState;
     shared: SharedDataState;
 }

@@ -1,10 +1,10 @@
 declare var $: any;
 
+// Services
+import { NavigatorService } from '../services/navigator.service';
+
 // Debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:QuickMenuCmp');
-
-// Public
-let toggleNavMenu;
 
 /**
  * Quick menu component
@@ -19,13 +19,13 @@ export class QuickMenuCmp extends HTMLElement {
     private isCodeEditorVis: boolean = true;
 
     // DOM
-    private navMenuEl: Element;
+    private quickMenuEl: Element;
+    private navigatorEl: any; // Element // TODO extend Element 
+    private editorEl: any; // Element;
 
     constructor() {
         super();
         debug('Construct QuickMenuCmp');
-
-        toggleNavMenu = this.toggleNavMenu;
     }
     
     connectedCallback() {
@@ -33,12 +33,19 @@ export class QuickMenuCmp extends HTMLElement {
         this.innerHTML = this.template;
 
         // Cache page elements
-        this.navMenuEl = $('quick-menu-vsc > .navigator');
-        debugOff('Navigation menu:', this.navMenuEl);
+        this.quickMenuEl = $('quick-menu-vsc');
+        this.navigatorEl = $('quick-menu-vsc > .navigator');
+        this.editorEl = $('quick-menu-vsc > .editor');
+        debugOff('Quick menu:', this.quickMenuEl);
         
         // Bind events
-        $('quick-menu-vsc > .navigator').on('click', (el: Element) => this.toggleNavMenu());
-        $('quick-menu-vsc > .editor').on('click', (el: Element) => this.toggleCodeEditor());
+        this.navigatorEl.on('click', (el: Element) => this.toggleNavMenu());
+        this.editorEl.on('click', (el: Element) => this.toggleCodeEditor());
+
+        // Subscribe
+        NavigatorService.navigation$().subscribe(() => {
+            console.warn('Redux rxjs success!')
+        });
 
     }
 
@@ -63,7 +70,8 @@ export class QuickMenuCmp extends HTMLElement {
      * Toggle lesson navigation menu
      */
     private toggleNavMenu(){
-        console.warn('toggleNavMenu');
+        debug('Toggle navigation menu');
+        NavigatorService.toggleNavigation();
     }
 
     /**

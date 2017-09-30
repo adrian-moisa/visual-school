@@ -11,6 +11,12 @@ let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:NavigatorUi
 export const NavigatorUiReducer = (state: NavigatorUiState = navigatorInitialState.ui, action: Action<any>) => {
     switch (action.type) {
 
+        // ====== TOGGLE NAVIGATOR ======
+
+        case NavigatorUiActions.TOGGLE_NAVIGATOR:
+            debug('TOGGLE_NAVIGATOR', action.payload);
+            return state
+
         default:
             return state
     }

@@ -6,5 +6,7 @@ import { NavigatorState } from '../interfaces/navigator-state';
  */
 export const navigatorInitialState: NavigatorState = {
     data: null,
-    ui: null
+    ui: {
+        isVisible: false
+    }
 };

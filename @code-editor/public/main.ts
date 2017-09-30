@@ -1,24 +1,24 @@
-import { createStore, compose, applyMiddleware } from 'redux';
+import { createStore, compose, applyMiddleware, Store } from 'redux';
 import { createEpicMiddleware } from 'redux-observable'
+import { Observable } from 'rxjs/Observable';
+// import { observableFromStore } from 'redux-rx';
+
+// Interfaces
+import { AppState } from './shared/interfaces/app-state';
 
 // Emulate jQuery selector (global var, before other components)
 require('script-loader!../node_modules/blingdotjs/bling.js');
 
-// Main app component (loaded last)
-import { VisualSchoolCmp } from './visual-school.cmp';
-
-// Reducers
+// State
 import { appReducers } from './shared/state/app.reducers';
-
-// Epics
 import { appEpics } from './shared/state/app.epics';
 
-// Debug
+// Setup debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:Main');
 (window as any).debug = require('debug');
 debug.enabled === false && console.log('Enable console logs by typing: debug.enable(\'vsc:*\')');
 
-// State store
+// Setup state store
 const epicMiddleware = createEpicMiddleware(appEpics);
 
 // Make the state store available globally
@@ -29,7 +29,11 @@ const epicMiddleware = createEpicMiddleware(appEpics);
         (window as any).devToolsExtension ? (window as any).devToolsExtension() : (f: any) => f
     )
 );
-declare var store: any;
+declare var store: Store<AppState>;
+
+// Rxjs store observable
+let store$ = (<any>window).store$ = observableFromStore(store);
+console.log('store$', store$);
 
 // Enable Webpack hot module replacement for reducers
 if (module.hot) {
@@ -37,12 +41,22 @@ if (module.hot) {
         const nextRootReducer = require('./shared/state/app.reducers');
         store.replaceReducer(nextRootReducer);
     });
-} 
+}
 
 // Styles
 require('./shared/scss/main.scss');
 
-// <!> Instantiate app after the other utilities
+// Main app component (loaded last)
+import { VisualSchoolCmp } from './visual-school.cmp';
 VisualSchoolCmp;
 
 debug('Initialise Main');
+
+// TODO move to a service
+function observableFromStore(store: Store<AppState>) {
+    return Observable.create((observer: any) => {
+        return store.subscribe(() => {
+            return observer.next(store.getState());
+        });
+    });
+}

@@ -7,7 +7,7 @@ export interface NavigatorDataState {
 
 // Ui
 export interface NavigatorUiState {
-    // empty
+    isVisible: boolean;
 }
 
 // Navigator
