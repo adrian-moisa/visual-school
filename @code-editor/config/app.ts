@@ -1,8 +1,12 @@
-
 /** 
  * Public app configuration
  */
 export const APP = {
-	domain: window.location.href, //'http://localhost:8000',
+	host: new URL(window.location.href).host,
+
+	// Used in development to avoid
+	// . Cross origin requests are only supported for protocol schemes: http, data, chrome, chrome-extension, https 
+	hostFiles: 'http://localhost:8081', 
+	
 	apiVersion: '1'
 };

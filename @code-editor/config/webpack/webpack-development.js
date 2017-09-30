@@ -9,6 +9,14 @@ module.exports = Object.assign(common, {
     // Adding inline source map to generated bundles is the easiest way to help debugging without bringing extra files.
     devtool: "inline-source-map",
 
+    devServer: {
+        headers: {
+            'Access-Control-Allow-Origin': '*',
+            "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+            "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
+        }
+    },
+
     // Development plugins
     // Enable hot reload
     plugins: [

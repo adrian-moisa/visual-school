@@ -58,7 +58,7 @@ export class NavigatorCmp extends HTMLElement {
                 </a>
             
                 <!-- Code samples -->
-                <a class="link" href="${APP.domain}/index.html">
+                <a class="link" href="${APP.host}/index.html">
                     <div class="icon fa fa-code"></div>
                     <div class="info">
                         <div class="title">Code samples</div>
@@ -84,7 +84,7 @@ export class NavigatorCmp extends HTMLElement {
             <div class="links lessons">
                 ${ this.links.reduce((t, link) => t + `
                 
-                <a class="link ${link.active === true ? 'active' : ''}"  href="${APP.domain}${link.url}">
+                <a class="link ${link.active === true ? 'active' : ''}"  href="${APP.host}${link.url}">
                     <div class="icon fa fa-${link.icon}"></div>
                     <div class="info">
                         <div class="title">${link.title}</div>

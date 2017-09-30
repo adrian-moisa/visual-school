@@ -5,7 +5,7 @@ import { QuickMenuCmp } from './navigator/components/quick-menu.cmp';
 CodeEditorCmp; NavigatorCmp; QuickMenuCmp;
 
 // Services
-import { codeEditorService } from './code-editor/services/code-editor.service';
+import { CodeEditorService } from './code-editor/services/code-editor.service';
 
 // Debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:VisualSchoolCmp');
@@ -27,7 +27,7 @@ export class VisualSchoolCmp extends HTMLElement {
         // DOM cache
         let contentEl: HTMLElement = <HTMLElement>document.querySelector('.lesson.content');
         debugOff('Lesson content:', contentEl);
-        codeEditorService.setContentElement(contentEl);
+        CodeEditorService.setContentElement(contentEl);
     }
 
     get template() {

@@ -65,6 +65,10 @@ module.exports = {
                 from: `public/shared/images`,
                 to: 'images'
             },
+            {
+                from: `code-samples`,
+                to: 'code-samples'
+            },
             // {
             //     from: NODE_MODULES_DIR + `/react/dist/react.min.js`,
             //     to: 'vendors/react.min.js'

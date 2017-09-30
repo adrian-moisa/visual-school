@@ -4,7 +4,7 @@ import 'brace/mode/html';
 import 'brace/theme/xcode';
 
 // Services
-import { codeEditorService } from './services/code-editor.service';
+import { CodeEditorService } from './services/code-editor.service';
 
 // Debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:CodeEditorCmp');
@@ -57,8 +57,17 @@ export class CodeEditorCmp extends HTMLElement {
         this.editor.setOptions({
             enableBasicAutocompletion: true
         });
+
+        // Initial content
+        CodeEditorService.getLessonContent('01-html/01-text.html')
+            .subscribe(sourceCode => {
+                // -1 moves cursor to the start (prevents select all text)
+                this.editor.setValue(sourceCode, -1);
+                this.editor.resize();
+                CodeEditorService.updateLessonContent(sourceCode);
+            });
     
-        // Update document
+        // Update document event
         this.editor.getSession().on('change', () => this.onEditorChange());
     }
 
@@ -69,7 +78,7 @@ export class CodeEditorCmp extends HTMLElement {
         debug('On editor change');
         
         let code = this.editor.getValue();
-        codeEditorService.updateLessonContent(code);
+        CodeEditorService.updateLessonContent(code);
 
     }
 
