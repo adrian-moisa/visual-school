@@ -1,0 +1,282 @@
+<html>
+
+<!-- Try opening this page in a browser -->
+<head>
+    <title>Colors</title>
+</head>
+<body>
+    
+    <div class="content">
+            
+        <!-- REMEMBER -->
+        <!-- ALways return to these samples when necessary instead of trying to memorize them by heart. -->
+
+        <style>
+
+            /* I'm changing the font styling a bit just because I hate reading Time New Roman on the web */
+            /* We will study more about fonts later */
+            /* But also since you are reading this, notice that I am using the body tag */
+            /* I could go as far as using the main tag, html, but this is fine */
+            /* The purpose of using body is to control styles for the entire page in one shot. */
+            /* In typical web apps using body tag is reserved only for a few properties. */
+            /* Most of the properties reside in strictly targeted selectors. */
+            body {
+                font-family: 'Arial';
+            }
+            
+            /* Named color */
+            /* A lot of times I use this instruction just to get a confirmation that my selector is valid. */
+            /* This comes in handy if the effects from the other properties are not so easy to detect. */
+            .red{
+                color: red; 
+            }
+
+            /* Hexadecimal codes */
+            .green{
+                color:#00FF00; /* Can be written both in upper and lower case. Upper is most common */
+            }
+
+            /* Red green blue color code. Each channel is expressed from 0 to 255 */
+            /* This is beacuse ot the */
+            .blue{
+                color: rgb(0,0,255);
+            }
+            
+            /* Red green blue alpha color code */
+            /* Alpha means transparency from 0 to 1 */
+            .transparent-blue{
+                color: rgba(0,0,255,0.4);
+            }
+
+        </style>
+
+        <!-- Defining colors in CSS is possible in several ways -->
+        <!-- Using names is the simplest. I almost never use it. -->
+        <!-- When I convert design to template I use a lot the color picker tool which returns values in Hexadecimal. -->
+        <p class="red">Red paragraph using color names</p>
+
+        <!-- Using Hexadecimal notation has the standard for a long time -->
+        <p class="green">Green paragraph using HEX colors</p>
+
+        <!-- RGB was introduced in order to allow easy conversions of colors from other software -->
+        <p class="blue">Blue paragraph using RGB colors</p>
+            
+        <!-- In modern browsers the alpha channel was added to control transparency. 
+                In the early days of web this was only a dream. -->
+        <p class="transparent-blue">Blue paragraph using RGBA colors</p>
+
+        <!-- You may notice something funny down bellow. -->
+        <!-- I have line breaks for each sentece but HTML ignores them. -->
+        <!-- Actually the only line brake in the page is caused by the <p> tag. -->
+
+        <!-- So why bother? -->
+        <!-- Because probably you are reading this right now in notepad. -->
+        <!-- As a matter of fact we need to fix this soon and start using a proper editor. -->
+        <!-- Until we get to more advanced lessons feel free to download and install Notepad++. -->
+        <!-- It's far better then Notepad. It has color coding first of all. -->
+        <!-- Later we will use something even better, but right now Notepad++ is awesome! -->
+
+        <!-- Anyway, the reason I have these line breaks is because in many circumstances -->
+        <!--    the default behavior of wrapping long lines of text is not enabled by default. -->
+        <!-- This means that you will see long lines of text with a long horizontal scrool. -->
+        <!-- This is really annoying so in order to spare you some nerves I will do this myself. -->
+        <!-- Doing this for text on the web is not really necessary. -->
+        <!-- It's our particular situation that needs it. -->
+
+        <h2>How to use the integrated browser color picker</h2>
+        <h3>Open developer tools panel</h3>
+        <p>
+            In case you are not aware of color pickers I will bring them to your attention.
+            The color picker is a tool used very often in web development and not just by designers.
+            In order to use it you have to open developer tools panel.
+            To open it usually you have to access main menu and there you will find developer tools in almost all browsers.
+            Or you can press F12. Most browsers should open developer tools.
+        </p>
+        
+        <h3>Select a HTML element contaning text</h3>
+        <p>
+            If this is your first visit there, don't panic. Ignore most of the stuff you see there.
+            Usually you will see a panel called "Console" which should be mostly white.
+            This is not what we need. Look for a panel called "Elements".
+            After opening "Elements" you should see some HTML in the main view.
+            Just click on any of these tags and on the right side you should see a panel with CSS rules.
+            For the moment just ignore them.
+            First one should usually be named element.style {}
+        </p>
+        
+        <h3>Change the color of the text live</h3>
+        <p>
+            One cool thing you can do with developer tools is to change the page without actually saving or refreshing.
+            This is done on the fly and the changes will be lost on refresh
+            Try typing there color hit "enter" and than type "red", enter again.
+            The way you enter CSS instructions in dev tools is a bit cumbersone unfortunately, it takes a bit of practice.
+            Now you should see some red text there.
+            Feel free to try the other notations aswell.
+            Notice that when you type wrong syntax a striketrough will appear, indicating that the rule is not active.
+            We will talk more about dev tolls in the upcoming chapters. 
+            Right now remember F12 to open dev tools and the CSS panel for live edits and experiments.
+        </p>
+        
+        
+        <h3>Now let's try a few experiments with colors</h3>
+
+                                <!-- This is not part of the lesson itself. -->
+                                <!-- I need a way to showcase the colors that I'm using down bellow. -->
+                                <!-- Just ignore this for the moment> I will explain later how it works. -->
+                                <!-- Of course, avoid inline styles :D -->
+                                <!-- Also adding extra tabs is not a recommended technique but 
+                                    I really need to emphasyze that these tags should be ignored. -->
+                                <!-- However this is also a good occasion to show you how some real CSS code might look like. -->
+                                <div style="position: relative; margin:0; width:100%;">
+                                    <div style="
+                                        background: lightGray; 
+                                        width:50vw; 
+                                        margin:0; 
+                                        position:absolute; 
+                                        top:0px; 
+                                        right:0px; 
+                                        height:170vw; 
+                                        z-index:-1; ">
+                                    </div>
+                                </div>
+
+        <!-- Because I don't want to make it hard for you to read this leasson I will keep styles close to the actual content. -->
+        <!-- Especially in this chapter I will use this method just to make it easy to foolow. -->
+        <!-- However in real web apps this is uncommon. Usually stylesheets are place in the header. -->
+        <style>
+
+            /* Again, in real world, naming classes like this is not common */
+            /* I will explain later in detail how it's best to name classes but 
+                for the moment I'll use this as a convenient way to comunincate my intentions for that class. */
+            .blue-text {
+                color:blue;
+            }
+            .blue-background {
+                background:blue;
+            }
+            .blue-border {
+                border:solid 10px blue;
+            }
+            .blue-shadow {
+                box-shadow:5px 5px 30px blue;
+            }
+            .blue-inner-shadow {
+                box-shadow:inset 5px 5px 30px blue;
+            }
+            .blue-text-shadow {
+                text-shadow:5px 5px 10px blue;
+            }
+            .blue-gradient {
+                background: linear-gradient(blue, DeepSkyBlue );
+            }
+
+            /* To make it easy to view the effects I will add some extra properties on the divs */
+            /* Usually you don't select all divs :D */
+            .content > div { 
+
+                /* It means: top and bottom margins are 30 pixels. 
+                    Left and right margins are calculated automatically so that the div stays in the center */
+                margin: 30px auto; 
+
+                /* But automatic margins cannot work if you don't have a width dimension. */
+                /* Otherwise the div will stretch full width by default. */
+                /* This was demonstrated in the HTML lessons. */
+                width: 400px;
+
+            }
+        </style>
+
+        <!-- An additional trick available with browser dev tools is to select an element from the webpage itself -->
+        <!-- Open this sample in the browser. -->
+        <!-- Right click on one of these elements and select Inspect element. -->
+        <!-- Dev tools will open having already this element preselected. -->
+        <!-- Another cool trick is that you can disable properties by clicking the checkbox. -->
+        <!-- Also observe that there are two rules that apply to any div. -->
+        <!-- One is the color rule from the color selector. -->
+        <!-- The other 2 are the maring and width from the more generic div selector. -->
+        <!-- Getting used to thse panels is really useful, in time they will becom invaluable. -->
+        <div class="blue-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
+        <div class="blue-background">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
+        <div class="blue-border">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
+        <div class="blue-shadow">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
+        <div class="blue-inner-shadow">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
+        <div class="blue-text-shadow">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
+        <div class="blue-gradient">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
+
+        
+        <h3>What about the alpha channel?</h3>
+    
+        <!-- Yep, let's see it in action. -->
+        <style>
+
+            /* Long class names are usually a really terible way to name your classes. */
+            /* Again, for the sake of the example, let's pretend we used really short names :D */
+            .blue-text-transparent {
+                color: rgba(0, 0, 255, 0.4);
+            }
+            .blue-background-transparent {
+                background:rgba(0, 0, 255, 0.4);;
+            }
+            .blue-border-transparent {
+                border:solid 10px rgba(0, 0, 255, 0.4);;
+            }
+            .blue-shadow-transparent {
+                box-shadow:5px 5px 30px rgba(0, 0, 255, 0.4);;
+            }
+            .blue-inner-shadow-transparent {
+                box-shadow:inset 5px 5px 30px rgba(0, 0, 255, 0.4);;
+            }
+            .blue-text-shadow-transparent {
+                text-shadow:5px 5px 10px rgba(0, 0, 255, 0.4);;
+            }
+            .blue-gradient-transparent {
+                background: linear-gradient(rgba(0, 0, 255, 0.4), rgba(86, 199, 233, 0.4) );
+            }
+    
+            /* No need to write again the div positioning rule, it's still active. */
+            /* In fact I recommended in the lesson to be careful not to repeat the same selector twice */
+            /* This makes it harder to understand the purpose, it adds confusion. */
+            /* We do not want confusion in our web apps. */
+            /* Just nice and clean code. */
+
+        </style>
+    
+        <div class="blue-text-transparent">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
+        <div class="blue-background-transparent">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
+        <div class="blue-border-transparent">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
+        <div class="blue-shadow-transparent">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
+        <div class="blue-inner-shadow-transparent">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
+        <div class="blue-text-shadow-transparent">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
+        <div class="blue-gradient-transparent">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
+    
+        <h2>Friendly reminder, these are just demo samples</h2>
+        <p>
+            One of my first grudges when I was learning HTML and CSS it was that I it was really hard to figure out 
+                how to use the newly learned lessons for actual work.
+            I mean, this demo looks prety technical and unlike any other webpage you have seen.
+            It's like buying a fancy 4K LED TV and displaying the color correction grid on it.
+            Righ now I'm under pressure to deliver under a short amount of time but I promise to return back later 
+                and link to proper samples of code that actually showcase real life situations.
+            This will most likely happen later on in the more advanced chapters when we start building some real life web apps.
+            I will use samples from there to demonstrate here what are some actual uses cases of these properties.
+            This will apply for all the upcoming lessons.
+
+        </p>
+    
+    </div>
+
+</body>
+
+<!-- <!> Ignore this code :D -->
+<link rel="stylesheet" href="../@code-editor/css/code-preview.css">
+<script src="../@code-editor/libs/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="../@code-editor/libs/theme-xcode.js" type="text/javascript" charset="utf-8"></script>
+<script src="../@code-editor/libs/mode-html.js" type="text/javascript" charset="utf-8"></script>
+<script src="../@code-editor/js/code-preview.js" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" href="../@code-editor/css/globals.css">
+<link rel="stylesheet" href="../@code-editor/css/typography.css">
+<link rel="stylesheet" href="../@code-editor/css/ui-blocks.css">
+<link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Open+Sans|Pacifico|Raleway|Slabo+27px" rel="stylesheet">
+<link rel="stylesheet" href="../@code-editor/css/font-awesome.min.css">
+
+</html>

@@ -1,0 +1,111 @@
+navigator-vsc {
+    width: 300px;
+    height: 100%;
+    font-size: 0.85em;
+    background: #333;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    overflow: auto;
+
+    &.hidden {
+        display: none;
+    }
+
+    a {
+        color: #71CCFD;
+        text-decoration: none;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+    
+    .header{
+        overflow: hidden;
+        height:50px;
+
+        .close{
+            height: 20px;
+            width: 20px;
+            padding: 10px;
+            float: right;
+            font-size: 20px;
+            cursor: pointer;
+            text-align: center;
+
+            &:hover{
+                background: crimson;
+                color:white;
+            }
+        }
+    }
+
+    .chapter{
+        padding: 10px 20px;
+
+        .title{
+            font-size: 1.7em;
+        }
+
+        .subtitle{
+            font-size: 1.3em;
+            margin:0;
+            color:#71CCFD;
+        }
+
+        .lesson{
+            font-size: 0.9em;
+            display: inline-block;
+            margin:0 0 10px 0;
+        }
+    }
+
+    .links {
+
+        .link {
+            color: #fff;
+            display: block;
+            border-bottom: solid 1px #555;
+            cursor:pointer;
+            display: flex;
+            flex-direction: row;
+
+            &.active {
+                background: #444;
+            }
+
+            &:hover {
+                background: #09A0F7;
+                color: white;
+            }
+                        
+            &:hover .icon,
+            &.active .label,
+            &:hover .label,
+            &:hover .title {
+                color: white;
+            }
+
+            .icon {
+                color: #71CCFD;
+                font-size: 30px;
+                box-sizing: border-box;
+                padding: 10px 20px;
+            }
+
+            .info {
+                padding: 10px 20px;
+            }
+
+            .title {
+                color: #fff;
+                font-size: 1.2em;
+            }
+
+            .label {
+                color: #bbb;
+                font-size: 0.9em;
+            }
+        }
+    }
+}
