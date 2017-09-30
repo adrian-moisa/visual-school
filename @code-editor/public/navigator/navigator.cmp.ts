@@ -6,10 +6,11 @@ import { Chapter } from './../chapters/interfaces/chapter';
 import { Lesson } from './../lessons/interfaces/lesson';
 
 // Debug
-let debugOff = (...any: any[]) => { }, debug = require('debug')('vs:NavigatorCmp');
+let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:NavigatorCmp');
 
 /**
  * Navigator component
+ * <!> Only one instance
  */
 export class NavigatorCmp extends HTMLElement {
 
@@ -41,66 +42,55 @@ export class NavigatorCmp extends HTMLElement {
 
     get template() {
         return `
-        
-            <!-- Toggle menu -->
-            <div id="lesson-navigation-btn" class="button quick-menu-item ${this.isVis ? 'active' : ''}" 
-                onclick="toggleNavMenu()" title="Lessons menu">
-                <i class="fa fa-list" aria-hidden="true"></i>
-            </div>
-    
-            <div id="lesson-navigation" class="menu side ${this.isVis ? 'visible' : 'hidden'}">
-    
-                <!-- Header -->
-                <div class="header">
-                    <!-- <div class="close fa fa-close" onclick="toggleNavMenu()"></div> -->
+
+            <!-- Header -->
+            <div class="header"></div>
+
+            <!-- Home -->
+            <a class="link" href="https://github.com/visual-space/visual-school">
+                <div class="icon fa fa-home"></div>
+                <div class="info">
+                    <div class="title">Home</div>
+                    <div class="label">Return to VisualSchool on Github</div>
                 </div>
-    
-                <!-- Home -->
-                <a class="link" href="https://github.com/visual-space/visual-school">
-                    <div class="icon fa fa-home"></div>
-                    <div class="info">
-                        <div class="title">Home</div>
-                        <div class="label">Return to VisualSchool on Github</div>
-                    </div>
+            </a>
+            
+            <!-- Code samples -->
+            <a class="link" href="${APP.domain}/index.html">
+                <div class="icon fa fa-code"></div>
+                <div class="info">
+                    <div class="title">Code samples</div>
+                    <div class="label">View all chapters</div>
+                </div>
+            </a>
+
+            <!-- Chapter -->
+            ${ this.chapter !== undefined ? 
+            `<div class="chapter">
+                <h1 class="title">${this.chapter.title}</h1>
+                <h2 class="subtitle">${this.chapter.description}</h2>
+                <a class="lesson" href="https://github.com/visual-space/visual-school/tree/master${this.chapter.url}">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    Read the lesson
                 </a>
+            </div>` : ``
+            }
                 
-                <!-- Code samples -->
-                <a class="link" href="${APP.domain}/index.html">
-                    <div class="icon fa fa-code"></div>
+            <!-- Menu items -->
+            ${ this.links.reduce((t, link) => t + `
+                
+                <a class="link ${link.active === true ? 'active' : ''}"  href="${APP.domain}${link.url}">
+                    <div class="icon fa fa-${link.icon}"></div>
                     <div class="info">
-                        <div class="title">Code samples</div>
-                        <div class="label">View all chapters</div>
+                        <div class="title">${link.title}</div>
+                        <div class="label">${link.description}</div>
                     </div>
                 </a>
-    
-                <!-- Chapter -->
-                ${ this.chapter !== undefined ? 
-                `<div class="chapter">
-                    <h1 class="title">${this.chapter.title}</h1>
-                    <h2 class="subtitle">${this.chapter.description}</h2>
-                    <a class="lesson" href="https://github.com/visual-space/visual-school/tree/master${this.chapter.url}">
-                        <i class="fa fa-angle-right" aria-hidden="true"></i>
-                        Read the lesson
-                    </a>
-                </div>` : ``
-                }
-                    
-                <!-- Menu items -->
-                ${ this.links.reduce((t, link) => t + `
-                    
-                    <a class="link ${link.active === true ? 'active' : ''}"  href="${APP.domain}${link.url}">
-                        <div class="icon fa fa-${link.icon}"></div>
-                        <div class="info">
-                            <div class="title">${link.title}</div>
-                            <div class="label">${link.description}</div>
-                        </div>
-                    </a>
-    
-                `, '')}
-    
-                <!-- Footer -->
-                <div class="footer"></div>
-            </div>
+
+            `, '')}
+
+            <!-- Footer -->
+            <div class="footer"></div>
         `;
 
     }

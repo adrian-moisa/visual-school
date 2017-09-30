@@ -2,6 +2,8 @@
 @import './shared/scss/variables.scss';
 
 .app {
+    display:block;
+    
     .app-routes-cmp{
         h2 {
             margin:0;

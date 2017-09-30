@@ -3,7 +3,7 @@ import { NavigatorCmp } from './navigator/navigator.cmp';
 NavigatorCmp;
 
 // Debug
-let debugOff = (...any: any[]) => { }, debug = require('debug')('vs:AppCmp');
+let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:AppCmp');
 
 /**
  * App
