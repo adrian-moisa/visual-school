@@ -1,7 +1,0 @@
-{
-    "verbose": false,
-    "watch": ["server/**/*.ts"],
-    "ext": "ts js json",
-    "ignore": ["server/**/*.spec.ts"],
-    "exec": "set DEBUG=vs:*,-not_this & ts-node --inspect server/main.ts"
-}

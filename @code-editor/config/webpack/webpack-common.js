@@ -19,7 +19,7 @@ module.exports = {
         // Since webpack-dev-middleware handles the files in memory, path property is used only in production.
         path: BUILD_DIR,
         publicPath: "/",
-        filename: "bundle.js"
+        filename: "visual-school.js"
     },
 
     resolve: {
@@ -68,7 +68,7 @@ module.exports = {
             inject: false 
         }),
 
-        // Load bundle.js after libs are loaded
+        // Load visual-school.js after libs are loaded
         new ScriptExtHtmlWebpackPlugin({
             defaultAttribute: 'defer'
         })

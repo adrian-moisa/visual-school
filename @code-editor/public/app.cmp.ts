@@ -22,12 +22,16 @@ export class AppCmp extends HTMLElement {
 
     get template() {
         return `
-          <navigator-vsc></navigator-vsc>
-          <div>App component</div>
+
+            <!-- Live code editor -->
+            <editor-vsc></editor-vsc>
+
+            <!-- Lesson navigator -->
+            <navigator-vsc></navigator-vsc>
         `;
     }
 }
 
 // Component
 require('./app.cmp.scss');
-window.customElements.define('app-vsc', AppCmp);
+window.customElements.define('visual-school', AppCmp);
