@@ -1,6 +1,6 @@
 // Components
-import { AppCmp } from './app.cmp';
-AppCmp;
+import { VisualSchoolCmp } from './visual-school.cmp';
+VisualSchoolCmp;
 
 // Debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:Main');

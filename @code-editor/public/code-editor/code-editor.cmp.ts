@@ -44,4 +44,4 @@ export class CodeEditorCmp extends HTMLElement {
 
 // Component
 require('./code-editor.cmp.scss');
-window.customElements.define('code-editor-vsc', CodeEditorCmp);
+window.customElements.define('editor-vsc', CodeEditorCmp);
