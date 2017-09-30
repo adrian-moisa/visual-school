@@ -31,10 +31,13 @@ export class CodeEditorCmp extends HTMLElement {
 
         // DOM cache
         this.editorEl = <HTMLElement>document.querySelector('editor-vsc');
-        this.editorEl.classList.add('editor')
+        this.editorEl.classList.add('editor');
         debugOff('Code editor:', this.editorEl);
 
-        this.initCodeEditor();
+        // Wait for page layout to be fully loaded.
+        setTimeout(() => {
+            this.initCodeEditor();
+        }, 0)
     }
     
     /**
@@ -51,6 +54,9 @@ export class CodeEditorCmp extends HTMLElement {
         this.editor.getSession().setUseSoftTabs(true);
         this.editor.getSession().setUseWrapMode(true);
         // this.editor.setAutoScrollEditorIntoView(true);
+        this.editor.setOptions({
+            enableBasicAutocompletion: true
+        });
     
         // Update document
         this.editor.getSession().on('change', () => this.onEditorChange());
@@ -62,7 +68,8 @@ export class CodeEditorCmp extends HTMLElement {
     onEditorChange(){
         debug('On editor change');
         
-        let updated = this.editor.getValue();
+        let code = this.editor.getValue();
+        codeEditorService.updateLessonContent(code);
 
     }
 

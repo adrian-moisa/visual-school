@@ -38,6 +38,7 @@
   "author": "Adrian Moisa",
   "license": "ISC",
   "dependencies": {
+    "blingdotjs": "gist:7d867cda127e64d38f28",
     "brace": "^0.10.0",
     "font-awesome": "^4.7.0",
     "redux": "^3.6.0",
@@ -66,6 +67,8 @@
     "rimraf": "^2.6.1",
     "sass-loader": "^6.0.3",
     "script-ext-html-webpack-plugin": "^1.7.1",
+    "script-loader": "^0.7.2",
+    "simplebar": "^2.4.4",
     "source-map-loader": "^0.2.0",
     "style-loader": "^0.13.2",
     "typescript": "^2.2.1",

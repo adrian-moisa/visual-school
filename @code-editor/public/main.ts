@@ -1,3 +1,5 @@
+require('script-loader!../node_modules/blingdotjs/bling.js'); // Emulate jQuery selector (global var)
+
 // Components
 import { VisualSchoolCmp } from './visual-school.cmp';
 VisualSchoolCmp;

@@ -4,6 +4,9 @@ import { NavigatorCmp } from './navigator/navigator.cmp';
 import { QuickMenuCmp } from './navigator/components/quick-menu.cmp';
 CodeEditorCmp; NavigatorCmp; QuickMenuCmp;
 
+// Services
+import { codeEditorService } from './code-editor/services/code-editor.service';
+
 // Debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:VisualSchoolCmp');
 
@@ -11,7 +14,7 @@ let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:VisualSchoo
  * App
  */
 export class VisualSchoolCmp extends HTMLElement {
-    
+
     constructor() {
         super();
         debug('Construct VisualSchoolCmp');
@@ -20,6 +23,11 @@ export class VisualSchoolCmp extends HTMLElement {
     connectedCallback() {
         debug('Connect VisualSchoolCmp');
         this.innerHTML = this.template;
+        
+        // DOM cache
+        let contentEl: HTMLElement = <HTMLElement>document.querySelector('.lesson.content');
+        debugOff('Lesson content:', contentEl);
+        codeEditorService.setContentElement(contentEl);
     }
 
     get template() {

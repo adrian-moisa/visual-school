@@ -22,9 +22,9 @@ export const codeEditorService = {
     /** 
      * Updates the lesson content
      */
-    updateLessonContent: (html: string) => {
+    updateLessonContent: (code: string) => {
         debug('Update lesson content'); 
-        contentEl.innerHTML = html;
+        contentEl.innerHTML = code;
     }
 
 }

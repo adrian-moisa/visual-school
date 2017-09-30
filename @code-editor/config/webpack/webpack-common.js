@@ -44,6 +44,14 @@ module.exports = {
                 test: /\.scss$/,
                 exclude: /node_modules/,
                 loader: 'style-loader!css-loader!sass-loader'
+            },
+            {
+                test: /\.(jpe|jpg|woff|woff2|eot|ttf|svg)(\?.*$|$)/,
+                loader: 'file-loader'
+            },
+            {
+                test: /\.bling\.js$/, // Emulate jQuery selector (global var)
+                use: [ 'script-loader' ]
             }
         ]
 
