@@ -24,7 +24,7 @@ export class QuickMenuCmp extends HTMLElement {
     }
     
     connectedCallback() {
-        debug('Connected QuickMenuCmp');
+        debug('Connect QuickMenuCmp');
         this.innerHTML = this.template;
 
         // Cache page elements

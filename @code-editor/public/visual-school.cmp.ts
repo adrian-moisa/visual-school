@@ -18,7 +18,7 @@ export class VisualSchoolCmp extends HTMLElement {
     }
     
     connectedCallback() {
-        debug('Connected VisualSchoolCmp');
+        debug('Connect VisualSchoolCmp');
         this.innerHTML = this.template;
     }
 

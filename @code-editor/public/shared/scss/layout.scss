@@ -19,14 +19,12 @@ html {
             float: left;
             overflow: auto;
             position: relative;
-            background: green;
         }
 
         visual-school{
             flex: 1; /* Creates space for editor and navigator to float left without breaking the line */
             height: 100%;
             float: left;
-            background: salmon;
 
             editor-vsc {
                 width: 100%;

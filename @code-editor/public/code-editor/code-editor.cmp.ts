@@ -1,4 +1,10 @@
 import { APP } from '../../config/app';
+import * as ace from 'brace';
+import 'brace/mode/html';
+import 'brace/theme/xcode';
+
+// Services
+import { codeEditorService } from './services/code-editor.service';
 
 // Debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:CodeEditorCmp');
@@ -11,12 +17,9 @@ let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:CodeEditorC
  */
 export class CodeEditorCmp extends HTMLElement {
 
-    // State
-    private isNavMenuVis: boolean = true;
-    private isCodeEditorVis: boolean = true;
-
     // DOM
-    private navMenuEl: Element;
+    private editorEl: HTMLElement;
+    private editor: ace.Editor;
 
     constructor() {
         super();
@@ -24,22 +27,45 @@ export class CodeEditorCmp extends HTMLElement {
     }
     
     connectedCallback() {
-        debug('Connected CodeEditorCmp');
-        this.innerHTML = this.template;
+        debug('Connect CodeEditorCmp');
 
-        // Cache page elements
-        this.navMenuEl = document.querySelector('quick-menu-vsc > .navigator');
-        debugOff('Navigation menu:', this.navMenuEl);
+        // DOM cache
+        this.editorEl = <HTMLElement>document.querySelector('editor-vsc');
+        this.editorEl.classList.add('editor')
+        debugOff('Code editor:', this.editorEl);
+
+        this.initCodeEditor();
     }
-
-    get template() {
-        return `
-        
-            Code editor component
     
-        `;
+    /**
+     * Initialise ace editor
+     */
+    initCodeEditor(){
+        debug('Initialise CodeEditorCmp');
+
+        // Start ace code editor
+        this.editor = ace.edit(this.editorEl);
+        this.editor.getSession().setMode('ace/mode/html');
+        this.editor.setTheme("ace/theme/xcode");
+        this.editor.getSession().setTabSize(4);
+        this.editor.getSession().setUseSoftTabs(true);
+        this.editor.getSession().setUseWrapMode(true);
+        // this.editor.setAutoScrollEditorIntoView(true);
+    
+        // Update document
+        this.editor.getSession().on('change', () => this.onEditorChange());
+    }
+
+    /**
+     * On editor change
+     */
+    onEditorChange(){
+        debug('On editor change');
+        
+        let updated = this.editor.getValue();
 
     }
+
 }
 
 // Component

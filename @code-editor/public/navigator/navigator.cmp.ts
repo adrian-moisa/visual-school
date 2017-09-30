@@ -30,7 +30,7 @@ export class NavigatorCmp extends HTMLElement {
     }
     
     connectedCallback() {
-        debug('Connected NavigatorCmp');
+        debug('Connect NavigatorCmp');
         this.innerHTML = this.template;
 
         // Cache page elements
@@ -45,24 +45,28 @@ export class NavigatorCmp extends HTMLElement {
 
             <!-- Header -->
             <div class="header"></div>
-
-            <!-- Home -->
-            <a class="link" href="https://github.com/visual-space/visual-school">
-                <div class="icon fa fa-home"></div>
-                <div class="info">
-                    <div class="title">Home</div>
-                    <div class="label">Return to VisualSchool on Github</div>
-                </div>
-            </a>
             
-            <!-- Code samples -->
-            <a class="link" href="${APP.domain}/index.html">
-                <div class="icon fa fa-code"></div>
-                <div class="info">
-                    <div class="title">Code samples</div>
-                    <div class="label">View all chapters</div>
-                </div>
-            </a>
+            <div class="links main">
+
+                <!-- Home -->
+                <a class="link" href="https://github.com/visual-space/visual-school">
+                    <div class="icon fa fa-home"></div>
+                    <div class="info">
+                        <div class="title">Home</div>
+                        <div class="label">Return to VisualSchool on Github</div>
+                    </div>
+                </a>
+            
+                <!-- Code samples -->
+                <a class="link" href="${APP.domain}/index.html">
+                    <div class="icon fa fa-code"></div>
+                    <div class="info">
+                        <div class="title">Code samples</div>
+                        <div class="label">View all chapters</div>
+                    </div>
+                </a>
+                
+            </div>
 
             <!-- Chapter -->
             ${ this.chapter !== undefined ? 
@@ -75,9 +79,10 @@ export class NavigatorCmp extends HTMLElement {
                 </a>
             </div>` : ``
             }
-                
-            <!-- Menu items -->
-            ${ this.links.reduce((t, link) => t + `
+            
+            <!-- Lessons links -->
+            <div class="links lessons">
+                ${ this.links.reduce((t, link) => t + `
                 
                 <a class="link ${link.active === true ? 'active' : ''}"  href="${APP.domain}${link.url}">
                     <div class="icon fa fa-${link.icon}"></div>
@@ -87,7 +92,8 @@ export class NavigatorCmp extends HTMLElement {
                     </div>
                 </a>
 
-            `, '')}
+                `, '')}
+            </div>
 
             <!-- Footer -->
             <div class="footer"></div>
