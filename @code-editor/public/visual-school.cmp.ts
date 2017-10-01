@@ -10,8 +10,11 @@ import { CodeEditorService } from './code-editor/services/code-editor.service';
 // Debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:VisualSchoolCmp');
 
+// DOM selector
+declare var $: any;
+
 /**
- * App
+ * Visual School App
  */
 export class VisualSchoolCmp extends HTMLElement {
 
@@ -22,17 +25,17 @@ export class VisualSchoolCmp extends HTMLElement {
     
     connectedCallback() {
         debug('Connect VisualSchoolCmp');
-        this.innerHTML = this.template;
+        this.render();
         
-        // DOM cache
-        let contentEl: HTMLElement = <HTMLElement>document.querySelector('.lesson.content');
-        debugOff('Lesson content:', contentEl);
+        // Remote cache
+        let contentEl: HTMLElement = $('.lesson.content');
         CodeEditorService.setContentElement(contentEl);
+        debugOff('Lesson content:', contentEl);
     }
 
-    get template() {
-        return `
-
+    render() {
+        debug('Render QuickMenuCmp');
+        this.innerHTML = `
             <!-- Live code editor -->
             <editor-vsc></editor-vsc>
 

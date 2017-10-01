@@ -9,6 +9,9 @@ import { CodeEditorService } from './services/code-editor.service';
 // Debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:CodeEditorCmp');
 
+// DOM selector
+declare var $: any;
+
 /**
  * Code editor
  * Code editor allows the modification of the source code in the samples at runtime
@@ -30,9 +33,9 @@ export class CodeEditorCmp extends HTMLElement {
         debug('Connect CodeEditorCmp');
 
         // DOM cache
-        this.editorEl = <HTMLElement>document.querySelector('editor-vsc');
+        this.editorEl = $('editor-vsc');
+        debug('Code editor:', this.editorEl);
         this.editorEl.classList.add('editor');
-        debugOff('Code editor:', this.editorEl);
 
         // Wait for page layout to be fully loaded.
         setTimeout(() => {

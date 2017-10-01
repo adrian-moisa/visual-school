@@ -1,10 +1,12 @@
-declare var $: any;
-
 // Services
 import { NavigatorService } from '../services/navigator.service';
+import { CodeEditorService } from '../../code-editor/services/code-editor.service';
 
 // Debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:QuickMenuCmp');
+
+// DOM selector
+declare var $: any;
 
 /**
  * Quick menu component
@@ -30,28 +32,33 @@ export class QuickMenuCmp extends HTMLElement {
     
     connectedCallback() {
         debug('Connect QuickMenuCmp');
-        this.innerHTML = this.template;
+        this.render();
 
-        // Cache page elements
+        // DOM cache
         this.quickMenuEl = $('quick-menu-vsc');
         this.navigatorEl = $('quick-menu-vsc > .navigator');
         this.editorEl = $('quick-menu-vsc > .editor');
         debugOff('Quick menu:', this.quickMenuEl);
         
-        // Bind events
+        // Toggle panels
         this.navigatorEl.on('click', (el: Element) => this.toggleNavMenu());
         this.editorEl.on('click', (el: Element) => this.toggleCodeEditor());
 
-        // Subscribe
-        NavigatorService.navigation$().subscribe(() => {
-            console.warn('Redux rxjs success!')
+        // Navigator visibility
+        NavigatorService.navigatorIsVis$().subscribe( isVis => {
+            console.warn('Navigator visibility:', isVis)
+        });
+
+        // Code editor visibility
+        CodeEditorService.codeEditorIsVis$().subscribe( isVis => {
+            console.warn('Code editor visibility:', isVis)
         });
 
     }
 
-    get template() {
-        return `
-        
+    render() {
+        debug('Render QuickMenuCmp');
+        this.innerHTML = `
             <!-- Toggle menu -->
             <div class="button navigator ${this.isNavMenuVis ? 'active' : ''}" title="Lessons menu">
                 <i class="fa fa-list" aria-hidden="true"></i>
@@ -61,9 +68,7 @@ export class QuickMenuCmp extends HTMLElement {
             <div class="button editor ${this.isCodeEditorVis ? 'active' : ''}" title="Code editor">
                 <i class="fa fa-code" aria-hidden="true"></i>
             </div>
-    
         `;
-
     }
 
     /**
@@ -71,14 +76,15 @@ export class QuickMenuCmp extends HTMLElement {
      */
     private toggleNavMenu(){
         debug('Toggle navigation menu');
-        NavigatorService.toggleNavigation();
+        NavigatorService.toggleNavigator();
     }
 
     /**
      * Toggle code editor
      */
     private toggleCodeEditor(){
-        console.warn('toggleCodeEditor');
+        debug('Toggle code editor');
+        CodeEditorService.toggleCodeEditor();
     }
 
 }

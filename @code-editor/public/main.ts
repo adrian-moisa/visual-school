@@ -6,10 +6,11 @@ import { Observable } from 'rxjs/Observable';
 // Interfaces
 import { AppState } from './shared/interfaces/app-state';
 
-// Emulate jQuery selector (global var, before other components)
-require('script-loader!../node_modules/blingdotjs/bling.js');
+// Emulate jQuery selector (global var)
+require('script-loader!./shared/scripts/bling.js');
 
 // State
+import { appInitialState } from './shared/state/app-initial-state';
 import { appReducers } from './shared/state/app.reducers';
 import { appEpics } from './shared/state/app.epics';
 
@@ -31,9 +32,8 @@ const epicMiddleware = createEpicMiddleware(appEpics);
 );
 declare var store: Store<AppState>;
 
-// Rxjs store observable
-let store$ = (<any>window).store$ = observableFromStore(store);
-console.log('store$', store$);
+// Rxjs store observable (global var)
+(<any>window).store$ = observableFromStore(store);
 
 // Enable Webpack hot module replacement for reducers
 if (module.hot) {
@@ -55,6 +55,12 @@ debug('Initialise Main');
 // TODO move to a service
 function observableFromStore(store: Store<AppState>) {
     return Observable.create((observer: any) => {
+
+        // Make sure distinctUntilChanged() has initial comparison value
+        // <!> This prevents all subscriptions from firing all at once at first store update
+        observer.next(store.getState());
+
+        // Update store observable each time the redux store updates
         return store.subscribe(() => {
             return observer.next(store.getState());
         });

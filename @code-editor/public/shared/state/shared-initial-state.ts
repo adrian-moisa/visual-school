@@ -1,4 +1,3 @@
-
 // Interfaces
 import { SharedState } from '../interfaces/shared-state';
 

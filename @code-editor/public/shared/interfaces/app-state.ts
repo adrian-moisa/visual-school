@@ -11,7 +11,7 @@ import { SharedDataState } from './shared-state';
  * App state
  */
 export interface AppState {
-    assistants: AssistantState;
+    assistant: AssistantState;
     chapters: ChaptersState;
     codeEditor: CodeEditorState;
     lessons: LessonsState;

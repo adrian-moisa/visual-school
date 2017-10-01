@@ -38,7 +38,6 @@
   "author": "Adrian Moisa",
   "license": "ISC",
   "dependencies": {
-    "blingdotjs": "gist:7d867cda127e64d38f28",
     "brace": "^0.10.0",
     "font-awesome": "^4.7.0",
     "redux": "^3.6.0",

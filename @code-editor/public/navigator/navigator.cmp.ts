@@ -1,5 +1,4 @@
 import { APP } from '../../config/app';
-declare var $: any;
 
 // Interfaces
 import { NavItem } from './interfaces/navigator';
@@ -8,6 +7,9 @@ import { Lesson } from './../lessons/interfaces/lesson';
 
 // Debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:NavigatorCmp');
+
+// DOM selector
+declare var $: any;
 
 /**
  * Navigator component
@@ -34,7 +36,7 @@ export class NavigatorCmp extends HTMLElement {
         debug('Connect NavigatorCmp');
         this.innerHTML = this.template;
 
-        // Cache page elements
+        // DOM cache
         this.navMenuEl = $('#lesson-navigation');
         this.navMenuBtnEl = $('#lesson-navigation-btn');
         debugOff('Navigation menu:', this.navMenuEl);

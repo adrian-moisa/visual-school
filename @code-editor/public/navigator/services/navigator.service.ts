@@ -16,10 +16,9 @@ import { NavigatorWebApi } from '../webapis/navigator.webapi';
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:NavigatorService');
 debug('Instantiate NavigatorService');
 
+// State
 declare var store: Store<AppState>;
 declare var store$: Observable<AppState>;
-
-let contentEl: HTMLElement;
 
 /** 
  * Navigator service 
@@ -40,22 +39,19 @@ export const NavigatorService = {
     // ====== LOGIC ======
 
     /** 
-     * Toggle navigation panel
+     * Toggle navigation panel visibility
      */
-    toggleNavigation: (value?: boolean) => {
-        debug('Toggle navigation:', value);
+    toggleNavigator: (value?: boolean) => {
+        debug('Toggle navigator:', value);
         store.dispatch(NavigatorUiActions.toggleNavigator());
     },
 
     /** 
-     * Get navigation observable
+     * Is navigation panel visible?
      */
-    navigation$: (): Observable<boolean> => {
-        debug('Get navigation observable');
-        return store$
-            .distinctUntilChanged(NAV_IS_VISIBLE)
-            .filter(NAV_IS_VISIBLE)
-            .map(NAV_IS_VISIBLE)
+    navigatorIsVis$: (): Observable<boolean> => {
+        debug('Get navigator is visible observable');
+        return store$.map(NAV_IS_VISIBLE).distinctUntilChanged();
     }
 
 }

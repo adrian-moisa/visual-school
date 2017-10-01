@@ -7,7 +7,7 @@ export interface CodeEditorDataState {
 
 // Ui
 export interface CodeEditorUiState {
-    // empty
+    isVisible: boolean;
 }
 
 // CodeEditor
