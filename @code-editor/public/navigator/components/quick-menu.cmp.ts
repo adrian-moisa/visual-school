@@ -1,3 +1,7 @@
+// Components
+import { QuickMenuLinkCmp } from './quick-menu/quick-menu-link.cmp';
+QuickMenuLinkCmp;
+
 // Services
 import { NavigatorService } from '../services/navigator.service';
 import { CodeEditorService } from '../../code-editor/services/code-editor.service';
@@ -23,7 +27,7 @@ export class QuickMenuCmp extends HTMLElement {
     // DOM
     private quickMenuEl: Element;
     private navigatorEl: any; // Element // TODO extend Element 
-    private editorEl: any; // Element;
+    private codeEditorEl: any; // Element;
 
     constructor() {
         super();
@@ -34,24 +38,16 @@ export class QuickMenuCmp extends HTMLElement {
         debug('Connect QuickMenuCmp');
         this.render();
 
-        // DOM cache
-        this.quickMenuEl = $('quick-menu-vsc');
-        this.navigatorEl = $('quick-menu-vsc > .navigator');
-        this.editorEl = $('quick-menu-vsc > .editor');
-        debugOff('Quick menu:', this.quickMenuEl);
-        
-        // Toggle panels
-        this.navigatorEl.on('click', (el: Element) => this.toggleNavMenu());
-        this.editorEl.on('click', (el: Element) => this.toggleCodeEditor());
-
         // Navigator visibility
         NavigatorService.navigatorIsVis$().subscribe( isVis => {
-            console.warn('Navigator visibility:', isVis)
+            debugOff('Navigator visibility:', isVis);
+            this.navigatorEl.active = isVis;
         });
-
+        
         // Code editor visibility
         CodeEditorService.codeEditorIsVis$().subscribe( isVis => {
-            console.warn('Code editor visibility:', isVis)
+            debugOff('Code editor visibility:', isVis);
+            this.codeEditorEl.active = isVis;
         });
 
     }
@@ -59,32 +55,24 @@ export class QuickMenuCmp extends HTMLElement {
     render() {
         debug('Render QuickMenuCmp');
         this.innerHTML = `
-            <!-- Toggle menu -->
-            <div class="button navigator ${this.isNavMenuVis ? 'active' : ''}" title="Lessons menu">
-                <i class="fa fa-list" aria-hidden="true"></i>
-            </div>
+            <!-- Navigator -->
+            <qm-link-vsc class="navigator" fa-icon="list" title="Lessons menu"></qm-link-vsc>
         
-            <!-- Toggle code editor -->
-            <div class="button editor ${this.isCodeEditorVis ? 'active' : ''}" title="Code editor">
-                <i class="fa fa-code" aria-hidden="true"></i>
-            </div>
+            <!-- Code editor -->
+            <qm-link-vsc class="editor" fa-icon="code" title="Code editor"></qm-link-vsc>
         `;
-    }
 
-    /**
-     * Toggle lesson navigation menu
-     */
-    private toggleNavMenu(){
-        debug('Toggle navigation menu');
-        NavigatorService.toggleNavigator();
-    }
-
-    /**
-     * Toggle code editor
-     */
-    private toggleCodeEditor(){
-        debug('Toggle code editor');
-        CodeEditorService.toggleCodeEditor();
+        // DOM cache
+        this.quickMenuEl = $('quick-menu-vsc');
+        this.navigatorEl = $('quick-menu-vsc > .navigator');
+        this.codeEditorEl = $('quick-menu-vsc > .editor');
+        debugOff('Quick menu:', this.quickMenuEl);
+        debugOff('Navigator link:', this.navigatorEl);
+        debugOff('Editor link:', this.codeEditorEl);
+        
+        // Toggle panels
+        this.navigatorEl.on('click', (el: Element) => NavigatorService.toggleNavigator());
+        this.codeEditorEl.on('click', (el: Element) => CodeEditorService.toggleCodeEditor());
     }
 
 }

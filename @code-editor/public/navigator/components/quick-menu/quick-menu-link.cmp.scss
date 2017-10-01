@@ -1,0 +1,16 @@
+qm-link-vsc{
+    cursor: pointer;
+    display: block;
+    width: 30px;
+    height: 20px;
+    padding: 10px;
+    float:left;
+    text-align: center;
+    color: #71CCFD;
+    
+    &[active],
+    &:hover{
+        background:#09A0F7;
+        color: #fff;
+    }
+}
