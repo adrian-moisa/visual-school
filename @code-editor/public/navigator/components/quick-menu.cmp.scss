@@ -3,4 +3,12 @@ quick-menu-vsc{
     position: fixed;
     top: 0;
     right: 20px;
+
+    > btn-link-vsc{
+        background: #333;
+        font-size: 1.2em;
+        line-height: 1em;
+        padding: 8px;
+        margin: 0 10px 0 0;
+    }
 }

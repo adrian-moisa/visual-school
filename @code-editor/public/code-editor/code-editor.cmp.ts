@@ -20,6 +20,9 @@ declare var $: any;
  */
 export class CodeEditorCmp extends HTMLElement {
 
+    // State
+    private isVisible: boolean;
+
     // DOM
     private editorEl: HTMLElement;
     private editor: ace.Editor;
@@ -41,6 +44,12 @@ export class CodeEditorCmp extends HTMLElement {
         setTimeout(() => {
             this.initCodeEditor();
         }, 0)
+
+        // Code editor visibility
+        CodeEditorService.codeEditorIsVis$().subscribe( isVis => {
+            debugOff('CodeEditor visibility:', isVis);
+            this.visible = isVis;
+        });
     }
     
     /**
@@ -84,6 +93,22 @@ export class CodeEditorCmp extends HTMLElement {
         let code = this.editor.getValue();
         CodeEditorService.updateLessonContent(code);
 
+    }
+    
+    get visible(): boolean {
+        return this.hasAttribute('visible');
+    }
+
+    set visible(val: boolean) {
+        debug('Set visible:', val);
+        this.isVisible = val;
+
+        // Reflect as an attribute.
+        if (val) {
+            this.setAttribute('visible', '');
+        } else {
+            this.removeAttribute('visible');
+        }
     }
 
 }

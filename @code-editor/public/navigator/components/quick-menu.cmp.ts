@@ -1,6 +1,6 @@
 // Components
-import { QuickMenuLinkCmp } from './quick-menu/quick-menu-link.cmp';
-QuickMenuLinkCmp;
+import { ButtonLinkCmp } from '../../shared/components/user-interface/button-link.cmp';
+ButtonLinkCmp;
 
 // Services
 import { NavigatorService } from '../services/navigator.service';
@@ -38,16 +38,16 @@ export class QuickMenuCmp extends HTMLElement {
         debug('Connect QuickMenuCmp');
         this.render();
 
-        // Navigator visibility
-        NavigatorService.navigatorIsVis$().subscribe( isVis => {
-            debugOff('Navigator visibility:', isVis);
-            this.navigatorEl.active = isVis;
-        });
-        
         // Code editor visibility
         CodeEditorService.codeEditorIsVis$().subscribe( isVis => {
             debugOff('Code editor visibility:', isVis);
             this.codeEditorEl.active = isVis;
+        });
+        
+        // Navigator visibility
+        NavigatorService.navigatorIsVis$().subscribe( isVis => {
+            debugOff('Navigator visibility:', isVis);
+            this.navigatorEl.active = isVis;
         });
 
     }
@@ -55,18 +55,16 @@ export class QuickMenuCmp extends HTMLElement {
     render() {
         debug('Render QuickMenuCmp');
         this.innerHTML = `
-            <!-- Navigator -->
-            <qm-link-vsc class="navigator" fa-icon="list" title="Lessons menu"></qm-link-vsc>
-        
             <!-- Code editor -->
-            <qm-link-vsc class="editor" fa-icon="code" title="Code editor"></qm-link-vsc>
+            <btn-link-vsc class="editor" fa-icon="code" title="Code editor"></btn-link-vsc>
+        
+            <!-- Navigator -->
+            <btn-link-vsc class="navigator" fa-icon="list" title="Lessons menu"></btn-link-vsc>
         `;
 
         // DOM cache
-        this.quickMenuEl = $('quick-menu-vsc');
         this.navigatorEl = $('quick-menu-vsc > .navigator');
         this.codeEditorEl = $('quick-menu-vsc > .editor');
-        debugOff('Quick menu:', this.quickMenuEl);
         debugOff('Navigator link:', this.navigatorEl);
         debugOff('Editor link:', this.codeEditorEl);
         

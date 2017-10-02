@@ -40,13 +40,24 @@ html {
         }
 
         // Template states
-        &.has-navigation.has-content.has-editor{
-            
+        &.has-content.has-editor.has-navigator{
             .lesson.content,
-            visual-school editor-vsc {
+            editor-vsc {
                 width: calc((100vw - 300px) / 2);
             }
+        }
 
+        &.has-content.has-navigator{
+            .lesson.content{
+                width: calc(100vw - 300px);
+            }
+        }
+
+        &.has-content.has-editor{
+            .lesson.content,
+            editor-vsc {
+                width: 50vw;
+            }
         }
     }
 }

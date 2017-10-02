@@ -1,42 +1,35 @@
 // Debug
-let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:QuickMenuLinkCmp');
+let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:ButtonLinkCmp');
 
 // DOM selector
 declare var $: any;
 
 /**
- * Quick menu link
+ * ButtonLinkCmp
  * Used to render links in the quick menu.
  * Initialy developed just to experiment with web components and data update strategies.
  */
-export class QuickMenuLinkCmp extends HTMLElement {
+export class ButtonLinkCmp extends HTMLElement {
 
     // State
     private isActive: boolean = true;
     private faIcon: string;
 
-    // DOM cache
-    private linkEl: Element;
-
     constructor() {
         super();
-        debug('Construct QuickMenuLinkCmp');
+        debug('Construct ButtonLinkCmp');
     }
 
     connectedCallback() {
-        debug('Connect QuickMenuLinkCmp');
+        debug('Connect ButtonLinkCmp');
         this.render();
     }
 
     render() {
-        debug('Render QuickMenuLinkCmp');
+        debug('Render ButtonLinkCmp');
         this.innerHTML = `
-            <i class="fa fa-list" aria-hidden="true"></i>
+            <i class="fa fa-${this.faIcon}" aria-hidden="true"></i>
         `;
-
-        // DOM cache
-        this.linkEl = $('quick-menu-vsc');
-        debugOff('Quick menu link:', this.linkEl);
     }
 
     static get observedAttributes() {
@@ -52,7 +45,7 @@ export class QuickMenuLinkCmp extends HTMLElement {
     }
 
     set active(val: boolean) {
-        debug('Active:', val);
+        debug('Set active:', val);
         this.isActive = val;
 
         // Reflect as an attribute.
@@ -66,5 +59,5 @@ export class QuickMenuLinkCmp extends HTMLElement {
 }
 
 // Component
-require('./quick-menu-link.cmp.scss');
-window.customElements.define('qm-link-vsc', QuickMenuLinkCmp);
+require('./button-link.cmp.scss');
+window.customElements.define('btn-link-vsc', ButtonLinkCmp);

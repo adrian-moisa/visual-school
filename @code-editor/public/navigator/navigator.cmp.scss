@@ -5,9 +5,10 @@ navigator-vsc {
     color: #fff;
     font-family: 'Open Sans', sans-serif;
     overflow: auto;
+    display: none;
 
-    &.hidden {
-        display: none;
+    &[visible] {
+        display: block;
     }
 
     a {

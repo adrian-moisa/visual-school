@@ -1,3 +1,7 @@
 editor-vsc{
-    display:block;
+    display: none;
+
+    &[visible] {
+        display: block;
+    }
 }

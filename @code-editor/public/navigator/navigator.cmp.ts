@@ -5,6 +5,9 @@ import { NavItem } from './interfaces/navigator';
 import { Chapter } from './../chapters/interfaces/chapter';
 import { Lesson } from './../lessons/interfaces/lesson';
 
+// Services
+import { NavigatorService } from './services/navigator.service';
+
 // Debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:NavigatorCmp');
 
@@ -13,19 +16,15 @@ declare var $: any;
 
 /**
  * Navigator component
- * <!> Only one instance
+ * Navigation for the entire course. From chapter, lesson and file down to code code block.
  */
 export class NavigatorCmp extends HTMLElement {
 
     // State
-    private isVis: boolean = true; // undefined
+    private isVisible: boolean;
     private links: NavItem[] = []; 
     private chapter: Chapter;
     private lesson: Lesson;
-
-    // DOM
-    private navMenuEl: Element;
-    private navMenuBtnEl: Element;
 
     constructor() {
         super();
@@ -34,17 +33,18 @@ export class NavigatorCmp extends HTMLElement {
     
     connectedCallback() {
         debug('Connect NavigatorCmp');
-        this.innerHTML = this.template;
+        this.render();
 
-        // DOM cache
-        this.navMenuEl = $('#lesson-navigation');
-        this.navMenuBtnEl = $('#lesson-navigation-btn');
-        debugOff('Navigation menu:', this.navMenuEl);
-        debugOff('Navigation menu button:', this.navMenuBtnEl);
+        // Navigator visibility
+        NavigatorService.navigatorIsVis$().subscribe( isVis => {
+            debugOff('Navigator visibility:', isVis);
+            this.visible = isVis;
+        });
     }
-
-    get template() {
-        return `
+    
+    private render() {
+        debug('Render NavigatorCmp');
+        this.innerHTML = `
 
             <!-- Header -->
             <div class="header"></div>
@@ -102,6 +102,23 @@ export class NavigatorCmp extends HTMLElement {
             <div class="footer"></div>
         `;
 
+
+    }
+
+    get visible(): boolean {
+        return this.hasAttribute('visible');
+    }
+
+    set visible(val: boolean) {
+        debug('Set visible:', val);
+        this.isVisible = val;
+
+        // Reflect as an attribute.
+        if (val) {
+            this.setAttribute('visible', '');
+        } else {
+            this.removeAttribute('visible');
+        }
     }
 }
 

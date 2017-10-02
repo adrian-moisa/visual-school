@@ -6,6 +6,7 @@ CodeEditorCmp; NavigatorCmp; QuickMenuCmp;
 
 // Services
 import { CodeEditorService } from './code-editor/services/code-editor.service';
+import { NavigatorService } from './navigator/services/navigator.service';
 
 // Debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:VisualSchoolCmp');
@@ -28,22 +29,38 @@ export class VisualSchoolCmp extends HTMLElement {
         this.render();
         
         // Remote cache
-        let contentEl: HTMLElement = $('.lesson.content');
-        CodeEditorService.setContentElement(contentEl);
-        debugOff('Lesson content:', contentEl);
+        let lessonContentEl: HTMLElement = $('.lesson.content');
+        let bodyEl: HTMLElement = $('body');
+        CodeEditorService.setContentElement(lessonContentEl);
+        debugOff('Lesson content:', lessonContentEl);
+        
+        // Navigator visibility
+        NavigatorService.navigatorIsVis$().subscribe( isVis => {
+            debugOff('Navigator visibility:', isVis);
+            isVis === true ? bodyEl.classList.add('has-navigator') : 
+            bodyEl.classList.remove('has-navigator');
+        });
+        
+        // Code editor visibility
+        CodeEditorService.codeEditorIsVis$().subscribe( isVis => {
+            debugOff('Code editor visibility:', isVis);
+            isVis === true ? bodyEl.classList.add('has-editor') : 
+            bodyEl.classList.remove('has-editor');
+        });
+        
     }
 
     render() {
         debug('Render QuickMenuCmp');
         this.innerHTML = `
+            <!-- Quick access menu -->
+            <quick-menu-vsc></quick-menu-vsc>
+
             <!-- Live code editor -->
             <editor-vsc></editor-vsc>
 
             <!-- Lesson navigator -->
             <navigator-vsc></navigator-vsc>
-
-            <!-- Quick access menu -->
-            <quick-menu-vsc></quick-menu-vsc>
         `;
     }
 }
