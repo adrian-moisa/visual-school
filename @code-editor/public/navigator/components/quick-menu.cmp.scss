@@ -2,13 +2,36 @@ quick-menu-vsc{
     display: block;
     position: fixed;
     top: 0;
-    right: 20px;
+    right: 21px;
 
+    > .logo{
+        float: left;
+        font-weight: 900;
+        background-color: #accdef;
+        color: #333;
+        padding: 10px 16px;
+        line-height: 1em;
+        font-family: 'Alfa Slab One', cursive;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    > .user,
     > btn-link-vsc{
-        background: #1c344d;
+        background-color: #accdef;
+        color: #333;
         font-size: 1.2em;
         line-height: 1em;
         padding: 8px;
-        margin: 0 10px 0 0;
+        margin: 0 3px 0 0;
+    }
+    
+    > .user{
+        cursor: pointer;
+        display: block;
+        width: 30px;
+        height: 20px;
+        float: left;
+        background-image: url(../../../media/avatar.jpg);
+        background-position: center;
     }
 }

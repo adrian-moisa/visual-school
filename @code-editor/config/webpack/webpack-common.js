@@ -1,29 +1,29 @@
-const webpack = require("webpack"),
-    path = require("path"),
-    ts = require("typescript"),
+const webpack = require('webpack'),
+    path = require('path'),
+    ts = require('typescript'),
     CopyWebpackPlugin = require('copy-webpack-plugin'),
     HtmlWebpackPlugin = require('html-webpack-plugin'),
     ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 
 // Constants
-const BUILD_DIR = path.join(__dirname, "../../build"),
-    PUBLIC_DIR = path.join(__dirname, "../../public"),
-    NODE_MODULES_DIR = path.join(__dirname, "../../node_modules");
+const BUILD_DIR = path.join(__dirname, '../../build'),
+    PUBLIC_DIR = path.join(__dirname, '../../public'),
+    NODE_MODULES_DIR = path.join(__dirname, '../../node_modules');
 
 // Shared between prod and dev
 module.exports = {
 
-    entry: "./public/main.ts",
+    entry: './public/main.ts',
 
     output: {
         // Since webpack-dev-middleware handles the files in memory, path property is used only in production.
         path: BUILD_DIR,
-        publicPath: "/",
-        filename: "visual-school.js"
+        publicPath: '/',
+        filename: 'visual-school.js'
     },
 
     resolve: {
-        extensions: ["*", ".ts", ".js"]
+        extensions: ['*', '.ts', '.js']
     },
 
     module: {
@@ -31,14 +31,14 @@ module.exports = {
         loaders: [
             {
                 test: /\.ts?$/,
-                loader: "awesome-typescript-loader",
+                loader: 'awesome-typescript-loader',
                 include: PUBLIC_DIR,
                 exclude: /node_modules/
             },
             {
                 test: /\.css$/,
                 exclude: /node_modules/,
-                loader: "style-loader!css-loader!autoprefixer-loader"
+                loader: 'style-loader!css-loader!autoprefixer-loader'
             },
             {
                 test: /\.scss$/,
@@ -47,8 +47,18 @@ module.exports = {
             },
             {
                 test: /\.(jpe|jpg|woff|woff2|eot|ttf|svg)(\?.*$|$)/,
-                loader: 'file-loader'
+                loader: 'file-loader',
+                query: {
+                    name: 'media/[name].[ext]'
+                }
             },
+            // {
+            //     test: /\.jpg$/,
+            //     loader: 'file-loader',
+            //     query: {
+            //         name: 'img/[name].[ext]'
+            //     }
+            // },
             {
                 test: /\.bling\.js$/, // Emulate jQuery selector (global var)
                 use: [ 'script-loader' ]
@@ -64,6 +74,10 @@ module.exports = {
             {
                 from: `public/shared/images`,
                 to: 'images'
+            },
+            {
+                from: `media`,
+                to: 'media'
             },
             {
                 from: `code-samples`,

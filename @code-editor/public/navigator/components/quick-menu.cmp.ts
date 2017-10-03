@@ -55,6 +55,16 @@ export class QuickMenuCmp extends HTMLElement {
     render() {
         debug('Render QuickMenuCmp');
         this.innerHTML = `
+        
+            <!-- Logo -->
+            <!-- <div class="logo">Visual School</div> -->
+            <div class="logo">Visual School</div>
+
+            <!-- Code editor -->
+            <!-- <div class="user"></div> -->
+            <div class="user"></div>
+            <!-- <btn-link-vsc class="user2" fa-icon="user-circle" title="Code editor"></btn-link-vsc> -->
+
             <!-- Code editor -->
             <btn-link-vsc class="editor" fa-icon="code" title="Code editor"></btn-link-vsc>
         
