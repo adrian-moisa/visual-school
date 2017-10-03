@@ -4,7 +4,7 @@ body {
 }
 
 a {
-    color: #00AAE2;
+    color: #09A0F7;
     text-decoration: none;
     display: block;
     float: left;
@@ -12,7 +12,7 @@ a {
 }
 
 a:hover {
-    color: DeepSkyBlue;
+    color: #09A0F7;
 }
 
 .nav {
@@ -61,5 +61,5 @@ h1, h2, h3 {
 
 .slab{
     font-family: 'Alfa Slab One', cursive;
-    color:DeepSkyBlue;
+    color:#2db1fd;
 }
