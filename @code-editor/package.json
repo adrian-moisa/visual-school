@@ -50,6 +50,7 @@
   "devDependencies": {
     "@types/redux": "^3.6.0",
     "@types/rx": "^4.1.1",
+    "@types/simplebar": "^2.4.0",
     "@types/webpack": "^2.2.11",
     "@types/webpack-dev-middleware": "^1.9.1",
     "@types/webpack-env": "^1.13.0",

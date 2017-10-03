@@ -33,6 +33,7 @@ export const CodeEditorService = {
     
     /** 
      * Get the content of the request lesson (file)
+     * <!> Not connected to state store
      */
     getLessonContent: (url: string): Observable<string> => {
         debug('Get lesson content'); 
@@ -59,18 +60,21 @@ export const CodeEditorService = {
 
     /** 
      * Keep a reference to the content element
+     * TODO This starts to feels as overengineering a bit
      */
-    setContentElement: (html: HTMLElement) => {
-        debug('Update lesson content'); 
+    setLessonContentEl: (html: HTMLElement) => {
+        debug('Set lesson content element'); 
         lessonContentEl = html;
     },
-
+    
     /** 
      * Updates the lesson content
+     * TODO This starts to feels as overengineering a bit
      */
     updateLessonContent: (code: string) => {
         debug('Update lesson content'); 
         lessonContentEl.innerHTML = code;
+        return lessonContentEl;
     }
 
 }

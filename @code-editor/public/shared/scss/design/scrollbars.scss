@@ -1,2 +1,39 @@
 @import '../colors.scss';
 @import '../variables.scss';
+
+html body{
+
+    .simplebar-track{
+
+        /* <!> Fast fade in and slow fadeout */
+        .simplebar-scrollbar{
+            border-radius: 0;
+            transition:opacity 1.5s;
+            &.visible{
+                opacity: 1;
+                transition:opacity 0.5s;
+            }
+        }
+
+        &:hover{
+            .simplebar-scrollbar{
+                opacity: 1;
+                transition:opacity 0.5s;
+            }
+        }
+    }
+
+    .lesson.content,
+    editor-vsc{
+        .simplebar-scrollbar{
+            background: #71CCFD // #5485B3 // #accdef // #1a4879 // #1c344d; // #71CCFD //#accdef;
+        }
+    }
+
+    navigator-vsc{
+        .simplebar-scrollbar{
+            background: #71CCFD // #5485B3 // #accdef; // #71CCFD 
+        }
+    }
+
+} 

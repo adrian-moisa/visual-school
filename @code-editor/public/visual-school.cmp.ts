@@ -31,7 +31,7 @@ export class VisualSchoolCmp extends HTMLElement {
         // Remote cache
         let lessonContentEl: HTMLElement = $('.lesson.content');
         let bodyEl: HTMLElement = $('body');
-        CodeEditorService.setContentElement(lessonContentEl);
+        CodeEditorService.setLessonContentEl(lessonContentEl);
         debugOff('Lesson content:', lessonContentEl);
         
         // Navigator visibility

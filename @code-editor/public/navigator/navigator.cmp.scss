@@ -1,14 +1,14 @@
 navigator-vsc {
     display: block;
     font-size: 0.85em;
-    background: #333;
+    background: #1c344d;
     color: #fff;
     font-family: 'Open Sans', sans-serif;
     overflow: auto;
-    display: none;
+    display: none!important; /* Important prevents collision with simplebar */
 
     &[visible] {
-        display: block;
+        display: flex!important; /* Important prevents collision with simplebar */        
     }
 
     a {
@@ -65,10 +65,11 @@ navigator-vsc {
         .link {
             color: #fff;
             display: block;
-            border-bottom: solid 1px #555;
+            border-bottom: solid 1px #385D83;
             cursor:pointer;
             display: flex;
             flex-direction: row;
+            width: 100%;
 
             &.active {
                 background: #444;
@@ -83,11 +84,11 @@ navigator-vsc {
             &.active .label,
             &:hover .label,
             &:hover .title {
-                color: white;
+                color: white!important;
             }
 
             .icon {
-                color: #71CCFD;
+                color: #accdef;
                 font-size: 30px;
                 box-sizing: border-box;
                 padding: 10px 20px;
@@ -102,7 +103,7 @@ navigator-vsc {
                 }
     
                 .label {
-                    color: #bbb;
+                    color: #accdef;
                     font-size: 0.9em;
                 }
             }

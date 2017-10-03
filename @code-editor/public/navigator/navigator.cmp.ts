@@ -1,4 +1,5 @@
 import { APP } from '../../config/app';
+import * as SimpleBar from 'simplebar';
 
 // Interfaces
 import { NavItem } from './interfaces/navigator';
@@ -102,6 +103,8 @@ export class NavigatorCmp extends HTMLElement {
             <div class="footer"></div>
         `;
 
+        // Simplebar
+        new SimpleBar(this);
 
     }
 
