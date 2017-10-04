@@ -6,8 +6,9 @@ import { Lesson } from '../../lessons/interfaces/lesson';
  * Container many lessons
  */
 export interface Chapter {
+    id: string;
     title: string;
     description: string;
-    url: string;
+    folder: string;
     lessons: Lesson[];
 }
