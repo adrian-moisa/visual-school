@@ -183,9 +183,11 @@ export class CodeEditorCmp extends HTMLElement {
 
         // Code editor
         this.editorSimpleBar = new SimpleBar(this.fauxScrollRegionEl)
-
+        this.fauxScrollRegionEl.removeEventListener('mouseenter', this.editorSimpleBar.onMouseEnter)
+        
         // Lesson content
         this.contentSimpleBar = new SimpleBar(this.lessonContentEl)
+        this.lessonContentEl.removeEventListener('mouseenter', this.contentSimpleBar.onMouseEnter)
 
         // Prevents any simplebar overwrites on editor changes
         CodeEditorService.setLessonContentEl($('.lesson.content .simplebar-content'))

@@ -63,7 +63,6 @@ export class QuickMenuCmp extends HTMLElement {
             <!-- Code editor -->
             <!-- <div class="user"></div> -->
             <div class="user"></div>
-            <!-- <btn-link-vsc class="user2" fa-icon="user-circle" title="Code editor"></btn-link-vsc> -->
 
             <!-- Code editor -->
             <btn-link-vsc class="editor" fa-icon="code" title="Code editor"></btn-link-vsc>

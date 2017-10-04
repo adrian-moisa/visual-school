@@ -1,19 +1,23 @@
-import { APP } from '../../config/app';
-import * as SimpleBar from 'simplebar';
+import { APP } from '../../config/app'
+import * as SimpleBar from 'simplebar'
+
+// Components
+import { NavLinkCmp } from './components/nav-link.cmp';
+NavLinkCmp;
 
 // Interfaces
-import { NavItem } from './interfaces/navigator';
-import { Chapter } from './../chapters/interfaces/chapter';
-import { Lesson } from './../lessons/interfaces/lesson';
+import { NavItem } from './interfaces/navigator'
+import { Chapter } from './../chapters/interfaces/chapter'
+import { Lesson } from './../lessons/interfaces/lesson'
 
 // Services
-import { NavigatorService } from './services/navigator.service';
+import { NavigatorService } from './services/navigator.service'
 
 // Debug
-let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:NavigatorCmp');
+let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:NavigatorCmp')
 
 // DOM selector
-declare var $: any;
+declare var $: any
 
 /**
  * Navigator component
@@ -21,55 +25,72 @@ declare var $: any;
  */
 export class NavigatorCmp extends HTMLElement {
 
+    get visible(): boolean {
+        return this.hasAttribute('visible')
+    }
+
+    set visible(val: boolean) {
+        debug('Set visible:', val)
+        this.isVisible = val
+
+        // Reflect as an attribute.
+        if (val) {
+            this.setAttribute('visible', '')
+        } else {
+            this.removeAttribute('visible')
+        }
+    }
+
     // State
-    private isVisible: boolean;
-    private links: NavItem[] = []; 
-    private chapter: Chapter;
-    private lesson: Lesson;
+    private isVisible: boolean
+    private mainLinks: NavItem[] = [
+        {
+            icon: 'home',
+            caption: 'Home',
+            description: 'Return to VisualSchool on Github',
+            url: 'https://github.com/visual-space/visual-school',
+        },
+        {
+            icon: 'code',
+            caption: 'Code samples',
+            description: 'View all chapters',
+            url: `${APP.host}/index.html`,
+        }
+    ] 
+    private links: NavItem[] = [] 
+    private chapter: Chapter
+    private lesson: Lesson
+
+    // Plugins
+    private navSimplebar: any
 
     constructor() {
-        super();
-        debug('Construct NavigatorCmp');
+        super()
+        debug('Construct NavigatorCmp')
     }
     
     connectedCallback() {
-        debug('Connect NavigatorCmp');
-        this.render();
-
-        // Navigator visibility
-        NavigatorService.navigatorIsVis$().subscribe( isVis => {
-            debugOff('Navigator visibility:', isVis);
-            this.visible = isVis;
-        });
+        debug('Connect NavigatorCmp')
+        this.render()
+        this.initSubscriptions()
     }
     
+    /**
+     * Render NavigatorCmp
+     */
     private render() {
-        debug('Render NavigatorCmp');
+        debug('Render NavigatorCmp')
         this.innerHTML = `
 
             <!-- Header -->
             <div class="header"></div>
             
+            <!-- Main links -->
             <div class="links main">
-
-                <!-- Home -->
-                <a class="link" href="https://github.com/visual-space/visual-school">
-                    <div class="icon fa fa-home"></div>
-                    <div class="info">
-                        <div class="title">Home</div>
-                        <div class="label">Return to VisualSchool on Github</div>
-                    </div>
-                </a>
-            
-                <!-- Code samples -->
-                <a class="link" href="${APP.host}/index.html">
-                    <div class="icon fa fa-code"></div>
-                    <div class="info">
-                        <div class="title">Code samples</div>
-                        <div class="label">View all chapters</div>
-                    </div>
-                </a>
-                
+                ${ this.mainLinks.reduce((t, link) => t + `
+                <nav-link-vsc href="${link.url}" fa-icon="${link.icon}" caption="${link.caption}" description="${link.description}">
+                </nav-link-vsc>
+                `, '')}
             </div>
 
             <!-- Chapter -->
@@ -87,44 +108,35 @@ export class NavigatorCmp extends HTMLElement {
             <!-- Lessons links -->
             <div class="links lessons">
                 ${ this.links.reduce((t, link) => t + `
-                
-                <a class="link ${link.active === true ? 'active' : ''}"  href="${APP.host}${link.url}">
-                    <div class="icon fa fa-${link.icon}"></div>
-                    <div class="info">
-                        <div class="title">${link.title}</div>
-                        <div class="label">${link.description}</div>
-                    </div>
-                </a>
-
+                <nav-link-vsc href="${link.url}" fa-icon="${link.icon}" caption="${link.caption}" description="${link.description}">
+                </nav-link-vsc>
                 `, '')}
             </div>
 
             <!-- Footer -->
             <div class="footer"></div>
-        `;
+        `
 
         // Simplebar
-        new SimpleBar(this);
-
+        this.navSimplebar = new SimpleBar(this)
+        this.removeEventListener('mouseenter', this.navSimplebar.onMouseEnter)
+        
     }
+    
+    /**
+     * Initialise subscriptions
+     */
+    private initSubscriptions() {
+        debug('Initialise subscriptions')
 
-    get visible(): boolean {
-        return this.hasAttribute('visible');
-    }
-
-    set visible(val: boolean) {
-        debug('Set visible:', val);
-        this.isVisible = val;
-
-        // Reflect as an attribute.
-        if (val) {
-            this.setAttribute('visible', '');
-        } else {
-            this.removeAttribute('visible');
-        }
+        // Navigator visibility
+        NavigatorService.navigatorIsVis$().subscribe( isVis => {
+            debugOff('Navigator visibility:', isVis)
+            this.visible = isVis
+        })
     }
 }
 
 // Component
-require('./navigator.cmp.scss');
-window.customElements.define('navigator-vsc', NavigatorCmp);
+require('./navigator.cmp.scss')
+window.customElements.define('navigator-vsc', NavigatorCmp)

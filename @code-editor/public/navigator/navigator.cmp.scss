@@ -61,52 +61,6 @@ navigator-vsc {
     }
 
     .links {
-
-        .link {
-            color: #fff;
-            display: block;
-            border-bottom: solid 1px #385D83;
-            cursor:pointer;
-            display: flex;
-            flex-direction: row;
-            width: 100%;
-
-            &.active {
-                background: #444;
-            }
-
-            &:hover {
-                background: #09A0F7;
-                color: white;
-            }
-                        
-            &:hover .icon,
-            &.active .label,
-            &:hover .label,
-            &:hover .title {
-                color: white!important;
-            }
-
-            .icon {
-                color: #accdef;
-                font-size: 30px;
-                box-sizing: border-box;
-                padding: 10px 20px;
-            }
-
-            .info {
-                padding: 10px 20px;
-                
-                .title {
-                    color: #fff;
-                    font-size: 1.2em;
-                }
-    
-                .label {
-                    color: #accdef;
-                    font-size: 0.9em;
-                }
-            }
-        }
+        nav-link-vsc{}
     }
 }

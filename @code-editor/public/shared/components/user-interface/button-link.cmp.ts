@@ -11,6 +11,23 @@ declare var $: any;
  */
 export class ButtonLinkCmp extends HTMLElement {
 
+    get active(): boolean {
+        return this.hasAttribute('active');
+    }
+
+    set active(val: boolean) {
+        debug('Set active:', val);
+        this.isActive = val;
+
+        // Reflect as an attribute.
+        if (val) {
+            this.setAttribute('active', '');
+        } else {
+            this.removeAttribute('active');
+        }
+    }
+
+
     // State
     private isActive: boolean = true;
     private faIcon: string;
@@ -37,25 +54,9 @@ export class ButtonLinkCmp extends HTMLElement {
     }
 
     attributeChangedCallback(name: string, oldValue: string, newValue: string) {
+        debug('Attribute:', name, newValue);
         if (name === 'fa-icon') this.faIcon = newValue;
     }
-
-    get active(): boolean {
-        return this.hasAttribute('active');
-    }
-
-    set active(val: boolean) {
-        debug('Set active:', val);
-        this.isActive = val;
-
-        // Reflect as an attribute.
-        if (val) {
-            this.setAttribute('active', '');
-        } else {
-            this.removeAttribute('active');
-        }
-    }
-
 }
 
 // Component
