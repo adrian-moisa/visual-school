@@ -9,9 +9,6 @@ import { AppState } from '../../shared/interfaces/app-state';
 import { NavigatorUiActions } from '../state/navigator-ui.actions';
 import { NAV_IS_VISIBLE } from '../state/navigator.selectors';
 
-// Webapi
-import { NavigatorWebApi } from '../webapis/navigator.webapi';
-
 // Debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:NavigatorService');
 debug('Instantiate NavigatorService');
@@ -21,20 +18,14 @@ declare var store: Store<AppState>;
 declare var store$: Observable<AppState>;
 
 /** 
- * Navigator service 
+ * NavigatorService 
  * Handles navigation panel.
  */
 export const NavigatorService = {
 
     // ====== DATA ======
 
-    /** 
-     * Get lessons from a specific chapter
-     */
-    // getLessons: (chapter: Chapter): Observable<Lesson[]> => {
-    //     debug('Get lesson content'); 
-    //     return NavigatorWebApi.getLessons(chapter);
-    // },
+    // ====== MAPS ======
 
     // ====== LOGIC ======
 
@@ -44,14 +35,17 @@ export const NavigatorService = {
     toggleNavigator: (value?: boolean) => {
         debug('Toggle navigator:', value);
         store.dispatch(NavigatorUiActions.toggleNavigator());
+        return NavigatorService.navigatorIsVis$()
     },
 
     /** 
-     * Is navigation panel visible?
+     * Is navigation panel visible observable
      */
     navigatorIsVis$: (): Observable<boolean> => {
         debug('Get navigator is visible observable');
         return store$.map(NAV_IS_VISIBLE).distinctUntilChanged();
     }
+    
+    // ====== UTILS ======
 
 }

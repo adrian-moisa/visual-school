@@ -11,6 +11,14 @@ let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:LessonsRedu
 export const LessonsDataReducer = (state: LessonsDataState = lessonsInitialState.data, action: Action<any>) => {
     switch (action.type) {
 
+        // ====== GET LESSONS LIST ======
+
+        case LessonsDataActions.GET_LESSONS_SUCCESS:
+            debug('GET_LESSONS_SUCCESS', action.payload)
+            return Object.assign({}, state, <LessonsDataState>{ 
+                lessons: action.payload 
+            })
+
         default:
             return state
     }

@@ -11,6 +11,15 @@ let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:ChaptersRed
 export const ChaptersDataReducer = (state: ChaptersDataState = chaptersInitialState.data, action: Action<any>) => {
     switch (action.type) {
 
+        // ====== GET CHAPTERS LIST ======
+
+        case ChaptersDataActions.GET_CHAPTERS_SUCCESS:
+            debug('GET_CHAPTERS_SUCCESS', action.payload)
+            return Object.assign({}, state, <ChaptersDataState>{ 
+                chapters: action.payload, 
+                chapter: action.payload[0], // TODO proper routing 
+            })
+
         default:
             return state
     }

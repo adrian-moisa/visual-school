@@ -2,9 +2,12 @@
 import { LessonsState } from '../interfaces/lessons-state';
 
 /**
- * Core initial state
+ * Lessons initial state
  */
 export const lessonsInitialState: LessonsState = {
-    data: null,
+    data: {
+        lessons: null,
+        lesson: null,
+    },
     ui: null
 };

@@ -1,6 +1,12 @@
 @import '../colors.scss';
 @import '../variables.scss';
 
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 a {
     text-decoration: none;
 

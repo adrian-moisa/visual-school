@@ -1,0 +1,58 @@
+[
+    {
+        "id": "1",
+        "chId": "1",
+        "file": "01-text",
+        "title": "Text",
+        "description": "Learn how to write text using HTML in web pages",
+        "icon": "file-text-o",
+        "steps": [
+            {
+                "lineNumber": 10
+            },
+            {
+                "lineNumber": 20
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "chId": "1",
+        "file": "02-images",
+        "title": "Images",
+        "description": "Add images to the page",
+        "icon": "file-image-o"
+    },
+    {
+        "id": "3",
+        "chId": "1",
+        "file": "03-lists",
+        "title": "Lists",
+        "description": "Display items in lists",
+        "icon": "list"
+    },
+    {
+        "id": "4",
+        "chId": "1",
+        "file": "04-inputs",
+        "title": "Inputs",
+        "description": "Write a forms and inputs",
+        "icon": "check-square-o"
+    },
+    {
+        "id": "5",
+        "chId": "1",
+        "file": "05-table",
+        "title": "Table",
+        "description": "Render data in tables",
+        "icon": "table"
+    },
+    {
+        "id": "6",
+        "chId": "1",
+        "file": "06-image-formats",
+        "title": "Image Formats",
+        "description": "Pros and Cons for all formats",
+        "icon": "file-image-o"
+    }
+]

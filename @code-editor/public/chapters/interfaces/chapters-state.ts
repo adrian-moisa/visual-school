@@ -1,13 +1,15 @@
 // Interfaces
+import { Chapter } from './chapter'
 
 // Data
 export interface ChaptersDataState {
-    // empty
+    chapters: Chapter[]
+    chapter: Chapter
 }
 
 // Ui
 export interface ChaptersUiState {
-    // empty
+    // Empty
 }
 
 // Chapters

@@ -12,6 +12,8 @@ import { Lesson } from './../lessons/interfaces/lesson'
 
 // Services
 import { NavigatorService } from './services/navigator.service'
+import { LessonsService } from '../lessons/services/lessons.service'
+import { ChaptersService } from '../chapters/services/chapters.service'
 
 // Debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:NavigatorCmp')
@@ -58,8 +60,10 @@ export class NavigatorCmp extends HTMLElement {
         }
     ] 
     private links: NavItem[] = [] 
-    private chapter: Chapter
-    private lesson: Lesson
+    private chapter: Chapter // Current
+    private lesson: Lesson // Current
+    private chapters: Chapter[]
+    private lessons: Lesson[]
 
     // Plugins
     private navSimplebar: any
@@ -73,6 +77,11 @@ export class NavigatorCmp extends HTMLElement {
         debug('Connect NavigatorCmp')
         this.render()
         this.initSubscriptions()
+
+        // Init data
+        ChaptersService.getChapters().subscribe( chapters => 
+            LessonsService.getLessons(chapters[0]) // this.chapter
+        )
     }
     
     /**
@@ -80,6 +89,7 @@ export class NavigatorCmp extends HTMLElement {
      */
     private render() {
         debug('Render NavigatorCmp')
+        debug('Render NavigatorCmp', this.lessons)
         this.innerHTML = `
 
             <!-- Header -->
@@ -88,17 +98,18 @@ export class NavigatorCmp extends HTMLElement {
             <!-- Main links -->
             <div class="links main">
                 ${ this.mainLinks.reduce((t, link) => t + `
-                <nav-link-vsc href="${link.url}" fa-icon="${link.icon}" caption="${link.caption}" description="${link.description}">
+                <nav-link-vsc href="${link.url}" fa-icon="${link.icon}" caption="${link.caption}" 
+                    description="${link.description}">
                 </nav-link-vsc>
                 `, '')}
             </div>
 
             <!-- Chapter -->
             ${ this.chapter !== undefined ? 
-            `<div class="chapter">
+            `<div class="chapter clearfix">
                 <h1 class="title">${this.chapter.title}</h1>
                 <h2 class="subtitle">${this.chapter.description}</h2>
-                <a class="lesson" href="https://github.com/visual-space/visual-school/tree/master${this.chapter.url}">
+                <a class="lesson" href="https://github.com/visual-space/visual-school/tree/master/${this.chapter.folder}">
                     <i class="fa fa-angle-right" aria-hidden="true"></i>
                     Read the lesson
                 </a>
@@ -107,8 +118,9 @@ export class NavigatorCmp extends HTMLElement {
             
             <!-- Lessons links -->
             <div class="links lessons">
-                ${ this.links.reduce((t, link) => t + `
-                <nav-link-vsc href="${link.url}" fa-icon="${link.icon}" caption="${link.caption}" description="${link.description}">
+                ${ this.links && this.links.reduce((t, link) => t + `
+                <nav-link-vsc href="${link.url}" fa-icon="${link.icon}" caption="${link.caption}" 
+                    description="${link.description}">
                 </nav-link-vsc>
                 `, '')}
             </div>
@@ -133,6 +145,39 @@ export class NavigatorCmp extends HTMLElement {
         NavigatorService.navigatorIsVis$().subscribe( isVis => {
             debugOff('Navigator visibility:', isVis)
             this.visible = isVis
+        })
+
+        // Chapters
+        ChaptersService.chapters$().subscribe( chapters => {
+            debugOff('Chapters:', chapters)
+            this.chapters = chapters
+        })
+
+        // Chapter
+        ChaptersService.chapter$().subscribe( chapter => {
+            debugOff('Chapters:', chapter)
+            this.chapter = chapter
+        })
+
+        // Lessons
+        LessonsService.lessons$().subscribe( lessons => {
+            debugOff('Lessons:', lessons)
+            console.log('---LessonsService.lessons$');
+            this.lessons = lessons
+            this.links = LessonsService.mapLessonsToNav(lessons) 
+            this.render()
+        })
+
+        // Current chapter
+        ChaptersService.chapter$().subscribe( chapter => {
+            debugOff('Chapter:', chapter)
+            this.chapter = chapter
+        })
+
+        // Current lesson
+        LessonsService.lesson$().subscribe( lesson => {
+            debugOff('Lesson:', lesson)
+            this.lesson = lesson
         })
     }
 }

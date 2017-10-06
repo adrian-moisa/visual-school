@@ -2,6 +2,7 @@ import { Observable } from 'rxjs/Observable'
 import 'rxjs'
 
 // Interfaces
-import { LessonsUiActions } from './lessons-ui.actions';
+import { LessonsDataActions } from './lessons-data.actions';
+import { Action } from '../../shared/interfaces/action';
 
 export const lessonsUiEpic: any = [];

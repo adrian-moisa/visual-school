@@ -1,8 +1,10 @@
 // Interfaces
+import { Lesson } from './lesson'
 
 // Data
 export interface LessonsDataState {
-    // empty
+    lessons: Lesson[]
+    lesson: Lesson
 }
 
 // Ui
@@ -12,6 +14,6 @@ export interface LessonsUiState {
 
 // Lessons
 export interface LessonsState {
-    data: LessonsDataState;
-    ui: LessonsUiState;
+    data: LessonsDataState
+    ui: LessonsUiState
 }

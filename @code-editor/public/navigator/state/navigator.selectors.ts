@@ -8,10 +8,10 @@ export const NAVIGATOR = (state: AppState)  => state.navigator;
 
 // ====== DATA ======
 
-// export const NAVIGATOR_DATA = createSelector<AppState, NavigatorState, NavigatorDataState>(
-//     NAVIGATOR,
-//     (state: NavigatorDataState) => state.someProp
-// );
+export const NAVIGATOR_DATA = createSelector<AppState, NavigatorState, NavigatorDataState>(
+    NAVIGATOR,
+    (state: NavigatorState) => state.data
+);
 
 // ====== UI ======
 
