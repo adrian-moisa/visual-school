@@ -2,24 +2,21 @@
 import { Action } from '../../shared/interfaces/action';
 import { Chapter } from '../../chapters/interfaces/chapter';
 
-/**
- * Chapters actions
- */
-export class ChaptersDataActions {
+export class chaptersDataActions {
 
     // ====== GET CHAPTERS LIST ======
 
     static GET_CHAPTERS = 'GET_CHAPTERS';
     static getChapters(): Action<Chapter> {
         return {
-            type: ChaptersDataActions.GET_CHAPTERS
+            type: chaptersDataActions.GET_CHAPTERS
         };
     }
 
     static GET_CHAPTERS_SUCCESS = 'GET_CHAPTERS_SUCCESS';
     static getChaptersSuccess(lessons: Chapter[]): Action<Chapter[]> {
         return {
-            type: ChaptersDataActions.GET_CHAPTERS_SUCCESS,
+            type: chaptersDataActions.GET_CHAPTERS_SUCCESS,
             payload: lessons
         };
     }
@@ -27,7 +24,7 @@ export class ChaptersDataActions {
     static GET_CHAPTERS_FAIL = 'GET_CHAPTERS_FAIL';
     static getChaptersFail(response: string): Action<string> {
         return {
-            type: ChaptersDataActions.GET_CHAPTERS_FAIL,
+            type: chaptersDataActions.GET_CHAPTERS_FAIL,
             payload: response
         };
     }

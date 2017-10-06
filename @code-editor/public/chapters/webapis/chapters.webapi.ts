@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs/Observable'
-import { APP } from '../../../config/app';
+import { APP, DEBUG } from '../../../config/app'
 import 'rxjs'
 
 // Interfaces
@@ -7,19 +7,16 @@ import { Chapter } from '../interfaces/chapter';
 import { Lesson } from '../../lessons/interfaces/lesson';
 
 // Debug
-let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:ChaptersWebApi');
-debug('Instantiate ChaptersWebApi');
+let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:chaptersWebApi');
+DEBUG.init && debug('Instantiate chaptersWebApi');
 
 /**
  * ChaptersWebApi
  */
-export const ChaptersWebApi = {
+export const chaptersWebApi = {
 
-    /**
-     * Get chapters
-     */
     getChapters: (): Observable<Chapter[]> => {
-        debug(`GET chapters:`);
+        DEBUG.webapi && debug(`GET chapters:`);
 
         return Observable.ajax({
             url: `${APP.hostFiles}/@lessons-metadata/chapters.json`,
@@ -27,7 +24,7 @@ export const ChaptersWebApi = {
             responseType: 'json' // text
         })
             .map((e: any) => e.response)
-            .do(chapters => debug(`GET OK chapters:`, chapters));
+            .do(chapters => DEBUG.webapi && debug(`GET OK chapters:`, chapters));
     },
 
 };

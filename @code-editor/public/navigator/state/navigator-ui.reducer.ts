@@ -1,3 +1,5 @@
+import { DEBUG } from '../../../config/app'
+
 // Interfaces
 import { Action } from '../../shared/interfaces/action';
 
@@ -6,9 +8,11 @@ import { NavigatorUiActions } from './navigator-ui.actions';
 import { NavigatorUiState } from '../interfaces/navigator-state';
 import { navigatorInitialState } from './navigator-initial-state';
 
-let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:NavigatorUiReducer');
+// Debug
+let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:navigatorUiReducer');
+DEBUG.init && debug('Instantiate navigatorUiReducer');
 
-export const NavigatorUiReducer = (state: NavigatorUiState = navigatorInitialState.ui, action: Action<any>) => {
+export const navigatorUiReducer = (state: NavigatorUiState = navigatorInitialState.ui, action: Action<any>) => {
 
     switch (action.type) {
 
@@ -16,7 +20,7 @@ export const NavigatorUiReducer = (state: NavigatorUiState = navigatorInitialSta
 
         case NavigatorUiActions.TOGGLE_NAVIGATOR:
             let isVisible: boolean = action.payload !== undefined ? action.payload : !state.isVisible;
-            debug('TOGGLE_NAVIGATOR:', isVisible);
+            DEBUG.reduce && debug('TOGGLE_NAVIGATOR:', isVisible);
             return Object.assign({}, state, {isVisible: isVisible});
 
         default:

@@ -1,6 +1,7 @@
 import { createStore, compose, applyMiddleware, Store } from 'redux';
 import { createEpicMiddleware } from 'redux-observable'
 import { Observable } from 'rxjs/Observable';
+import { DEBUG } from '../config/app'
 // import { observableFromStore } from 'redux-rx';
 
 // Interfaces
@@ -15,9 +16,10 @@ import { appReducers } from './shared/state/app.reducers';
 import { appEpics } from './shared/state/app.epics';
 
 // Setup debug
-let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:Main');
+let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:main');
 (window as any).debug = require('debug');
 debug.enabled === false && console.log('Enable console logs by typing: debug.enable(\'vsc:*\')');
+DEBUG.init && debug('Instantiate main');
 
 // Setup state store
 const epicMiddleware = createEpicMiddleware(appEpics);
@@ -49,8 +51,6 @@ require('./shared/scss/main.scss');
 // Main app component (loaded last)
 import { VisualSchoolCmp } from './visual-school.cmp';
 VisualSchoolCmp;
-
-debug('Initialise Main');
 
 // TODO move to a service
 function observableFromStore(store: Store<AppState>) {

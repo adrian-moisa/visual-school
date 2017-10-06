@@ -1,3 +1,5 @@
+import { DEBUG } from '../../../config/app'
+
 // Interfaces
 import { Action } from '../../shared/interfaces/action';
 
@@ -6,15 +8,17 @@ import { LessonsDataActions } from './lessons-data.actions';
 import { LessonsDataState } from '../interfaces/lessons-state';
 import { lessonsInitialState } from './lessons-initial-state';
 
-let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:LessonsReducer');
+// Debug
+let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:lessonsDataReducer');
+DEBUG.init && debug('Instantiate lessonsDataReducer');
 
-export const LessonsDataReducer = (state: LessonsDataState = lessonsInitialState.data, action: Action<any>) => {
+export const lessonsDataReducer = (state: LessonsDataState = lessonsInitialState.data, action: Action<any>) => {
     switch (action.type) {
 
         // ====== GET LESSONS LIST ======
 
         case LessonsDataActions.GET_LESSONS_SUCCESS:
-            debug('GET_LESSONS_SUCCESS', action.payload)
+            DEBUG.reduce && debug('GET_LESSONS_SUCCESS', action.payload)
             return Object.assign({}, state, <LessonsDataState>{ 
                 lessons: action.payload 
             })

@@ -1,5 +1,6 @@
 import { Observable } from 'rxjs/Observable';
 import { Store } from 'redux';
+import { DEBUG } from '../../../config/app'
 import 'rxjs';
 
 // Interfaces
@@ -10,18 +11,14 @@ import { NavigatorUiActions } from '../state/navigator-ui.actions';
 import { NAV_IS_VISIBLE } from '../state/navigator.selectors';
 
 // Debug
-let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:NavigatorService');
-debug('Instantiate NavigatorService');
+let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:navigatorService');
+DEBUG.init && debug('Instantiate navigatorService');
 
 // State
 declare var store: Store<AppState>;
 declare var store$: Observable<AppState>;
 
-/** 
- * NavigatorService 
- * Handles navigation panel.
- */
-export const NavigatorService = {
+export const navigatorService = {
 
     // ====== DATA ======
 
@@ -29,20 +26,14 @@ export const NavigatorService = {
 
     // ====== LOGIC ======
 
-    /** 
-     * Toggle navigation panel visibility
-     */
-    toggleNavigator: (value?: boolean) => {
-        debug('Toggle navigator:', value);
+    toggleNavigatorVis: (value?: boolean) => {
+        DEBUG.logic && debug('Toggle navigator visibility:', value);
         store.dispatch(NavigatorUiActions.toggleNavigator());
-        return NavigatorService.navigatorIsVis$()
+        return navigatorService.navigatorIsVis$()
     },
 
-    /** 
-     * Is navigation panel visible observable
-     */
     navigatorIsVis$: (): Observable<boolean> => {
-        debug('Get navigator is visible observable');
+        DEBUG.logic && debug('Observable navigator is visible');
         return store$.map(NAV_IS_VISIBLE).distinctUntilChanged();
     }
     

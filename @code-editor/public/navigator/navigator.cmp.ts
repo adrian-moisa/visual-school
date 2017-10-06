@@ -1,4 +1,4 @@
-import { APP } from '../../config/app'
+import { APP, DEBUG } from '../../config/app'
 import * as SimpleBar from 'simplebar'
 
 // Components
@@ -11,9 +11,9 @@ import { Chapter } from './../chapters/interfaces/chapter'
 import { Lesson } from './../lessons/interfaces/lesson'
 
 // Services
-import { NavigatorService } from './services/navigator.service'
-import { LessonsService } from '../lessons/services/lessons.service'
-import { ChaptersService } from '../chapters/services/chapters.service'
+import { navigatorService } from './services/navigator.service'
+import { lessonsService } from '../lessons/services/lessons.service'
+import { chaptersService } from '../chapters/services/chapters.service'
 
 // Debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:NavigatorCmp')
@@ -32,7 +32,7 @@ export class NavigatorCmp extends HTMLElement {
     }
 
     set visible(val: boolean) {
-        debug('Set visible:', val)
+        DEBUG.input && debug('Set visible:', val)
         this.isVisible = val
 
         // Reflect as an attribute.
@@ -70,26 +70,22 @@ export class NavigatorCmp extends HTMLElement {
 
     constructor() {
         super()
-        debug('Construct NavigatorCmp')
+        DEBUG.constr && debug('Construct NavigatorCmp')
     }
     
     connectedCallback() {
-        debug('Connect NavigatorCmp')
+        DEBUG.init && debug('Connect NavigatorCmp')
         this.render()
         this.initSubscriptions()
 
         // Init data
-        ChaptersService.getChapters().subscribe( chapters => 
-            LessonsService.getLessons(chapters[0]) // this.chapter
+        chaptersService.getChapters().subscribe( chapters => 
+            lessonsService.getLessons(chapters[0]) // this.chapter
         )
     }
     
-    /**
-     * Render NavigatorCmp
-     */
     private render() {
-        debug('Render NavigatorCmp')
-        debug('Render NavigatorCmp', this.lessons)
+        DEBUG.render && debug('Render NavigatorCmp')
         this.innerHTML = `
 
             <!-- Header -->
@@ -135,48 +131,45 @@ export class NavigatorCmp extends HTMLElement {
         
     }
     
-    /**
-     * Initialise subscriptions
-     */
     private initSubscriptions() {
-        debug('Initialise subscriptions')
+        DEBUG.cmp && debug('Initialise subscriptions')
 
         // Navigator visibility
-        NavigatorService.navigatorIsVis$().subscribe( isVis => {
-            debugOff('Navigator visibility:', isVis)
+        navigatorService.navigatorIsVis$().subscribe( isVis => {
+            DEBUG.cmp && debugOff('Navigator visibility:', isVis)
             this.visible = isVis
         })
 
         // Chapters
-        ChaptersService.chapters$().subscribe( chapters => {
-            debugOff('Chapters:', chapters)
+        chaptersService.chapters$().subscribe( chapters => {
+            DEBUG.cmp && debugOff('Chapters:', chapters)
             this.chapters = chapters
         })
 
         // Chapter
-        ChaptersService.chapter$().subscribe( chapter => {
-            debugOff('Chapters:', chapter)
+        chaptersService.chapter$().subscribe( chapter => {
+            DEBUG.cmp && debugOff('Chapters:', chapter)
             this.chapter = chapter
         })
 
         // Lessons
-        LessonsService.lessons$().subscribe( lessons => {
-            debugOff('Lessons:', lessons)
+        lessonsService.lessons$().subscribe( lessons => {
+            DEBUG.cmp && debugOff('Lessons:', lessons)
             console.log('---LessonsService.lessons$');
             this.lessons = lessons
-            this.links = LessonsService.mapLessonsToNav(lessons) 
+            this.links = lessonsService.mapLessonsToNav(lessons) 
             this.render()
         })
 
         // Current chapter
-        ChaptersService.chapter$().subscribe( chapter => {
-            debugOff('Chapter:', chapter)
+        chaptersService.chapter$().subscribe( chapter => {
+            DEBUG.cmp && debugOff('Chapter:', chapter)
             this.chapter = chapter
         })
 
         // Current lesson
-        LessonsService.lesson$().subscribe( lesson => {
-            debugOff('Lesson:', lesson)
+        lessonsService.lesson$().subscribe( lesson => {
+            DEBUG.cmp && debugOff('Lesson:', lesson)
             this.lesson = lesson
         })
     }

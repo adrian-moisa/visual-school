@@ -1,3 +1,5 @@
+import { DEBUG } from '../../../config/app'
+
 // Interfaces
 import { Action } from '../../shared/interfaces/action';
 
@@ -6,9 +8,11 @@ import { NavigatorDataActions } from './navigator-data.actions';
 import { NavigatorDataState } from '../interfaces/navigator-state';
 import { navigatorInitialState } from './navigator-initial-state';
 
-let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:NavigatorReducer');
+// Debug
+let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:navigatorDataReducer');
+DEBUG.init && debug('Instantiate navigatorDataReducer');
 
-export const NavigatorDataReducer = (state: NavigatorDataState = navigatorInitialState.data, action: Action<any>) => {
+export const navigatorDataReducer = (state: NavigatorDataState = navigatorInitialState.data, action: Action<any>) => {
     switch (action.type) {
 
         default:

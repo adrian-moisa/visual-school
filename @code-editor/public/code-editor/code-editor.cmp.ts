@@ -1,4 +1,4 @@
-import { APP } from '../../config/app'
+import { APP, DEBUG } from '../../config/app'
 import * as SimpleBar from 'simplebar'
 import * as ace from 'brace'
 import 'brace/mode/html'
@@ -8,7 +8,7 @@ import 'brace/theme/xcode'
 import { onHTMLElement } from '../shared/interfaces/html-element'
 
 // Services
-import { CodeEditorService } from './services/code-editor.service'
+import { codeEditorService } from './services/code-editor.service'
 
 // Debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:CodeEditorCmp')
@@ -16,9 +16,7 @@ let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:CodeEditorC
 // DOM selector
 declare var $: any
 
-
 /**
- * Code editor
  * Code editor allows the modification of the source code in the samples at runtime
  * TODO Reflow code when sidebar is toggled
  * TODO Code editor knows too much about lesson content. Might be a problem in the future.
@@ -30,7 +28,7 @@ export class CodeEditorCmp extends HTMLElement {
     }
 
     set visible(val: boolean) {
-        debug('Set visible:', val)
+        DEBUG.input && debug('Set visible:', val)
         this.isVisible = val
 
         // Reflect as an attribute.
@@ -48,6 +46,7 @@ export class CodeEditorCmp extends HTMLElement {
 
     // Editor, lesson
     private lessonContentEl: onHTMLElement
+    private lessonSbContentEl: onHTMLElement
     private editorEl: onHTMLElement
     private aceContentEl: onHTMLElement
 
@@ -65,11 +64,11 @@ export class CodeEditorCmp extends HTMLElement {
 
     constructor() {
         super()
-        debug('Construct CodeEditorCmp')
+        DEBUG.constr && debug('Construct CodeEditorCmp')
     }
 
     connectedCallback() {
-        debug('Connect CodeEditorCmp')
+        DEBUG.init && debug('Connect CodeEditorCmp')
 
         // Render
         this.render()
@@ -84,11 +83,8 @@ export class CodeEditorCmp extends HTMLElement {
         }, 0)
     }
 
-    /**
-     * Render CodeEditorCmp
-     */
     private render() {
-        debug('Render CodeEditorCmp')
+        DEBUG.render && debug('Render CodeEditorCmp')
 
         this.innerHTML = `
             <div class="editor"></div>
@@ -100,21 +96,18 @@ export class CodeEditorCmp extends HTMLElement {
         // Editor and content
         this.editorEl = $('editor-vsc .editor')
         this.lessonContentEl = $('.lesson.content')
-        debugOff('Code editor:', this.editorEl)
-        debug('Lesson content:', this.lessonContentEl)
+        DEBUG.dom && debugOff('Code editor:', this.editorEl)
+        DEBUG.dom && debug('Lesson content:', this.lessonContentEl)
 
         // Faux scroll
         this.fauxScrollRegionEl = $('editor-vsc .simplebar')
         this.fauxScrollContentEl = $('editor-vsc .simplebar .inner')
-        debugOff('Faux scroll region:', this.fauxScrollRegionEl)
-        debugOff('Faux scroll content:', this.fauxScrollContentEl)
+        DEBUG.dom && debugOff('Faux scroll region:', this.fauxScrollRegionEl)
+        DEBUG.dom && debugOff('Faux scroll content:', this.fauxScrollContentEl)
     }
 
-    /**
-     * Init ace code editor
-     */
     private initAceCodeEditor() {
-        debug('Init ace code editor')
+        DEBUG.cmp && debug('Init ace code editor')
 
         // Ace editor
         this.editor = ace.edit(this.editorEl)
@@ -140,7 +133,7 @@ export class CodeEditorCmp extends HTMLElement {
      *     This creates the feeling that simplebar controls ace directly when in fact it controls it's scrollbar.
      */
     private syncAceAndSimpleBar() {
-        debug('Init ace code editor')
+        DEBUG.cmp && debug('Init ace code editor')
 
         // DOM cache
         this.aceVScrollEl = $('.ace_scrollbar-v')
@@ -175,11 +168,8 @@ export class CodeEditorCmp extends HTMLElement {
         })
     }
 
-    /**
-     * Setup custom scroll bars for lesson content and code editor
-     */
     private initCustomScrolls() {
-        debug('Init custom scroll')
+        DEBUG.cmp && debug('Init custom scroll')
 
         // Code editor
         this.editorSimpleBar = new SimpleBar(this.fauxScrollRegionEl)
@@ -190,46 +180,37 @@ export class CodeEditorCmp extends HTMLElement {
         this.lessonContentEl.removeEventListener('mouseenter', this.contentSimpleBar.onMouseEnter)
 
         // Prevents any simplebar overwrites on editor changes
-        CodeEditorService.setLessonContentEl($('.lesson.content .simplebar-content'))
+        this.lessonSbContentEl = $('.lesson.content .simplebar-content')
     }
 
-    /**
-     * Initialise subscriptions
-     */
     private initSubscriptions() {
-        debug('Initialise subscriptions')
+        DEBUG.cmp && debug('Initialise subscriptions')
 
         // Initial editor source code
-        CodeEditorService.getLessonContent('index.html') // '01-html/01-text.html'
+        codeEditorService.getLessonContent('index.html') // '01-html/01-text.html'
             .subscribe(sourceCode => this.updateEditorSourceCode(sourceCode))
 
         // Code editor visibility
-        CodeEditorService.codeEditorIsVis$().subscribe(isVis => {
+        codeEditorService.codeEditorIsVis$().subscribe(isVis => {
             debugOff('CodeEditor visibility:', isVis)
             this.visible = isVis
         })
     }
 
-    /**
-     * Update editor source code
-     */
     private updateEditorSourceCode(sourceCode: string) {
-        debug('Update editor source code')
+        DEBUG.cmp && debug('Update editor source code')
 
         // -1 moves cursor to the start (prevents select all text)
         this.editor.setValue(sourceCode, -1)
         this.editor.resize()
     }
 
-    /**
-     * On editor change
-     */
     private updateLessonContent() {
-        debug('On editor change')
+        DEBUG.cmp && debug('On editor change')
 
         // Update lesson content
         let sourceCode: string = this.editor.getValue()
-        CodeEditorService.updateLessonContent(sourceCode)
+        this.lessonSbContentEl.innerHTML = sourceCode;
 
         // Editor resize
         this.editor.resize()

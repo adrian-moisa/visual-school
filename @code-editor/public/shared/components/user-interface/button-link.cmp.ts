@@ -1,3 +1,5 @@
+import { DEBUG } from '../../../../config/app'
+
 // Debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:ButtonLinkCmp');
 
@@ -5,9 +7,7 @@ let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:ButtonLinkC
 declare var $: any;
 
 /**
- * ButtonLinkCmp
- * Used to render links in the quick menu.
- * Initialy developed just to experiment with web components and data update strategies.
+ * Renders links in the quick menu.
  */
 export class ButtonLinkCmp extends HTMLElement {
 
@@ -16,7 +16,7 @@ export class ButtonLinkCmp extends HTMLElement {
     }
 
     set active(val: boolean) {
-        debug('Set active:', val);
+        DEBUG.input && debug('Set active:', val);
         this.isActive = val;
 
         // Reflect as an attribute.
@@ -34,16 +34,16 @@ export class ButtonLinkCmp extends HTMLElement {
 
     constructor() {
         super();
-        debug('Construct ButtonLinkCmp');
+        DEBUG.constr && debug('Construct ButtonLinkCmp');
     }
 
     connectedCallback() {
-        debug('Connect ButtonLinkCmp');
+        DEBUG.init && debug('Connect ButtonLinkCmp');
         this.render();
     }
 
     render() {
-        debug('Render ButtonLinkCmp');
+        DEBUG.render && debug('Render ButtonLinkCmp');
         this.innerHTML = `
             <i class="fa fa-${this.faIcon}" aria-hidden="true"></i>
         `;
@@ -54,7 +54,7 @@ export class ButtonLinkCmp extends HTMLElement {
     }
 
     attributeChangedCallback(name: string, oldValue: string, newValue: string) {
-        debug('Attribute:', name, newValue);
+        DEBUG.input && debug('Attribute:', name, newValue);
         if (name === 'fa-icon') this.faIcon = newValue;
     }
 }

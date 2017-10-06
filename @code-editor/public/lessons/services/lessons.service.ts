@@ -1,5 +1,6 @@
 import { Observable } from 'rxjs/Observable';
 import { Store } from 'redux';
+import { DEBUG } from '../../../config/app'
 import 'rxjs';
 
 // Interfaces
@@ -13,39 +14,35 @@ import { LessonsDataActions } from '../state/lessons-data.actions';
 import { LESSONS_LIST, LESSON } from '../state/lessons.selectors';
 
 // Webapi
-import { LessonsWebApi } from '../webapis/lessons.webapi';
+import { lessonsWebApi } from '../webapis/lessons.webapi';
 
 // Debug
-let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:LessonsService');
-debug('Instantiate LessonsService');
+let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:lessonsService');
+DEBUG.init && debug('Instantiate lessonsService');
 
 // State
 declare var store: Store<AppState>;
 declare var store$: Observable<AppState>;
 
-/** 
- * LessonsService 
- * Handles lesons in the app.
- */
-export const LessonsService = {
+export const lessonsService = {
 
     // ====== DATA ======
 
     getLessons: (chapter: Chapter): Observable<Lesson[]> => {
-        debug('Get lesson content:', chapter.title); 
+        DEBUG.data && debug('Get lessons:', chapter.title); 
         store.dispatch(LessonsDataActions.getLessons(chapter));
-        return LessonsService.lessons$()
+        return lessonsService.lessons$()
     },
     
     lessons$: (): Observable<Lesson[]> => {
-        debug('Get lessons observable');
+        DEBUG.data && debug('Observable lessons');
         return store$.map(LESSONS_LIST)
             .filter(e => e !== undefined && e !== null)
             .distinctUntilChanged();
     },
     
     lesson$: (): Observable<Lesson> => {
-        debug('Get lesson observable');
+        DEBUG.data && debug('Observable lesson');
         return store$.map(LESSON)
             .filter(e => e !== undefined && e !== null)
             .distinctUntilChanged();
@@ -62,7 +59,7 @@ export const LessonsService = {
             url: lesson.file,
         }))
         
-        debug('Map lessons to navigation items:', navItems);
+        DEBUG.map && debug('Map lessons to navigation items:', navItems);
         return navItems;
     },
     

@@ -1,5 +1,6 @@
 import { Observable } from 'rxjs/Observable';
 import { Store } from 'redux';
+import { DEBUG } from '../../../config/app'
 import 'rxjs';
 
 // Interfaces
@@ -7,52 +8,40 @@ import { AppState } from '../../shared/interfaces/app-state';
 import { Chapter } from '../../chapters/interfaces/chapter';
 
 // State
-import { ChaptersDataActions } from '../state/chapters-data.actions';
+import { chaptersDataActions } from '../state/chapters-data.actions';
 import { CHAPTERS_LIST, CHAPTER } from '../state/chapters.selectors';
 
 // Webapi
-import { ChaptersWebApi } from '../webapis/chapters.webapi';
+import { chaptersWebApi } from '../webapis/chapters.webapi';
 
 // Debug
-let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:ChaptersService');
-debug('Instantiate ChaptersService');
+let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:chaptersService');
+DEBUG.init && debug('Instantiate chaptersService');
 
 // State
 declare var store: Store<AppState>;
 declare var store$: Observable<AppState>;
 
-/** 
- * ChaptersService 
- * Handles lesons in the app.
- */
-export const ChaptersService = {
+export const chaptersService = {
 
     // ====== DATA ======
 
-    /** 
-     * Get all chapters
-     */
     getChapters: (): Observable<Chapter[]> => {
-        debug('Get chapters'); 
-        store.dispatch(ChaptersDataActions.getChapters());
-        return ChaptersService.chapters$()
+        DEBUG.data && debug('Get chapters'); 
+        store.dispatch(chaptersDataActions.getChapters());
+        return chaptersService.chapters$()
     },
     
-    /** 
-     * Get chapters list observable
-     */
     chapters$: (): Observable<Chapter[]> => {
-        debug('chapters observable');
+        DEBUG.data && debug('Observable chapters ');
         return store$.map(CHAPTERS_LIST)
             .filter(e => e !== undefined && e !== null)
             .distinctUntilChanged();
     },
     
-    /** 
-     * Get current chapter observable
-     */
+    /** Current chapter */
     chapter$: (): Observable<Chapter> => {
-        debug('chapter observable');
+        DEBUG.data && debug('Observable current chapter ');
         return store$.map(CHAPTER)
             .filter(e => e !== undefined && e !== null)
             .distinctUntilChanged();

@@ -1,20 +1,24 @@
+import { DEBUG } from '../../../config/app'
+
 // Interfaces
 import { Action } from '../../shared/interfaces/action';
+import { ChaptersDataState } from '../interfaces/chapters-state';
 
 // State
-import { ChaptersDataActions } from './chapters-data.actions';
-import { ChaptersDataState } from '../interfaces/chapters-state';
+import { chaptersDataActions } from './chapters-data.actions';
 import { chaptersInitialState } from './chapters-initial-state';
 
-let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:ChaptersReducer');
+// Debug
+let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:chaptersDataReducer');
+DEBUG.init && debug('Instantiate chaptersDataReducer');
 
-export const ChaptersDataReducer = (state: ChaptersDataState = chaptersInitialState.data, action: Action<any>) => {
+export const chaptersDataReducer = (state: ChaptersDataState = chaptersInitialState.data, action: Action<any>) => {
     switch (action.type) {
 
         // ====== GET CHAPTERS LIST ======
 
-        case ChaptersDataActions.GET_CHAPTERS_SUCCESS:
-            debug('GET_CHAPTERS_SUCCESS', action.payload)
+        case chaptersDataActions.GET_CHAPTERS_SUCCESS:
+            DEBUG.reduce && debug('GET_CHAPTERS_SUCCESS', action.payload)
             return Object.assign({}, state, <ChaptersDataState>{ 
                 chapters: action.payload, 
                 chapter: action.payload[0], // TODO proper routing 

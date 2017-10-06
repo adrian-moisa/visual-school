@@ -1,3 +1,5 @@
+import { DEBUG } from '../../../config/app'
+
 // Interfaces
 import { Action } from '../interfaces/action';
 
@@ -6,9 +8,11 @@ import { SharedDataActions } from './shared-data.actions';
 import { SharedDataState } from '../interfaces/shared-state';
 import { sharedInitialState } from './shared-initial-state';
 
-let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:SharedReducer');
+// Debug
+let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:sharedDataReducer');
+DEBUG.init && debug('Instantiate sharedDataReducer');
 
-export const SharedDataReducer = (state: SharedDataState = sharedInitialState.data, action: Action<any>) => {
+export const sharedDataReducer = (state: SharedDataState = sharedInitialState.data, action: Action<any>) => {
     switch (action.type) {
 
         default:

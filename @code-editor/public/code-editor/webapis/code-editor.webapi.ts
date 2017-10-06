@@ -1,23 +1,15 @@
 import { Observable } from 'rxjs/Observable'
+import { APP, DEBUG } from '../../../config/app'
 import 'rxjs'
 
-// Config
-import { APP } from '../../../config/app';
-
 // Debug
-let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:CodeEditorWebApi');
-debug('Instantiate CodeEditorWebApi');
+let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:codeEditorWebApi');
+DEBUG.init && debug('Instantiate codeEditorWebApi');
 
-/**
- * Code editor web api
- */
-export const CodeEditorWebApi = {
+export const codeEditorWebApi = {
 
-    /**
-     * Get entities list async
-     */
     getLessonContent: (url: string): Observable<string> => {
-        debug(`GET lesson content:`, url);
+        DEBUG.webapi && debug(`GET lesson content:`, url);
 
         return Observable.ajax({
             // url: `${APP.host}/code-samples/${url}`,
@@ -26,7 +18,7 @@ export const CodeEditorWebApi = {
             responseType: 'text' // json
         })
             .map((e: any) => e.response)
-            .do(e => debug(`GET OK lesson content:`, url, e));
+            .do(e => DEBUG.webapi && debug(`GET OK lesson content:`, url, e));
     }
 
 };

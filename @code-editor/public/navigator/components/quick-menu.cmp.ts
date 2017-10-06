@@ -1,10 +1,12 @@
+import { DEBUG } from '../../../config/app'
+
 // Components
 import { ButtonLinkCmp } from '../../shared/components/user-interface/button-link.cmp';
 ButtonLinkCmp;
 
 // Services
-import { NavigatorService } from '../services/navigator.service';
-import { CodeEditorService } from '../../code-editor/services/code-editor.service';
+import { navigatorService } from '../services/navigator.service';
+import { codeEditorService } from '../../code-editor/services/code-editor.service';
 
 // Debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:QuickMenuCmp');
@@ -13,7 +15,6 @@ let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:QuickMenuCm
 declare var $: any;
 
 /**
- * Quick menu component
  * This is a menu fixed on the top right of the page.
  * Allows easy access to navigation menu, code editor (and user profile in the future)
  * <!> Only one instance
@@ -31,21 +32,21 @@ export class QuickMenuCmp extends HTMLElement {
 
     constructor() {
         super();
-        debug('Construct QuickMenuCmp');
+        DEBUG.constr && debug('Construct QuickMenuCmp');
     }
     
     connectedCallback() {
-        debug('Connect QuickMenuCmp');
+        DEBUG.init && debug('Connect QuickMenuCmp');
         this.render();
 
         // Code editor visibility
-        CodeEditorService.codeEditorIsVis$().subscribe( isVis => {
+        codeEditorService.codeEditorIsVis$().subscribe( isVis => {
             debugOff('Code editor visibility:', isVis);
             this.codeEditorEl.active = isVis;
         });
         
         // Navigator visibility
-        NavigatorService.navigatorIsVis$().subscribe( isVis => {
+        navigatorService.navigatorIsVis$().subscribe( isVis => {
             debugOff('Navigator visibility:', isVis);
             this.navigatorEl.active = isVis;
         });
@@ -53,7 +54,7 @@ export class QuickMenuCmp extends HTMLElement {
     }
 
     render() {
-        debug('Render QuickMenuCmp');
+        DEBUG.render && debug('Render QuickMenuCmp');
         this.innerHTML = `
         
             <!-- Logo -->
@@ -78,8 +79,8 @@ export class QuickMenuCmp extends HTMLElement {
         debugOff('Editor link:', this.codeEditorEl);
         
         // Toggle panels
-        this.navigatorEl.on('click', (el: Element) => NavigatorService.toggleNavigator());
-        this.codeEditorEl.on('click', (el: Element) => CodeEditorService.toggleCodeEditor());
+        this.navigatorEl.on('click', (el: Element) => navigatorService.toggleNavigatorVis());
+        this.codeEditorEl.on('click', (el: Element) => codeEditorService.toggleCodeEditorVis());
     }
 
 }

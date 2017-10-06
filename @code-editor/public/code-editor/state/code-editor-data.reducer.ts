@@ -1,14 +1,18 @@
+import { DEBUG } from '../../../config/app'
+
 // Interfaces
 import { Action } from '../../shared/interfaces/action';
+import { CodeEditorDataState } from '../interfaces/code-editor-state';
 
 // State
-import { CodeEditorDataActions } from './code-editor-data.actions';
-import { CodeEditorDataState } from '../interfaces/code-editor-state';
+import { codeEditorDataActions } from './code-editor-data.actions';
 import { codeEditorInitialState } from './code-editor-initial-state';
 
-let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:CodeEditorReducer');
+// Debug
+let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:codeEditorDataReducer');
+DEBUG.init && debug('Instantiate codeEditorDataReducer');
 
-export const CodeEditorDataReducer = (state: CodeEditorDataState = codeEditorInitialState.data, action: Action<any>) => {
+export const codeEditorDataReducer = (state: CodeEditorDataState = codeEditorInitialState.data, action: Action<any>) => {
     switch (action.type) {
 
         default:
