@@ -22,7 +22,6 @@ let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:NavigatorCm
 declare var $: any
 
 /**
- * Navigator component
  * Navigation for the entire course. From chapter, lesson and file down to code code block.
  */
 export class NavigatorCmp extends HTMLElement {
@@ -90,16 +89,17 @@ export class NavigatorCmp extends HTMLElement {
 
             <!-- Header -->
             <div class="header"></div>
-            
-            <!-- Main links -->
-            <div class="links main">
-                ${ this.mainLinks.reduce((t, link) => t + `
-                <nav-link-vsc href="${link.url}" fa-icon="${link.icon}" caption="${link.caption}" 
-                    description="${link.description}">
-                </nav-link-vsc>
-                `, '')}
-            </div>
-
+            ` +
+                                    // DELETE
+                                    // <!-- Main links -->
+                                    // <div class="links main">
+                                    //     ${ this.mainLinks && this.mainLinks.reduce((t, link) => t + `
+                                    //     <nav-link-vsc href="${link.url}" fa-icon="${link.icon}" caption="${link.caption}" 
+                                    //         description="${link.description}">
+                                    //     </nav-link-vsc>
+                                    //     `, '')}
+                                    // </div>
+`
             <!-- Chapter -->
             ${ this.chapter !== undefined ? 
             `<div class="chapter clearfix">
@@ -120,6 +120,54 @@ export class NavigatorCmp extends HTMLElement {
                 </nav-link-vsc>
                 `, '')}
             </div>
+            
+            <!-- Chapter -->
+            ${ this.chapter !== undefined ? 
+            `<div class="chapter clearfix">
+                <h1 class="title">${this.chapter.title}</h1>
+                <h2 class="subtitle">${this.chapter.description}</h2>
+                <a class="lesson" href="https://github.com/visual-space/visual-school/tree/master/${this.chapter.folder}">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    Read the lesson
+                </a>
+            </div>` : ``
+            }
+            
+            <!-- Chapter -->
+            ${ this.chapter !== undefined ? 
+            `<div class="chapter clearfix">
+                <h1 class="title">${this.chapter.title}</h1>
+                <h2 class="subtitle">${this.chapter.description}</h2>
+                <a class="lesson" href="https://github.com/visual-space/visual-school/tree/master/${this.chapter.folder}">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    Read the lesson
+                </a>
+            </div>` : ``
+            }
+            
+            <!-- Chapter -->
+            ${ this.chapter !== undefined ? 
+            `<div class="chapter clearfix">
+                <h1 class="title">${this.chapter.title}</h1>
+                <h2 class="subtitle">${this.chapter.description}</h2>
+                <a class="lesson" href="https://github.com/visual-space/visual-school/tree/master/${this.chapter.folder}">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    Read the lesson
+                </a>
+            </div>` : ``
+            }
+            
+            <!-- Chapter -->
+            ${ this.chapter !== undefined ? 
+            `<div class="chapter clearfix">
+                <h1 class="title">${this.chapter.title}</h1>
+                <h2 class="subtitle">${this.chapter.description}</h2>
+                <a class="lesson" href="https://github.com/visual-space/visual-school/tree/master/${this.chapter.folder}">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    Read the lesson
+                </a>
+            </div>` : ``
+            }
 
             <!-- Footer -->
             <div class="footer"></div>

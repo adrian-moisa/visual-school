@@ -15,21 +15,21 @@ export const APP = {
  * Debug sorted by type of code
  */
 export const DEBUG = {
-    constr: true,
-    init: true,
-    destroy: true,
+    constr: false,
+    init: false,
+    destroy: false,
     render: true,
-    dom: true,
-    input: true, // Inputs and write values
-    cmp: true,
-    guard: true,
-    resolve: true,
-    reduce: true,
-    epic: true,
-    select: true,
-    map: true,
-    util: true,
-    logic: true,
-    data: true,
-    webapi: true, // Json stringified version of the objects
+    dom: false,
+    input: false, // Inputs and write values
+    cmp: false,
+    guard: false,
+    resolve: false,
+    reduce: false,
+    epic: false,
+    select: false,
+    map: false,
+    util: false,
+    logic: false,
+    data: false,
+    webapi: false, // Json stringified version of the objects
 }

@@ -52,7 +52,7 @@ export class VisualSchoolCmp extends HTMLElement {
     }
 
     render() {
-        DEBUG.render && debug('Render QuickMenuCmp');
+        DEBUG.render && debug('Render VisualSchoolCmp');
         this.innerHTML = `
             <!-- Quick access menu -->
             <quick-menu-vsc></quick-menu-vsc>
