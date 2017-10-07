@@ -210,7 +210,7 @@ export class CodeEditorCmp extends HTMLElement {
 
         // Update lesson content
         let sourceCode: string = this.editor.getValue()
-        this.lessonSbContentEl.innerHTML = sourceCode;
+        this.lessonSbContentEl.innerHTML = sourceCode
 
         // Editor resize
         this.editor.resize()

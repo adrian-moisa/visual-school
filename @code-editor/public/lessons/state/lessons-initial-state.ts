@@ -1,5 +1,5 @@
 // Interfaces
-import { LessonsState } from '../interfaces/lessons-state';
+import { LessonsState } from '../interfaces/lessons-state'
 
 /**
  * Lessons initial state
@@ -10,4 +10,4 @@ export const lessonsInitialState: LessonsState = {
         lesson: null,
     },
     ui: null
-};
+}

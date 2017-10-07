@@ -1,16 +1,16 @@
 import { DEBUG } from '../../../config/app'
 
 // Interfaces
-import { Action } from '../../shared/interfaces/action';
-import { ChaptersDataState } from '../interfaces/chapters-state';
+import { Action } from '../../shared/interfaces/action'
+import { ChaptersDataState } from '../interfaces/chapters-state'
 
 // State
-import { chaptersDataActions } from './chapters-data.actions';
-import { chaptersInitialState } from './chapters-initial-state';
+import { chaptersDataActions } from './chapters-data.actions'
+import { chaptersInitialState } from './chapters-initial-state'
 
 // Debug
-let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:chaptersDataReducer');
-DEBUG.init && debug('Instantiate chaptersDataReducer');
+let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:chaptersDataReducer')
+DEBUG.init && debug('Instantiate chaptersDataReducer')
 
 export const chaptersDataReducer = (state: ChaptersDataState = chaptersInitialState.data, action: Action<any>) => {
     switch (action.type) {

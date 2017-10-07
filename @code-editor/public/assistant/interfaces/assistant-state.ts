@@ -1,17 +1,14 @@
 // Interfaces
+import { AssistAction } from '../interfaces/assist-action'
 
-// Data
 export interface AssistantDataState {
-    // empty
+    assistActions: AssistAction[]
+    assistAction: AssistAction
 }
 
-// Ui
-export interface AssistantUiState {
-    // empty
-}
+export interface AssistantUiState {}
 
-// Assistant
 export interface AssistantState {
-    data: AssistantDataState;
-    ui: AssistantUiState;
+    data: AssistantDataState
+    ui: AssistantUiState
 }

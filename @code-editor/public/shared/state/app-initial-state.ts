@@ -1,13 +1,13 @@
 // Interfaces
-import { AppState } from '../interfaces/app-state';
+import { AppState } from '../interfaces/app-state'
 
 // State 
-import { assistantInitialState } from '../../assistant/state/assistant-initial-state';
-import { chaptersInitialState } from '../../chapters/state/chapters-initial-state';
-import { codeBlocksInitialState } from '../../code-blocks/state/code-blocks-initial-state';
-import { codeEditorInitialState } from '../../code-editor/state/code-editor-initial-state';
-import { lessonsInitialState } from '../../lessons/state/lessons-initial-state';
-import { navigatorInitialState } from '../../navigator/state/navigator-initial-state';
+import { assistantInitialState } from '../../assistant/state/assistant-initial-state'
+import { chaptersInitialState } from '../../chapters/state/chapters-initial-state'
+import { codeBlocksInitialState } from '../../code-blocks/state/code-blocks-initial-state'
+import { codeEditorInitialState } from '../../code-editor/state/code-editor-initial-state'
+import { lessonsInitialState } from '../../lessons/state/lessons-initial-state'
+import { navigatorInitialState } from '../../navigator/state/navigator-initial-state'
 
 /**
  * Core initial state
@@ -21,4 +21,4 @@ export const appInitialState: AppState = {
     codeEditor: codeEditorInitialState,
     lessons: lessonsInitialState,
     navigator: navigatorInitialState,
-};
+}

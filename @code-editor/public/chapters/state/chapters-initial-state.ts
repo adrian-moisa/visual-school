@@ -1,6 +1,6 @@
 
 // Interfaces
-import { ChaptersState } from '../interfaces/chapters-state';
+import { ChaptersState } from '../interfaces/chapters-state'
 
 /**
  * Chapters initial state
@@ -11,4 +11,4 @@ export const chaptersInitialState: ChaptersState = {
         chapter: null,
     },
     ui: null
-};
+}

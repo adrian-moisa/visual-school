@@ -1,5 +1,5 @@
 // Interfaces
-import { CodeBlocksState } from '../interfaces/code-blocks-state';
+import { CodeBlocksState } from '../interfaces/code-blocks-state'
 
 export const codeBlocksInitialState: CodeBlocksState = {
     data: {
@@ -7,4 +7,4 @@ export const codeBlocksInitialState: CodeBlocksState = {
         codeBlocks: null
     },
     ui: null
-};
+}

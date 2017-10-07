@@ -3,10 +3,10 @@ import { DEBUG } from '../../../config/app'
 import 'rxjs'
 
 // Interfaces
-import { codeBlocksUiActions } from './code-blocks-ui.actions';
+import { codeBlocksUiActions } from './code-blocks-ui.actions'
 
 // Debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:codeBlocksUiEpic')
-DEBUG.init && debug('Instantiate codeBlocksUiEpic');
+DEBUG.init && debug('Instantiate codeBlocksUiEpic')
 
-export const codeBlocksUiEpic: any = [];
+export const codeBlocksUiEpic: any = []

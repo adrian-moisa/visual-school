@@ -14,6 +14,6 @@ export interface ChaptersUiState {
 
 // Chapters
 export interface ChaptersState {
-    data: ChaptersDataState;
-    ui: ChaptersUiState;
+    data: ChaptersDataState
+    ui: ChaptersUiState
 }

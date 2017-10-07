@@ -2,8 +2,8 @@ import { APP, DEBUG } from '../../config/app'
 import * as SimpleBar from 'simplebar'
 
 // Components
-import { NavLinkCmp } from './components/nav-link.cmp';
-NavLinkCmp;
+import { NavLinkCmp } from './components/nav-link.cmp'
+NavLinkCmp
 
 // Interfaces
 import { NavItem } from './interfaces/navigator'
@@ -203,7 +203,7 @@ export class NavigatorCmp extends HTMLElement {
         // Lessons
         lessonsService.lessons$().subscribe( lessons => {
             DEBUG.cmp && debugOff('Lessons:', lessons)
-            console.log('---LessonsService.lessons$');
+            console.log('---LessonsService.lessons$')
             this.lessons = lessons
             this.links = lessonsService.mapLessonsToNav(lessons) 
             this.render()

@@ -3,19 +3,19 @@ import { DEBUG } from '../../../config/app'
 import 'rxjs'
 
 // Interfaces
-import { Action } from '../../shared/interfaces/action';
-import { Lesson } from '../interfaces/lesson';
-import { Chapter } from '../../chapters/interfaces/chapter';
+import { Action } from '../../shared/interfaces/action'
+import { Lesson } from '../interfaces/lesson'
+import { Chapter } from '../../chapters/interfaces/chapter'
 
 // State
-import { lessonsDataActions } from './lessons-data.actions';
+import { lessonsDataActions } from './lessons-data.actions'
 
 // Webapi
 import { lessonsWebApi } from '../webapis/lessons.webapi'
 
 // Debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:lessonsDataEpic')
-DEBUG.init && debug('Instantiate lessonsDataEpic');
+DEBUG.init && debug('Instantiate lessonsDataEpic')
 
 // ====== LESSONS DATA EPIC ======
 
@@ -30,4 +30,4 @@ const getLessons = (action$: any) =>
 
 export const lessonsDataEpic: any = [
     getLessons
-];
+]

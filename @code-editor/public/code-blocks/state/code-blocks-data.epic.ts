@@ -3,18 +3,18 @@ import { DEBUG } from '../../../config/app'
 import 'rxjs'
 
 // Interfaces
-import { Action } from '../../shared/interfaces/action';
-import { Lesson } from '../../lessons/interfaces/lesson';
+import { Action } from '../../shared/interfaces/action'
+import { Lesson } from '../../lessons/interfaces/lesson'
 
 // State
-import { codeBlocksDataActions } from './code-blocks-data.actions';
+import { codeBlocksDataActions } from './code-blocks-data.actions'
 
 // Webapi
 import { codeBlocksWebApi} from '../webapis/code-blocks.webapi'
 
 // Debug
-let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:codeBlocksDataEpic');
-DEBUG.init && debug('Instantiate codeBlocksDataEpic');
+let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:codeBlocksDataEpic')
+DEBUG.init && debug('Instantiate codeBlocksDataEpic')
 
 // ====== CODE BLOCKS DATA EPIC ======
 
@@ -29,4 +29,4 @@ const getCodeBlocksList = (action$: any) =>
 
 export const codeBlocksDataEpic: any = [
     getCodeBlocksList
-];
+]

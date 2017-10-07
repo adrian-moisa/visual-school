@@ -3,16 +3,16 @@ import { DEBUG } from '../../../config/app'
 import 'rxjs'
 
 // Interfaces
-import { Action } from '../../shared/interfaces/action';
-import { chaptersDataActions } from './chapters-data.actions';
-import { Chapter } from '../../chapters/interfaces/chapter';
+import { Action } from '../../shared/interfaces/action'
+import { chaptersDataActions } from './chapters-data.actions'
+import { Chapter } from '../../chapters/interfaces/chapter'
 
 // Webapi
 import { chaptersWebApi } from '../webapis/chapters.webapi'
 
 // Debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:chaptersDataEpic')
-DEBUG.init && debug('Instantiate chaptersDataEpic');
+DEBUG.init && debug('Instantiate chaptersDataEpic')
 
 // ====== CHAPTERS DATA EPIC ======
 
@@ -27,4 +27,4 @@ const getChapters = (action$: any) =>
 
 export const chaptersDataEpic: any = [
     getChapters
-];
+]

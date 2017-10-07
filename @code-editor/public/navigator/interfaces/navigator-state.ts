@@ -7,11 +7,11 @@ export interface NavigatorDataState {
 
 // Ui
 export interface NavigatorUiState {
-    isVisible: boolean;
+    isVisible: boolean
 }
 
 // Navigator
 export interface NavigatorState {
-    data: NavigatorDataState;
-    ui: NavigatorUiState;
+    data: NavigatorDataState
+    ui: NavigatorUiState
 }

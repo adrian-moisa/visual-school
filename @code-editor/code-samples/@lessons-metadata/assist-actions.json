@@ -1,0 +1,36 @@
+[
+    {
+        "id": "1",
+        "lessonId": "1",
+        "title": "Step 1",
+        "description": "Learn how to write text using HTML in web pages",
+        "commands": [
+            {
+                "id": 1,
+                "type": "Tooltip",
+                "codeBlockId": 1,
+                "message": "Hello World1!"
+            },
+            {
+                "id": 2,
+                "type": "Highlight",
+                "codeBlockId": 1,
+                "message": "Hello World2!"
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "lessonId": "1",
+        "title": "Step 2",
+        "description": "Learn how to write text using HTML in web pages",
+        "commands": [
+            {
+                "id": 6,
+                "type": "CodeOverlay",
+                "codeBlockId": 2,
+                "message": "Hello World3!"
+            }
+        ]
+    }
+]

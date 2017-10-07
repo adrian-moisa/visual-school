@@ -1,5 +1,5 @@
 // Interfaces
-import { Action } from '../../shared/interfaces/action';
+import { Action } from '../../shared/interfaces/action'
 
 /**
  * Lessons ui actions

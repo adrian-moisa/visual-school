@@ -1,2 +1,2 @@
-declare module 'redux-rx';
-declare module 'simplebar';
+declare module 'redux-rx'
+declare module 'simplebar'
