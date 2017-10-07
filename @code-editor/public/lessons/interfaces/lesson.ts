@@ -2,14 +2,14 @@
 import { AssistAction } from '../../assistant/interfaces/assist-action';
 
 /**
- * Chapter lesson
+ * Lessons are composed of code blocks and assitant steps
  */
 export interface Lesson {
     id: string;
-    chId: string;
-    file: string;
+    chapterId: string;
+    urlSlug: string;
     title: string;
     description: string;
     icon: string;
-    steps: AssistAction[];
+    // steps: AssistAction[];
 }

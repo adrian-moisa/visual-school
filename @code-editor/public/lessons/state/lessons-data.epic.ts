@@ -4,9 +4,11 @@ import 'rxjs'
 
 // Interfaces
 import { Action } from '../../shared/interfaces/action';
-import { LessonsDataActions } from './lessons-data.actions';
 import { Lesson } from '../interfaces/lesson';
 import { Chapter } from '../../chapters/interfaces/chapter';
+
+// State
+import { lessonsDataActions } from './lessons-data.actions';
 
 // Webapi
 import { lessonsWebApi } from '../webapis/lessons.webapi'
@@ -15,15 +17,17 @@ import { lessonsWebApi } from '../webapis/lessons.webapi'
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:lessonsDataEpic')
 DEBUG.init && debug('Instantiate lessonsDataEpic');
 
-const getLessonsList = (action$: any) =>
-    action$.ofType(LessonsDataActions.GET_LESSONS)
+// ====== LESSONS DATA EPIC ======
+
+const getLessons = (action$: any) =>
+    action$.ofType(lessonsDataActions.GET_LESSONS)
     .do(DEBUG.epic && debug('GET_LESSONS'))
         .mergeMap((action: Action<Chapter>) =>
             lessonsWebApi.getLessons(action.payload)
-                .map(response => LessonsDataActions.getLessonsSuccess(response))
-                .catch(error => Observable.of(LessonsDataActions.getLessonsFail(error)))
+                .map(response => lessonsDataActions.getLessonsSuccess(response))
+                .catch(error => Observable.of(lessonsDataActions.getLessonsFail(error)))
         )
 
 export const lessonsDataEpic: any = [
-    getLessonsList
+    getLessons
 ];

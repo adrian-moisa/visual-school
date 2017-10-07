@@ -15,10 +15,10 @@ DEBUG.init && debug('Instantiate chaptersDataReducer');
 export const chaptersDataReducer = (state: ChaptersDataState = chaptersInitialState.data, action: Action<any>) => {
     switch (action.type) {
 
-        // ====== GET CHAPTERS LIST ======
+        // ====== GET CHAPTERS ======
 
-        case chaptersDataActions.GET_CHAPTERS_SUCCESS:
-            DEBUG.reduce && debug('GET_CHAPTERS_SUCCESS', action.payload)
+        case chaptersDataActions.GET_CHAPTERS_OK:
+            DEBUG.reduce && debug('GET_CHAPTERS_OK', action.payload)
             return Object.assign({}, state, <ChaptersDataState>{ 
                 chapters: action.payload, 
                 chapter: action.payload[0], // TODO proper routing 

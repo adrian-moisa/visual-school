@@ -20,10 +20,6 @@ import { lessonsUiReducer } from '../../lessons/state/lessons-ui.reducer';
 import { navigatorDataReducer } from '../../navigator/state/navigator-data.reducer';
 import { navigatorUiReducer } from '../../navigator/state/navigator-ui.reducer';
 
-// Shared
-import { sharedDataReducer } from '../../shared/state/shared-data.reducer';
-import { sharedUiReducer } from '../../shared/state/shared-ui.reducer';
-
 export const appReducers = combineReducers({
     assitant: combineReducers({
         data: assistantDataReducer,
@@ -44,9 +40,5 @@ export const appReducers = combineReducers({
     navigator: combineReducers({
         data: navigatorDataReducer,
         ui: navigatorUiReducer,
-    }),
-    shared: combineReducers({
-        data: sharedDataReducer,
-        ui: sharedUiReducer,
     }),
 });

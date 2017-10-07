@@ -20,10 +20,6 @@ import { lessonsUiEpic } from '../../lessons/state/lessons-ui.epic';
 import { navigatorDataEpic } from '../../navigator/state/navigator-data.epic';
 import { navigatorUiEpic } from '../../navigator/state/navigator-ui.epic';
 
-// Shared
-import { sharedDataEpic } from '../../shared/state/shared-data.epic';
-import { sharedUiEpic } from '../../shared/state/shared-ui.epic';
-
 /**
  * App epics
  */
@@ -38,6 +34,4 @@ export const appEpics = combineEpics(
     ...lessonsUiEpic,
     ...navigatorDataEpic,
     ...navigatorUiEpic,
-    ...sharedDataEpic,
-    ...sharedUiEpic,
 );

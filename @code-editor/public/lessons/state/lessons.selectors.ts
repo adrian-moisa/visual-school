@@ -5,30 +5,27 @@ import { LessonsState, LessonsDataState, LessonsUiState } from '../interfaces/le
 import { AppState } from '../../shared/interfaces/app-state';
 import { Lesson } from '../interfaces/lesson'
 
-export const LESSONS = (state: AppState) => state.lessons;
+// ====== LESSONS ======
+
+const _LESSONS = (state: AppState) => state.lessons;
+
+const _DATA = createSelector<AppState, LessonsState, LessonsDataState>(
+    _LESSONS, (state: LessonsState) => state.data
+);
+
+const _UI = createSelector<AppState, LessonsState, LessonsUiState>(
+    _LESSONS, (state: LessonsState) => state.ui
+);
 
 // ====== DATA ======
 
-export const LESSONS_DATA = createSelector<AppState, LessonsState, LessonsDataState>(
-    LESSONS,
-    (state: LessonsState) => state.data
-);
-
 /** Current lesson */
 export const LESSON = createSelector<AppState, LessonsDataState, Lesson>(
-    LESSONS_DATA,
-    (state: LessonsDataState) => state.lesson
+    _DATA, (state: LessonsDataState) => state.lesson
 );
 
-/** Chapter lessons */
-export const LESSONS_LIST = createSelector<AppState, LessonsDataState, Lesson[]>(
-    LESSONS_DATA,
-    (state: LessonsDataState) => state.lessons
+export const LESSONS = createSelector<AppState, LessonsDataState, Lesson[]>(
+    _DATA, (state: LessonsDataState) => state.lessons
 );
 
 // ====== UI ======
-
-export const LESSONS_UI = createSelector<AppState, LessonsState, LessonsUiState>(
-    LESSONS,
-    (state: LessonsState) => state.ui
-);

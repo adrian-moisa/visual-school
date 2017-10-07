@@ -7,7 +7,6 @@ import { chaptersInitialState } from '../../chapters/state/chapters-initial-stat
 import { codeEditorInitialState } from '../../code-editor/state/code-editor-initial-state';
 import { lessonsInitialState } from '../../lessons/state/lessons-initial-state';
 import { navigatorInitialState } from '../../navigator/state/navigator-initial-state';
-import { sharedInitialState } from './shared-initial-state';
 
 /**
  * Core initial state
@@ -20,5 +19,4 @@ export const appInitialState: AppState = {
     codeEditor: codeEditorInitialState,
     lessons: lessonsInitialState,
     navigator: navigatorInitialState,
-    shared: sharedInitialState,
 };

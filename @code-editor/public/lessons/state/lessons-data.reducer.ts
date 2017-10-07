@@ -2,10 +2,10 @@ import { DEBUG } from '../../../config/app'
 
 // Interfaces
 import { Action } from '../../shared/interfaces/action';
+import { LessonsDataState } from '../interfaces/lessons-state';
 
 // State
-import { LessonsDataActions } from './lessons-data.actions';
-import { LessonsDataState } from '../interfaces/lessons-state';
+import { lessonsDataActions } from './lessons-data.actions';
 import { lessonsInitialState } from './lessons-initial-state';
 
 // Debug
@@ -15,10 +15,10 @@ DEBUG.init && debug('Instantiate lessonsDataReducer');
 export const lessonsDataReducer = (state: LessonsDataState = lessonsInitialState.data, action: Action<any>) => {
     switch (action.type) {
 
-        // ====== GET LESSONS LIST ======
+        // ====== GET LESSONS ======
 
-        case LessonsDataActions.GET_LESSONS_SUCCESS:
-            DEBUG.reduce && debug('GET_LESSONS_SUCCESS', action.payload)
+        case lessonsDataActions.GET_LESSONS_OK:
+            DEBUG.reduce && debug('GET_LESSONS_OK', action.payload)
             return Object.assign({}, state, <LessonsDataState>{ 
                 lessons: action.payload 
             })

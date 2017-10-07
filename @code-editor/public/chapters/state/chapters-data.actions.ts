@@ -13,18 +13,18 @@ export class chaptersDataActions {
         };
     }
 
-    static GET_CHAPTERS_SUCCESS = 'GET_CHAPTERS_SUCCESS';
+    static GET_CHAPTERS_OK = 'GET_CHAPTERS_OK';
     static getChaptersSuccess(lessons: Chapter[]): Action<Chapter[]> {
         return {
-            type: chaptersDataActions.GET_CHAPTERS_SUCCESS,
+            type: chaptersDataActions.GET_CHAPTERS_OK,
             payload: lessons
         };
     }
 
-    static GET_CHAPTERS_FAIL = 'GET_CHAPTERS_FAIL';
+    static GET_CHAPTERS_ERR = 'GET_CHAPTERS_ERR';
     static getChaptersFail(response: string): Action<string> {
         return {
-            type: chaptersDataActions.GET_CHAPTERS_FAIL,
+            type: chaptersDataActions.GET_CHAPTERS_ERR,
             payload: response
         };
     }

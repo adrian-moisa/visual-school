@@ -16,7 +16,7 @@ export const lessonsWebApi = {
         DEBUG.webapi && debug(`GET lessons:`, chapter.id);
 
         return Observable.ajax({
-            url: `${APP.hostFiles}/@lessons-metadata/lessons-ch${chapter.id}.json`,
+            url: `${APP.hostFiles}/@lessons-metadata/lessons.json`, // ${chapter.id}
             method: 'GET',
             responseType: 'json' // text
         })

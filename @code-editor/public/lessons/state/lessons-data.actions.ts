@@ -1,37 +1,34 @@
 // Interfaces
-import { Action } from '../../shared/interfaces/action';
-import { Chapter } from '../../chapters/interfaces/chapter';
-import { Lesson } from '../interfaces/lesson';
+import { Action } from '../../shared/interfaces/action'
+import { Chapter } from '../../chapters/interfaces/chapter'
+import { Lesson } from '../interfaces/lesson'
 
-/**
- * Lessons actions
- */
-export class LessonsDataActions {
+export class lessonsDataActions {
 
-    // ====== GET LESSONS LIST ======
+    // ====== GET LESSONS ======
 
-    static GET_LESSONS = 'GET_LESSONS';
+    static GET_LESSONS = 'GET_LESSONS'
     static getLessons(chapter: Chapter): Action<Chapter> {
         return {
-            type: LessonsDataActions.GET_LESSONS,
+            type: lessonsDataActions.GET_LESSONS,
             payload: chapter
-        };
+        }
     }
 
-    static GET_LESSONS_SUCCESS = 'GET_LESSONS_SUCCESS';
+    static GET_LESSONS_OK = 'GET_LESSONS_OK'
     static getLessonsSuccess(lessons: Lesson[]): Action<Lesson[]> {
         return {
-            type: LessonsDataActions.GET_LESSONS_SUCCESS,
+            type: lessonsDataActions.GET_LESSONS_OK,
             payload: lessons
-        };
+        }
     }
 
-    static GET_LESSONS_FAIL = 'GET_LESSONS_FAIL';
+    static GET_LESSONS_ERR = 'GET_LESSONS_ERR'
     static getLessonsFail(response: string): Action<string> {
         return {
-            type: LessonsDataActions.GET_LESSONS_FAIL,
+            type: lessonsDataActions.GET_LESSONS_ERR,
             payload: response
-        };
+        }
     }
 
 }

@@ -105,7 +105,7 @@ export class NavigatorCmp extends HTMLElement {
             `<div class="chapter clearfix">
                 <h1 class="title">${this.chapter.title}</h1>
                 <h2 class="subtitle">${this.chapter.description}</h2>
-                <a class="lesson" href="https://github.com/visual-space/visual-school/tree/master/${this.chapter.folder}">
+                <a class="lesson" href="https://github.com/visual-space/visual-school/tree/master/${this.chapter.urlSlug}">
                     <i class="fa fa-angle-right" aria-hidden="true"></i>
                     Read the lesson
                 </a>
@@ -126,7 +126,7 @@ export class NavigatorCmp extends HTMLElement {
             `<div class="chapter clearfix">
                 <h1 class="title">${this.chapter.title}</h1>
                 <h2 class="subtitle">${this.chapter.description}</h2>
-                <a class="lesson" href="https://github.com/visual-space/visual-school/tree/master/${this.chapter.folder}">
+                <a class="lesson" href="https://github.com/visual-space/visual-school/tree/master/${this.chapter.urlSlug}">
                     <i class="fa fa-angle-right" aria-hidden="true"></i>
                     Read the lesson
                 </a>
@@ -138,7 +138,7 @@ export class NavigatorCmp extends HTMLElement {
             `<div class="chapter clearfix">
                 <h1 class="title">${this.chapter.title}</h1>
                 <h2 class="subtitle">${this.chapter.description}</h2>
-                <a class="lesson" href="https://github.com/visual-space/visual-school/tree/master/${this.chapter.folder}">
+                <a class="lesson" href="https://github.com/visual-space/visual-school/tree/master/${this.chapter.urlSlug}">
                     <i class="fa fa-angle-right" aria-hidden="true"></i>
                     Read the lesson
                 </a>
@@ -150,7 +150,7 @@ export class NavigatorCmp extends HTMLElement {
             `<div class="chapter clearfix">
                 <h1 class="title">${this.chapter.title}</h1>
                 <h2 class="subtitle">${this.chapter.description}</h2>
-                <a class="lesson" href="https://github.com/visual-space/visual-school/tree/master/${this.chapter.folder}">
+                <a class="lesson" href="https://github.com/visual-space/visual-school/tree/master/${this.chapter.urlSlug}">
                     <i class="fa fa-angle-right" aria-hidden="true"></i>
                     Read the lesson
                 </a>
@@ -162,7 +162,7 @@ export class NavigatorCmp extends HTMLElement {
             `<div class="chapter clearfix">
                 <h1 class="title">${this.chapter.title}</h1>
                 <h2 class="subtitle">${this.chapter.description}</h2>
-                <a class="lesson" href="https://github.com/visual-space/visual-school/tree/master/${this.chapter.folder}">
+                <a class="lesson" href="https://github.com/visual-space/visual-school/tree/master/${this.chapter.urlSlug}">
                     <i class="fa fa-angle-right" aria-hidden="true"></i>
                     Read the lesson
                 </a>

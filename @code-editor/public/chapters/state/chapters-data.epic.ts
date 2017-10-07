@@ -14,7 +14,9 @@ import { chaptersWebApi } from '../webapis/chapters.webapi'
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:chaptersDataEpic')
 DEBUG.init && debug('Instantiate chaptersDataEpic');
 
-const getChaptersList = (action$: any) =>
+// ====== CHAPTERS DATA EPIC ======
+
+const getChapters = (action$: any) =>
     action$.ofType(chaptersDataActions.GET_CHAPTERS)
         .do(DEBUG.epic && debug('GET_CHAPTERS'))
         .mergeMap((action: Action<Chapter>) =>
@@ -24,5 +26,5 @@ const getChaptersList = (action$: any) =>
         )
 
 export const chaptersDataEpic: any = [
-    getChaptersList
+    getChapters
 ];

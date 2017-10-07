@@ -9,7 +9,7 @@ import { Chapter } from '../../chapters/interfaces/chapter';
 
 // State
 import { chaptersDataActions } from '../state/chapters-data.actions';
-import { CHAPTERS_LIST, CHAPTER } from '../state/chapters.selectors';
+import { CHAPTERS, CHAPTER } from '../state/chapters.selectors';
 
 // Webapi
 import { chaptersWebApi } from '../webapis/chapters.webapi';
@@ -34,7 +34,7 @@ export const chaptersService = {
     
     chapters$: (): Observable<Chapter[]> => {
         DEBUG.data && debug('Observable chapters ');
-        return store$.map(CHAPTERS_LIST)
+        return store$.map(CHAPTERS)
             .filter(e => e !== undefined && e !== null)
             .distinctUntilChanged();
     },
