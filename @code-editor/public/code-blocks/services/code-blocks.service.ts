@@ -10,11 +10,11 @@ import { Lesson } from '../../lessons/interfaces/lesson'
 import { NavItem } from '../../navigator/interfaces/navigator'
 
 // State
-import { codeEditorDataActions } from '../state/code-editor-data.actions'
-import { CODE_BLOCKS, CODE_BLOCK } from '../state/code-editor.selectors'
+import { codeBlocksDataActions } from '../state/code-blocks-data.actions'
+import { CODE_BLOCKS, CODE_BLOCK } from '../state/code-blocks.selectors'
 
 // Webapi
-import { codeEditorWebApi } from '../webapis/code-editor.webapi'
+import { codeBlocksWebApi } from '../webapis/code-blocks.webapi'
 
 // Debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:codeBlocksService')
@@ -30,7 +30,7 @@ export const codeBlocksService = {
 
     getCodeBlocks: (lesson: Lesson): Observable<CodeBlock[]> => {
         DEBUG.data && debug('Get codeBlocks:', lesson.title) 
-        store.dispatch(codeEditorDataActions.getCodeBlocks(lesson))
+        store.dispatch(codeBlocksDataActions.getCodeBlocks(lesson))
         return codeBlocksService.codeBlocks$()
     },
     

@@ -1,18 +1,11 @@
 // Interfaces
-import {CodeBlock} from '../interfaces/code-block'
 
-// Data
-export interface CodeEditorDataState {
-    codeBlocks: CodeBlock[]
-    codeBlock: CodeBlock
-}
+export interface CodeEditorDataState {}
 
-// Ui
 export interface CodeEditorUiState {
     isVisible: boolean
 }
 
-// CodeEditor
 export interface CodeEditorState {
     data: CodeEditorDataState
     ui: CodeEditorUiState

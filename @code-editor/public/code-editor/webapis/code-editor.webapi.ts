@@ -3,7 +3,6 @@ import { APP, DEBUG } from '../../../config/app'
 import 'rxjs'
 
 // Interfaces
-import { CodeBlock } from '../interfaces/code-block'
 import { Lesson } from '../../lessons/interfaces/lesson'
 
 // Debug
@@ -24,18 +23,6 @@ export const codeEditorWebApi = {
         })
             .map((e: any) => e.response)
             .do(e => DEBUG.webapi && debug(`GET OK lesson content:`, url, e));
-    },
-    
-    getCodeBlocks: (lesson: Lesson): Observable<CodeBlock[]> => {
-        DEBUG.webapi && debug(`GET codeBlocks:`, lesson.id);
-
-        return Observable.ajax({
-            url: `${APP.hostFiles}/@codeBlocks-metadata/code-blocks.json`, // ${lesson.id}
-            method: 'GET',
-            responseType: 'json' // text
-        })
-            .map((e: any) => e.response)
-            .do(codeBlocks => DEBUG.webapi && debug(`GET OK codeBlocks:`, lesson.id, codeBlocks));
     }
 
 };
