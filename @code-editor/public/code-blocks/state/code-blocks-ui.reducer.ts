@@ -10,7 +10,7 @@ import { codeBlocksInitialState } from './code-blocks-initial-state'
 
 // Debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:codeBlocksUiReducer')
-DEBUG.init && debug('Instantiate codeBlocksUiReducer')
+DEBUG.constr && debug('Instantiate codeBlocksUiReducer')
 
 export const codeBlocksUiReducer = (state: CodeBlocksUiState = codeBlocksInitialState.ui, action: Action<any>) => {
     

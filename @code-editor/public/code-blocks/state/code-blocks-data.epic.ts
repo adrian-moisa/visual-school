@@ -14,17 +14,18 @@ import { codeBlocksWebApi} from '../webapis/code-blocks.webapi'
 
 // Debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:codeBlocksDataEpic')
-DEBUG.init && debug('Instantiate codeBlocksDataEpic')
+DEBUG.constr && debug('Instantiate codeBlocksDataEpic')
 
 // ====== CODE BLOCKS DATA EPIC ======
 
 const getCodeBlocksList = (action$: any) =>
     action$.ofType(codeBlocksDataActions.GET_CODE_BLOCKS)
-    .do(DEBUG.epic && debug('GET_CODE_BLOCKS'))
-        .mergeMap((action: Action<Lesson>) =>
-        codeBlocksWebApi.getCodeBlocks(action.payload)
-                .map(response => codeBlocksDataActions.getCodeBlocksSuccess(response))
-                .catch(error => Observable.of(codeBlocksDataActions.getCodeBlocksFail(error)))
+        .mergeMap((action: Action<Lesson>) => {
+                DEBUG.epic && debug('GET_CODE_BLOCKS')
+                return codeBlocksWebApi.getCodeBlocks(action.payload)
+                    .map(response => codeBlocksDataActions.getCodeBlocksSuccess(response))
+                    .catch(error => Observable.of(codeBlocksDataActions.getCodeBlocksFail(error)))
+            }
         )
 
 export const codeBlocksDataEpic: any = [

@@ -8,7 +8,7 @@ import { Lesson } from '../../lessons/interfaces/lesson'
 
 // Debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:codeBlocksWebApi')
-DEBUG.init && debug('Instantiate codeBlocksWebApi')
+DEBUG.constr && debug('Instantiate codeBlocksWebApi')
 
 export const codeBlocksWebApi = {
     
@@ -16,7 +16,7 @@ export const codeBlocksWebApi = {
         DEBUG.webapi && debug(`GET codeBlocks:`, lesson.id)
 
         return Observable.ajax({
-            url: `${APP.hostFiles}/@codeBlocks-metadata/code-blocks.json`, // ${lesson.id}
+            url: `${APP.hostFiles}/@lessons-metadata/code-blocks.json`, // ${lesson.id}
             method: 'GET',
             responseType: 'json' // text
         })

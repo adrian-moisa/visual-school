@@ -10,7 +10,7 @@ import { navigatorInitialState } from './navigator-initial-state';
 
 // Debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:navigatorDataReducer');
-DEBUG.init && debug('Instantiate navigatorDataReducer');
+DEBUG.constr && debug('Instantiate navigatorDataReducer');
 
 export const navigatorDataReducer = (state: NavigatorDataState = navigatorInitialState.data, action: Action<any>) => {
     switch (action.type) {

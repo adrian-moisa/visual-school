@@ -8,7 +8,7 @@ import { Lesson } from '../interfaces/lesson'
 
 // Debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:lessonsWebApi')
-DEBUG.init && debug('Instantiate LessonsWebApi')
+DEBUG.constr && debug('Instantiate LessonsWebApi')
 
 export const lessonsWebApi = {
 

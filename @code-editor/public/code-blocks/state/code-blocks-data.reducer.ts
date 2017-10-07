@@ -10,7 +10,7 @@ import { codeBlocksInitialState } from './code-blocks-initial-state'
 
 // Debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:codeBlocksDataReducer')
-DEBUG.init && debug('Instantiate codeBlocksDataReducer')
+DEBUG.constr && debug('Instantiate codeBlocksDataReducer')
 
 export const codeBlocksDataReducer = (state: CodeBlocksDataState = codeBlocksInitialState.data, action: Action<any>) => {
     switch (action.type) {

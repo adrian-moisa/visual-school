@@ -7,6 +7,6 @@ import { codeEditorUiActions } from './code-editor-ui.actions'
 
 // Debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:codeEditorUiEpic')
-DEBUG.init && debug('Instantiate codeEditorUiEpic')
+DEBUG.constr && debug('Instantiate codeEditorUiEpic')
 
 export const codeEditorUiEpic: any = []

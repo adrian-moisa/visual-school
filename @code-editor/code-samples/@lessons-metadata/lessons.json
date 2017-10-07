@@ -1,104 +1,104 @@
 [
     {
         "id": "1",
-        "chId": "1",
-        "file": "01-text",
+        "chapterId": "1",
+        "urlSlug": "01-text",
         "title": "Text",
         "description": "Learn how to write text using HTML in web pages",
         "icon": "file-text-o"
     },
     {
         "id": "2",
-        "chId": "1",
-        "file": "02-images",
+        "chapterId": "1",
+        "urlSlug": "02-images",
         "title": "Images",
         "description": "Add images to the page",
         "icon": "file-image-o"
     },
     {
         "id": "3",
-        "chId": "1",
-        "file": "03-lists",
+        "chapterId": "1",
+        "urlSlug": "03-lists",
         "title": "Lists",
         "description": "Display items in lists",
         "icon": "list"
     },
     {
         "id": "4",
-        "chId": "1",
-        "file": "04-inputs",
+        "chapterId": "1",
+        "urlSlug": "04-inputs",
         "title": "Inputs",
         "description": "Write a forms and inputs",
         "icon": "check-square-o"
     },
     {
         "id": "5",
-        "chId": "1",
-        "file": "05-table",
+        "chapterId": "1",
+        "urlSlug": "05-table",
         "title": "Table",
         "description": "Render data in tables",
         "icon": "table"
     },
     {
         "id": "6",
-        "chId": "1",
-        "file": "06-image-formats",
+        "chapterId": "1",
+        "urlSlug": "06-image-formats",
         "title": "Image Formats",
         "description": "Pros and Cons for all formats",
         "icon": "file-image-o"
     },
     {
         "id": "7",
-        "chId": "2",
-        "file": "01-specificity",
+        "chapterId": "2",
+        "urlSlug": "01-specificity",
         "title": "Specificity",
         "description": "CSS selectors have a priority order",
         "icon": "code"
     },
     {
         "id": 8,
-        "chId": 2,
-        "file": "02-colors-shadows",
+        "chapterId": 2,
+        "urlSlug": "02-colors-shadows",
         "title": "Colors, Shadows",
         "description": "Handling colors and the various color notations",
         "icon": "eye"
     },
     {
         "id": "9",
-        "chId": "2",
-        "file": "03-fonts",
+        "chapterId": "2",
+        "urlSlug": "03-fonts",
         "title": "Fonts",
         "description": "Typefaces and Iconfonts",
         "icon": "text-height"
     },
     {
         "id": "10",
-        "chId": "2",
-        "file": "04-backgrounds",
+        "chapterId": "2",
+        "urlSlug": "04-backgrounds",
         "title": "Backgrounds",
         "description": "Background position and dimensions",
         "icon": "file-picture-o"
     },
     {
         "id": "11",
-        "chId": "2",
-        "file": "05-margin-border-padding",
+        "chapterId": "2",
+        "urlSlug": "05-margin-border-padding",
         "title": "Margin, Border, Padding",
         "description": "Control the box model like a pro",
         "icon": "arrows-alt"
     },
     {
         "id": "12",
-        "chId": "2",
-        "file": "06-position",
+        "chapterId": "2",
+        "urlSlug": "06-position",
         "title": "Position",
         "description": "Control the placements of DOM elements",
         "icon": "arrows"
     },
     {
         "id": 13,
-        "chId": 2,
-        "file": "07-transform-animation",
+        "chapterId": 2,
+        "urlSlug": "07-transform-animation",
         "title": "Transform, Animation",
         "description": "Master the elements of animation",
         "icon": "video-camera"

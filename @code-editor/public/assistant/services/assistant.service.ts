@@ -18,7 +18,7 @@ import { assistantWebApi } from '../webapis/assistant.webapi'
 
 // Debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:assistantService')
-DEBUG.init && debug('Instantiate assistantService')
+DEBUG.constr && debug('Instantiate assistantService')
 
 // State
 declare var store: Store<AppState>

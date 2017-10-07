@@ -10,7 +10,7 @@ import { assistantInitialState } from './assistant-initial-state'
 
 // Debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:assistantDataReducer')
-DEBUG.init && debug('Instantiate assistantDataReducer')
+DEBUG.constr && debug('Instantiate assistantDataReducer')
 
 export const assistantDataReducer = (state: AssistantDataState = assistantInitialState.data, action: Action<any>) => {
     switch (action.type) {

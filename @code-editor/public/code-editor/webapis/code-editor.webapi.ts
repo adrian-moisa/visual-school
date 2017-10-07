@@ -7,7 +7,7 @@ import { Lesson } from '../../lessons/interfaces/lesson'
 
 // Debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:codeEditorWebApi')
-DEBUG.init && debug('Instantiate codeEditorWebApi')
+DEBUG.constr && debug('Instantiate codeEditorWebApi')
 
 export const codeEditorWebApi = {
 

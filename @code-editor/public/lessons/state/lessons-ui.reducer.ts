@@ -10,7 +10,7 @@ import { lessonsInitialState } from './lessons-initial-state'
 
 // Debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:lessonsUiReducer')
-DEBUG.init && debug('Instantiate lessonsUiReducer')
+DEBUG.constr && debug('Instantiate lessonsUiReducer')
 
 export const lessonsUiReducer = (state: LessonsUiState = lessonsInitialState.ui, action: Action<any>) => {
     switch (action.type) {

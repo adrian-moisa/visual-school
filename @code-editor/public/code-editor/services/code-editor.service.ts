@@ -15,7 +15,7 @@ import { codeEditorWebApi } from '../webapis/code-editor.webapi'
 
 // Debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:codeEditorService')
-DEBUG.init && debug('Instantiate codeEditorService')
+DEBUG.constr && debug('Instantiate codeEditorService')
 
 // State
 declare var store: Store<AppState>

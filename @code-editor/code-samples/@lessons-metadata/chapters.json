@@ -1,13 +1,13 @@
 [
     {
         "id": "1",
-        "folder": "01-html",
+        "urlSlug": "01-html",
         "title": "Ch 1 - HTML",
         "description": "Learn the basics of HTML"
     },
     {
         "id": "2",
-        "folder": "02-css",
+        "urlSlug": "02-css",
         "title": "Ch 2 - CSS",
         "description": "Learn the basics of CSS"
     }

@@ -7,6 +7,6 @@ import { codeBlocksUiActions } from './code-blocks-ui.actions'
 
 // Debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:codeBlocksUiEpic')
-DEBUG.init && debug('Instantiate codeBlocksUiEpic')
+DEBUG.constr && debug('Instantiate codeBlocksUiEpic')
 
 export const codeBlocksUiEpic: any = []

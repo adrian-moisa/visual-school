@@ -10,7 +10,7 @@ import { chaptersInitialState } from './chapters-initial-state'
 
 // Debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:chaptersDataReducer')
-DEBUG.init && debug('Instantiate chaptersDataReducer')
+DEBUG.constr && debug('Instantiate chaptersDataReducer')
 
 export const chaptersDataReducer = (state: ChaptersDataState = chaptersInitialState.data, action: Action<any>) => {
     switch (action.type) {

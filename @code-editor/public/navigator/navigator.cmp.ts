@@ -7,13 +7,9 @@ NavLinkCmp
 
 // Interfaces
 import { NavItem } from './interfaces/navigator'
-import { Chapter } from './../chapters/interfaces/chapter'
-import { Lesson } from './../lessons/interfaces/lesson'
 
 // Services
 import { navigatorService } from './services/navigator.service'
-import { lessonsService } from '../lessons/services/lessons.service'
-import { chaptersService } from '../chapters/services/chapters.service'
 
 // Debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:NavigatorCmp')
@@ -22,7 +18,8 @@ let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:NavigatorCm
 declare var $: any
 
 /**
- * Navigation for the entire course. From chapter, lesson and file down to code code block.
+ * Navigation for the entire course. 
+ * From chapters, lessons and files down to code blocks.
  */
 export class NavigatorCmp extends HTMLElement {
 
@@ -44,25 +41,7 @@ export class NavigatorCmp extends HTMLElement {
 
     // State
     private isVisible: boolean
-    private mainLinks: NavItem[] = [
-        {
-            icon: 'home',
-            caption: 'Home',
-            description: 'Return to VisualSchool on Github',
-            url: 'https://github.com/visual-space/visual-school',
-        },
-        {
-            icon: 'code',
-            caption: 'Code samples',
-            description: 'View all chapters',
-            url: `${APP.host}/index.html`,
-        }
-    ] 
-    private links: NavItem[] = [] 
-    private chapter: Chapter // Current
-    private lesson: Lesson // Current
-    private chapters: Chapter[]
-    private lessons: Lesson[]
+    private navLinks: NavItem[]
 
     // Plugins
     private navSimplebar: any
@@ -77,101 +56,43 @@ export class NavigatorCmp extends HTMLElement {
         this.render()
         this.initSubscriptions()
 
-        // Init data
-        chaptersService.getChapters().subscribe( chapters => 
-            lessonsService.getLessons(chapters[0]) // this.chapter
-        )
+        // TODO Move to routes
+        navigatorService.getNavLinks(<any>{id:1}, <any>{id:1});
     }
     
     private render() {
         DEBUG.render && debug('Render NavigatorCmp')
-        this.innerHTML = `
+        this.innerHTML = JSON.stringify(this.navLinks)
+        
+        // `
 
-            <!-- Header -->
-            <div class="header"></div>
-            ` +
-                                    // DELETE
-                                    // <!-- Main links -->
-                                    // <div class="links main">
-                                    //     ${ this.mainLinks && this.mainLinks.reduce((t, link) => t + `
-                                    //     <nav-link-vsc href="${link.url}" fa-icon="${link.icon}" caption="${link.caption}" 
-                                    //         description="${link.description}">
-                                    //     </nav-link-vsc>
-                                    //     `, '')}
-                                    // </div>
-`
-            <!-- Chapter -->
-            ${ this.chapter !== undefined ? 
-            `<div class="chapter clearfix">
-                <h1 class="title">${this.chapter.title}</h1>
-                <h2 class="subtitle">${this.chapter.description}</h2>
-                <a class="lesson" href="https://github.com/visual-space/visual-school/tree/master/${this.chapter.urlSlug}">
-                    <i class="fa fa-angle-right" aria-hidden="true"></i>
-                    Read the lesson
-                </a>
-            </div>` : ``
-            }
-            
-            <!-- Lessons links -->
-            <div class="links lessons">
-                ${ this.links && this.links.reduce((t, link) => t + `
-                <nav-link-vsc href="${link.url}" fa-icon="${link.icon}" caption="${link.caption}" 
-                    description="${link.description}">
-                </nav-link-vsc>
-                `, '')}
-            </div>
-            
-            <!-- Chapter -->
-            ${ this.chapter !== undefined ? 
-            `<div class="chapter clearfix">
-                <h1 class="title">${this.chapter.title}</h1>
-                <h2 class="subtitle">${this.chapter.description}</h2>
-                <a class="lesson" href="https://github.com/visual-space/visual-school/tree/master/${this.chapter.urlSlug}">
-                    <i class="fa fa-angle-right" aria-hidden="true"></i>
-                    Read the lesson
-                </a>
-            </div>` : ``
-            }
-            
-            <!-- Chapter -->
-            ${ this.chapter !== undefined ? 
-            `<div class="chapter clearfix">
-                <h1 class="title">${this.chapter.title}</h1>
-                <h2 class="subtitle">${this.chapter.description}</h2>
-                <a class="lesson" href="https://github.com/visual-space/visual-school/tree/master/${this.chapter.urlSlug}">
-                    <i class="fa fa-angle-right" aria-hidden="true"></i>
-                    Read the lesson
-                </a>
-            </div>` : ``
-            }
-            
-            <!-- Chapter -->
-            ${ this.chapter !== undefined ? 
-            `<div class="chapter clearfix">
-                <h1 class="title">${this.chapter.title}</h1>
-                <h2 class="subtitle">${this.chapter.description}</h2>
-                <a class="lesson" href="https://github.com/visual-space/visual-school/tree/master/${this.chapter.urlSlug}">
-                    <i class="fa fa-angle-right" aria-hidden="true"></i>
-                    Read the lesson
-                </a>
-            </div>` : ``
-            }
-            
-            <!-- Chapter -->
-            ${ this.chapter !== undefined ? 
-            `<div class="chapter clearfix">
-                <h1 class="title">${this.chapter.title}</h1>
-                <h2 class="subtitle">${this.chapter.description}</h2>
-                <a class="lesson" href="https://github.com/visual-space/visual-school/tree/master/${this.chapter.urlSlug}">
-                    <i class="fa fa-angle-right" aria-hidden="true"></i>
-                    Read the lesson
-                </a>
-            </div>` : ``
-            }
+        //     <!-- Header -->
+        //     <div class="header"></div>
 
-            <!-- Footer -->
-            <div class="footer"></div>
-        `
+        //     <!-- Chapter -->
+        //     ${ this.chapter !== undefined ? 
+        //     `<div class="chapter clearfix">
+        //         <h1 class="title">${this.chapter.title}</h1>
+        //         <h2 class="subtitle">${this.chapter.description}</h2>
+        //         <a class="lesson" href="https://github.com/visual-space/visual-school/tree/master/${this.chapter.urlSlug}">
+        //             <i class="fa fa-angle-right" aria-hidden="true"></i>
+        //             Read the lesson
+        //         </a>
+        //     </div>` : ``
+        //     }
+            
+        //     <!-- Lessons links -->
+        //     <div class="links lessons">
+        //         ${ this.links && this.links.reduce((t, link) => t + `
+        //         <nav-link-vsc href="${link.url}" fa-icon="${link.icon}" caption="${link.caption}" 
+        //             description="${link.description}">
+        //         </nav-link-vsc>
+        //         `, '')}
+        //     </div>
+
+        //     <!-- Footer -->
+        //     <div class="footer"></div>
+        // `
 
         // Simplebar
         this.navSimplebar = new SimpleBar(this)
@@ -188,38 +109,45 @@ export class NavigatorCmp extends HTMLElement {
             this.visible = isVis
         })
 
-        // Chapters
-        chaptersService.chapters$().subscribe( chapters => {
-            DEBUG.cmp && debugOff('Chapters:', chapters)
-            this.chapters = chapters
-        })
-
-        // Chapter
-        chaptersService.chapter$().subscribe( chapter => {
-            DEBUG.cmp && debugOff('Chapters:', chapter)
-            this.chapter = chapter
-        })
-
-        // Lessons
-        lessonsService.lessons$().subscribe( lessons => {
-            DEBUG.cmp && debugOff('Lessons:', lessons)
-            console.log('---LessonsService.lessons$')
-            this.lessons = lessons
-            this.links = lessonsService.mapLessonsToNav(lessons) 
+        // Navigator links
+        navigatorService.navLinks$().subscribe( navLinks => {
+            DEBUG.cmp && debugOff('Navigator visibility:', navLinks)
+            this.navLinks = navLinks
             this.render()
         })
 
-        // Current chapter
-        chaptersService.chapter$().subscribe( chapter => {
-            DEBUG.cmp && debugOff('Chapter:', chapter)
-            this.chapter = chapter
-        })
+                                // // Chapters
+                                // chaptersService.chapters$().subscribe( chapters => {
+                                //     DEBUG.cmp && debugOff('Chapters:', chapters)
+                                //     this.chapters = chapters
+                                // })
 
-        // Current lesson
-        lessonsService.lesson$().subscribe( lesson => {
-            DEBUG.cmp && debugOff('Lesson:', lesson)
-            this.lesson = lesson
-        })
+                                // // Chapter
+                                // chaptersService.chapter$().subscribe( chapter => {
+                                //     DEBUG.cmp && debugOff('Chapters:', chapter)
+                                //     this.chapter = chapter
+                                // })
+
+                                // // Lessons
+                                // lessonsService.lessons$().subscribe( lessons => {
+                                //     DEBUG.cmp && debugOff('Lessons:', lessons)
+                                //     console.log('---LessonsService.lessons$')
+                                //     this.lessons = lessons
+                                //     this.links = lessonsService.mapLessonsToNav(lessons) 
+                                //     this.render()
+                                // })
+
+                                // // Current chapter
+                                // chaptersService.chapter$().subscribe( chapter => {
+                                //     DEBUG.cmp && debugOff('Chapter:', chapter)
+                                //     this.chapter = chapter
+                                // })
+
+                                // // Current lesson
+                                // lessonsService.lesson$().subscribe( lesson => {
+                                //     DEBUG.cmp && debugOff('Lesson:', lesson)
+                                //     this.lesson = lesson
+                                // })
     }
 }
 

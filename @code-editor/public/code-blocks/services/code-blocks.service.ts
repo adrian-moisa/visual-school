@@ -18,7 +18,7 @@ import { codeBlocksWebApi } from '../webapis/code-blocks.webapi'
 
 // Debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:codeBlocksService')
-DEBUG.init && debug('Instantiate codeBlocksService')
+DEBUG.constr && debug('Instantiate codeBlocksService')
 
 // State
 declare var store: Store<AppState>
@@ -52,11 +52,13 @@ export const codeBlocksService = {
 
     mapCodeBlocksToNav: (codeBlocks: CodeBlock[]): NavItem[] => {
         let navItems: NavItem[] = codeBlocks.map(codeBlock => ({
+            id: codeBlock.id, 
+            parentId: codeBlock.lessonId, 
             active: false, 
             caption: codeBlock.title,
             description: codeBlock.description,
             icon: codeBlock.icon,
-            url: codeBlock.urlSlug,
+            urlSlug: codeBlock.urlSlug,
         }))
         
         DEBUG.map && debug('Map codeBlocks to navigation items:', navItems)

@@ -18,7 +18,7 @@ import { lessonsWebApi } from '../webapis/lessons.webapi'
 
 // Debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:lessonsService')
-DEBUG.init && debug('Instantiate lessonsService')
+DEBUG.constr && debug('Instantiate lessonsService')
 
 // State
 declare var store: Store<AppState>
@@ -51,12 +51,14 @@ export const lessonsService = {
     // ====== MAPS ======
 
     mapLessonsToNav: (lessons: Lesson[]): NavItem[] => {
-        let navItems: NavItem[] = lessons.map(lesson => ({
+        let navItems: NavItem[] = lessons.map(lesson => (<NavItem>{
+            parentId: lesson.chapterId, 
+            id: lesson.id, 
             active: false, 
             caption: lesson.title,
             description: lesson.description,
             icon: lesson.icon,
-            url: lesson.urlSlug,
+            urlSlug: lesson.urlSlug,
         }))
         
         DEBUG.map && debug('Map lessons to navigation items:', navItems)

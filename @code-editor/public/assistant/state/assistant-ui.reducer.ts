@@ -9,7 +9,7 @@ import { assistantUiActions } from './assistant-ui.actions'
 import { assistantInitialState } from './assistant-initial-state'
 
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:assistantUiReducer')
-DEBUG.init && debug('Instantiate assistantUiReducer')
+DEBUG.constr && debug('Instantiate assistantUiReducer')
 
 export const assistantUiReducer = (state: AssistantUiState = assistantInitialState.ui, action: Action<any>) => {
     switch (action.type) {

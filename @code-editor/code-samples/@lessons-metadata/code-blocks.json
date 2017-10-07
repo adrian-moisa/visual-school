@@ -2,6 +2,7 @@
     {
         "id": "1",
         "lessonId": "1",
+        "urlSlug": "some-code",
         "title": "Text 1",
         "description": "Learn how to write text using HTML in web pages",
         "startLine": 10,
@@ -10,6 +11,7 @@
     {
         "id": "2",
         "lessonId": "1",
+        "urlSlug": "other-code",
         "title": "Text2",
         "description": "Learn how to write text using HTML in web pages",
         "startLine": 20,

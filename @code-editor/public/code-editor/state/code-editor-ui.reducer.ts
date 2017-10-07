@@ -10,7 +10,7 @@ import { codeEditorInitialState } from './code-editor-initial-state'
 
 // Debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:codeEditorUiReducer')
-DEBUG.init && debug('Instantiate codeEditorUiReducer')
+DEBUG.constr && debug('Instantiate codeEditorUiReducer')
 
 export const codeEditorUiReducer = (state: CodeEditorUiState = codeEditorInitialState.ui, action: Action<any>) => {
     

@@ -10,7 +10,7 @@ import { codeEditorInitialState } from './code-editor-initial-state'
 
 // Debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:codeEditorDataReducer')
-DEBUG.init && debug('Instantiate codeEditorDataReducer')
+DEBUG.constr && debug('Instantiate codeEditorDataReducer')
 
 export const codeEditorDataReducer = (state: CodeEditorDataState = codeEditorInitialState.data, action: Action<any>) => {
     switch (action.type) {

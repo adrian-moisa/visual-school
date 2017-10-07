@@ -14,7 +14,7 @@ import { codeEditorWebApi} from '../webapis/code-editor.webapi'
 
 // Debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:codeEditorDataEpic')
-DEBUG.init && debug('Instantiate codeEditorDataEpic')
+DEBUG.constr && debug('Instantiate codeEditorDataEpic')
 
 // ====== CODE EDITOR DATA EPIC ======
 

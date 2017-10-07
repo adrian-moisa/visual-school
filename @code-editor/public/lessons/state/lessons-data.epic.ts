@@ -15,17 +15,18 @@ import { lessonsWebApi } from '../webapis/lessons.webapi'
 
 // Debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:lessonsDataEpic')
-DEBUG.init && debug('Instantiate lessonsDataEpic')
+DEBUG.constr && debug('Instantiate lessonsDataEpic')
 
 // ====== LESSONS DATA EPIC ======
 
 const getLessons = (action$: any) =>
     action$.ofType(lessonsDataActions.GET_LESSONS)
-    .do(DEBUG.epic && debug('GET_LESSONS'))
-        .mergeMap((action: Action<Chapter>) =>
-            lessonsWebApi.getLessons(action.payload)
-                .map(response => lessonsDataActions.getLessonsSuccess(response))
-                .catch(error => Observable.of(lessonsDataActions.getLessonsFail(error)))
+        .mergeMap((action: Action<Chapter>) => {
+                DEBUG.epic && debug('GET_LESSONS')
+                return lessonsWebApi.getLessons(action.payload)
+                    .map(response => lessonsDataActions.getLessonsSuccess(response))
+                    .catch(error => Observable.of(lessonsDataActions.getLessonsFail(error)))
+            }
         )
 
 export const lessonsDataEpic: any = [

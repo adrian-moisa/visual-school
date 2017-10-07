@@ -10,7 +10,7 @@ import { navigatorInitialState } from './navigator-initial-state';
 
 // Debug
 let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:navigatorUiReducer');
-DEBUG.init && debug('Instantiate navigatorUiReducer');
+DEBUG.constr && debug('Instantiate navigatorUiReducer');
 
 export const navigatorUiReducer = (state: NavigatorUiState = navigatorInitialState.ui, action: Action<any>) => {
 
