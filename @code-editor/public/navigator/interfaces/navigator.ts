@@ -1,13 +1,17 @@
-/** Nav item defines the properties of links used to render the navigation menu */
-export interface NavItem {
-    active?: boolean, // Indicates that the URL is currently displayed
-    caption: string, // title triggers max callstack
+/** 
+ * Nav item defines the properties of links used to render the navigation menu 
+ * Nav items connect to other objects such as chapters, lessons, code blocks
+ */
+export interface NavNode {
+    id?: string,
+    index?: number, // Added at runtime
+    parentId?: string,
+    type?: string,
+    active?: boolean,
+    caption: string, // Title (using title token triggers max callstack)
     description: string,
     icon: string,
     urlSlug?: string,
     url?: string,
-    id?: string, // Original object
-    parentId?: string, // Parent of the original object
-    type?: string, // Default: LINK_TYPE.Anchor
-    children?: NavItem[],
+    children?: NavNode[],
 }

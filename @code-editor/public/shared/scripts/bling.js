@@ -7,6 +7,13 @@ window.$ = function(query) {
     return nodes;
 };
 
+HTMLElement.prototype.$ = function (query) {
+    var selector = this.querySelectorAll.bind(this);
+    var nodes = selector(query);
+    if (nodes.length === 1) return nodes[0];
+    return nodes;
+};
+
 Element.prototype.on = window.on = function (name, fn) {
   this.addEventListener(name, fn);
 };

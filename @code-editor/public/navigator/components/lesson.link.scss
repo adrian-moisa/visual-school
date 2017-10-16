@@ -1,14 +1,14 @@
-nav-link-vsc{
+lesson-link{
     color: #fff;
     display: block;    
     border-bottom: solid 1px #1f3b57;
     width: 100%;
     background: #112438;
-
-    &[active] {
-        background: #444;
+    
+    &.active {
+        background: #041627;
     }
-
+    
     &:hover {
         background: #09A0F7;
         color: white;

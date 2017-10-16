@@ -1,35 +1,32 @@
 import { DEBUG } from '../config/app'
 
 // Components
-import { CodeEditorCmp } from './code-editor/code-editor.cmp'
-import { NavigatorCmp } from './navigator/navigator.cmp'
-import { QuickMenuCmp } from './navigator/components/quick-menu.cmp'
-CodeEditorCmp 
-NavigatorCmp 
-QuickMenuCmp
+import { CodeEditorModule } from './code-editor/code-editor.module'
+import { NavigatorModule } from './navigator/navigator.module'
+import { QuickMenu } from './navigator/components/quick.menu'
+CodeEditorModule 
+NavigatorModule 
+QuickMenu
 
 // Services
 import { codeEditorService } from './code-editor/services/code-editor.service'
 import { navigatorService } from './navigator/services/navigator.service'
 
 // Debug
-let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:VisualSchoolCmp')
+let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:VisualSchoolApp')
 
 // DOM selector
 declare var $: any
 
-/**
- * Visual School App
- */
-export class VisualSchoolCmp extends HTMLElement {
+export class VisualSchoolApp extends HTMLElement {
 
     constructor() {
         super()
-        DEBUG.constr && debug('Construct VisualSchoolCmp')
+        DEBUG.constr && debug('Construct VisualSchoolApp')
     }
     
     connectedCallback() {
-        DEBUG.init && debug('Connect VisualSchoolCmp')
+        DEBUG.init && debug('Connect VisualSchoolApp')
         this.render()
         
         // Remote cache
@@ -54,20 +51,20 @@ export class VisualSchoolCmp extends HTMLElement {
     }
 
     render() {
-        DEBUG.render && debug('Render VisualSchoolCmp')
+        DEBUG.render && debug('Render VisualSchoolApp')
         this.innerHTML = `
             <!-- Quick access menu -->
-            <quick-menu-vsc></quick-menu-vsc>
+            <quick-menu></quick-menu>
 
             <!-- Live code editor -->
-            <editor-vsc></editor-vsc>
+            <code-editor-module></code-editor-module>
 
             <!-- Lesson navigator -->
-            <navigator-vsc></navigator-vsc>
+            <navigator-module></navigator-module>
         `
     }
 }
 
 // Component
-require('./visual-school.cmp.scss')
-window.customElements.define('visual-school', VisualSchoolCmp)
+require('./visual-school.app.scss')
+window.customElements.define('visual-school-app', VisualSchoolApp)

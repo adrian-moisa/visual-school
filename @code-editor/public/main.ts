@@ -49,8 +49,8 @@ if (module.hot) {
 require('./shared/scss/main.scss')
 
 // Main app component (loaded last)
-import { VisualSchoolCmp } from './visual-school.cmp'
-VisualSchoolCmp
+import { VisualSchoolApp } from './visual-school.app'
+VisualSchoolApp
 
 // TODO move to a service
 function observableFromStore(store: Store<AppState>) {

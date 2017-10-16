@@ -20,7 +20,8 @@ export const lessonsDataReducer = (state: LessonsDataState = lessonsInitialState
         case lessonsDataActions.GET_LESSONS_OK:
             DEBUG.reduce && debug('GET_LESSONS_OK', action.payload)
             return Object.assign({}, state, <LessonsDataState>{ 
-                lessons: action.payload 
+                lessons: action.payload,
+                lesson: action.payload[0], // TODO proper routing 
             })
 
         default:

@@ -5,7 +5,7 @@ import 'rxjs'
 
 // Interfaces
 import { AppState } from '../../shared/interfaces/app-state'
-import { NavItem } from '../interfaces/navigator'
+import { NavNode } from '../interfaces/navigator'
 import { Chapter } from '../../chapters/interfaces/chapter'
 import { Lesson } from '../../lessons/interfaces/lesson'
 import { CodeBlock } from '../../code-blocks/interfaces/code-block'
@@ -38,29 +38,36 @@ export const navigatorService = {
 
     // ====== DATA ======
 
-    getNavLinks: (chapter: Chapter, lesson: Lesson) => {
-        DEBUG.data && debug('Get navigator links')
+    getRootNavNode: (chapter: Chapter, lesson: Lesson) => {
+        DEBUG.data && debug('Get root navigation node')
         
         // Parallel requests
         chaptersService.getChapters()
         lessonsService.getLessons(chapter)
         codeBlocksService.getCodeBlocks(lesson)
 
-        return navigatorService.navLinks$
+        return navigatorService.rootNavNode$
     },
 
-    navLinks$: (): Observable<NavItem[]> => {
-        DEBUG.data && debug('Observable navigator links')
+    // TODO set active properties for active items
+    /** Root node has no link by itself, it is rendered already expanded (children links visible) */
+    rootNavNode$: (): Observable<NavNode> => {
+        DEBUG.data && debug('Observable navigator root node (link and children)')
 
         let nav = Observable.combineLatest(
             chaptersService.chapters$(),
+            chaptersService.chapter$(),
             lessonsService.lessons$(),
-            codeBlocksService.codeBlocks$()
+            lessonsService.lesson$(),
+            codeBlocksService.codeBlocks$(),
+            codeBlocksService.codeBlock$(),
         ).switchMap(data => {
-            let [chapters, lessons, codeBlocks] = data
+            let [chapters, chapter, lessons, lesson, codeBlocks, codeBlock] = data
             DEBUG.data && debugOff('Chapters, lessons, codeBlocks', data)
 
-            let links = navigatorService.mapChaptersLessonsCodeToNav(chapters, lessons, codeBlocks)
+            let links = navigatorService.mapChaptersLessonsCodeToNav(
+                chapters, chapter, lessons, lesson, codeBlocks, codeBlock
+            )
             return Observable.of(links)
         })
 
@@ -69,25 +76,38 @@ export const navigatorService = {
 
     // ====== MAPS ======
 
-    mapChaptersLessonsCodeToNav: (chapters: Chapter[], lessons: Lesson[], codeBlocks: CodeBlock[]): NavItem[] => {
+    mapChaptersLessonsCodeToNav: (
+        chapters: Chapter[], 
+        chapter: Chapter, 
+        lessons: Lesson[], 
+        lesson: Lesson,
+        codeBlocks: CodeBlock[],
+        codeBlock: CodeBlock
+    ): NavNode => {
 
         // Code blocks
-        let codeBlocksLinks: NavItem[] = codeBlocksService.mapCodeBlocksToNav(codeBlocks)
-        codeBlocksLinks.forEach(link => {
+        let codeBlocksLinks: NavNode[] = codeBlocksService.mapCodeBlocksToNav(codeBlocks)
+        codeBlocksLinks.forEach((link, i) => {
             link.type = LINK_TYPE.CodeBlock
+            link.index = i
+            if (link.id === codeBlock.id) link.active = true
         })
         
         // Lessons
-        let lessonsLinks: NavItem[] = lessonsService.mapLessonsToNav(lessons)
-        lessonsLinks.forEach(link => {
+        let lessonsLinks: NavNode[] = lessonsService.mapLessonsToNav(lessons)
+        lessonsLinks.forEach((link, i) => {
             link.type = LINK_TYPE.Lesson
+            link.index = i
+            if (link.id === lesson.id) link.active = true
             link.children = codeBlocksLinks.filter( cbLink => cbLink.parentId === link.id )
         })
 
         // Chapters
-        let chaptersLinks: NavItem[] = chaptersService.mapChaptersToNav(chapters)
-        chaptersLinks.forEach(link => {
+        let chaptersLinks: NavNode[] = chaptersService.mapChaptersToNav(chapters)
+        chaptersLinks.forEach((link, i) => {
             link.type = LINK_TYPE.Chapter
+            link.index = i
+            if (link.id === chapter.id) link.active = true
             link.children = lessonsLinks.filter( lsnLink => lsnLink.parentId === link.id )
         })
 
@@ -108,9 +128,15 @@ export const navigatorService = {
             })
         })
 
+        // Using root node, `navigation-node` component can be reused from top to bottom
+        let rootNavNode: NavNode = <NavNode>{
+            active: true, // Enables rendering of children
+            children: chaptersLinks
+        }
+
         DEBUG.map && debug('Map chapters, lessons, code blocks to navigation items')
         DEBUG.map && debugOff('Navigation items:', JSON.stringify(chaptersLinks, null, 4))
-        return chaptersLinks
+        return rootNavNode
     },
 
     // ====== LOGIC ======

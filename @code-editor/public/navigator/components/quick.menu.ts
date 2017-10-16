@@ -1,15 +1,15 @@
 import { DEBUG } from '../../../config/app'
 
 // Components
-import { ButtonLinkCmp } from '../../shared/components/user-interface/button-link.cmp'
-ButtonLinkCmp
+import { ButtonLink } from '../../shared/components/user-interface/button.link'
+ButtonLink
 
 // Services
 import { navigatorService } from '../services/navigator.service'
 import { codeEditorService } from '../../code-editor/services/code-editor.service'
 
 // Debug
-let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:QuickMenuCmp')
+let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:QuickMenu')
 
 // DOM selector
 declare var $: any
@@ -19,7 +19,7 @@ declare var $: any
  * Allows easy access to navigation menu, code editor (and user profile in the future)
  * <!> Only one instance
  */
-export class QuickMenuCmp extends HTMLElement {
+export class QuickMenu extends HTMLElement {
 
     // State
     private isNavMenuVis: boolean = true
@@ -32,11 +32,11 @@ export class QuickMenuCmp extends HTMLElement {
 
     constructor() {
         super()
-        DEBUG.constr && debug('Construct QuickMenuCmp')
+        DEBUG.constr && debug('Construct QuickMenu')
     }
     
     connectedCallback() {
-        DEBUG.init && debug('Connect QuickMenuCmp')
+        DEBUG.init && debug('Connect QuickMenu')
         this.render()
 
         // Code editor visibility
@@ -54,7 +54,7 @@ export class QuickMenuCmp extends HTMLElement {
     }
 
     render() {
-        DEBUG.render && debug('Render QuickMenuCmp')
+        DEBUG.render && debug('Render QuickMenu')
         this.innerHTML = `
         
             <!-- Logo -->
@@ -66,15 +66,15 @@ export class QuickMenuCmp extends HTMLElement {
             <div class="user"></div>
 
             <!-- Code editor -->
-            <btn-link-vsc class="editor" fa-icon="code" title="Code editor"></btn-link-vsc>
+            <btn-link class="editor" icon="code" title="Code editor"></btn-link>
         
             <!-- Navigator -->
-            <btn-link-vsc class="navigator" fa-icon="list" title="Lessons menu"></btn-link-vsc>
+            <btn-link class="navigator" icon="list" title="Lessons menu"></btn-link>
         `
 
         // DOM cache
-        this.navigatorEl = $('quick-menu-vsc > .navigator')
-        this.codeEditorEl = $('quick-menu-vsc > .editor')
+        this.navigatorEl = $('quick-menu > .navigator')
+        this.codeEditorEl = $('quick-menu > .editor')
         debugOff('Navigator link:', this.navigatorEl)
         debugOff('Editor link:', this.codeEditorEl)
         
@@ -86,5 +86,5 @@ export class QuickMenuCmp extends HTMLElement {
 }
 
 // Component
-require('./quick-menu.cmp.scss')
-window.customElements.define('quick-menu-vsc', QuickMenuCmp)
+require('./quick.menu.scss')
+window.customElements.define('quick-menu', QuickMenu)

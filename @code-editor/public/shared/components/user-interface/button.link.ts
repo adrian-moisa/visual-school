@@ -1,7 +1,7 @@
 import { DEBUG } from '../../../../config/app'
 
 // Debug
-let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:ButtonLinkCmp')
+let debugOff = (...any: any[]) => { }, debug = require('debug')('vsc:ButtonLink')
 
 // DOM selector
 declare var $: any
@@ -9,14 +9,14 @@ declare var $: any
 /**
  * Renders links in the quick menu.
  */
-export class ButtonLinkCmp extends HTMLElement {
+export class ButtonLink extends HTMLElement {
 
     get active(): boolean {
         return this.hasAttribute('active')
     }
 
     set active(val: boolean) {
-        DEBUG.input && debug('Set active:', val)
+        DEBUG.input && debug('Input active:', val)
         this.isActive = val
 
         // Reflect as an attribute.
@@ -30,35 +30,35 @@ export class ButtonLinkCmp extends HTMLElement {
 
     // State
     private isActive: boolean = true
-    private faIcon: string
+    private icon: string
 
     constructor() {
         super()
-        DEBUG.constr && debug('Construct ButtonLinkCmp')
+        DEBUG.constr && debug('Construct ButtonLink')
     }
 
     connectedCallback() {
-        DEBUG.init && debug('Connect ButtonLinkCmp')
+        DEBUG.init && debug('Connect ButtonLink')
         this.render()
     }
 
     render() {
-        DEBUG.render && debug('Render ButtonLinkCmp')
+        DEBUG.render && debug('Render ButtonLink')
         this.innerHTML = `
-            <i class="fa fa-${this.faIcon}" aria-hidden="true"></i>
+            <i class="fa fa-${this.icon}" aria-hidden="true"></i>
         `
     }
 
     static get observedAttributes() {
-        return ['fa-icon']
+        return ['icon']
     }
 
     attributeChangedCallback(name: string, oldValue: string, newValue: string) {
         DEBUG.input && debug('Attribute:', name, newValue)
-        if (name === 'fa-icon') this.faIcon = newValue
+        if (name === 'icon') this.icon = newValue
     }
 }
 
 // Component
-require('./button-link.cmp.scss')
-window.customElements.define('btn-link-vsc', ButtonLinkCmp)
+require('./button.link.scss')
+window.customElements.define('btn-link', ButtonLink)

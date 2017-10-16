@@ -1,4 +1,4 @@
-navigator-vsc {
+navigator-module {
     display: block;
     font-size: 0.85em;
     background: #1c344d;
@@ -40,27 +40,8 @@ navigator-vsc {
         }
     }
 
-    .chapter{
-        padding: 10px 20px;
-
-        .title{
-            font-size: 1.7em;
-        }
-
-        .subtitle{
-            font-size: 1.3em;
-            margin:0;
-            color:#accdef;
-        }
-
-        .lesson{
-            font-size: 0.9em;
-            display: inline-block;
-            margin:0 0 10px 0;
-        }
-    }
-
-    .links {
-        nav-link-vsc{}
+    .footer {
+        width: 100%;
+        height: 50px;
     }
 }

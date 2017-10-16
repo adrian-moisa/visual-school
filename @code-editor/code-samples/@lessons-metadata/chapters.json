@@ -2,13 +2,67 @@
     {
         "id": "1",
         "urlSlug": "01-html",
-        "title": "Ch 1 - HTML",
+        "title": "HTML",
         "description": "Learn the basics of HTML"
     },
     {
         "id": "2",
         "urlSlug": "02-css",
-        "title": "Ch 2 - CSS",
+        "title": "CSS",
         "description": "Learn the basics of CSS"
+    },
+    {
+        "id": "3",
+        "urlSlug": "03-javascript",
+        "title": "Javascript",
+        "description": "Master Javascript"
+    },
+    {
+        "id": "4",
+        "urlSlug": "04-oop",
+        "title": "OOP",
+        "description": "Object Oriented Programming"
+    },
+    {
+        "id": "5",
+        "urlSlug": "05-frameworks",
+        "title": "Frameworks",
+        "description": "Unlock higher productivity by using frameworks"
+    },
+    {
+        "id": "6",
+        "urlSlug": "06-patterns",
+        "title": "Patterns",
+        "description": "Javscript coding patterns"
+    },
+    {
+        "id": "7",
+        "urlSlug": "07-web-components",
+        "title": "Web Components",
+        "description": "The building blocks of web apps"
+    },
+    {
+        "id": "8",
+        "urlSlug": "08-server",
+        "title": "Server",
+        "description": "Node.js, Express, Mongo"
+    },
+    {
+        "id": "9",
+        "urlSlug": "09-real-apps",
+        "title": "Real apps",
+        "description": "Build apps for the real world"
+    },
+    {
+        "id": "10",
+        "urlSlug": "10-games",
+        "title": "Games",
+        "description": "Javascript Game development"
+    },
+    {
+        "id": "11",
+        "urlSlug": "11-visual-space",
+        "title": "Visual Space",
+        "description": "Modern interactive web apps"
     }
 ]

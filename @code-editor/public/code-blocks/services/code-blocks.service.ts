@@ -7,7 +7,7 @@ import 'rxjs'
 import { AppState } from '../../shared/interfaces/app-state'
 import { CodeBlock } from '../interfaces/code-block'
 import { Lesson } from '../../lessons/interfaces/lesson'
-import { NavItem } from '../../navigator/interfaces/navigator'
+import { NavNode } from '../../navigator/interfaces/navigator'
 
 // State
 import { codeBlocksDataActions } from '../state/code-blocks-data.actions'
@@ -50,8 +50,8 @@ export const codeBlocksService = {
 
     // ====== MAPS ======
 
-    mapCodeBlocksToNav: (codeBlocks: CodeBlock[]): NavItem[] => {
-        let navItems: NavItem[] = codeBlocks.map(codeBlock => ({
+    mapCodeBlocksToNav: (codeBlocks: CodeBlock[]): NavNode[] => {
+        let navItems: NavNode[] = codeBlocks.map(codeBlock => ({
             id: codeBlock.id, 
             parentId: codeBlock.lessonId, 
             active: false, 

@@ -7,7 +7,7 @@ import 'rxjs'
 import { AppState } from '../../shared/interfaces/app-state'
 import { AssistAction } from '../interfaces/assist-action'
 import { Lesson } from '../../lessons/interfaces/lesson'
-import { NavItem } from '../../navigator/interfaces/navigator'
+import { NavNode } from '../../navigator/interfaces/navigator'
 
 // State
 import { assistantDataActions } from '../state/assistant-data.actions'
@@ -50,8 +50,8 @@ export const assistantService = {
 
     // ====== MAPS ======
 
-    mapAssistActionsToNav: (assistActions: AssistAction[]): NavItem[] => {
-        let navItems: NavItem[] = assistActions.map(action => ({
+    mapAssistActionsToNav: (assistActions: AssistAction[]): NavNode[] => {
+        let navItems: NavNode[] = assistActions.map(action => ({
             active: false, 
             caption: action.title,
             description: action.description,

@@ -6,7 +6,7 @@ import 'rxjs'
 // Interfaces
 import { AppState } from '../../shared/interfaces/app-state'
 import { Chapter } from '../../chapters/interfaces/chapter'
-import { NavItem } from '../../navigator/interfaces/navigator'
+import { NavNode } from '../../navigator/interfaces/navigator'
 
 // State
 import { chaptersDataActions } from '../state/chapters-data.actions'
@@ -50,8 +50,8 @@ export const chaptersService = {
 
     // ====== MAPS ======
 
-    mapChaptersToNav: (chapters: Chapter[]): NavItem[] => {
-        let navItems: NavItem[] = chapters.map(chapter => (<NavItem>{
+    mapChaptersToNav: (chapters: Chapter[]): NavNode[] => {
+        let navItems: NavNode[] = chapters.map(chapter => (<NavNode>{
             id: chapter.id, 
             active: false, 
             caption: chapter.title,

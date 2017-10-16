@@ -7,7 +7,7 @@ import 'rxjs'
 import { AppState } from '../../shared/interfaces/app-state'
 import { Chapter } from '../../chapters/interfaces/chapter'
 import { Lesson } from '../interfaces/lesson'
-import { NavItem } from '../../navigator/interfaces/navigator'
+import { NavNode } from '../../navigator/interfaces/navigator'
 
 // State
 import { lessonsDataActions } from '../state/lessons-data.actions'
@@ -50,8 +50,8 @@ export const lessonsService = {
 
     // ====== MAPS ======
 
-    mapLessonsToNav: (lessons: Lesson[]): NavItem[] => {
-        let navItems: NavItem[] = lessons.map(lesson => (<NavItem>{
+    mapLessonsToNav: (lessons: Lesson[]): NavNode[] => {
+        let navItems: NavNode[] = lessons.map(lesson => (<NavNode>{
             parentId: lesson.chapterId, 
             id: lesson.id, 
             active: false, 
